@@ -6,19 +6,7 @@
 //
 
 import XCTest
-
-struct User {
-
-    // MARK: - Properties
-    let id: Int
-    let email: String
-    let username: String
-    let password: String
-    let firstName: String
-    let lastName: String
-    let address: String
-    let phone: String
-}
+@testable import WhiteLabelECommerce
 
 class UsersTests: XCTestCase {
     func testUser_init_ShouldRetainProperties() {
