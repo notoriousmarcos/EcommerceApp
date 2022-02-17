@@ -6,25 +6,7 @@
 //
 
 import XCTest
-
-protocol Model: Codable, Equatable {
-    func toData() -> Data?
-    func toJSON() -> [String: Any]?
-}
-
-extension Model {
-    func toData() -> Data? {
-        return try? JSONEncoder().encode(self)
-    }
-    
-    func toJSON() -> [String: Any]? {
-        guard let data = toData() else { return nil }
-        return try? JSONSerialization.jsonObject(
-            with: data,
-            options: .allowFragments
-        ) as? [String: Any]
-    }
-}
+@testable import WhiteLabelECommerce
 
 class ModelTests: XCTestCase {
     let sut = TestModel(property: "Test")
