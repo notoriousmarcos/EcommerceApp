@@ -21,6 +21,8 @@
 		B74A8CA127BEB5B2002F41CD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7327BEB5B1002F41CD /* Persistence.swift */; };
 		B74A8CA227BEB5B2002F41CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74A8C7427BEB5B2002F41CD /* Assets.xcassets */; };
 		B74A8CA327BEB5B2002F41CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74A8C7427BEB5B2002F41CD /* Assets.xcassets */; };
+		B74A8CB727BEB815002F41CD /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8CB627BEB815002F41CD /* ModelTests.swift */; };
+		B74A8CB827BEB815002F41CD /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8CB627BEB815002F41CD /* ModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		B74A8C9227BEB5B2002F41CD /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74A8C9627BEB5B2002F41CD /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		B74A8C9827BEB5B2002F41CD /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		B74A8CB627BEB815002F41CD /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 			children = (
 				B74A8C6E27BEB5B1002F41CD /* Shared */,
 				B74A8C8027BEB5B2002F41CD /* macOS */,
+				B74A8CB227BEB73E002F41CD /* SharedTests */,
 				B74A8C8927BEB5B2002F41CD /* Tests iOS */,
 				B74A8C9527BEB5B2002F41CD /* Tests macOS */,
 				B74A8C7A27BEB5B2002F41CD /* Products */,
@@ -147,6 +151,30 @@
 				B74A8C9827BEB5B2002F41CD /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		B74A8CB227BEB73E002F41CD /* SharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8CB427BEB7EF002F41CD /* Domain */,
+			);
+			path = SharedTests;
+			sourceTree = "<group>";
+		};
+		B74A8CB427BEB7EF002F41CD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8CB527BEB7F8002F41CD /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B74A8CB527BEB7F8002F41CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8CB627BEB815002F41CD /* ModelTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8CB727BEB815002F41CD /* ModelTests.swift in Sources */,
 				B74A8C8D27BEB5B2002F41CD /* Tests_iOSLaunchTests.swift in Sources */,
 				B74A8C8B27BEB5B2002F41CD /* Tests_iOS.swift in Sources */,
 			);
@@ -338,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8CB827BEB815002F41CD /* ModelTests.swift in Sources */,
 				B74A8C9927BEB5B2002F41CD /* Tests_macOSLaunchTests.swift in Sources */,
 				B74A8C9727BEB5B2002F41CD /* Tests_macOS.swift in Sources */,
 			);
