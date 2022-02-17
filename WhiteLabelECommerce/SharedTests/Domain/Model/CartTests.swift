@@ -8,13 +8,6 @@
 import XCTest
 @testable import WhiteLabelECommerce
 
-struct Cart {
-    let id: Int
-    let userId: Int
-    let date: Date
-    let products: [Product]
-}
-
 class CartTests: XCTestCase {
     func testCart_init_ShouldRetainProperties() {
         // Arrange
