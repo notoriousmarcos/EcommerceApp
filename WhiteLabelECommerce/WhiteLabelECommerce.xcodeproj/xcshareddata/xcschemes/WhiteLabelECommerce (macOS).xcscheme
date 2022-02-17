@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B74A8CDB27BEC672002F41CD"
+               BlueprintIdentifier = "B74A8CEA27BEC80C002F41CD"
                BuildableName = "WhiteLabelECommerceTests(mac).xctest"
                BlueprintName = "WhiteLabelECommerceTests(mac)"
                ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
