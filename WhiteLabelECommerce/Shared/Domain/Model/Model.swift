@@ -16,7 +16,7 @@ extension Model {
     func toData() -> Data? {
         return try? JSONEncoder().encode(self)
     }
-    
+
     func toJSON() -> [String: Any]? {
         guard let data = toData() else { return nil }
         return try? JSONSerialization.jsonObject(

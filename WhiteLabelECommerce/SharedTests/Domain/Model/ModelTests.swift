@@ -10,7 +10,7 @@ import XCTest
 
 class ModelTests: XCTestCase {
     let sut = TestModel(property: "Test")
-    
+
     func testModel_toData_ShouldCreateValidData() throws {
         // Act
         guard let data = sut.toData() else {
@@ -21,25 +21,25 @@ class ModelTests: XCTestCase {
             TestModel.self,
             from: data
         )
-        
+
         // Assert
         XCTAssertEqual(wrappedData, sut)
     }
-    
+
     func testModel_toJSON_ShouldCreateAValidJSON() {
-        
+
         // Act
         guard let dictionary = sut.toJSON() else {
             XCTFail("Should return a valid dictionary.")
             return
         }
-        
+
         // Assert
         XCTAssertTrue(dictionary.keys.contains("property"))
         XCTAssertEqual(dictionary["property"] as? String, sut.property)
-        
+
     }
-    
+
     struct TestModel: Model {
         let property: String
     }
