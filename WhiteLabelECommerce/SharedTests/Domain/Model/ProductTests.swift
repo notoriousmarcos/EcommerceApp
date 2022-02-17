@@ -6,34 +6,7 @@
 //
 
 import XCTest
-
-struct Product {
-
-    // MARK: - Properties
-    let id: Int
-    let title: String
-    let price: Double
-    let category: String
-    let description: String
-    let imageURL: String
-
-    // MARK: - Init
-    init(
-    id: Int,
-    title: String,
-    price: Double,
-    category: String,
-    description: String,
-    image: String
-    ) {
-        self.id = id
-        self.title = title
-        self.price = price
-        self.category = category
-        self.description = description
-        self.imageURL = image
-    }
-}
+@testable import WhiteLabelECommerce
 
 class ProductTests: XCTestCase {
     func testProduct_init_ShouldRetainProperties() {
@@ -44,7 +17,7 @@ class ProductTests: XCTestCase {
             price: 10.0,
             category: "men's clothing",
             description: "Product description",
-            image: "https:imageurl"
+            imageURL: "https:imageurl"
         )
 
        // Assert
