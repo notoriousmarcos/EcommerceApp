@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8C6E27BEB5B1002F41CD /* Shared */,
+				B74A8CF627BEC890002F41CD /* iOS */,
 				B74A8C8027BEB5B2002F41CD /* macOS */,
 				B74A8CB227BEB73E002F41CD /* SharedTests */,
 				B74A8CD027BEC64C002F41CD /* WhiteLabelECommerceTests(iOS) */,
@@ -183,6 +184,13 @@
 			children = (
 			);
 			path = "WhiteLabelECommerceTests(mac)";
+			sourceTree = "<group>";
+		};
+		B74A8CF627BEC890002F41CD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
