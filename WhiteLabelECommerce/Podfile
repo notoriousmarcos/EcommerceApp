@@ -1,0 +1,11 @@
+pod 'SwiftLint'
+
+target 'WhiteLabelECommerce (iOS)' do
+  platform :ios, '15.0'
+  use_frameworks!
+end
+
+target 'WhiteLabelECommerce (macOS)' do
+  platform :osx, '12.0'
+  use_frameworks!
+end
