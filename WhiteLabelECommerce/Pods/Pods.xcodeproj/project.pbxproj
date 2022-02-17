@@ -28,12 +28,18 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		20D19EE84D7E90F96A142A1AFBD437E2 /* Pods-WhiteLabelECommerceTests(mac)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 847C8CFAAF4AD9C05EAEB7ED7A590DA3 /* Pods-WhiteLabelECommerceTests(mac)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24B12956435EB0DF131BD2F7BFB1F273 /* Pods-WhiteLabelECommerceTests(iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD17D52B94383153BE808B3BEA282B49 /* Pods-WhiteLabelECommerceTests(iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3169FE39303A2B83EC551559BC6911EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3261E5A5395F45780622405F504B2804 /* Foundation.framework */; };
 		38F36C45B4A1D5D1E870442A12557ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */; };
-		58167B512BCB03667619682636A97724 /* Pods-WhiteLabelECommerce (macOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B167A984008533F5D44797BC1CE7AF15 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */; };
-		CD69E23CB26A5ADA323125B491E6D134 /* Pods-WhiteLabelECommerce (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D9F870B1EC657A0092EA85BD02E842A /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC6C3770CEA8C01F1FFBF889BA7A9BBE /* Pods-WhiteLabelECommerce (macOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E25F9FBDBD4A64B8A0507371DE635582 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC01BEF8D66005460BF8571AD0EC53D0 /* Pods-WhiteLabelECommerce (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50841CB9FC0BC287310918E4A551A7CC /* Pods-WhiteLabelECommerce (iOS)-dummy.m */; };
+		39918571D02BDD27E06069AA36C59EBF /* Pods-WhiteLabelECommerceTests(iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F6262F0746A1F78A9DAAF4951AE15 /* Pods-WhiteLabelECommerceTests(iOS)-dummy.m */; };
+		555E0998A857D7A01D4EF9E8945EF5D6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */; };
+		58167B512BCB03667619682636A97724 /* Pods-WhiteLabelECommerce (macOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BAA18653D7453A3F3BC24F6E48BA7 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */; };
+		72E52861315FC8ADE21D5F88E7749112 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3261E5A5395F45780622405F504B2804 /* Foundation.framework */; };
+		CD69E23CB26A5ADA323125B491E6D134 /* Pods-WhiteLabelECommerce (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65278D7C3AA29756B0AC58F93CDCDA9F /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC6C3770CEA8C01F1FFBF889BA7A9BBE /* Pods-WhiteLabelECommerce (macOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A04E20F5B86A24CD6CBF3C9D773FC8 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8093F1FBE520DEF4ED2F3A9ECEC7026 /* Pods-WhiteLabelECommerceTests(mac)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AABFE99C40ED27FEDC2675ECFE6802D4 /* Pods-WhiteLabelECommerceTests(mac)-dummy.m */; };
+		FC01BEF8D66005460BF8571AD0EC53D0 /* Pods-WhiteLabelECommerce (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B2F2476FCDE11B91921BD7686DD2E2 /* Pods-WhiteLabelECommerce (iOS)-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2B03D5FD26A26B7D62142EA4492AEB83;
 			remoteInfo = "SwiftLint-iOS";
+		};
+		B0F08786CAE925CE0CF70DDFD0B34839 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F1CCF2BD1B73BCE3F00DBCC1E53BBAF;
+			remoteInfo = "Pods-WhiteLabelECommerce (macOS)";
+		};
+		BE7D4C94D6ED2C4F7D1BD058818353E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60D636A285720B9A8C8B8132F1B40BC3;
+			remoteInfo = "Pods-WhiteLabelECommerce (iOS)";
 		};
 		E4458D1CAA547B8C7F52FB33290D3420 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,33 +75,59 @@
 
 /* Begin PBXFileReference section */
 		0F5555C1D15FA4927A58247E15EF17F2 /* Pods-WhiteLabelECommerce (iOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WhiteLabelECommerce (iOS)"; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5D893C0E8081B61F97E42BE4045218 /* Pods-WhiteLabelECommerceTests(mac)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerceTests(mac)-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11B2F2476FCDE11B91921BD7686DD2E2 /* Pods-WhiteLabelECommerce (iOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerce (iOS)-dummy.m"; sourceTree = "<group>"; };
 		1277199AC5AB719B3E1C6E1CC93A29AB /* Pods-WhiteLabelECommerce (macOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WhiteLabelECommerce (macOS)"; path = Pods_WhiteLabelECommerce__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1964A47E18F117A9238C82AB2E3C52DA /* Pods-WhiteLabelECommerce (macOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (macOS)-Info.plist"; sourceTree = "<group>"; };
-		2534625A669F70A7C88CE1964863731F /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2C4A3C3AFEB7F61A4BAFC4B6481807A4 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		1964F5B95D54BC3D873AB4018B6484F0 /* Pods-WhiteLabelECommerceTests(mac) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WhiteLabelECommerceTests(mac)"; path = Pods_WhiteLabelECommerceTests_mac_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDF7D90095D1BF2CBCCB342FEF00EE6 /* Pods-WhiteLabelECommerceTests(iOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerceTests(iOS).modulemap"; sourceTree = "<group>"; };
+		1D6F6262F0746A1F78A9DAAF4951AE15 /* Pods-WhiteLabelECommerceTests(iOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerceTests(iOS)-dummy.m"; sourceTree = "<group>"; };
+		2E44B80253F933019E32CEF4D5901D80 /* Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3261E5A5395F45780622405F504B2804 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33F63885E56E3B0F3A50E99DA15D293B /* Pods-WhiteLabelECommerce (iOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (iOS)-Info.plist"; sourceTree = "<group>"; };
 		3C814B686EAF148926EDE9DD176BDFDA /* SwiftLint-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftLint-macOS.debug.xcconfig"; path = "../SwiftLint-macOS/SwiftLint-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		427C7FE80FA000696AD9526F9A531B49 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		4399D933D57F50250D9B24BA643BAB68 /* SwiftLint-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftLint-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		50841CB9FC0BC287310918E4A551A7CC /* Pods-WhiteLabelECommerce (iOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerce (iOS)-dummy.m"; sourceTree = "<group>"; };
-		54AB36C234A3BDE68AC5876A7F11AD5C /* Pods-WhiteLabelECommerce (iOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerce (iOS).modulemap"; sourceTree = "<group>"; };
+		4E65866C2E51348A73080A3C94070090 /* Pods-WhiteLabelECommerceTests(iOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerceTests(iOS)-Info.plist"; sourceTree = "<group>"; };
+		5172160E120FC07D47F60F2FCE37EA37 /* Pods-WhiteLabelECommerceTests(mac)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerceTests(mac)-acknowledgements.plist"; sourceTree = "<group>"; };
 		5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		5EA1130E09DA0129B38895F4888E5970 /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; sourceTree = "<group>"; };
-		608DE9D90486C3C60CA9529781F25F48 /* Pods-WhiteLabelECommerce (iOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (iOS)-Info.plist"; sourceTree = "<group>"; };
+		5B9EA8292FAF5DE9EC409A5B2FFF6C30 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		63A04E20F5B86A24CD6CBF3C9D773FC8 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerce (macOS)-umbrella.h"; sourceTree = "<group>"; };
+		65278D7C3AA29756B0AC58F93CDCDA9F /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerce (iOS)-umbrella.h"; sourceTree = "<group>"; };
 		69B0A46B2A7901B5F1FFE215EB029527 /* SwiftLint-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftLint-macOS.release.xcconfig"; path = "../SwiftLint-macOS/SwiftLint-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		6D0B31E615DF58D21EA80CB9FC27CC54 /* SwiftLint-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftLint-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		72C81FD2E11BE91EA20E8D318CD63ED4 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
-		8AC9518C819738BF8C43C29F92996B97 /* Pods-WhiteLabelECommerce (macOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerce (macOS).modulemap"; sourceTree = "<group>"; };
-		8D9F870B1EC657A0092EA85BD02E842A /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerce (iOS)-umbrella.h"; sourceTree = "<group>"; };
-		94EA3E6D9E18A132DA37453B44802EE3 /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist"; sourceTree = "<group>"; };
+		7681264DA4B2DE916BBC30EF7C1539DE /* Pods-WhiteLabelECommerceTests(mac)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerceTests(mac)-Info.plist"; sourceTree = "<group>"; };
+		7CB4A423DA2BF28BA459BF6EE4791952 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		847C8CFAAF4AD9C05EAEB7ED7A590DA3 /* Pods-WhiteLabelECommerceTests(mac)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerceTests(mac)-umbrella.h"; sourceTree = "<group>"; };
+		8C941014724FE9985B5E886152DBA10D /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		8F547E6B6998E8DF358BB89C11BBAD26 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerceTests(iOS).release.xcconfig"; sourceTree = "<group>"; };
+		961BAA18653D7453A3F3BC24F6E48BA7 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerce (macOS)-dummy.m"; sourceTree = "<group>"; };
+		9C848233BE86840FE67789CB958BDEBA /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerceTests(mac).release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B167A984008533F5D44797BC1CE7AF15 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerce (macOS)-dummy.m"; sourceTree = "<group>"; };
-		E25F9FBDBD4A64B8A0507371DE635582 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerce (macOS)-umbrella.h"; sourceTree = "<group>"; };
-		EEEAFC69A7FA4BD895AEA087A5C780E4 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
-		F9AC63BA8CF31ECDD5F1816D9E863910 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2D348E494141FE5A52DF09239EB0D89 /* Pods-WhiteLabelECommerceTests(iOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WhiteLabelECommerceTests(iOS)"; path = Pods_WhiteLabelECommerceTests_iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99993DC6A544FBB8B1DD22FD0CF02CD /* Pods-WhiteLabelECommerce (iOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerce (iOS).modulemap"; sourceTree = "<group>"; };
+		AABFE99C40ED27FEDC2675ECFE6802D4 /* Pods-WhiteLabelECommerceTests(mac)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WhiteLabelECommerceTests(mac)-dummy.m"; sourceTree = "<group>"; };
+		B633B272EEFF975EE9ACB25A258B857B /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B95B54D10B078336B85A91465FDC1C39 /* Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC8E0CEE5A2A7563024EC35FFCEDEE30 /* Pods-WhiteLabelECommerce (macOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerce (macOS).modulemap"; sourceTree = "<group>"; };
+		C33A0F6B40F0447186705E94099D5C5C /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5A18B864ED548C8F6C7753E74803C9C /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD17D52B94383153BE808B3BEA282B49 /* Pods-WhiteLabelECommerceTests(iOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WhiteLabelECommerceTests(iOS)-umbrella.h"; sourceTree = "<group>"; };
+		D1278ECD5A41D54F569959AB0DE938EC /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		EB164AD3F4DEEF1DA0CE87C77F099F3F /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerce (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		F36A6350B9D5AFD4D582C8C1CB747F68 /* Pods-WhiteLabelECommerce (macOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WhiteLabelECommerce (macOS)-Info.plist"; sourceTree = "<group>"; };
+		F86EF47DB871DAA1042335D8EA43F952 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA773470030228180CEE01A9EE793E5B /* Pods-WhiteLabelECommerceTests(mac).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WhiteLabelECommerceTests(mac).modulemap"; sourceTree = "<group>"; };
+		FEDB54A853DC01881C04D0D5EF87CF75 /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WhiteLabelECommerceTests(mac).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B03C7F059BADFCB795ECD51BCF84FC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555E0998A857D7A01D4EF9E8945EF5D6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4803DD3EDA3846F7443C6650D51B28B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,32 +144,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5FDF8856DB6FCD5ED67E3767BB62FB52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72E52861315FC8ADE21D5F88E7749112 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C4C56425496A53700BCB9C830334558 /* Targets Support Files */ = {
+		129EDF49298D750EDBBB2F206DAEBB2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26D6689084B4B3CC21E64FBC981A6B7F /* Pods-WhiteLabelECommerce (iOS) */,
-				5614A600EDCAA20D1F7802D0A291E75D /* Pods-WhiteLabelECommerce (macOS) */,
+				0F5555C1D15FA4927A58247E15EF17F2 /* Pods-WhiteLabelECommerce (iOS) */,
+				1277199AC5AB719B3E1C6E1CC93A29AB /* Pods-WhiteLabelECommerce (macOS) */,
+				A2D348E494141FE5A52DF09239EB0D89 /* Pods-WhiteLabelECommerceTests(iOS) */,
+				1964F5B95D54BC3D873AB4018B6484F0 /* Pods-WhiteLabelECommerceTests(mac) */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		26D6689084B4B3CC21E64FBC981A6B7F /* Pods-WhiteLabelECommerce (iOS) */ = {
-			isa = PBXGroup;
-			children = (
-				54AB36C234A3BDE68AC5876A7F11AD5C /* Pods-WhiteLabelECommerce (iOS).modulemap */,
-				F9AC63BA8CF31ECDD5F1816D9E863910 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown */,
-				EEEAFC69A7FA4BD895AEA087A5C780E4 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist */,
-				50841CB9FC0BC287310918E4A551A7CC /* Pods-WhiteLabelECommerce (iOS)-dummy.m */,
-				608DE9D90486C3C60CA9529781F25F48 /* Pods-WhiteLabelECommerce (iOS)-Info.plist */,
-				8D9F870B1EC657A0092EA85BD02E842A /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */,
-				5EA1130E09DA0129B38895F4888E5970 /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */,
-				2C4A3C3AFEB7F61A4BAFC4B6481807A4 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */,
-			);
-			name = "Pods-WhiteLabelECommerce (iOS)";
-			path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		41C052635D3E21350AC08C5F316759F6 /* OS X */ = {
@@ -132,15 +172,6 @@
 				5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */,
 			);
 			name = "OS X";
-			sourceTree = "<group>";
-		};
-		41ECC8F13ADB8EF5BB7BB09115280767 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0F5555C1D15FA4927A58247E15EF17F2 /* Pods-WhiteLabelECommerce (iOS) */,
-				1277199AC5AB719B3E1C6E1CC93A29AB /* Pods-WhiteLabelECommerce (macOS) */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4EDC20B56A0B9A8564E1FCEA191C83C4 /* Frameworks */ = {
@@ -152,20 +183,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5614A600EDCAA20D1F7802D0A291E75D /* Pods-WhiteLabelECommerce (macOS) */ = {
+		67F5439435C9270B61703A4D81E1FABF /* Pods-WhiteLabelECommerceTests(iOS) */ = {
 			isa = PBXGroup;
 			children = (
-				8AC9518C819738BF8C43C29F92996B97 /* Pods-WhiteLabelECommerce (macOS).modulemap */,
-				2534625A669F70A7C88CE1964863731F /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown */,
-				94EA3E6D9E18A132DA37453B44802EE3 /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist */,
-				B167A984008533F5D44797BC1CE7AF15 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */,
-				1964A47E18F117A9238C82AB2E3C52DA /* Pods-WhiteLabelECommerce (macOS)-Info.plist */,
-				E25F9FBDBD4A64B8A0507371DE635582 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */,
-				72C81FD2E11BE91EA20E8D318CD63ED4 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */,
-				427C7FE80FA000696AD9526F9A531B49 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */,
+				1CDF7D90095D1BF2CBCCB342FEF00EE6 /* Pods-WhiteLabelECommerceTests(iOS).modulemap */,
+				2E44B80253F933019E32CEF4D5901D80 /* Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.markdown */,
+				B95B54D10B078336B85A91465FDC1C39 /* Pods-WhiteLabelECommerceTests(iOS)-acknowledgements.plist */,
+				1D6F6262F0746A1F78A9DAAF4951AE15 /* Pods-WhiteLabelECommerceTests(iOS)-dummy.m */,
+				4E65866C2E51348A73080A3C94070090 /* Pods-WhiteLabelECommerceTests(iOS)-Info.plist */,
+				CD17D52B94383153BE808B3BEA282B49 /* Pods-WhiteLabelECommerceTests(iOS)-umbrella.h */,
+				D1278ECD5A41D54F569959AB0DE938EC /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */,
+				8F547E6B6998E8DF358BB89C11BBAD26 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */,
 			);
-			name = "Pods-WhiteLabelECommerce (macOS)";
-			path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)";
+			name = "Pods-WhiteLabelECommerceTests(iOS)";
+			path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)";
 			sourceTree = "<group>";
 		};
 		6B0757DEC1DC356A0FA2CAAC1AAE675B /* Support Files */ = {
@@ -180,6 +211,22 @@
 			path = "../Target Support Files/SwiftLint-iOS";
 			sourceTree = "<group>";
 		};
+		6EFA350A77AE873FD7A9AB33E7708A93 /* Pods-WhiteLabelECommerce (macOS) */ = {
+			isa = PBXGroup;
+			children = (
+				BC8E0CEE5A2A7563024EC35FFCEDEE30 /* Pods-WhiteLabelECommerce (macOS).modulemap */,
+				B633B272EEFF975EE9ACB25A258B857B /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.markdown */,
+				C5A18B864ED548C8F6C7753E74803C9C /* Pods-WhiteLabelECommerce (macOS)-acknowledgements.plist */,
+				961BAA18653D7453A3F3BC24F6E48BA7 /* Pods-WhiteLabelECommerce (macOS)-dummy.m */,
+				F36A6350B9D5AFD4D582C8C1CB747F68 /* Pods-WhiteLabelECommerce (macOS)-Info.plist */,
+				63A04E20F5B86A24CD6CBF3C9D773FC8 /* Pods-WhiteLabelECommerce (macOS)-umbrella.h */,
+				5B9EA8292FAF5DE9EC409A5B2FFF6C30 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */,
+				7CB4A423DA2BF28BA459BF6EE4791952 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */,
+			);
+			name = "Pods-WhiteLabelECommerce (macOS)";
+			path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)";
+			sourceTree = "<group>";
+		};
 		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,15 +235,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AB7591397B1509353FA694EEBE78777A /* Pods-WhiteLabelECommerce (iOS) */ = {
+			isa = PBXGroup;
+			children = (
+				A99993DC6A544FBB8B1DD22FD0CF02CD /* Pods-WhiteLabelECommerce (iOS).modulemap */,
+				F86EF47DB871DAA1042335D8EA43F952 /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.markdown */,
+				C33A0F6B40F0447186705E94099D5C5C /* Pods-WhiteLabelECommerce (iOS)-acknowledgements.plist */,
+				11B2F2476FCDE11B91921BD7686DD2E2 /* Pods-WhiteLabelECommerce (iOS)-dummy.m */,
+				33F63885E56E3B0F3A50E99DA15D293B /* Pods-WhiteLabelECommerce (iOS)-Info.plist */,
+				65278D7C3AA29756B0AC58F93CDCDA9F /* Pods-WhiteLabelECommerce (iOS)-umbrella.h */,
+				8C941014724FE9985B5E886152DBA10D /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */,
+				EB164AD3F4DEEF1DA0CE87C77F099F3F /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */,
+			);
+			name = "Pods-WhiteLabelECommerce (iOS)";
+			path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				4EDC20B56A0B9A8564E1FCEA191C83C4 /* Frameworks */,
 				965877409E01FB3D85D85E90E6B30185 /* Pods */,
-				41ECC8F13ADB8EF5BB7BB09115280767 /* Products */,
-				1C4C56425496A53700BCB9C830334558 /* Targets Support Files */,
+				129EDF49298D750EDBBB2F206DAEBB2E /* Products */,
+				F8265F15F5CC2F6605F40F6109E9561A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D19E1E781656B57D254D597FB4185EFC /* Pods-WhiteLabelECommerceTests(mac) */ = {
+			isa = PBXGroup;
+			children = (
+				FA773470030228180CEE01A9EE793E5B /* Pods-WhiteLabelECommerceTests(mac).modulemap */,
+				0F5D893C0E8081B61F97E42BE4045218 /* Pods-WhiteLabelECommerceTests(mac)-acknowledgements.markdown */,
+				5172160E120FC07D47F60F2FCE37EA37 /* Pods-WhiteLabelECommerceTests(mac)-acknowledgements.plist */,
+				AABFE99C40ED27FEDC2675ECFE6802D4 /* Pods-WhiteLabelECommerceTests(mac)-dummy.m */,
+				7681264DA4B2DE916BBC30EF7C1539DE /* Pods-WhiteLabelECommerceTests(mac)-Info.plist */,
+				847C8CFAAF4AD9C05EAEB7ED7A590DA3 /* Pods-WhiteLabelECommerceTests(mac)-umbrella.h */,
+				FEDB54A853DC01881C04D0D5EF87CF75 /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */,
+				9C848233BE86840FE67789CB958BDEBA /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */,
+			);
+			name = "Pods-WhiteLabelECommerceTests(mac)";
+			path = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)";
 			sourceTree = "<group>";
 		};
 		DABCD2AA1C1DFCD4E2578CE87BDFD93F /* iOS */ = {
@@ -205,6 +284,17 @@
 				3261E5A5395F45780622405F504B2804 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		F8265F15F5CC2F6605F40F6109E9561A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB7591397B1509353FA694EEBE78777A /* Pods-WhiteLabelECommerce (iOS) */,
+				6EFA350A77AE873FD7A9AB33E7708A93 /* Pods-WhiteLabelECommerce (macOS) */,
+				67F5439435C9270B61703A4D81E1FABF /* Pods-WhiteLabelECommerceTests(iOS) */,
+				D19E1E781656B57D254D597FB4185EFC /* Pods-WhiteLabelECommerceTests(mac) */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		FB20D3EBFF8645FAA422628402EF8D36 /* SwiftLint */ = {
@@ -235,9 +325,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB8E9A8FACB889B83CF44AB2B52B83AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D19EE84D7E90F96A142A1AFBD437E2 /* Pods-WhiteLabelECommerceTests(mac)-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4B7C604955EA6E833C3A80F60004B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B12956435EB0DF131BD2F7BFB1F273 /* Pods-WhiteLabelECommerceTests(iOS)-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		009A4386EF0E324B250EC9633B926CB6 /* Pods-WhiteLabelECommerceTests(iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82245DDF04C3EDD9B188F61C883B9DED /* Build configuration list for PBXNativeTarget "Pods-WhiteLabelECommerceTests(iOS)" */;
+			buildPhases = (
+				FB4B7C604955EA6E833C3A80F60004B6 /* Headers */,
+				0B0BA74CA6C39AC0CCE3AC54CC542F8E /* Sources */,
+				5FDF8856DB6FCD5ED67E3767BB62FB52 /* Frameworks */,
+				AD28D90DF7905E9265D6B6D8A814623D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BA771BA344059EFA71AF112D3BC4447 /* PBXTargetDependency */,
+			);
+			name = "Pods-WhiteLabelECommerceTests(iOS)";
+			productName = Pods_WhiteLabelECommerceTests_iOS_;
+			productReference = A2D348E494141FE5A52DF09239EB0D89 /* Pods-WhiteLabelECommerceTests(iOS) */;
+			productType = "com.apple.product-type.framework";
+		};
 		60D636A285720B9A8C8B8132F1B40BC3 /* Pods-WhiteLabelECommerce (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B56DA409865BECE7C6160CF071D1A05 /* Build configuration list for PBXNativeTarget "Pods-WhiteLabelECommerce (iOS)" */;
@@ -276,6 +401,25 @@
 			productReference = 1277199AC5AB719B3E1C6E1CC93A29AB /* Pods-WhiteLabelECommerce (macOS) */;
 			productType = "com.apple.product-type.framework";
 		};
+		9B38F934D533A4A6C33A4E8ECC41E3A5 /* Pods-WhiteLabelECommerceTests(mac) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA264692BFE4D1035E7376A27A0A4B7 /* Build configuration list for PBXNativeTarget "Pods-WhiteLabelECommerceTests(mac)" */;
+			buildPhases = (
+				CB8E9A8FACB889B83CF44AB2B52B83AE /* Headers */,
+				DB682A031FFFBFF604C2DAAE1308AC45 /* Sources */,
+				1B03C7F059BADFCB795ECD51BCF84FC0 /* Frameworks */,
+				F94B7240AE8FC25AB3E26392C8837497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				914C20784161C4EA6D55DABC0A80B3B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-WhiteLabelECommerceTests(mac)";
+			productName = Pods_WhiteLabelECommerceTests_mac_;
+			productReference = 1964F5B95D54BC3D873AB4018B6484F0 /* Pods-WhiteLabelECommerceTests(mac) */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -294,12 +438,14 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 41ECC8F13ADB8EF5BB7BB09115280767 /* Products */;
+			productRefGroup = 129EDF49298D750EDBBB2F206DAEBB2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				60D636A285720B9A8C8B8132F1B40BC3 /* Pods-WhiteLabelECommerce (iOS) */,
 				7F1CCF2BD1B73BCE3F00DBCC1E53BBAF /* Pods-WhiteLabelECommerce (macOS) */,
+				009A4386EF0E324B250EC9633B926CB6 /* Pods-WhiteLabelECommerceTests(iOS) */,
+				9B38F934D533A4A6C33A4E8ECC41E3A5 /* Pods-WhiteLabelECommerceTests(mac) */,
 				2B03D5FD26A26B7D62142EA4492AEB83 /* SwiftLint-iOS */,
 				9F0E6E0C8BF75091EADD98FA13B1A847 /* SwiftLint-macOS */,
 			);
@@ -314,7 +460,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD28D90DF7905E9265D6B6D8A814623D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDADB8CACDE7F31A6885DC5835241D7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F94B7240AE8FC25AB3E26392C8837497 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,6 +492,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B0BA74CA6C39AC0CCE3AC54CC542F8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39918571D02BDD27E06069AA36C59EBF /* Pods-WhiteLabelECommerceTests(iOS)-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD5A401012064DC0DF420BF63D136B6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,14 +508,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB682A031FFFBFF604C2DAAE1308AC45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8093F1FBE520DEF4ED2F3A9ECEC7026 /* Pods-WhiteLabelECommerceTests(mac)-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0BA771BA344059EFA71AF112D3BC4447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WhiteLabelECommerce (iOS)";
+			target = 60D636A285720B9A8C8B8132F1B40BC3 /* Pods-WhiteLabelECommerce (iOS) */;
+			targetProxy = BE7D4C94D6ED2C4F7D1BD058818353E7 /* PBXContainerItemProxy */;
+		};
 		70E734176409B4EAA420DB4408B733F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SwiftLint-macOS";
 			target = 9F0E6E0C8BF75091EADD98FA13B1A847 /* SwiftLint-macOS */;
 			targetProxy = E4458D1CAA547B8C7F52FB33290D3420 /* PBXContainerItemProxy */;
+		};
+		914C20784161C4EA6D55DABC0A80B3B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WhiteLabelECommerce (macOS)";
+			target = 7F1CCF2BD1B73BCE3F00DBCC1E53BBAF /* Pods-WhiteLabelECommerce (macOS) */;
+			targetProxy = B0F08786CAE925CE0CF70DDFD0B34839 /* PBXContainerItemProxy */;
 		};
 		A7C2029F313F6EBFCAA8A1B21BE02AE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -358,6 +546,43 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		13614A62EE3A9EBA117718BF6A35D6A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1278ECD5A41D54F569959AB0DE938EC /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS)-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		151D00AAF5A7D99E2695E193777FE6D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C814B686EAF148926EDE9DD176BDFDA /* SwiftLint-macOS.debug.xcconfig */;
@@ -391,6 +616,44 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		375F4840569A954B3A5386832881B1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F547E6B6998E8DF358BB89C11BBAD26 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS)-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		6C85647F9B051B8207061377D4FED462 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -457,7 +720,7 @@
 		};
 		6E70E2C6E689A962D0EBE9C4FD845683 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C4A3C3AFEB7F61A4BAFC4B6481807A4 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */;
+			baseConfigurationReference = EB164AD3F4DEEF1DA0CE87C77F099F3F /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -513,7 +776,7 @@
 		};
 		847541FBEB03A3E1E1D7968907C59D37 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 427C7FE80FA000696AD9526F9A531B49 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */;
+			baseConfigurationReference = 7CB4A423DA2BF28BA459BF6EE4791952 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -550,7 +813,7 @@
 		};
 		98055EBA1445971347B9CB5A73BDA40F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EA1130E09DA0129B38895F4888E5970 /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */;
+			baseConfigurationReference = 8C941014724FE9985B5E886152DBA10D /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -602,9 +865,46 @@
 			};
 			name = Release;
 		};
+		B743008703510C5BBEFBAD15C879CA0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C848233BE86840FE67789CB958BDEBA /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac)-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D16A798B7F9BF2FD406CDE3D997B37E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72C81FD2E11BE91EA20E8D318CD63ED4 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */;
+			baseConfigurationReference = 5B9EA8292FAF5DE9EC409A5B2FFF6C30 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -706,6 +1006,43 @@
 			};
 			name = Debug;
 		};
+		EB5443858B8647A163B3BF3ED4F1B2E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDB54A853DC01881C04D0D5EF87CF75 /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac)-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,6 +1087,24 @@
 			buildConfigurations = (
 				EB17D8DF20FC5638F2D99522D491151A /* Debug */,
 				6C85647F9B051B8207061377D4FED462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82245DDF04C3EDD9B188F61C883B9DED /* Build configuration list for PBXNativeTarget "Pods-WhiteLabelECommerceTests(iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13614A62EE3A9EBA117718BF6A35D6A0 /* Debug */,
+				375F4840569A954B3A5386832881B1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA264692BFE4D1035E7376A27A0A4B7 /* Build configuration list for PBXNativeTarget "Pods-WhiteLabelECommerceTests(mac)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5443858B8647A163B3BF3ED4F1B2E1 /* Debug */,
+				B743008703510C5BBEFBAD15C879CA0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

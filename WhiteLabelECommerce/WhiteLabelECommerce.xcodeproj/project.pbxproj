@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2E707A6DC2A8EA278EACFE99 /* Pods_WhiteLabelECommerce__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */; };
+		81E6EBC1F49AE157FB23E469 /* Pods_WhiteLabelECommerceTests_iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C68AA1E08BB8119CBAC645 /* Pods_WhiteLabelECommerceTests_iOS_.framework */; };
 		852BCCFAA351D2E9CE327B84 /* Pods_WhiteLabelECommerce__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */; };
+		8A87C10A1E86EB48A38FE4C5 /* Pods_WhiteLabelECommerceTests_mac_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B1B15A11785EB6B86136EB /* Pods_WhiteLabelECommerceTests_mac_.framework */; };
 		B74A8C9A27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C6F27BEB5B1002F41CD /* WhiteLabelECommerce.xcdatamodeld */; };
 		B74A8C9B27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C6F27BEB5B1002F41CD /* WhiteLabelECommerce.xcdatamodeld */; };
 		B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */; };
@@ -44,7 +46,12 @@
 
 /* Begin PBXFileReference section */
 		353C024767C7BFBC452EC9B8 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		4ECF3023D916280F28FD529E /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(mac).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).release.xcconfig"; sourceTree = "<group>"; };
+		51C68AA1E08BB8119CBAC645 /* Pods_WhiteLabelECommerceTests_iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerceTests_iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E61A3B94C22716C2E0151E /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		6699D83C401AC3026BC1322C /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(mac).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).debug.xcconfig"; sourceTree = "<group>"; };
+		70B308FDB1ADA6F52CD95A10 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).release.xcconfig"; sourceTree = "<group>"; };
+		87B1B15A11785EB6B86136EB /* Pods_WhiteLabelECommerceTests_mac_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerceTests_mac_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F47F37A635D63E7CC79D63 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74A8C7027BEB5B1002F41CD /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 		B74A8CEB27BEC80C002F41CD /* WhiteLabelECommerceTests(mac).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(mac).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E6EBC1F49AE157FB23E469 /* Pods_WhiteLabelECommerceTests_iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A87C10A1E86EB48A38FE4C5 /* Pods_WhiteLabelECommerceTests_mac_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +114,11 @@
 				353C024767C7BFBC452EC9B8 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */,
 				BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */,
 				91F47F37A635D63E7CC79D63 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */,
+				FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */,
+				70B308FDB1ADA6F52CD95A10 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */,
+				6699D83C401AC3026BC1322C /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */,
+				4ECF3023D916280F28FD529E /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +127,8 @@
 			children = (
 				FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */,
 				AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */,
+				51C68AA1E08BB8119CBAC645 /* Pods_WhiteLabelECommerceTests_iOS_.framework */,
+				87B1B15A11785EB6B86136EB /* Pods_WhiteLabelECommerceTests_mac_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,8 +140,8 @@
 				B74A8CF627BEC890002F41CD /* iOS */,
 				B74A8C8027BEB5B2002F41CD /* macOS */,
 				B74A8CB227BEB73E002F41CD /* SharedTests */,
-				B74A8CD027BEC64C002F41CD /* WhiteLabelECommerceTests(iOS) */,
-				B74A8CEC27BEC80C002F41CD /* WhiteLabelECommerceTests(mac) */,
+				B74A8CD027BEC64C002F41CD /* WhiteLabelECommerceTestsiOS */,
+				B74A8CEC27BEC80C002F41CD /* WhiteLabelECommerceTestsMac */,
 				B74A8C7A27BEB5B2002F41CD /* Products */,
 				356E27A0553836855C8D4006 /* Pods */,
 				B4D7977CEA2DEA07F1F8DA03 /* Frameworks */,
@@ -205,18 +220,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B74A8CD027BEC64C002F41CD /* WhiteLabelECommerceTests(iOS) */ = {
+		B74A8CD027BEC64C002F41CD /* WhiteLabelECommerceTestsiOS */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "WhiteLabelECommerceTests(iOS)";
+			path = WhiteLabelECommerceTestsiOS;
 			sourceTree = "<group>";
 		};
-		B74A8CEC27BEC80C002F41CD /* WhiteLabelECommerceTests(mac) */ = {
+		B74A8CEC27BEC80C002F41CD /* WhiteLabelECommerceTestsMac */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "WhiteLabelECommerceTests(mac)";
+			path = WhiteLabelECommerceTestsMac;
 			sourceTree = "<group>";
 		};
 		B74A8CF627BEC890002F41CD /* iOS */ = {
@@ -237,6 +252,7 @@
 				B74A8C7527BEB5B2002F41CD /* Sources */,
 				B74A8C7627BEB5B2002F41CD /* Frameworks */,
 				B74A8C7727BEB5B2002F41CD /* Resources */,
+				B74A8CF727BECD97002F41CD /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -255,6 +271,7 @@
 				B74A8C7B27BEB5B2002F41CD /* Sources */,
 				B74A8C7C27BEB5B2002F41CD /* Frameworks */,
 				B74A8C7D27BEB5B2002F41CD /* Resources */,
+				B74A8CF827BECDB4002F41CD /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -269,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74A8CD527BEC64C002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerceTests(iOS)" */;
 			buildPhases = (
+				3378E5AD1CD88591FADC6A06 /* [CP] Check Pods Manifest.lock */,
 				B74A8CCB27BEC64C002F41CD /* Sources */,
 				B74A8CCC27BEC64C002F41CD /* Frameworks */,
 				B74A8CCD27BEC64C002F41CD /* Resources */,
+				B74A8CF927BECDC9002F41CD /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -287,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74A8CF127BEC80C002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerceTests(mac)" */;
 			buildPhases = (
+				0FB5ED4A8345C03665B50D10 /* [CP] Check Pods Manifest.lock */,
 				B74A8CE727BEC80C002F41CD /* Sources */,
 				B74A8CE827BEC80C002F41CD /* Frameworks */,
 				B74A8CE927BEC80C002F41CD /* Resources */,
+				B74A8CFA27BECDDA002F41CD /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -404,6 +425,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0FB5ED4A8345C03665B50D10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteLabelECommerceTests(mac)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3378E5AD1CD88591FADC6A06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteLabelECommerceTests(iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9300F589BB38FD4D25F7788D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +490,78 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B74A8CF727BECD97002F41CD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		B74A8CF827BECDB4002F41CD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		B74A8CF927BECDC9002F41CD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		B74A8CFA27BECDDA002F41CD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -719,6 +856,7 @@
 		};
 		B74A8CD627BEC64C002F41CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -739,6 +877,7 @@
 		};
 		B74A8CD727BEC64C002F41CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B308FDB1ADA6F52CD95A10 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -760,6 +899,7 @@
 		};
 		B74A8CF227BEC80C002F41CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6699D83C401AC3026BC1322C /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +919,7 @@
 		};
 		B74A8CF327BEC80C002F41CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ECF3023D916280F28FD529E /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
