@@ -41,6 +41,8 @@
 		B74A8D1327BFB973002F41CD /* GetAllProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1127BFB973002F41CD /* GetAllProductsUseCase.swift */; };
 		B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1527BFBAE4002F41CD /* TypeAlias.swift */; };
 		B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1527BFBAE4002F41CD /* TypeAlias.swift */; };
+		B74A8D1C27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */; };
+		B74A8D1D27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 		B74A8D0C27BEE42C002F41CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B74A8D1127BFB973002F41CD /* GetAllProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductsUseCase.swift; sourceTree = "<group>"; };
 		B74A8D1527BFBAE4002F41CD /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductUseCase.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D1127BFB973002F41CD /* GetAllProductsUseCase.swift */,
+				B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -620,6 +624,7 @@
 			files = (
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
 				B74A8C9A27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
+				B74A8D1C27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA027BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D0727BEDE67002F41CD /* Cart.swift in Sources */,
 				B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */,
@@ -637,6 +642,7 @@
 			files = (
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
 				B74A8C9B27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
+				B74A8D1D27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA127BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D0827BEDE67002F41CD /* Cart.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
