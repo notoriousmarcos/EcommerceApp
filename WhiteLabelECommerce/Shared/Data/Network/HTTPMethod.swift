@@ -1,6 +1,6 @@
 //
 //  HTTPMethod.swift
-//  TVMazeApp
+//  WhiteLabelECommerce
 //
 //  Created by marcos.brito on 04/09/21.
 //

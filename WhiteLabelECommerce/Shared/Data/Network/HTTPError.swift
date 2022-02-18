@@ -1,6 +1,6 @@
 //
 //  HTTPError.swift
-//  Shortly
+//  WhiteLabelECommerce
 //
 //  Created by marcos.brito on 28/08/21.
 //

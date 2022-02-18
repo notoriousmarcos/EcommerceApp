@@ -1,8 +1,8 @@
 //
 //  HTTPErrorTests.swift
-//  TVMazeAppTests
+//  WhiteLabelECommerce
 //
-//  Created by marcos.brito on 02/09/21.
+//  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
 @testable import WhiteLabelECommerce
