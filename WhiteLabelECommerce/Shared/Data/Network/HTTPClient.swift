@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HTTPGetClient {
+protocol HTTPClient {
     func dispatch<ReturnType: Codable>(
         request: URLRequest,
         completion: @escaping ResultCompletionHandler<ReturnType, HTTPError>

@@ -5,11 +5,10 @@
 //  Created by marcos.brito on 04/09/21.
 //
 
-import XCTest
 @testable import WhiteLabelECommerce
+import XCTest
 
 class HTTPMethodTests: XCTestCase {
-
     func testHTTPMethod_initWithRawValue_ShouldReceiveCorrectHTTPMethod() {
         XCTAssertEqual(HTTPMethod(rawValue: "GET"), .get)
         XCTAssertEqual(HTTPMethod(rawValue: "POST"), .post)

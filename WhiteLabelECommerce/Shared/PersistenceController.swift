@@ -1,5 +1,5 @@
 //
-//  Persistence.swift
+//  PersistenceController.swift
 //  Shared
 //
 //  Created by Marcos Vinicius Brito on 17/02/22.
@@ -34,7 +34,7 @@ struct PersistenceController {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
         container.viewContext.automaticallyMergesChangesFromParent = true
-        container.loadPersistentStores(completionHandler: { (_, error) in
+        container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }

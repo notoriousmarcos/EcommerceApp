@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
-import XCTest
 @testable import WhiteLabelECommerce
+import XCTest
 
 class ProductTests: XCTestCase {
     func testProduct_init_ShouldRetainProperties() {
