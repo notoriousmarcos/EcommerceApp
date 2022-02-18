@@ -89,6 +89,10 @@
 		B74A8D7227C0323F002F41CD /* GetProductRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7027C0323F002F41CD /* GetProductRequestTests.swift */; };
 		B74A8D7427C033A4002F41CD /* GetProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7327C033A4002F41CD /* GetProductRequest.swift */; };
 		B74A8D7527C033A4002F41CD /* GetProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7327C033A4002F41CD /* GetProductRequest.swift */; };
+		B74A8D7727C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */; };
+		B74A8D7827C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */; };
+		B74A8D7A27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */; };
+		B74A8D7B27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +166,8 @@
 		B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductsRequestTests.swift; sourceTree = "<group>"; };
 		B74A8D7027C0323F002F41CD /* GetProductRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequestTests.swift; sourceTree = "<group>"; };
 		B74A8D7327C033A4002F41CD /* GetProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequest.swift; sourceTree = "<group>"; };
+		B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductUseCaseTests.swift; sourceTree = "<group>"; };
+		B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductUseCase.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -436,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */,
+				B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -469,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */,
+				B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -806,6 +814,7 @@
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
 				B74A8D6B27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */,
 				B74A8D4E27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
+				B74A8D7A27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */,
 				B74A8C9A27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1C27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA027BEB5B2002F41CD /* PersistenceController.swift in Sources */,
@@ -838,6 +847,7 @@
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
 				B74A8D6C27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */,
 				B74A8D4F27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
+				B74A8D7B27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */,
 				B74A8C9B27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1D27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA127BEB5B2002F41CD /* PersistenceController.swift in Sources */,
@@ -866,6 +876,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D7727C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B74A8D6427BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D7127C0323F002F41CD /* GetProductRequestTests.swift in Sources */,
@@ -886,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D7827C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B74A8D6527BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D7227C0323F002F41CD /* GetProductRequestTests.swift in Sources */,
