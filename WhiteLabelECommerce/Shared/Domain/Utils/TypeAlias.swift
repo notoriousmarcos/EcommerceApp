@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias ResultCompletionHandler<T> = (Result<T, Error>) -> Void
+typealias ResultCompletionHandler<T, E: Error> = (Result<T, E>) -> Void

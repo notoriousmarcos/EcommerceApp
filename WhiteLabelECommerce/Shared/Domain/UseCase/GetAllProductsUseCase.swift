@@ -8,6 +8,6 @@
 import Foundation
 
 protocol GetAllProductsUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<[Product]>
+    typealias CompletionHandler = ResultCompletionHandler<[Product], Error>
     func execute(completion: @escaping CompletionHandler)
 }
