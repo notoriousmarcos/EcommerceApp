@@ -59,6 +59,16 @@
 		B74A8D3327BFC8BF002F41CD /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3127BFC8BE002F41CD /* AuthenticationTests.swift */; };
 		B74A8D3527BFC992002F41CD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3427BFC992002F41CD /* Authentication.swift */; };
 		B74A8D3627BFC992002F41CD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3427BFC992002F41CD /* Authentication.swift */; };
+		B74A8D4027BFDB1A002F41CD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3F27BFDB1A002F41CD /* HTTPClient.swift */; };
+		B74A8D4127BFDB1A002F41CD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3F27BFDB1A002F41CD /* HTTPClient.swift */; };
+		B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4427BFDCA1002F41CD /* HTTPMethodTests.swift */; };
+		B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4427BFDCA1002F41CD /* HTTPMethodTests.swift */; };
+		B74A8D4827BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4527BFDCA1002F41CD /* HTTPErrorTests.swift */; };
+		B74A8D4927BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4527BFDCA1002F41CD /* HTTPErrorTests.swift */; };
+		B74A8D4C27BFDCB4002F41CD /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */; };
+		B74A8D4D27BFDCB4002F41CD /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */; };
+		B74A8D4E27BFDCB4002F41CD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */; };
+		B74A8D4F27BFDCB4002F41CD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +127,11 @@
 		B74A8D2E27BFC62A002F41CD /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		B74A8D3127BFC8BE002F41CD /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		B74A8D3427BFC992002F41CD /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		B74A8D3F27BFDB1A002F41CD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		B74A8D4427BFDCA1002F41CD /* HTTPMethodTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		B74A8D4527BFDCA1002F41CD /* HTTPErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPErrorTests.swift; sourceTree = "<group>"; };
+		B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +217,7 @@
 		B74A8C6E27BEB5B1002F41CD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B74A8D3D27BFDA7C002F41CD /* Data */,
 				B74A8CBD27BEBE98002F41CD /* Domain */,
 				B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */,
 				B74A8C7227BEB5B1002F41CD /* ContentView.swift */,
@@ -234,6 +250,7 @@
 		B74A8CB227BEB73E002F41CD /* SharedTests */ = {
 			isa = PBXGroup;
 			children = (
+				B74A8D4227BFDC6B002F41CD /* Data */,
 				B74A8CB427BEB7EF002F41CD /* Domain */,
 			);
 			path = SharedTests;
@@ -323,6 +340,41 @@
 				B74A8D1527BFBAE4002F41CD /* TypeAlias.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B74A8D3D27BFDA7C002F41CD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D3E27BFDAE6002F41CD /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B74A8D3E27BFDAE6002F41CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */,
+				B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */,
+				B74A8D3F27BFDB1A002F41CD /* HTTPClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B74A8D4227BFDC6B002F41CD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D4327BFDC77002F41CD /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B74A8D4327BFDC77002F41CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D4527BFDCA1002F41CD /* HTTPErrorTests.swift */,
+				B74A8D4427BFDCA1002F41CD /* HTTPMethodTests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,12 +708,14 @@
 			files = (
 				B74A8D2027BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
+				B74A8D4E27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
 				B74A8C9A27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1C27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA027BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D2327BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0727BEDE67002F41CD /* Cart.swift in Sources */,
 				B74A8D2627BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
+				B74A8D4C27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
 				B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
@@ -671,6 +725,7 @@
 				B74A8C9E27BEB5B2002F41CD /* ContentView.swift in Sources */,
 				B74A8D1227BFB973002F41CD /* GetAllProductsUseCase.swift in Sources */,
 				B74A8CFF27BEDB0A002F41CD /* Product.swift in Sources */,
+				B74A8D4027BFDB1A002F41CD /* HTTPClient.swift in Sources */,
 				B74A8D3527BFC992002F41CD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,12 +736,14 @@
 			files = (
 				B74A8D2127BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
+				B74A8D4F27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
 				B74A8C9B27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1D27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
 				B74A8CA127BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D2427BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0827BEDE67002F41CD /* Cart.swift in Sources */,
 				B74A8D2727BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
+				B74A8D4D27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2D27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
@@ -696,6 +753,7 @@
 				B74A8C9F27BEB5B2002F41CD /* ContentView.swift in Sources */,
 				B74A8D1327BFB973002F41CD /* GetAllProductsUseCase.swift in Sources */,
 				B74A8D0027BEDB0A002F41CD /* Product.swift in Sources */,
+				B74A8D4127BFDB1A002F41CD /* HTTPClient.swift in Sources */,
 				B74A8D3627BFC992002F41CD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +762,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
+				B74A8D4827BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D0A27BEDED6002F41CD /* UsersTests.swift in Sources */,
 				B74A8CE327BEC691002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFC27BED3F6002F41CD /* ProductTests.swift in Sources */,
@@ -716,6 +776,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
+				B74A8D4927BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D0B27BEDED6002F41CD /* UsersTests.swift in Sources */,
 				B74A8CF427BEC81B002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFD27BED3F6002F41CD /* ProductTests.swift in Sources */,
