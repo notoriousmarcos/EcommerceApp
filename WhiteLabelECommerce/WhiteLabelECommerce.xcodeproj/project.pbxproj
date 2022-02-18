@@ -53,6 +53,8 @@
 		B74A8D2A27BFC4C5002F41CD /* UpdateProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2827BFC4C5002F41CD /* UpdateProductInCartUseCase.swift */; };
 		B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2B27BFC551002F41CD /* RemoveProductInCartUseCase.swift */; };
 		B74A8D2D27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2B27BFC551002F41CD /* RemoveProductInCartUseCase.swift */; };
+		B74A8D2F27BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2E27BFC62A002F41CD /* AuthenticationUseCase.swift */; };
+		B74A8D3027BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2E27BFC62A002F41CD /* AuthenticationUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,7 @@
 		B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCartUseCase.swift; sourceTree = "<group>"; };
 		B74A8D2827BFC4C5002F41CD /* UpdateProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductInCartUseCase.swift; sourceTree = "<group>"; };
 		B74A8D2B27BFC551002F41CD /* RemoveProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProductInCartUseCase.swift; sourceTree = "<group>"; };
+		B74A8D2E27BFC62A002F41CD /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +303,7 @@
 				B74A8D2227BFBFE3002F41CD /* AddProductToCartUseCase.swift */,
 				B74A8D2827BFC4C5002F41CD /* UpdateProductInCartUseCase.swift */,
 				B74A8D2B27BFC551002F41CD /* RemoveProductInCartUseCase.swift */,
+				B74A8D2E27BFC62A002F41CD /* AuthenticationUseCase.swift */,
 				B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */,
 			);
 			path = UseCase;
@@ -653,6 +657,7 @@
 				B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
 				B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
+				B74A8D2F27BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
 				B74A8D2927BFC4C5002F41CD /* UpdateProductInCartUseCase.swift in Sources */,
 				B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B74A8C9E27BEB5B2002F41CD /* ContentView.swift in Sources */,
@@ -676,6 +681,7 @@
 				B74A8D2D27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
+				B74A8D3027BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
 				B74A8D2A27BFC4C5002F41CD /* UpdateProductInCartUseCase.swift in Sources */,
 				B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B74A8C9F27BEB5B2002F41CD /* ContentView.swift in Sources */,
