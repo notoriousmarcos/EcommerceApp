@@ -9,5 +9,5 @@ import Foundation
 
 protocol GetProductUseCase {
     typealias CompletionHandler = ResultCompletionHandler<Product, Error>
-    func execute(completion: @escaping CompletionHandler)
+    func execute(id: Int, completion: @escaping CompletionHandler)
 }
