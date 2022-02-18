@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CreateCartUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<Cart>
+    typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
     func execute(
         createCartModel: CreateCartModel,
         completion: @escaping CompletionHandler

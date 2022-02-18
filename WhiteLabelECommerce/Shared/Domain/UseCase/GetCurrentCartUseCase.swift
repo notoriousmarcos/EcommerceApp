@@ -8,6 +8,6 @@
 import Foundation
 
 protocol GetCurrentCartUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<Cart>
+    typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
     func execute(completion: @escaping CompletionHandler)
 }
