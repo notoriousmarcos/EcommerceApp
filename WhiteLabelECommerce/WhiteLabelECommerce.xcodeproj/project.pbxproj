@@ -73,6 +73,18 @@
 		B74A8D5427BFE3FB002F41CD /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D5227BFE3FB002F41CD /* RequestTests.swift */; };
 		B74A8D5727BFE426002F41CD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D5627BFE426002F41CD /* Request.swift */; };
 		B74A8D5827BFE426002F41CD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D5627BFE426002F41CD /* Request.swift */; };
+		B74A8D5B27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */; };
+		B74A8D5C27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */; };
+		B74A8D6127BFE87F002F41CD /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6027BFE87F002F41CD /* MockHTTPClient.swift */; };
+		B74A8D6227BFE87F002F41CD /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6027BFE87F002F41CD /* MockHTTPClient.swift */; };
+		B74A8D6427BFEE77002F41CD /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6327BFEE77002F41CD /* Mocks.swift */; };
+		B74A8D6527BFEE77002F41CD /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6327BFEE77002F41CD /* Mocks.swift */; };
+		B74A8D6727C02C8F002F41CD /* GetAllProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6627C02C8F002F41CD /* GetAllProductsRequest.swift */; };
+		B74A8D6827C02C8F002F41CD /* GetAllProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6627C02C8F002F41CD /* GetAllProductsRequest.swift */; };
+		B74A8D6B27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */; };
+		B74A8D6C27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */; };
+		B74A8D6E27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */; };
+		B74A8D6F27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +150,12 @@
 		B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B74A8D5227BFE3FB002F41CD /* RequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		B74A8D5627BFE426002F41CD /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsUseCaseTests.swift; sourceTree = "<group>"; };
+		B74A8D6027BFE87F002F41CD /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		B74A8D6327BFEE77002F41CD /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		B74A8D6627C02C8F002F41CD /* GetAllProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductsRequest.swift; sourceTree = "<group>"; };
+		B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsUseCase.swift; sourceTree = "<group>"; };
+		B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductsRequestTests.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +274,7 @@
 		B74A8CB227BEB73E002F41CD /* SharedTests */ = {
 			isa = PBXGroup;
 			children = (
+				B74A8D5D27BFE847002F41CD /* Mock */,
 				B74A8D4227BFDC6B002F41CD /* Data */,
 				B74A8CB427BEB7EF002F41CD /* Domain */,
 			);
@@ -351,6 +370,7 @@
 		B74A8D3D27BFDA7C002F41CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B74A8D6927C02D15002F41CD /* UseCase */,
 				B74A8D3E27BFDAE6002F41CD /* Network */,
 			);
 			path = Data;
@@ -378,6 +398,7 @@
 		B74A8D4327BFDC77002F41CD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B74A8D5927BFE75A002F41CD /* UseCase */,
 				B74A8D5127BFE3B5002F41CD /* Request */,
 				B74A8D4527BFDCA1002F41CD /* HTTPErrorTests.swift */,
 				B74A8D4427BFDCA1002F41CD /* HTTPMethodTests.swift */,
@@ -389,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D5227BFE3FB002F41CD /* RequestTests.swift */,
+				B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -397,8 +419,50 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D5627BFE426002F41CD /* Request.swift */,
+				B74A8D6627C02C8F002F41CD /* GetAllProductsRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		B74A8D5927BFE75A002F41CD /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B74A8D5D27BFE847002F41CD /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D5E27BFE853002F41CD /* Data */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B74A8D5E27BFE853002F41CD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D6327BFEE77002F41CD /* Mocks.swift */,
+				B74A8D5F27BFE863002F41CD /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B74A8D5F27BFE863002F41CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D6027BFE87F002F41CD /* MockHTTPClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B74A8D6927C02D15002F41CD /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -732,6 +796,7 @@
 			files = (
 				B74A8D2027BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
+				B74A8D6B27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */,
 				B74A8D4E27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
 				B74A8C9A27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1C27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
@@ -741,6 +806,7 @@
 				B74A8D2627BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D4C27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
+				B74A8D6727C02C8F002F41CD /* GetAllProductsRequest.swift in Sources */,
 				B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8D2F27BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
@@ -761,6 +827,7 @@
 			files = (
 				B74A8D2127BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
+				B74A8D6C27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift in Sources */,
 				B74A8D4F27BFDCB4002F41CD /* HTTPMethod.swift in Sources */,
 				B74A8C9B27BEB5B2002F41CD /* WhiteLabelECommerce.xcdatamodeld in Sources */,
 				B74A8D1D27BFBC4C002F41CD /* GetProductUseCase.swift in Sources */,
@@ -770,6 +837,7 @@
 				B74A8D2727BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D4D27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2D27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
+				B74A8D6827C02C8F002F41CD /* GetAllProductsRequest.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8D3027BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
@@ -788,13 +856,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D6427BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D5327BFE3FB002F41CD /* RequestTests.swift in Sources */,
 				B74A8D4827BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
+				B74A8D5B27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B74A8D0A27BEDED6002F41CD /* UsersTests.swift in Sources */,
 				B74A8CE327BEC691002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFC27BED3F6002F41CD /* ProductTests.swift in Sources */,
+				B74A8D6E27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */,
 				B74A8D3227BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
+				B74A8D6127BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
 				B74A8D0427BEDC95002F41CD /* CartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,13 +875,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A8D6527BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D5427BFE3FB002F41CD /* RequestTests.swift in Sources */,
 				B74A8D4927BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
+				B74A8D5C27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B74A8D0B27BEDED6002F41CD /* UsersTests.swift in Sources */,
 				B74A8CF427BEC81B002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFD27BED3F6002F41CD /* ProductTests.swift in Sources */,
+				B74A8D6F27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */,
 				B74A8D3327BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
+				B74A8D6227BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
 				B74A8D0527BEDC96002F41CD /* CartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
