@@ -13,7 +13,7 @@ struct User: Model {
     let id: Int
     let email: String
     let username: String
-    let token: String
+    var auth: Authentication? = nil
     let firstName: String
     let lastName: String
     let address: String

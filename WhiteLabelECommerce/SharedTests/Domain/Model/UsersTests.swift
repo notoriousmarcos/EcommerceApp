@@ -15,7 +15,7 @@ class UsersTests: XCTestCase {
             id: 1,
             email: "a@a",
             username: "username",
-            token: "token",
+            auth: Authentication(token: "token"),
             firstName: "firstname",
             lastName: "lastname",
             address: "address",
@@ -26,7 +26,7 @@ class UsersTests: XCTestCase {
         XCTAssertEqual(sut.id, 1)
         XCTAssertEqual(sut.email, "a@a")
         XCTAssertEqual(sut.username, "username")
-        XCTAssertEqual(sut.token, "token")
+        XCTAssertEqual(sut.auth?.token, "token")
         XCTAssertEqual(sut.firstName, "firstname")
         XCTAssertEqual(sut.lastName, "lastname")
         XCTAssertEqual(sut.address, "address")
