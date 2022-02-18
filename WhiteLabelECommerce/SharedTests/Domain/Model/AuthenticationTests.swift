@@ -6,10 +6,7 @@
 //
 
 import XCTest
-
-struct Authentication {
-    let token: String
-}
+@testable import WhiteLabelECommerce
 
 class AuthenticationTests: XCTestCase {
 
