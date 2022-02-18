@@ -16,7 +16,7 @@ enum HTTPError: Int, Error {
     case serverError = 500
     case unknown = -1
 
-    public init(rawValue: Int) {
+    init(rawValue: Int) {
         switch rawValue {
             case 400:
                 self = .badRequest

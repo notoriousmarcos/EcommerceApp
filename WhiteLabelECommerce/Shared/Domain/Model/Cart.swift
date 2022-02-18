@@ -8,7 +8,6 @@
 import Foundation
 
 struct Cart {
-
     // MARK: - Properties
     let id: Int
     let userId: Int

@@ -5,11 +5,10 @@
 //  Created by marcos.brito on 02/09/21.
 //
 
-import XCTest
 @testable import WhiteLabelECommerce
+import XCTest
 
 class HTTPErrorTests: XCTestCase {
-
     func testHTTPError_initWithRawValue_ShouldReceiveCorrectError() {
         XCTAssertEqual(HTTPError(rawValue: 400), .badRequest)
         XCTAssertEqual(HTTPError(rawValue: 401), .unauthorized)

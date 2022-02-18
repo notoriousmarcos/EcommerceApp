@@ -8,7 +8,6 @@
 import Foundation
 
 struct Authentication: Model {
-
     // MARK: - Properties
     let token: String
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 struct User: Model {
-
     // MARK: - Properties
     let id: Int
     let email: String

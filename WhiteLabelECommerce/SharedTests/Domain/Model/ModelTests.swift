@@ -5,11 +5,11 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
-import XCTest
 @testable import WhiteLabelECommerce
+import XCTest
 
 class ModelTests: XCTestCase {
-    let sut = TestModel(property: "Test")
+    private let sut = TestModel(property: "Test")
 
     func testModel_toData_ShouldCreateValidData() throws {
         // Act
@@ -27,7 +27,6 @@ class ModelTests: XCTestCase {
     }
 
     func testModel_toJSON_ShouldCreateAValidJSON() {
-
         // Act
         guard let dictionary = sut.toJSON() else {
             XCTFail("Should return a valid dictionary.")
@@ -37,10 +36,9 @@ class ModelTests: XCTestCase {
         // Assert
         XCTAssertTrue(dictionary.keys.contains("property"))
         XCTAssertEqual(dictionary["property"] as? String, sut.property)
-
     }
 
-    struct TestModel: Model {
+    private struct TestModel: Model {
         let property: String
     }
 }
