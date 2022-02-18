@@ -47,6 +47,8 @@
 		B74A8D2127BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D1F27BFBE45002F41CD /* GetCurrentCartUseCase.swift */; };
 		B74A8D2327BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2227BFBFE3002F41CD /* AddProductToCartUseCase.swift */; };
 		B74A8D2427BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2227BFBFE3002F41CD /* AddProductToCartUseCase.swift */; };
+		B74A8D2627BFC213002F41CD /* CreateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */; };
+		B74A8D2727BFC213002F41CD /* CreateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,7 @@
 		B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductUseCase.swift; sourceTree = "<group>"; };
 		B74A8D1F27BFBE45002F41CD /* GetCurrentCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCartUseCase.swift; sourceTree = "<group>"; };
 		B74A8D2227BFBFE3002F41CD /* AddProductToCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductToCartUseCase.swift; sourceTree = "<group>"; };
+		B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCartUseCase.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 				B74A8D1B27BFBC4C002F41CD /* GetProductUseCase.swift */,
 				B74A8D1F27BFBE45002F41CD /* GetCurrentCartUseCase.swift */,
 				B74A8D2227BFBFE3002F41CD /* AddProductToCartUseCase.swift */,
+				B74A8D2527BFC213002F41CD /* CreateCartUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -637,6 +641,7 @@
 				B74A8CA027BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D2327BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0727BEDE67002F41CD /* Cart.swift in Sources */,
+				B74A8D2627BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D1627BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
@@ -657,6 +662,7 @@
 				B74A8CA127BEB5B2002F41CD /* Persistence.swift in Sources */,
 				B74A8D2427BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0827BEDE67002F41CD /* Cart.swift in Sources */,
+				B74A8D2727BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
