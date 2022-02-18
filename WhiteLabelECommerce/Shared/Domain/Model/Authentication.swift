@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Authentication {
+struct Authentication: Model {
     let token: String
 }
