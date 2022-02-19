@@ -93,6 +93,14 @@
 		B74A8D7827C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */; };
 		B74A8D7A27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */; };
 		B74A8D7B27C035BC002F41CD /* RemoteGetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */; };
+		B74A8D7D27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */; };
+		B74A8D7E27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */; };
+		B74A8D8027C11074002F41CD /* GetCurrentCartRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7F27C11074002F41CD /* GetCurrentCartRequestTests.swift */; };
+		B74A8D8127C11074002F41CD /* GetCurrentCartRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D7F27C11074002F41CD /* GetCurrentCartRequestTests.swift */; };
+		B74A8D8327C110F2002F41CD /* GetCurrentCartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D8227C110F2002F41CD /* GetCurrentCartRequest.swift */; };
+		B74A8D8427C110F2002F41CD /* GetCurrentCartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D8227C110F2002F41CD /* GetCurrentCartRequest.swift */; };
+		B74A8D8627C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */; };
+		B74A8D8727C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +176,10 @@
 		B74A8D7327C033A4002F41CD /* GetProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequest.swift; sourceTree = "<group>"; };
 		B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductUseCaseTests.swift; sourceTree = "<group>"; };
 		B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductUseCase.swift; sourceTree = "<group>"; };
+		B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCurrentCartUseCaseTests.swift; sourceTree = "<group>"; };
+		B74A8D7F27C11074002F41CD /* GetCurrentCartRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCartRequestTests.swift; sourceTree = "<group>"; };
+		B74A8D8227C110F2002F41CD /* GetCurrentCartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCartRequest.swift; sourceTree = "<group>"; };
+		B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCurrentCartUseCase.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -422,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D5227BFE3FB002F41CD /* RequestTests.swift */,
+				B74A8D7F27C11074002F41CD /* GetCurrentCartRequestTests.swift */,
 				B74A8D6D27C02D8E002F41CD /* GetAllProductsRequestTests.swift */,
 				B74A8D7027C0323F002F41CD /* GetProductRequestTests.swift */,
 			);
@@ -433,6 +446,7 @@
 			children = (
 				B74A8D5627BFE426002F41CD /* Request.swift */,
 				B74A8D6627C02C8F002F41CD /* GetAllProductsRequest.swift */,
+				B74A8D8227C110F2002F41CD /* GetCurrentCartRequest.swift */,
 				B74A8D7327C033A4002F41CD /* GetProductRequest.swift */,
 			);
 			path = Request;
@@ -443,6 +457,7 @@
 			children = (
 				B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */,
 				B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */,
+				B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -476,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */,
+				B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */,
 				B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */,
 			);
 			path = UseCase;
@@ -820,6 +836,7 @@
 				B74A8CA027BEB5B2002F41CD /* PersistenceController.swift in Sources */,
 				B74A8D2327BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0727BEDE67002F41CD /* Cart.swift in Sources */,
+				B74A8D8727C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift in Sources */,
 				B74A8D2627BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D4C27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
@@ -828,6 +845,7 @@
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8D2F27BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
 				B74A8D2927BFC4C5002F41CD /* UpdateProductInCartUseCase.swift in Sources */,
+				B74A8D8427C110F2002F41CD /* GetCurrentCartRequest.swift in Sources */,
 				B74A8D5727BFE426002F41CD /* Request.swift in Sources */,
 				B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B74A8C9E27BEB5B2002F41CD /* ContentView.swift in Sources */,
@@ -853,6 +871,7 @@
 				B74A8CA127BEB5B2002F41CD /* PersistenceController.swift in Sources */,
 				B74A8D2427BFBFE3002F41CD /* AddProductToCartUseCase.swift in Sources */,
 				B74A8D0827BEDE67002F41CD /* Cart.swift in Sources */,
+				B74A8D8627C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift in Sources */,
 				B74A8D2727BFC213002F41CD /* CreateCartUseCase.swift in Sources */,
 				B74A8D4D27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B74A8D2D27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
@@ -861,6 +880,7 @@
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
 				B74A8D3027BFC62A002F41CD /* AuthenticationUseCase.swift in Sources */,
 				B74A8D2A27BFC4C5002F41CD /* UpdateProductInCartUseCase.swift in Sources */,
+				B74A8D8327C110F2002F41CD /* GetCurrentCartRequest.swift in Sources */,
 				B74A8D5827BFE426002F41CD /* Request.swift in Sources */,
 				B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B74A8C9F27BEB5B2002F41CD /* ContentView.swift in Sources */,
@@ -887,6 +907,8 @@
 				B74A8CE327BEC691002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFC27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D6E27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */,
+				B74A8D7D27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B74A8D8027C11074002F41CD /* GetCurrentCartRequestTests.swift in Sources */,
 				B74A8D3227BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
 				B74A8D6127BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
 				B74A8D0427BEDC95002F41CD /* CartTests.swift in Sources */,
@@ -908,6 +930,8 @@
 				B74A8CF427BEC81B002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFD27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D6F27C02D8E002F41CD /* GetAllProductsRequestTests.swift in Sources */,
+				B74A8D7E27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B74A8D8127C11074002F41CD /* GetCurrentCartRequestTests.swift in Sources */,
 				B74A8D3327BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
 				B74A8D6227BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
 				B74A8D0527BEDC96002F41CD /* CartTests.swift in Sources */,
