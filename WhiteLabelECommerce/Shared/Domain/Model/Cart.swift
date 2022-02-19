@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cart {
+struct Cart: Model {
     // MARK: - Properties
     let id: Int
     let userId: Int

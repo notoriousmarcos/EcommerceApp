@@ -1,5 +1,5 @@
 //
-//  GetProductRequest.swift
+//  GetCurrentCartRequest.swift
 //  WhiteLabelECommerce
 //
 //  Created by Marcos Vinicius Brito on 18/02/22.
@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct GetProductRequest: Request {
+struct GetCurrentCartRequest: Request {
     // MARK: - Typealias
-    typealias ReturnType = Product
-
+    typealias ReturnType = Cart
     // MARK: - Properties
     let baseURL: String
     let method: HTTPMethod = .get
@@ -20,6 +19,6 @@ struct GetProductRequest: Request {
     let headers: [String: String]? = nil
 
     init(id: Int) {
-        baseURL = "https://fakestoreapi.com/products/\(id)"
+        baseURL = "https://fakestoreapi.com/carts/user/\(id)"
     }
 }

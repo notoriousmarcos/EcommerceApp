@@ -17,4 +17,10 @@ struct Mocks {
         description: "Product description",
         imageURL: "https:imageurl"
     )
+    static let cart = Cart(
+        id: 1,
+        userId: 1,
+        date: Date(),
+        products: [product]
+    )
 }

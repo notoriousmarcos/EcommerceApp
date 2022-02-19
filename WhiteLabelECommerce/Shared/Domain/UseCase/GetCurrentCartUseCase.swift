@@ -9,5 +9,5 @@ import Foundation
 
 protocol GetCurrentCartUseCase {
     typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
-    func execute(completion: @escaping CompletionHandler)
+    func execute(id: Int, completion: @escaping CompletionHandler)
 }
