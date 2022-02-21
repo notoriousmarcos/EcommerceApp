@@ -22,5 +22,3 @@ struct CreateCartRequest: Request {
         self.body = cart.toJSON()
     }
 }
-
-
