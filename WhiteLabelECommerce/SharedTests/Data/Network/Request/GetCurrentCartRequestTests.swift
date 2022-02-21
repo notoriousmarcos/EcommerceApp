@@ -11,7 +11,7 @@ import XCTest
 class GetCurrentCartRequestTests: XCTestCase {
     func testGetCurrentCartRequest_init_ShouldRetainCorrectValues() {
         // Arrange
-        let sut = GetCurrentCartRequest(id: 1)
+        let sut = GetCurrentCartRequest(userId: 1)
 
         // Assert
         XCTAssertEqual(sut.baseURL, "https://fakestoreapi.com/carts/user/1")
@@ -24,7 +24,7 @@ class GetCurrentCartRequestTests: XCTestCase {
 
     func testGetGetCurrentCartRequest_asURLRequest_ShouldReturnURLRequest() {
         // Arrange
-        let sut = GetCurrentCartRequest(id: 1)
+        let sut = GetCurrentCartRequest(userId: 1)
 
         // Act
         let urlRequest = sut.asURLRequest()

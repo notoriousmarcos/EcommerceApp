@@ -17,7 +17,7 @@ class RemoteGetCurrentCartUseCaseTests: XCTestCase {
         let sut = RemoteGetCurrentCartUseCase(client: mockClient)
 
         // Act
-        sut.execute(id: 1) { result in
+        sut.execute(userId: 1) { result in
             if case let .success(cart) = result {
                 // Assert
                 XCTAssertEqual(cart, Mocks.cart)
@@ -33,7 +33,7 @@ class RemoteGetCurrentCartUseCaseTests: XCTestCase {
         let sut = RemoteGetCurrentCartUseCase(client: mockClient)
 
         // Act
-        sut.execute(id: 1) { result in
+        sut.execute(userId: 1) { result in
             if case let .failure(error) = result {
                 // Assert
                 XCTAssertEqual(error as? HTTPError, .badRequest)

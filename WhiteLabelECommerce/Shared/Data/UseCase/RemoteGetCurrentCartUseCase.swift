@@ -14,8 +14,8 @@ class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
         self.client = client
     }
 
-    func execute(id: Int, completion: @escaping CompletionHandler) {
-        guard let urlRequest = GetProductRequest(id: id).asURLRequest() else {
+    func execute(userId: Int, completion: @escaping CompletionHandler) {
+        guard let urlRequest = GetProductRequest(userId: userId).asURLRequest() else {
             return
         }
 

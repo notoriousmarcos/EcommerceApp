@@ -9,8 +9,8 @@ import Foundation
 
 struct Cart: Model {
     // MARK: - Properties
-    let id: Int
-    let userId: Int
-    let date: Date
-    let products: [Product]
+    private(set) var id: Int?
+    private(set) var userId: Int
+    private(set) var date: Date
+    private(set) var products: [CartItem]
 }

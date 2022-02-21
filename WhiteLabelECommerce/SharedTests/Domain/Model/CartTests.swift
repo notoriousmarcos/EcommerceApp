@@ -12,25 +12,19 @@ class CartTests: XCTestCase {
     func testCart_init_ShouldRetainProperties() {
         // Arrange
         let creationDate = Date()
-        let product = Product(
-            id: 1,
-            title: "Product",
-            price: 10.0,
-            category: "men's clothing",
-            description: "Product description",
-            imageURL: "https:imageurl"
-        )
+        let item = CartItem(productId: 1, quantity: 1)
+
         let sut = Cart(
             id: 1,
             userId: 1,
             date: creationDate,
-            products: [product]
+            products: [item]
         )
 
        // Assert
         XCTAssertEqual(sut.id, 1)
         XCTAssertEqual(sut.userId, 1)
         XCTAssertEqual(sut.date, creationDate)
-        XCTAssertEqual(sut.products, [product])
+        XCTAssertEqual(sut.products, [item])
     }
 }
