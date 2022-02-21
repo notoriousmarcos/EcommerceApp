@@ -330,6 +330,14 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		B72AE24027C416C800525CCD /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		B746946027C1325A00060003 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,7 +574,7 @@
 			isa = PBXGroup;
 			children = (
 				B72AE23727C4089C00525CCD /* Remote */,
-				B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */,
+				B72AE24027C416C800525CCD /* Local */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
