@@ -11,6 +11,7 @@ protocol UpdateProductInCartUseCase {
     typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
     func execute(
         _ product: Product,
+        withQuantity quantity: Int,
         inCart cart: Cart,
         completion: @escaping CompletionHandler
     )
