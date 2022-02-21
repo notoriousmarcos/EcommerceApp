@@ -14,7 +14,7 @@ class UpdateCartRequestTests: XCTestCase {
     func testUpdateCartRequest_initWithValidCart_ShouldRetainCorrectValues() {
         // Assert
         XCTAssertEqual(sut?.baseURL, "https://fakestoreapi.com/carts/1")
-        XCTAssertEqual(sut?.method, .post)
+        XCTAssertEqual(sut?.method, .put)
         XCTAssertEqual(sut?.contentType, "application/json")
         XCTAssertNil(sut?.params)
         XCTAssertEqual(sut?.body?["id"] as? Int, Mocks.cart.id)

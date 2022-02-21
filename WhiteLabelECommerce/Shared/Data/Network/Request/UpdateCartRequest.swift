@@ -12,7 +12,7 @@ struct UpdateCartRequest: Request {
     typealias ReturnType = Cart
     // MARK: - Properties
     let baseURL: String
-    let method: HTTPMethod = .post
+    let method: HTTPMethod = .put
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
     let body: [String: Any]?
