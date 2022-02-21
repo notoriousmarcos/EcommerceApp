@@ -25,6 +25,10 @@
 		B72AE23327C404FE00525CCD /* UpdateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23127C404FE00525CCD /* UpdateCartUseCase.swift */; };
 		B72AE23527C406CB00525CCD /* RemoteUpdateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23427C406CB00525CCD /* RemoteUpdateCartUseCase.swift */; };
 		B72AE23627C406CB00525CCD /* RemoteUpdateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23427C406CB00525CCD /* RemoteUpdateCartUseCase.swift */; };
+		B72AE23A27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */; };
+		B72AE23B27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */; };
+		B72AE23E27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23D27C4131200525CCD /* LocalAddProductToCartUseCase.swift */; };
+		B72AE23F27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE23D27C4131200525CCD /* LocalAddProductToCartUseCase.swift */; };
 		B746945B27C114C600060003 /* CreateCartRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746945A27C114C600060003 /* CreateCartRequestTests.swift */; };
 		B746945C27C114C600060003 /* CreateCartRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746945A27C114C600060003 /* CreateCartRequestTests.swift */; };
 		B746945E27C1317800060003 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746945D27C1317800060003 /* DateExtension.swift */; };
@@ -167,6 +171,8 @@
 		B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUpdateCartUseCaseTests.swift; sourceTree = "<group>"; };
 		B72AE23127C404FE00525CCD /* UpdateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCartUseCase.swift; sourceTree = "<group>"; };
 		B72AE23427C406CB00525CCD /* RemoteUpdateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUpdateCartUseCase.swift; sourceTree = "<group>"; };
+		B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddProductToCartUseCaseTests.swift; sourceTree = "<group>"; };
+		B72AE23D27C4131200525CCD /* LocalAddProductToCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddProductToCartUseCase.swift; sourceTree = "<group>"; };
 		B746945A27C114C600060003 /* CreateCartRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCartRequestTests.swift; sourceTree = "<group>"; };
 		B746945D27C1317800060003 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B746946127C1327600060003 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
@@ -290,6 +296,38 @@
 				87B1B15A11785EB6B86136EB /* Pods_WhiteLabelECommerceTests_mac_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B72AE23727C4089C00525CCD /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */,
+				B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */,
+				B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */,
+				B746947927C3F05C00060003 /* RemoteCreateCartUseCaseTests.swift */,
+				B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B72AE23827C408AE00525CCD /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */,
+				B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */,
+				B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */,
+				B72AE22127C3F42100525CCD /* RemoteCreateCartUseCase.swift */,
+				B72AE23427C406CB00525CCD /* RemoteUpdateCartUseCase.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B72AE23C27C4130200525CCD /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B72AE23D27C4131200525CCD /* LocalAddProductToCartUseCase.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		B746946027C1325A00060003 /* Utils */ = {
@@ -527,11 +565,8 @@
 		B74A8D5927BFE75A002F41CD /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B74A8D5A27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift */,
-				B74A8D7627C0342F002F41CD /* RemoteGetProductUseCaseTests.swift */,
-				B74A8D7C27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift */,
-				B746947927C3F05C00060003 /* RemoteCreateCartUseCaseTests.swift */,
-				B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */,
+				B72AE23727C4089C00525CCD /* Remote */,
+				B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -564,11 +599,8 @@
 		B74A8D6927C02D15002F41CD /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B74A8D6A27C02D32002F41CD /* RemoteGetAllProductsUseCase.swift */,
-				B74A8D8527C111D6002F41CD /* RemoteGetCurrentCartUseCase.swift */,
-				B74A8D7927C035BC002F41CD /* RemoteGetProductUseCase.swift */,
-				B72AE22127C3F42100525CCD /* RemoteCreateCartUseCase.swift */,
-				B72AE23427C406CB00525CCD /* RemoteUpdateCartUseCase.swift */,
+				B72AE23C27C4130200525CCD /* Local */,
+				B72AE23827C408AE00525CCD /* Remote */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -930,6 +962,7 @@
 				B74A8D5727BFE426002F41CD /* Request.swift in Sources */,
 				B72AE23527C406CB00525CCD /* RemoteUpdateCartUseCase.swift in Sources */,
 				B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
+				B72AE23E27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */,
 				B746947327C15C3500060003 /* StringExtension.swift in Sources */,
 				B72AE23227C404FE00525CCD /* UpdateCartUseCase.swift in Sources */,
 				B74A8C9E27BEB5B2002F41CD /* ContentView.swift in Sources */,
@@ -974,6 +1007,7 @@
 				B74A8D5827BFE426002F41CD /* Request.swift in Sources */,
 				B72AE23627C406CB00525CCD /* RemoteUpdateCartUseCase.swift in Sources */,
 				B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
+				B72AE23F27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */,
 				B746947427C15C3500060003 /* StringExtension.swift in Sources */,
 				B72AE23327C404FE00525CCD /* UpdateCartUseCase.swift in Sources */,
 				B74A8C9F27BEB5B2002F41CD /* ContentView.swift in Sources */,
@@ -996,6 +1030,7 @@
 				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D7127C0323F002F41CD /* GetProductRequestTests.swift in Sources */,
 				B74A8D5327BFE3FB002F41CD /* RequestTests.swift in Sources */,
+				B72AE23A27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */,
 				B74A8D4827BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D5B27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B72AE22F27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */,
@@ -1025,6 +1060,7 @@
 				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B74A8D7227C0323F002F41CD /* GetProductRequestTests.swift in Sources */,
 				B74A8D5427BFE3FB002F41CD /* RequestTests.swift in Sources */,
+				B72AE23B27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */,
 				B74A8D4927BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D5C27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B72AE23027C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */,
