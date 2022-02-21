@@ -1,26 +1,26 @@
 //
-//  CreateCartRequest.swift
+//  UpdateCartRequest.swift
 //  WhiteLabelECommerce
 //
-//  Created by Marcos Vinicius Brito on 19/02/22.
+//  Created by Marcos Vinicius Brito on 21/02/22.
 //
 
 import Foundation
 
-struct CreateCartRequest: Request {
+struct UpdateCartRequest: Request {
     // MARK: - Typealias
     typealias ReturnType = Cart
     // MARK: - Properties
-    let baseURL: String = "https://fakestoreapi.com/carts"
+    let baseURL: String
     let method: HTTPMethod = .post
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
     let body: [String: Any]?
     let headers: [String: String]? = nil
 
-    init(cart: Cart) {
+    init?(cart: Cart) {
+        guard let cartId = cart.id else { return nil }
+        baseURL = "https://fakestoreapi.com/carts/\(cartId)"
         self.body = cart.toJSON()
     }
 }
-
-

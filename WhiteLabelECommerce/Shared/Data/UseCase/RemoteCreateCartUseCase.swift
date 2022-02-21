@@ -1,21 +1,21 @@
 //
-//  RemoteGetCurrentCartUseCase.swift
+//  RemoteCreateCartUseCase.swift
 //  WhiteLabelECommerce
 //
-//  Created by Marcos Vinicius Brito on 18/02/22.
+//  Created by Marcos Vinicius Brito on 21/02/22.
 //
 
 import Foundation
 
-class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
+class RemoteCreateCartUseCase: CreateCartUseCase {
     let client: HTTPClient
 
     init(client: HTTPClient) {
         self.client = client
     }
 
-    func execute(userId: Int, completion: @escaping CompletionHandler) {
-        guard let urlRequest = GetCurrentCartRequest(userId: userId).asURLRequest() else {
+    func execute(cart: Cart, completion: @escaping CompletionHandler) {
+        guard let urlRequest = CreateCartRequest(cart: cart).asURLRequest() else {
             return
         }
 
