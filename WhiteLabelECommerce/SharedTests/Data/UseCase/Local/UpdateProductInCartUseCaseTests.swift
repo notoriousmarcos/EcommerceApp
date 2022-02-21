@@ -77,7 +77,7 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
         // Arrange
         let sut = LocalUpdateProductInCartUseCase()
         let product = Product(
-            id: 1,
+            id: 2,
             title: "Product",
             price: 10.0,
             category: "men's clothing",
@@ -94,6 +94,7 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
                 XCTAssertEqual(cart.date, Mocks.cart.date)
                 XCTAssertEqual(cart.products.count, 1)
                 XCTAssertEqual(cart.products.first?.quantity, 1)
+                XCTAssertEqual(cart.products.first?.productId, 1)
             } else {
                 XCTFail("Should receive a valid response")
             }
