@@ -10,13 +10,7 @@ import Foundation
 protocol CreateCartUseCase {
     typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
     func execute(
-        createCartModel: CreateCartModel,
+        cart: Cart,
         completion: @escaping CompletionHandler
     )
-}
-
-struct CreateCartModel: Model {
-    let userId: Int
-    let date: Date
-    let products: [Product]
 }
