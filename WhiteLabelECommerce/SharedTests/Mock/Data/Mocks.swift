@@ -20,7 +20,11 @@ struct Mocks {
     static let cart = Cart(
         id: 1,
         userId: 1,
-        date: Date(),
-        products: [product]
+        date: Date(timeIntervalSince1970: 122_333),
+        products: [cartItem]
+    )
+    static let cartItem = CartItem(
+        productId: 1,
+        quantity: 1
     )
 }

@@ -18,7 +18,7 @@ struct GetCurrentCartRequest: Request {
     let body: [String: Any]? = nil
     let headers: [String: String]? = nil
 
-    init(id: Int) {
-        baseURL = "https://fakestoreapi.com/carts/user/\(id)"
+    init(userId: Int) {
+        baseURL = "https://fakestoreapi.com/carts/user/\(userId)"
     }
 }
