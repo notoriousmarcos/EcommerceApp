@@ -7,29 +7,26 @@
 
 import Foundation
 
-class RemoteCreateCartUseCase: CreateCartUseCase {
-    let client: HTTPClient
+protocol CreateCartClient {
+    func dispatch(createCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>)
+}
 
-    init(client: HTTPClient) {
+class RemoteCreateCartUseCase: CreateCartUseCase {
+    let client: CreateCartClient
+    
+    init(client: CreateCartClient) {
         self.client = client
     }
-
+    
     func execute(cart: Cart, completion: @escaping CompletionHandler) {
-        guard let urlRequest = CreateCartRequest(cart: cart).asURLRequest() else {
-            return
-        }
-
-        client.dispatch(
-            request: urlRequest,
-            completion: { (result: Result<Cart, HTTPError>) in
-                switch result {
-                    case .success(let cart):
-                        completion(.success(cart))
-
-                    case .failure(let error):
-                        completion(.failure(error))
-                }
+        client.dispatch(createCart: cart) { result in
+            switch result {
+                case .success(let cart):
+                    completion(.success(cart))
+                    
+                case .failure(let error):
+                    completion(.failure(error))
             }
-        )
+        }
     }
 }

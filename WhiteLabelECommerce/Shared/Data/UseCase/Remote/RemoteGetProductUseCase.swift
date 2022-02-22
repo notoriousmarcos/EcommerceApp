@@ -7,29 +7,26 @@
 
 import Foundation
 
-class RemoteGetProductUseCase: GetProductUseCase {
-    let client: HTTPClient
+protocol GetProductClient {
+    func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, HTTPError>)
+}
 
-    init(client: HTTPClient) {
+class RemoteGetProductUseCase: GetProductUseCase {
+    let client: GetProductClient
+
+    init(client: GetProductClient) {
         self.client = client
     }
 
     func execute(id: Int, completion: @escaping CompletionHandler) {
-        guard let urlRequest = GetProductRequest(id: id).asURLRequest() else {
-            return
-        }
-
-        client.dispatch(
-            request: urlRequest,
-            completion: { (result: Result<Product, HTTPError>) in
-                switch result {
-                    case .success(let product):
-                        completion(.success(product))
-
-                    case .failure(let error):
-                        completion(.failure(error))
-                }
+        client.dispatch(productId: id) { (result: Result<Product, HTTPError>) in
+            switch result {
+                case .success(let product):
+                    completion(.success(product))
+                    
+                case .failure(let error):
+                    completion(.failure(error))
             }
-        )
+        }
     }
 }

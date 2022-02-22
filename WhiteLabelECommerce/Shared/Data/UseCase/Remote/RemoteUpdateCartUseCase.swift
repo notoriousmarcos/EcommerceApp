@@ -7,10 +7,14 @@
 
 import Foundation
 
-class RemoteUpdateCartUseCase: UpdateCartUseCase {
-    let client: HTTPClient
+protocol UpdateCartClient {
+    func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>)
+}
 
-    init(client: HTTPClient) {
+class RemoteUpdateCartUseCase: UpdateCartUseCase {
+    let client: UpdateCartClient
+
+    init(client: UpdateCartClient) {
         self.client = client
     }
 
@@ -18,21 +22,14 @@ class RemoteUpdateCartUseCase: UpdateCartUseCase {
         cart: Cart,
         completion: @escaping CompletionHandler
     ) {
-        guard let urlRequest = UpdateCartRequest(cart: cart)?.asURLRequest() else {
-            return
-        }
+        client.dispatch(updateCart: cart) { result in
+            switch result {
+                case .success(let cart):
+                    completion(.success(cart))
 
-        client.dispatch(
-            request: urlRequest,
-            completion: { (result: Result<Cart, HTTPError>) in
-                switch result {
-                    case .success(let cart):
-                        completion(.success(cart))
-
-                    case .failure(let error):
-                        completion(.failure(error))
-                }
+                case .failure(let error):
+                    completion(.failure(error))
             }
-        )
+        }
     }
 }
