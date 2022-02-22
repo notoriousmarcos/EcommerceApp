@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 19/02/22.
 //
 
-@testable import WatchConnectivity
+@testable import WhiteLabelECommerce
 import XCTest
 
 class DateExtensionTests: XCTestCase {

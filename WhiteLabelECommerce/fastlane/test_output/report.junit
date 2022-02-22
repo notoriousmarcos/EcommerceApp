@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='WhiteLabelECommerceTests(mac).xctest' tests='32' failures='0'>
+  <testsuite name='WhiteLabelECommerceTests_mac_.LocalUpdateProductInCartUseCaseTests' tests='4' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithEmptyProducts' time='0.001'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateInvalidProduct_ShouldReturnSameCart' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithOneProductAndQuantityTwo' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithOneProductAndQuantityOne' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.LocalAddProductToCartUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalAddProductToCartUseCaseTests' name='testLocalAddProductToCartUseCase_addSameProduct_ShouldReturnUpdatedCartWithOneProductAndQuantityTwo' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalAddProductToCartUseCaseTests' name='testLocalAddProductToCartUseCase_addProduct_ShouldReturnACartWithOneProduct' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.DateExtensionTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.DateExtensionTests' name='testDate_toString_ShouldReturnAValidString' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.RemoteUpdateCartUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteUpdateCartUseCaseTests' name='testRemoteUpdateCartUseCase_executeWithSuccess_ShouldReturnCart' time='0.001'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteUpdateCartUseCaseTests' name='testRemoteUpdateCartUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.CartItemTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.CartItemTests' name='testCartItem_setQuantity_ShouldUpdateQuantity' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.CartItemTests' name='testCartItem_init_ShouldRetainProperties' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.ModelTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.ModelTests' name='testModel_toData_ShouldCreateValidData' time='0.001'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.ModelTests' name='testModel_toJSON_ShouldCreateAValidJSON' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.CartTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.CartTests' name='testCart_init_ShouldRetainProperties' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.HTTPMethodTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.HTTPMethodTests' name='testHTTPMethod_initWithRawValue_ShouldReceiveCorrectHTTPMethod' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.HTTPErrorTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.HTTPErrorTests' name='testHTTPError_initWithRawValue_ShouldReceiveCorrectError' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.RemoteGetProductUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetProductUseCaseTests' name='testRemoteGetProductUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetProductUseCaseTests' name='testRemoteGetProductUseCase_executeWithSuccess_ShouldReturnProduct' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.RemoteGetAllProductsUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetAllProductsUseCaseTests' name='testRemoteGetAllProductsUseCase_executeWithSuccess_ShouldReturnProducts' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetAllProductsUseCaseTests' name='testRemoteGetAllProductsUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.RemoteCreateCartUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteCreateCartUseCaseTests' name='testRemoteCreateCartUse_executeWithSuccess_ShouldReturnCart' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteCreateCartUseCaseTests' name='testRemoteCreateCartUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.UsersTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.UsersTests' name='testUser_init_ShouldRetainProperties' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.StringExtensionTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.StringExtensionTests' name='testString_createDate_ShouldReturnAValidDate' time='0.001'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.StringExtensionTests' name='testString_createDate_ShouldReturnNil' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.RemoteGetCurrentCartUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetCurrentCartUseCaseTests' name='testRemoteGetCurrentCartUseCase_executeWithSuccess_ShouldReturnProduct' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.RemoteGetCurrentCartUseCaseTests' name='testRemoteGetCurrentCartUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.LocalRemoveProductInCartUseCaseTests' tests='2' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithOneProduct' time='0.000'/>
+    <testcase classname='WhiteLabelECommerceTests_mac_.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithEmptyProducts' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.AuthenticationTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.AuthenticationTests' name='testAuthentication_init_ShouldRetainProperties' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.ProductTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.ProductTests' name='testProduct_init_ShouldRetainProperties' time='0.000'/>
+  </testsuite>
+  <testsuite name='WhiteLabelECommerceTests_mac_.ErrorExtensionTests' tests='1' failures='0'>
+    <testcase classname='WhiteLabelECommerceTests_mac_.ErrorExtensionTests' name='testError_createError_ShouldReturnAValidError' time='0.000'/>
+  </testsuite>
+</testsuites>
