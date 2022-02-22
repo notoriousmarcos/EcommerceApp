@@ -23,7 +23,7 @@ class RemoteGetProductUseCase: GetProductUseCase {
             switch result {
                 case .success(let product):
                     completion(.success(product))
-                    
+
                 case .failure(let error):
                     completion(.failure(error))
             }
