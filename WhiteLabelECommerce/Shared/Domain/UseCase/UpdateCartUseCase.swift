@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UpdateCartUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
+    typealias CompletionHandler = ResultCompletionHandler<Cart, DomainError>
     func execute(
         cart: Cart,
         completion: @escaping CompletionHandler

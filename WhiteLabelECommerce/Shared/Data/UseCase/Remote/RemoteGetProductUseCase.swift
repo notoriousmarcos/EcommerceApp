@@ -25,7 +25,7 @@ class RemoteGetProductUseCase: GetProductUseCase {
                     completion(.success(product))
 
                 case .failure(let error):
-                    completion(.failure(error))
+                    completion(.failure(.requestError(error: error)))
             }
         }
     }

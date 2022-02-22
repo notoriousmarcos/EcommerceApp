@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthenticationUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<User, Error>
+    typealias CompletionHandler = ResultCompletionHandler<User, DomainError>
     func execute(
         authenticationModel: AuthenticationModel,
         completion: @escaping CompletionHandler

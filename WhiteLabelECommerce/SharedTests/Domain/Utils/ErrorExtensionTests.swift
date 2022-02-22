@@ -10,10 +10,9 @@ import XCTest
 
 class ErrorExtensionTests: XCTestCase {
     func testError_createError_ShouldReturnAValidError() {
-        let sut = DomainError.createError(withCode: 1, andMessage: "message") as? NSError
-        XCTAssertNotNil(sut)
-        XCTAssertEqual(sut?.domain, "com.notorious.WhiteLabelECommerce.domain")
-        XCTAssertEqual(sut?.code, 1)
-        XCTAssertEqual(sut?.userInfo["message"] as? String, "message")
+        let sut = DomainError.createError(withCode: 1, andMessage: "message") as NSError
+        XCTAssertEqual(sut.domain, "com.notorious.WhiteLabelECommerce.domain")
+        XCTAssertEqual(sut.code, 1)
+        XCTAssertEqual(sut.userInfo["message"] as? String, "message")
     }
 }

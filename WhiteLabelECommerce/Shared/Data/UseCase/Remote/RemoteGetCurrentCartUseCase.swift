@@ -25,7 +25,7 @@ class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
                     completion(.success(cart))
 
                 case .failure(let error):
-                    completion(.failure(error))
+                    completion(.failure(.requestError(error: error)))
             }
         }
     }
