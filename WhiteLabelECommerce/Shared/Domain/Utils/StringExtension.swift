@@ -14,6 +14,7 @@ public extension String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.dateFormat = format
+        formatter.timeZone = .init(abbreviation: "UTC")
         return formatter.date(from: self)
     }
 }
