@@ -31,6 +31,14 @@
 		B72AE24927C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */; };
 		B72AE24B27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */; };
 		B72AE24C27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */; };
+		B72AE26127C51A3F00525CCD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26027C51A3F00525CCD /* DomainError.swift */; };
+		B72AE26227C51A3F00525CCD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26027C51A3F00525CCD /* DomainError.swift */; };
+		B72AE26427C51C0500525CCD /* ErrorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26327C51C0500525CCD /* ErrorExtensionTests.swift */; };
+		B72AE26527C51C0500525CCD /* ErrorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26327C51C0500525CCD /* ErrorExtensionTests.swift */; };
+		B72AE26727C51C3100525CCD /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26627C51C3100525CCD /* ErrorExtension.swift */; };
+		B72AE26827C51C3100525CCD /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26627C51C3100525CCD /* ErrorExtension.swift */; };
+		B72AE26A27C51E2800525CCD /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26927C51E2800525CCD /* StringExtensionTests.swift */; };
+		B72AE26B27C51E2800525CCD /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26927C51E2800525CCD /* StringExtensionTests.swift */; };
 		B746945E27C1317800060003 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746945D27C1317800060003 /* DateExtension.swift */; };
 		B746945F27C1317800060003 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746945D27C1317800060003 /* DateExtension.swift */; };
 		B746946227C1327600060003 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746946127C1327600060003 /* DateExtensionTests.swift */; };
@@ -156,6 +164,10 @@
 		B72AE24427C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRemoveProductInCartUseCase.swift; sourceTree = "<group>"; };
 		B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductInCartUseCaseTests.swift; sourceTree = "<group>"; };
 		B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUpdateProductInCartUseCase.swift; sourceTree = "<group>"; };
+		B72AE26027C51A3F00525CCD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		B72AE26327C51C0500525CCD /* ErrorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorExtensionTests.swift; path = SharedTests/Domain/Utils/ErrorExtensionTests.swift; sourceTree = SOURCE_ROOT; };
+		B72AE26627C51C3100525CCD /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		B72AE26927C51E2800525CCD /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		B746945D27C1317800060003 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B746946127C1327600060003 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		B746946427C14B6F00060003 /* CartItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTests.swift; sourceTree = "<group>"; };
@@ -315,10 +327,20 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		B72AE25F27C519CC00525CCD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B72AE26027C51A3F00525CCD /* DomainError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		B746946027C1325A00060003 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B72AE26327C51C0500525CCD /* ErrorExtensionTests.swift */,
 				B746946127C1327600060003 /* DateExtensionTests.swift */,
+				B72AE26927C51E2800525CCD /* StringExtensionTests.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -406,6 +428,7 @@
 		B74A8CBD27BEBE98002F41CD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B72AE25F27C519CC00525CCD /* Error */,
 				B74A8D1427BFBAC7002F41CD /* Utils */,
 				B74A8D1027BFB961002F41CD /* UseCase */,
 				B74A8CBE27BEBEA1002F41CD /* Model */,
@@ -469,6 +492,7 @@
 				B74A8D1527BFBAE4002F41CD /* TypeAlias.swift */,
 				B746945D27C1317800060003 /* DateExtension.swift */,
 				B746947227C15C3500060003 /* StringExtension.swift */,
+				B72AE26627C51C3100525CCD /* ErrorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -908,12 +932,14 @@
 				B72AE23E27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */,
 				B72AE24527C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift in Sources */,
 				B746947327C15C3500060003 /* StringExtension.swift in Sources */,
+				B72AE26727C51C3100525CCD /* ErrorExtension.swift in Sources */,
 				B72AE23227C404FE00525CCD /* UpdateCartUseCase.swift in Sources */,
 				B74A8C9E27BEB5B2002F41CD /* ContentView.swift in Sources */,
 				B74A8D1227BFB973002F41CD /* GetAllProductsUseCase.swift in Sources */,
 				B74A8CFF27BEDB0A002F41CD /* Product.swift in Sources */,
 				B74A8D4027BFDB1A002F41CD /* HTTPClient.swift in Sources */,
 				B746946827C14CED00060003 /* CartItem.swift in Sources */,
+				B72AE26127C51A3F00525CCD /* DomainError.swift in Sources */,
 				B74A8D3527BFC992002F41CD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,12 +974,14 @@
 				B72AE23F27C4131200525CCD /* LocalAddProductToCartUseCase.swift in Sources */,
 				B72AE24627C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift in Sources */,
 				B746947427C15C3500060003 /* StringExtension.swift in Sources */,
+				B72AE26827C51C3100525CCD /* ErrorExtension.swift in Sources */,
 				B72AE23327C404FE00525CCD /* UpdateCartUseCase.swift in Sources */,
 				B74A8C9F27BEB5B2002F41CD /* ContentView.swift in Sources */,
 				B74A8D1327BFB973002F41CD /* GetAllProductsUseCase.swift in Sources */,
 				B74A8D0027BEDB0A002F41CD /* Product.swift in Sources */,
 				B74A8D4127BFDB1A002F41CD /* HTTPClient.swift in Sources */,
 				B746946927C14CED00060003 /* CartItem.swift in Sources */,
+				B72AE26227C51A3F00525CCD /* DomainError.swift in Sources */,
 				B74A8D3627BFC992002F41CD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -964,6 +992,7 @@
 			files = (
 				B74A8D7727C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B746946227C1327600060003 /* DateExtensionTests.swift in Sources */,
+				B72AE26A27C51E2800525CCD /* StringExtensionTests.swift in Sources */,
 				B72AE24827C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */,
 				B74A8D6427BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
@@ -976,6 +1005,7 @@
 				B74A8CE327BEC691002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFC27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D7D27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B72AE26427C51C0500525CCD /* ErrorExtensionTests.swift in Sources */,
 				B74A8D3227BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
 				B746947A27C3F05C00060003 /* RemoteCreateCartUseCaseTests.swift in Sources */,
 				B74A8D6127BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
@@ -990,6 +1020,7 @@
 			files = (
 				B74A8D7827C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B746946327C1327600060003 /* DateExtensionTests.swift in Sources */,
+				B72AE26B27C51E2800525CCD /* StringExtensionTests.swift in Sources */,
 				B72AE24927C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */,
 				B74A8D6527BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
@@ -1002,6 +1033,7 @@
 				B74A8CF427BEC81B002F41CD /* ModelTests.swift in Sources */,
 				B74A8CFD27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D7E27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B72AE26527C51C0500525CCD /* ErrorExtensionTests.swift in Sources */,
 				B74A8D3327BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
 				B746947B27C3F05C00060003 /* RemoteCreateCartUseCaseTests.swift in Sources */,
 				B74A8D6227BFE87F002F41CD /* MockHTTPClient.swift in Sources */,
