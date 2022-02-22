@@ -28,6 +28,5 @@ class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
                     completion(.failure(error))
             }
         }
-
     }
 }
