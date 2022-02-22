@@ -2,7 +2,11 @@ name: Pull request
 on: 
   pull_request:
     branches:
-      - develop
+      - 'main'
+  push:
+    branches:    
+      - 'main'
+  
 jobs:
   test:
     runs-on: macos-11.6
@@ -23,6 +27,10 @@ jobs:
         with:
           ruby-version: 3.0.3
           bundler-cache: true
+      - name: Bundle install
+        run: bundle install
+      - name: Pod install
+        run: bundle exec pod install
       - name: Test - iOS
         run: bundle exec fastlane ios test
       - name: Test - macOS
