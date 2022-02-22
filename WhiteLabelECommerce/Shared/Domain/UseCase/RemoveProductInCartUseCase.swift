@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RemoveProductInCartUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
+    typealias CompletionHandler = ResultCompletionHandler<Cart, DomainError>
     func execute(
         _ product: Product,
         inCart cart: Cart,

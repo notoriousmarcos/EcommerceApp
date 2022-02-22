@@ -37,9 +37,10 @@ class RemoteUpdateCartUseCaseTests: XCTestCase {
 
         // Act
         sut.execute(cart: Mocks.cart) { result in
-            if case let .failure(error) = result {
+            if case let .failure(error) = result,
+               case let .requestError(error) = error {
                 // Assert
-                XCTAssertEqual(error as? HTTPError, .badRequest)
+                XCTAssertEqual(error, .badRequest)
             } else {
                 XCTFail("Should receive an error response")
             }

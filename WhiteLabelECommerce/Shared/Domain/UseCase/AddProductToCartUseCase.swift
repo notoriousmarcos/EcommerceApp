@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AddProductToCartUseCase {
-    typealias CompletionHandler = ResultCompletionHandler<Cart, Error>
+    typealias CompletionHandler = ResultCompletionHandler<Cart, DomainError>
     func execute(
         _ product: Product,
         toCart cart: Cart,
