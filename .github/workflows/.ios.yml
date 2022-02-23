@@ -9,7 +9,7 @@ on:
   
 jobs:
   test:
-    runs-on: macos-11.6
+    runs-on: macos-latest
     timeout-minutes: 15
     steps:
       - name: Cancel previous jobs
