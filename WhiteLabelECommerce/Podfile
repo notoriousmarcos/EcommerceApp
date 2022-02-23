@@ -10,7 +10,7 @@ target 'WhiteLabelECommerce (iOS)' do
 end
 
 target 'WhiteLabelECommerce (macOS)' do
-  platform :osx, '12.0'
+  platform :osx, '11.0'
   use_frameworks!
   target 'WhiteLabelECommerceTests(mac)' do
     inherit! :search_paths
