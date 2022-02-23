@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_ : NSObject
+@end
+@implementation PodsDummy_Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_
+@end

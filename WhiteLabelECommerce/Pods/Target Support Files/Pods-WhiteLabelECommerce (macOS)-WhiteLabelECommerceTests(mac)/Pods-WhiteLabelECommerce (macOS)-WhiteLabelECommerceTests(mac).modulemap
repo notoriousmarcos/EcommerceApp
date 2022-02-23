@@ -1,0 +1,6 @@
+framework module Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_ {
+  umbrella header "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)-umbrella.h"
+
+  export *
+  module * { export * }
+}
