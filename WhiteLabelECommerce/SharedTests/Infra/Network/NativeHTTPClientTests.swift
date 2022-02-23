@@ -36,35 +36,12 @@ class NativeHTTPClientTests: XCTestCase {
             return (HTTPURLResponse(), validData, nil)
         }
 
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
+        sut.dispatch(request: urlRequest) { (result: Result<Data, HTTPError>) in
             switch result {
-                case .success(let response):
-                    XCTAssertEqual(response["response"], "value")
+                case .success(let data):
+                    XCTAssertEqual(data, data)
                 case .failure:
                     XCTFail("Should return a valid data")
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
-    }
-
-    func testNativeHTTPClient_makeRequest_ShouldReturnUnknown() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let invalidJSONData = "{\"response\": \"value\"".data(using: .utf8)!
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { _ in
-            return (HTTPURLResponse(), invalidJSONData, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .unknown)
             }
             exp.fulfill()
         }
@@ -92,7 +69,7 @@ class NativeHTTPClientTests: XCTestCase {
             return (requestHandlerResponse, nil, nil)
         }
 
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
+        sut.dispatch(request: urlRequest) { (result: Result<Data, HTTPError>) in
             switch result {
                 case .success:
                     XCTFail("Should return an error")
