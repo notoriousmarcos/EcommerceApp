@@ -27,4 +27,14 @@ struct Mocks {
         productId: 1,
         quantity: 1
     )
+    static let user = User(
+        id: 1,
+        email: "a@a",
+        username: "username",
+        auth: Authentication(token: "token"),
+        firstName: "firstname",
+        lastName: "lastname",
+        address: "address",
+        phone: "1111111"
+    )
 }
