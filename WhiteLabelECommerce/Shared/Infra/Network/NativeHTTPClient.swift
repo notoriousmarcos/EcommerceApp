@@ -19,9 +19,9 @@ class NativeHTTPClient: HTTPClient {
     }
 
     // MARK: - Functions
-    func dispatch<ReturnType: Codable>(
+    func dispatch(
         request: URLRequest,
-        completion: @escaping ResultCompletionHandler<ReturnType, HTTPError>
+        completion: @escaping ResultCompletionHandler<Data, HTTPError>
     ) {
         var subscription: AnyCancellable?
         var isComplete = false
@@ -45,7 +45,7 @@ class NativeHTTPClient: HTTPClient {
         }
     }
 
-    private func dispatch<ReturnType: Codable>(request: URLRequest) -> AnyPublisher<ReturnType, HTTPError> {
+    private func dispatch(request: URLRequest) -> AnyPublisher<Data, HTTPError> {
         return session
             .dataTaskPublisher(for: request)
             .tryMap({ [weak self] data, response in
@@ -55,7 +55,6 @@ class NativeHTTPClient: HTTPClient {
                 }
                 return data
             })
-            .decode(type: ReturnType.self, decoder: JSONDecoder())
             .mapError { [weak self] error in
                 guard let error = error as? HTTPError else {
                     return self?.handleError(error) ?? .unknown
