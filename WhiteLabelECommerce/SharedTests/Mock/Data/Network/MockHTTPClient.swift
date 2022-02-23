@@ -110,3 +110,23 @@ extension MockHTTPClient: UpdateCartClient {
         )
     }
 }
+
+extension MockHTTPClient: AuthenticationClient {
+    func dispatch(
+        authentication: AuthenticationModel,
+        _ completion: @escaping ResultCompletionHandler<User, HTTPError>
+    ) {
+        dispatch(
+            request: URLRequest(url: url),
+            completion: { (result: Result<User, HTTPError>) in
+                switch result {
+                    case .success(let user):
+                        completion(.success(user))
+
+                    case .failure(let error):
+                        completion(.failure(error))
+                }
+            }
+        )
+    }
+}
