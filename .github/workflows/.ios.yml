@@ -11,6 +11,9 @@ jobs:
   test:
     runs-on: macos-latest
     timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: ./WhiteLabelECommerce
     steps:
       - name: Cancel previous jobs
         uses: styfle/cancel-workflow-action@0.9.1
