@@ -16,6 +16,7 @@ class NativeHTTPClientTests: XCTestCase {
         return URLSession(configuration: configuration)
     }()
     private let urlRequest = URLRequest(url: URL(string: "http://google.com")!)
+    private lazy var sut = NativeHTTPClient(session: session)
 
     func testNativeHTTPClient_init_ShouldRetainProperties() {
         // Arrange
@@ -71,132 +72,32 @@ class NativeHTTPClientTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
-    func testNativeHTTPClient_makeGetRequest_ShouldReturnBadRequest() {
+    func testNativeHTTPClient_makeRequest_ShouldValidateMapError() {
         // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: 400), nil, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .badRequest)
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 400), expectedError: .badRequest)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 401), expectedError: .unauthorized)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 403), expectedError: .forbidden)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 404), expectedError: .notFound)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 500), expectedError: .serverError)
+        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: -1), expectedError: .unknown)
     }
 
-    func testNativeHTTPClient_makeGetRequest_ShouldReturnUnauthorized() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
+    private func assertRequestFailing(
+        with requestHandlerResponse: URLResponse,
+        expectedError error: HTTPError
+    ) {
         let exp = expectation(description: "Waiting for Request")
 
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: 401), nil, nil)
+        MockURLProtocol.requestHandler = { _ in
+            return (requestHandlerResponse, nil, nil)
         }
 
         sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
             switch result {
                 case .success:
                     XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .unauthorized)
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
-    }
-
-    func testNativeHTTPClient_makeGetRequest_ShouldReturnForbidden() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: 403), nil, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .forbidden)
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
-    }
-
-    func testNativeHTTPClient_makeGetRequest_ShouldReturnNotFound() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: 404), nil, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .notFound)
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
-    }
-
-    func testNativeHTTPClient_makeGetRequest_ShouldReturnServerError() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: 500), nil, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .serverError)
-            }
-            exp.fulfill()
-        }
-
-        wait(for: [exp], timeout: 1)
-    }
-
-    func testNativeHTTPClient_makeInvalidRequest_ShouldReturnUnknown() {
-        // Arrange
-        let sut = NativeHTTPClient(session: session)
-        let validData = Data()
-        let exp = expectation(description: "Waiting for Request")
-
-        MockURLProtocol.requestHandler = { request in
-            return (self.createErrorResponseForRequest(request, code: -1), validData, nil)
-        }
-
-        sut.dispatch(request: urlRequest) { (result: Result<[String: String], HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let error):
-                    XCTAssertEqual(error, .unknown)
+                case .failure(let receivedError):
+                    XCTAssertEqual(receivedError, error)
             }
             exp.fulfill()
         }

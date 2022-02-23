@@ -8,7 +8,8 @@
 import XCTest
 
 class MockURLProtocol: URLProtocol {
-    static var requestHandler: ((URLRequest) -> (URLResponse, Data?, Error?))? // swiftlint:disable:this large_tuple
+    typealias RequestHandler = ((URLRequest) -> (URLResponse, Data?, Error?))
+    static var requestHandler: RequestHandler?
 
     override class func canInit(with request: URLRequest) -> Bool {
         return true
