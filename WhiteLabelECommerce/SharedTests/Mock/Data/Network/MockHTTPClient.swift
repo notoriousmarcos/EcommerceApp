@@ -27,7 +27,7 @@ class MockHTTPClient: HTTPClient {
 }
 
 extension MockHTTPClient: GetAllProductsClient {
-    func dispatch(_ completion: @escaping ResultCompletionHandler<[Product], HTTPError>) {
+    func dispatch(_ completion: @escaping ResultCompletionHandler<[Product], DomainError>) {
         dispatch(
             request: URLRequest(url: url),
             completion: { (result: Result<[Product], HTTPError>) in
@@ -36,7 +36,7 @@ extension MockHTTPClient: GetAllProductsClient {
                         completion(.success(products))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
@@ -44,7 +44,7 @@ extension MockHTTPClient: GetAllProductsClient {
 }
 
 extension MockHTTPClient: GetProductClient {
-    func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, HTTPError>) {
+    func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, DomainError>) {
         dispatch(
             request: URLRequest(url: url),
             completion: { (result: Result<Product, HTTPError>) in
@@ -53,7 +53,7 @@ extension MockHTTPClient: GetProductClient {
                         completion(.success(product))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
@@ -61,7 +61,7 @@ extension MockHTTPClient: GetProductClient {
 }
 
 extension MockHTTPClient: GetCurrentCartClient {
-    func dispatch(userId id: Int, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>) {
+    func dispatch(userId id: Int, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>) {
         dispatch(
             request: URLRequest(url: url),
             completion: { (result: Result<Cart, HTTPError>) in
@@ -70,7 +70,7 @@ extension MockHTTPClient: GetCurrentCartClient {
                         completion(.success(cart))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
@@ -78,7 +78,7 @@ extension MockHTTPClient: GetCurrentCartClient {
 }
 
 extension MockHTTPClient: CreateCartClient {
-    func dispatch(createCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>) {
+    func dispatch(createCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>) {
         dispatch(
             request: URLRequest(url: url),
             completion: { (result: Result<Cart, HTTPError>) in
@@ -87,7 +87,7 @@ extension MockHTTPClient: CreateCartClient {
                         completion(.success(cart))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
@@ -95,7 +95,7 @@ extension MockHTTPClient: CreateCartClient {
 }
 
 extension MockHTTPClient: UpdateCartClient {
-    func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>) {
+    func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>) {
         dispatch(
             request: URLRequest(url: url),
             completion: { (result: Result<Cart, HTTPError>) in
@@ -104,7 +104,7 @@ extension MockHTTPClient: UpdateCartClient {
                         completion(.success(cart))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
@@ -114,7 +114,7 @@ extension MockHTTPClient: UpdateCartClient {
 extension MockHTTPClient: AuthenticationClient {
     func dispatch(
         authentication: AuthenticationModel,
-        _ completion: @escaping ResultCompletionHandler<User, HTTPError>
+        _ completion: @escaping ResultCompletionHandler<User, DomainError>
     ) {
         dispatch(
             request: URLRequest(url: url),
@@ -124,7 +124,7 @@ extension MockHTTPClient: AuthenticationClient {
                         completion(.success(user))
 
                     case .failure(let error):
-                        completion(.failure(error))
+                        completion(.failure(.requestError(error: error)))
                 }
             }
         )
