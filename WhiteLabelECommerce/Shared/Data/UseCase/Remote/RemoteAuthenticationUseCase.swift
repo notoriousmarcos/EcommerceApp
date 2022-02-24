@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthenticationClient {
-    func dispatch(authentication: AuthenticationModel, _ completion: @escaping ResultCompletionHandler<User, HTTPError>)
+    func dispatch(authentication: AuthenticationModel, _ completion: @escaping ResultCompletionHandler<User, DomainError>)
 }
 
 class RemoteAuthenticationUseCase: AuthenticationUseCase {
@@ -23,13 +23,7 @@ class RemoteAuthenticationUseCase: AuthenticationUseCase {
         completion: @escaping CompletionHandler
     ) {
         client.dispatch(authentication: authenticationModel) { result in
-            switch result {
-                case .success(let cart):
-                    completion(.success(cart))
-
-                case .failure(let error):
-                    completion(.failure(.requestError(error: error)))
-            }
+            completion(result)
         }
     }
 }

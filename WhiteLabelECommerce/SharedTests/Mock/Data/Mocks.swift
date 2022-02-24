@@ -17,6 +17,44 @@ struct Mocks {
         description: "Product description",
         imageURL: "https:imageurl"
     )
+    static let products = [
+        Product(
+            id: 1,
+            title: "Product",
+            price: 10.0,
+            category: "men's clothing",
+            description: "Product description",
+            imageURL: "https:imageurl"
+        ),
+        Product(
+            id: 2,
+            title: "Product",
+            price: 10.0,
+            category: "Women's clothing",
+            description: "Product description",
+            imageURL: "https:imageurl"
+        )
+    ]
+    static let productsData = """
+        [
+            {
+                \"id\":1,
+                \"title\":\"Product\",
+                \"price\":10.0,
+                \"category\":\"men'sclothing\",
+                \"description\":\"Productdescription\",
+                \"imageURL\":\"https://imageurl\"
+            },
+            {
+                \"id\":2,
+                \"title\":\"Product\",
+                \"price\":10.0,
+                \"category\":\"Women'sclothing\",
+                \"description\":\"Productdescription\",
+                \"imageURL\":\"https://imageurl\"
+            }
+        ]
+    """.data(using: .utf8)
     static let cart = Cart(
         id: 1,
         userId: 1,

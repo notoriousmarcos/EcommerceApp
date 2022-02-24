@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetProductClient {
-    func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, HTTPError>)
+    func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, DomainError>)
 }
 
 class RemoteGetProductUseCase: GetProductUseCase {
@@ -19,14 +19,8 @@ class RemoteGetProductUseCase: GetProductUseCase {
     }
 
     func execute(id: Int, completion: @escaping CompletionHandler) {
-        client.dispatch(productId: id) { (result: Result<Product, HTTPError>) in
-            switch result {
-                case .success(let product):
-                    completion(.success(product))
-
-                case .failure(let error):
-                    completion(.failure(.requestError(error: error)))
-            }
+        client.dispatch(productId: id) { result in
+            completion(result)
         }
     }
 }

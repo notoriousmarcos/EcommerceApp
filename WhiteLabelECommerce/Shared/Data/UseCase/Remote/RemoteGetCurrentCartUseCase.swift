@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetCurrentCartClient {
-    func dispatch(userId id: Int, _ completion: @escaping ResultCompletionHandler<Cart, HTTPError>)
+    func dispatch(userId id: Int, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>)
 }
 
 class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
@@ -20,13 +20,7 @@ class RemoteGetCurrentCartUseCase: GetCurrentCartUseCase {
 
     func execute(userId: Int, completion: @escaping CompletionHandler) {
         client.dispatch(userId: userId) { result in
-            switch result {
-                case .success(let cart):
-                    completion(.success(cart))
-
-                case .failure(let error):
-                    completion(.failure(.requestError(error: error)))
-            }
+            completion(result)
         }
     }
 }
