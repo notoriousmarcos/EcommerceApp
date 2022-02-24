@@ -9,11 +9,11 @@
 import XCTest
 
 class RemoteGetProductUseCaseTests: XCTestCase {
-    private let mockClient = MockHTTPClient()
+    private let mockClient = MockClients()
 
     func testRemoteGetProductUseCase_executeWithSuccess_ShouldReturnProduct() {
         // Arrange
-        mockClient.result = Mocks.product
+        mockClient.result = .success(Mocks.product)
         let sut = RemoteGetProductUseCase(client: mockClient)
 
         // Act
@@ -29,7 +29,7 @@ class RemoteGetProductUseCaseTests: XCTestCase {
 
     func testRemoteGetProductUseCase_executeWithFailure_ShouldReturnError() {
         // Arrange
-        mockClient.error = HTTPError.badRequest
+        mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteGetProductUseCase(client: mockClient)
 
         // Act

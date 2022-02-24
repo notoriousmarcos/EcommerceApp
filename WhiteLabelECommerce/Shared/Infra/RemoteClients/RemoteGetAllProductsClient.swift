@@ -32,7 +32,7 @@ struct RemoteGetAllProductsClient: GetAllProductsClient {
                             .success(products)
                         )
                     } catch {
-                        completion(.failure(.unknown(error: error)))
+                        completion(.failure(.errorOnParsing(error: error)))
                     }
                 case .failure(let error):
                     completion(.failure(.requestError(error: error)))

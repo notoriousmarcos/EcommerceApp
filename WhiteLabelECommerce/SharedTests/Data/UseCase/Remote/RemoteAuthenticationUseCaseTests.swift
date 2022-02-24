@@ -9,13 +9,13 @@
 import XCTest
 
 class RemoteAuthenticationUseCaseTests: XCTestCase {
-    private let mockClient = MockHTTPClient()
+    private let mockClient = MockClients()
     private let authentication = AuthenticationModel(email: "username", password: "password")
     private lazy var sut = RemoteAuthenticationUseCase(client: mockClient)
 
     func testRemoteAuthenticationUseCase_executeWithSuccess_ShouldReturnUser() {
         // Arrange
-        mockClient.result = Mocks.user
+        mockClient.result = .success(Mocks.user)
 
         // Act
         sut.execute(authenticationModel: authentication) { result in
@@ -37,7 +37,7 @@ class RemoteAuthenticationUseCaseTests: XCTestCase {
 
     func testRemoteAuthenticationUseCase_executeWithFailure_ShouldReturnError() {
         // Arrange
-        mockClient.error = HTTPError.badRequest
+        mockClient.result = .failure(.requestError(error: .badRequest))
 
         // Act
         sut.execute(authenticationModel: authentication) { result in

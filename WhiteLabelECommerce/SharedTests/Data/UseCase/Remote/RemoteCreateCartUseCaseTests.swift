@@ -9,7 +9,7 @@
 import XCTest
 
 class RemoteCreateCartUseCaseTests: XCTestCase {
-    private let mockClient = MockHTTPClient()
+    private let mockClient = MockClients()
     private let cart = Cart(
         id: nil,
         userId: 1,
@@ -19,7 +19,7 @@ class RemoteCreateCartUseCaseTests: XCTestCase {
 
     func testRemoteCreateCartUse_executeWithSuccess_ShouldReturnCart() {
         // Arrange
-        mockClient.result = Mocks.cart
+        mockClient.result = .success(Mocks.cart)
         let sut = RemoteCreateCartUseCase(client: mockClient)
 
         // Act
@@ -38,7 +38,7 @@ class RemoteCreateCartUseCaseTests: XCTestCase {
 
     func testRemoteCreateCartUseCase_executeWithFailure_ShouldReturnError() {
         // Arrange
-        mockClient.error = HTTPError.badRequest
+        mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteCreateCartUseCase(client: mockClient)
 
         // Act

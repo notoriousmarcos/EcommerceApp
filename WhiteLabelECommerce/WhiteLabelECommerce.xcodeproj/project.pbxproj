@@ -167,6 +167,8 @@
 		B7F20FA927C7C1AA0018ADAF /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FA727C7C1AA0018ADAF /* URLRequestExtension.swift */; };
 		B7F20FAC27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FAB27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift */; };
 		B7F20FAD27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FAB27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift */; };
+		B7F20FAF27C7E1F90018ADAF /* MockClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FAE27C7E1F90018ADAF /* MockClients.swift */; };
+		B7F20FB027C7E1F90018ADAF /* MockClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FAE27C7E1F90018ADAF /* MockClients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +283,7 @@
 		B7F20FA427C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsClientTests.swift; sourceTree = "<group>"; };
 		B7F20FA727C7C1AA0018ADAF /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		B7F20FAB27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsClient.swift; sourceTree = "<group>"; };
+		B7F20FAE27C7E1F90018ADAF /* MockClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClients.swift; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		C27BAD843FE856A0074B1D47 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig"; sourceTree = "<group>"; };
 		D698E6D0A117864912462B8C /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig"; sourceTree = "<group>"; };
@@ -640,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A8D6027BFE87F002F41CD /* MockHTTPClient.swift */,
+				B7F20FAE27C7E1F90018ADAF /* MockClients.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1207,6 +1211,7 @@
 				B75F0DA727C668360031412C /* GetAllProductsRequestTests.swift in Sources */,
 				B72AE24227C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift in Sources */,
 				B75F0DAB27C668360031412C /* CreateCartRequestTests.swift in Sources */,
+				B7F20FAF27C7E1F90018ADAF /* MockClients.swift in Sources */,
 				B74A8D4827BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D5B27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B72AE22F27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */,
@@ -1246,6 +1251,7 @@
 				B75F0DA827C668360031412C /* GetAllProductsRequestTests.swift in Sources */,
 				B72AE24327C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift in Sources */,
 				B75F0DAC27C668360031412C /* CreateCartRequestTests.swift in Sources */,
+				B7F20FB027C7E1F90018ADAF /* MockClients.swift in Sources */,
 				B74A8D4927BFDCA1002F41CD /* HTTPErrorTests.swift in Sources */,
 				B74A8D5C27BFE780002F41CD /* RemoteGetAllProductsUseCaseTests.swift in Sources */,
 				B72AE23027C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */,

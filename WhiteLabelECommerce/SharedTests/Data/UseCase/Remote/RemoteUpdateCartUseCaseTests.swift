@@ -9,11 +9,11 @@
 import XCTest
 
 class RemoteUpdateCartUseCaseTests: XCTestCase {
-    private let mockClient = MockHTTPClient()
+    private let mockClient = MockClients()
 
     func testRemoteUpdateCartUseCase_executeWithSuccess_ShouldReturnCart() {
         // Arrange
-        mockClient.result = Mocks.cart
+        mockClient.result = .success(Mocks.cart)
         let sut = RemoteUpdateCartUseCase(client: mockClient)
 
         // Act
@@ -32,7 +32,7 @@ class RemoteUpdateCartUseCaseTests: XCTestCase {
 
     func testRemoteUpdateCartUseCase_executeWithFailure_ShouldReturnError() {
         // Arrange
-        mockClient.error = HTTPError.badRequest
+        mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteUpdateCartUseCase(client: mockClient)
 
         // Act

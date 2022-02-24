@@ -9,15 +9,12 @@
 import XCTest
 
 class RemoteGetAllProductsClientTests: XCTestCase {
-    private lazy var session: URLSession = {
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [MockURLProtocol.self]
-        return URLSession(configuration: configuration)
-    }()
-    private lazy var httpClient = NativeHTTPClient(session: session)
+    private lazy var httpClient = MockHTTPClient()
     private lazy var sut = RemoteGetAllProductsClient(httpClient: httpClient)
 
     func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithNoProducts() {
+        // Arrange
+        httpClient.result = "[]".data(using: .utf8)
         // Act
         sut.dispatch { result in
             if case let .success(products) = result {
@@ -31,9 +28,7 @@ class RemoteGetAllProductsClientTests: XCTestCase {
     func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Assert
         let expectedProducts = Mocks.products
-        MockURLProtocol.requestHandler = { _ in
-            return (HTTPURLResponse(), Mocks.productsData, nil)
-        }
+        httpClient.result = Mocks.productsData
 
         // Act
         sut.dispatch { result in
@@ -47,9 +42,7 @@ class RemoteGetAllProductsClientTests: XCTestCase {
 
     func testRemoteGetAllProductsClient_dispatch_ShouldReceiveAParseError() {
         // Assert
-        MockURLProtocol.requestHandler = { _ in
-            return (HTTPURLResponse(), Data(), nil)
-        }
+        httpClient.result = Data()
 
         // Act
         sut.dispatch { result in
@@ -64,13 +57,7 @@ class RemoteGetAllProductsClientTests: XCTestCase {
 
     func testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
-        MockURLProtocol.requestHandler = { request in
-            let response = HTTPURLResponse(url: request.url!,
-                                           statusCode: 401,
-                                           httpVersion: nil,
-                                           headerFields: request.allHTTPHeaderFields)!
-            return (response, nil, nil)
-        }
+        httpClient.error = .unauthorized
 
         // Act
         sut.dispatch { result in
