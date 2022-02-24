@@ -24,7 +24,7 @@ struct Mocks {
             price: 10.0,
             category: "men's clothing",
             description: "Product description",
-            imageURL: "https:imageurl"
+            imageURL: "https://imageurl"
         ),
         Product(
             id: 2,
@@ -32,7 +32,7 @@ struct Mocks {
             price: 10.0,
             category: "Women's clothing",
             description: "Product description",
-            imageURL: "https:imageurl"
+            imageURL: "https://imageurl"
         )
     ]
     static let productsData = """
@@ -41,16 +41,16 @@ struct Mocks {
                 \"id\":1,
                 \"title\":\"Product\",
                 \"price\":10.0,
-                \"category\":\"men'sclothing\",
-                \"description\":\"Productdescription\",
+                \"category\":\"men's clothing\",
+                \"description\":\"Product description\",
                 \"imageURL\":\"https://imageurl\"
             },
             {
                 \"id\":2,
                 \"title\":\"Product\",
                 \"price\":10.0,
-                \"category\":\"Women'sclothing\",
-                \"description\":\"Productdescription\",
+                \"category\":\"Women's clothing\",
+                \"description\":\"Product description\",
                 \"imageURL\":\"https://imageurl\"
             }
         ]
