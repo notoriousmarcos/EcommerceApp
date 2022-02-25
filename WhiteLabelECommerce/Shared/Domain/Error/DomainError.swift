@@ -8,7 +8,7 @@
 import Foundation
 
 enum DomainError: Error {
-    case unknown(error: Error)
+    case unknown(error: Error?)
     case requestError(error: HTTPError)
     case errorOnParsing(error: Error)
     case guardError(error: Error)

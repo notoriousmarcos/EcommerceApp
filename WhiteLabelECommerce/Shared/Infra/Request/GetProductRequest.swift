@@ -8,9 +8,6 @@
 import Foundation
 
 struct GetProductRequest: Request {
-    // MARK: - Typealias
-    typealias ReturnType = Product
-
     // MARK: - Properties
     let baseURL: String
     let method: HTTPMethod = .get

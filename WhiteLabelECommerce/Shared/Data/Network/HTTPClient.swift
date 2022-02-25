@@ -8,8 +8,8 @@
 import Foundation
 
 protocol HTTPClient {
-    func dispatch(
-        request: URLRequest,
-        completion: @escaping ResultCompletionHandler<Data, HTTPError>
+    func dispatch<ReturnType: Codable>(
+        request: Request,
+        _ completion: @escaping ResultCompletionHandler<ReturnType, DomainError>
     )
 }

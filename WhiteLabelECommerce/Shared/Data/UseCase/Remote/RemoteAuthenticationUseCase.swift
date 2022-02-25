@@ -8,7 +8,10 @@
 import Foundation
 
 protocol AuthenticationClient {
-    func dispatch(authentication: AuthenticationModel, _ completion: @escaping ResultCompletionHandler<User, DomainError>)
+    func dispatch(
+        authentication: AuthenticationModel,
+        _ completion: @escaping ResultCompletionHandler<User, DomainError>
+    )
 }
 
 class RemoteAuthenticationUseCase: AuthenticationUseCase {

@@ -19,16 +19,20 @@ class NativeHTTPClient: HTTPClient {
     }
 
     // MARK: - Functions
-    func dispatch(
-        request: URLRequest,
-        completion: @escaping ResultCompletionHandler<Data, HTTPError>
+    func dispatch<ReturnType: Codable>(
+        request: Request,
+        _ completion: @escaping ResultCompletionHandler<ReturnType, DomainError>
     ) {
+        guard let request = request.asURLRequest() else {
+            completion(.failure(.requestError(error: .badRequest)))
+            return
+        }
         var subscription: AnyCancellable?
         var isComplete = false
         subscription = dispatch(request: request).sink { [weak self] result in
             switch result {
                 case .failure(let error):
-                    completion(.failure(error))
+                    completion(.failure(.requestError(error: error)))
                 case .finished:
                     break
             }
@@ -37,7 +41,12 @@ class NativeHTTPClient: HTTPClient {
                 self?.subscriptions.remove(subscription)
             }
         } receiveValue: { response in
-            completion(.success(response))
+            do {
+                let parsedValue = try JSONDecoder().decode(ReturnType.self, from: response)
+                completion(.success(parsedValue))
+            } catch {
+                completion(.failure(.errorOnParsing(error: error)))
+            }
         }
 
         if let subscription = subscription, !isComplete {
@@ -57,7 +66,7 @@ class NativeHTTPClient: HTTPClient {
             })
             .mapError { [weak self] error in
                 guard let error = error as? HTTPError else {
-                    return self?.handleError(error) ?? .unknown
+                    return .unknown
                 }
                 return error
             }
@@ -74,9 +83,5 @@ class NativeHTTPClient: HTTPClient {
             case 500: return .serverError
             default: return .unknown
         }
-    }
-
-    private func handleError(_ error: Error) -> HTTPError {
-        return .unknown
     }
 }

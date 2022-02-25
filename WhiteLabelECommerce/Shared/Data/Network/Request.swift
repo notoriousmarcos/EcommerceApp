@@ -14,7 +14,6 @@ protocol Request {
     var params: [String: Any]? { get }
     var body: [String: Any]? { get }
     var headers: [String: String]? { get }
-    associatedtype ReturnType: Codable
 }
 
 extension Request {
