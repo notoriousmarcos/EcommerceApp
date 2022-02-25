@@ -18,7 +18,7 @@ struct RemoteGetAllProductsClient: GetAllProductsClient {
 
     // MARK: - Functions
     func dispatch(_ completion: @escaping ResultCompletionHandler<[Product], DomainError>) {
-        client.dispatch(request: GetAllProductsRequest()) { (result: Result<[Product], DomainError>) in
+        client.dispatch(request: GetAllProductsRequest()) { result in
             completion(result)
         }
     }
