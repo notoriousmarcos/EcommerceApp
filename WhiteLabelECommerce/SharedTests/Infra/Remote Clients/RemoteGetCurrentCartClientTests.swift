@@ -1,5 +1,5 @@
 //
-//  RemoteGetProductClientTests.swift
+//  RemoteGetCurrentCartClientTests.swift
 //  WhiteLabelECommerce
 //
 //  Created by Marcos Vinicius Brito on 25/02/22.
@@ -8,30 +8,30 @@
 @testable import WhiteLabelECommerce
 import XCTest
 
-class RemoteGetProductClientTests: XCTestCase {
+class RemoteGetCurrentCartClientTests: XCTestCase {
     private lazy var httpClient = MockHTTPClient()
-    private lazy var sut = RemoteGetProductClient(client: httpClient)
+    private lazy var sut = RemoteGetCurrentCartClient(client: httpClient)
 
-    func testRemoteGetProductClient_dispatch_ShouldSuccessWithTwoProduct() {
+    func testRemoteGetCurrentCartClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Assert
-        httpClient.result = Mocks.product
+        httpClient.result = Mocks.cart
 
         // Act
-        sut.dispatch(productId: 1) { result in
-            if case let .success(product) = result {
-                XCTAssertEqual(product, Mocks.product)
+        sut.dispatch(userId: 1) { result in
+            if case let .success(cart) = result {
+                XCTAssertEqual(cart, Mocks.cart)
             } else {
                 XCTFail("Should be succeed.")
             }
         }
     }
 
-    func testRemoteGetProductClient_dispatch_ShouldReceiveAnHTTPError() {
+    func testRemoteGetCurrentCartClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
         httpClient.error = .requestError(error: .unauthorized)
 
         // Act
-        sut.dispatch(productId: 1) { result in
+        sut.dispatch(userId: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
                 XCTAssertEqual(error, .unauthorized)
