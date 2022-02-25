@@ -11,17 +11,17 @@ import XCTest
 
 class MockHTTPClient: HTTPClient {
     let url = URL(string: "https://google.com")!
-    var result: Data?
-    var error: HTTPError?
+    var result: Codable?
+    var error: DomainError?
 
-    func dispatch(
-        request: URLRequest,
-        completion: @escaping ResultCompletionHandler<Data, HTTPError>
+    func dispatch<ReturnType: Codable>(
+        request: Request,
+        _ completion: @escaping ResultCompletionHandler<ReturnType, DomainError>
     ) {
-        if let result = result {
+        if let result = result as? ReturnType {
             completion(.success(result))
         } else {
-            completion(.failure(error ?? .unknown))
+            completion(.failure(error ?? .unknown(error: nil)))
         }
     }
 }

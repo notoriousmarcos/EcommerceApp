@@ -8,8 +8,6 @@
 import Foundation
 
 struct CreateCartRequest: Request {
-    // MARK: - Typealias
-    typealias ReturnType = Cart
     // MARK: - Properties
     let baseURL: String = "https://fakestoreapi.com/carts"
     let method: HTTPMethod = .post

@@ -8,8 +8,6 @@
 import Foundation
 
 struct GetCurrentCartRequest: Request {
-    // MARK: - Typealias
-    typealias ReturnType = Cart
     // MARK: - Properties
     let baseURL: String
     let method: HTTPMethod = .get

@@ -15,7 +15,7 @@ class NativeHTTPClientTests: XCTestCase {
         configuration.protocolClasses = [MockURLProtocol.self]
         return URLSession(configuration: configuration)
     }()
-    private let urlRequest = URLRequest(url: URL(string: "http://google.com")!)
+    private var request = StubRequest(baseURL: "http://google.com")
     private lazy var sut = NativeHTTPClient(session: session)
 
     func testNativeHTTPClient_init_ShouldRetainProperties() {
@@ -26,22 +26,83 @@ class NativeHTTPClientTests: XCTestCase {
         XCTAssertNotNil(sut.session)
     }
 
-    func testNativeHTTPClient_makeRequest_ShouldReturnASuccess() {
+    func testNativeHTTPClient_dispatch_ShouldSuccessWithNoProducts() {
+        // Arranged
+        let exp = expectation(description: "Waiting for Request")
+
+        MockURLProtocol.requestHandler = { _ in
+            return (HTTPURLResponse(), "[]".data(using: .utf8), nil)
+        }
+
+        // Act
+        sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
+            if case let .success(products) = result {
+                XCTAssertEqual(products, [])
+            } else {
+                XCTFail("Should be succeed.")
+            }
+            exp.fulfill()
+        }
+
+        wait(for: [exp], timeout: 1)
+    }
+
+    func testNativeHTTPClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Arrange
         let sut = NativeHTTPClient(session: session)
-        let validData = "{\"response\": \"value\"}".data(using: .utf8)!
+        let expectedProducts = Mocks.products
+        let validData = Mocks.productsData
         let exp = expectation(description: "Waiting for Request")
 
         MockURLProtocol.requestHandler = { _ in
             return (HTTPURLResponse(), validData, nil)
         }
 
-        sut.dispatch(request: urlRequest) { (result: Result<Data, HTTPError>) in
-            switch result {
-                case .success(let data):
-                    XCTAssertEqual(data, data)
-                case .failure:
-                    XCTFail("Should return a valid data")
+        sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
+            if case let .success(products) = result {
+                XCTAssertEqual(products, expectedProducts)
+            } else {
+                XCTFail("Should be succeed.")
+            }
+            exp.fulfill()
+        }
+
+        wait(for: [exp], timeout: 1)
+    }
+
+    func testNativeHTTPClient_dispatch_ShouldReceiveAParseError() {
+        // Arranged
+        let exp = expectation(description: "Waiting for Request")
+
+        MockURLProtocol.requestHandler = { _ in
+            return (HTTPURLResponse(), Data(), nil)
+        }
+
+        // Act
+        sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
+            if case let .failure(error) = result,
+               case let .errorOnParsing(error) = error {
+                XCTAssert(error is DecodingError)
+            } else {
+                XCTFail("Should be Failed.")
+            }
+            exp.fulfill()
+        }
+
+        wait(for: [exp], timeout: 1)
+    }
+
+    func testNativeHTTPClient_dispatch_ShouldReceiveABadRequest() {
+        // Arranged
+        let exp = expectation(description: "Waiting for Request")
+
+        // Act
+        sut.dispatch(request: StubRequest(baseURL: "http\\")) { (result: Result<[Product], DomainError>) in
+            if case let .failure(error) = result,
+               case let .requestError(error) = error {
+                XCTAssertEqual(error, .badRequest)
+            } else {
+                XCTFail("Should be Failed.")
             }
             exp.fulfill()
         }
@@ -51,30 +112,59 @@ class NativeHTTPClientTests: XCTestCase {
 
     func testNativeHTTPClient_makeRequest_ShouldValidateMapError() {
         // Arrange
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 400), expectedError: .badRequest)
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 401), expectedError: .unauthorized)
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 403), expectedError: .forbidden)
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 404), expectedError: .notFound)
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: 500), expectedError: .serverError)
-        assertRequestFailing(with: createErrorResponseForRequest(urlRequest, code: -1), expectedError: .unknown)
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: 400),
+            expectedError: .badRequest
+        )
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: 401),
+            expectedError: .unauthorized
+        )
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: 403),
+            expectedError: .forbidden
+        )
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: 404),
+            expectedError: .notFound
+        )
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: 500),
+            expectedError: .serverError
+        )
+        assertRequestFailing(
+            with: createErrorResponseForRequest(request.asURLRequest()!, code: -1),
+            expectedError: .unknown
+        )
+    }
+
+    private struct StubRequest: Request {
+        var baseURL: String
+        var method: HTTPMethod = .get
+        var contentType: String = ""
+        var params: [String: Any]?
+        var body: [String: Any]?
+        var headers: [String: String]?
     }
 
     private func assertRequestFailing(
         with requestHandlerResponse: URLResponse,
-        expectedError error: HTTPError
+        expectedError: HTTPError
     ) {
+        // Arranged
         let exp = expectation(description: "Waiting for Request")
 
         MockURLProtocol.requestHandler = { _ in
             return (requestHandlerResponse, nil, nil)
         }
 
-        sut.dispatch(request: urlRequest) { (result: Result<Data, HTTPError>) in
-            switch result {
-                case .success:
-                    XCTFail("Should return an error")
-                case .failure(let receivedError):
-                    XCTAssertEqual(receivedError, error)
+        // Act
+        sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
+            if case let .failure(error) = result,
+               case let .requestError(receivedError) = error {
+                XCTAssertEqual(receivedError, expectedError)
+            } else {
+                XCTFail("Should be Failed.")
             }
             exp.fulfill()
         }

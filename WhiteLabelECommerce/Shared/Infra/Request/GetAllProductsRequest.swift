@@ -8,9 +8,6 @@
 import Foundation
 
 struct GetAllProductsRequest: Request {
-    // MARK: - Typealias
-    typealias ReturnType = [Product]
-
     // MARK: - Properties
     let baseURL: String = "https://fakestoreapi.com/products"
     let method: HTTPMethod = .get
