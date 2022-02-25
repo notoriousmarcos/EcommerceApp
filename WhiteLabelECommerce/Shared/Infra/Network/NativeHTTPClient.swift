@@ -64,7 +64,7 @@ class NativeHTTPClient: HTTPClient {
                 }
                 return data
             })
-            .mapError { [weak self] error in
+            .mapError { error in
                 guard let error = error as? HTTPError else {
                     return .unknown
                 }

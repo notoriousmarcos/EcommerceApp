@@ -24,7 +24,6 @@ opt_in_rules:
   - fallthrough
   - fatal_error_message
   - file_header
-  - file_name
   - first_where
   - flatmap_over_map_reduce
   - identical_operands
@@ -80,10 +79,6 @@ analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
 file_length:
   warning: 600
   error: 800
-
-file_name:
-  excluded:
-    - TypeAlias.swift
 
 identifier_name:
   excluded:

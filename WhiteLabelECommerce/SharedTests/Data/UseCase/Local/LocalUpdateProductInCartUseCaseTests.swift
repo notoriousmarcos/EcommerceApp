@@ -1,5 +1,5 @@
 //
-//  UpdateProductInCartUseCaseTests.swift
+//  LocalUpdateProductInCartUseCaseTests.swift
 //  WhiteLabelECommerce
 //
 //  Created by Marcos Vinicius Brito on 21/02/22.

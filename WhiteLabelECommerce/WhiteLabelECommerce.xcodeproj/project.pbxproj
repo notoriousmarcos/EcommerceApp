@@ -27,8 +27,8 @@
 		B72AE24327C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24127C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift */; };
 		B72AE24527C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24427C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift */; };
 		B72AE24627C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24427C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift */; };
-		B72AE24827C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */; };
-		B72AE24927C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */; };
+		B72AE24827C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24727C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift */; };
+		B72AE24927C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24727C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift */; };
 		B72AE24B27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */; };
 		B72AE24C27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */; };
 		B72AE26127C51A3F00525CCD /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE26027C51A3F00525CCD /* DomainError.swift */; };
@@ -210,7 +210,7 @@
 		B72AE23D27C4131200525CCD /* LocalAddProductToCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAddProductToCartUseCase.swift; sourceTree = "<group>"; };
 		B72AE24127C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRemoveProductInCartUseCaseTests.swift; sourceTree = "<group>"; };
 		B72AE24427C41A7000525CCD /* LocalRemoveProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRemoveProductInCartUseCase.swift; sourceTree = "<group>"; };
-		B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductInCartUseCaseTests.swift; sourceTree = "<group>"; };
+		B72AE24727C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUpdateProductInCartUseCaseTests.swift; sourceTree = "<group>"; };
 		B72AE24A27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUpdateProductInCartUseCase.swift; sourceTree = "<group>"; };
 		B72AE26027C51A3F00525CCD /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		B72AE26327C51C0500525CCD /* ErrorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorExtensionTests.swift; path = SharedTests/Domain/Utils/ErrorExtensionTests.swift; sourceTree = SOURCE_ROOT; };
@@ -401,7 +401,7 @@
 			children = (
 				B72AE23927C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift */,
 				B72AE24127C4172300525CCD /* LocalRemoveProductInCartUseCaseTests.swift */,
-				B72AE24727C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift */,
+				B72AE24727C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -1208,7 +1208,7 @@
 				B75F0DA927C668360031412C /* GetProductRequestTests.swift in Sources */,
 				B746946227C1327600060003 /* DateExtensionTests.swift in Sources */,
 				B72AE26A27C51E2800525CCD /* StringExtensionTests.swift in Sources */,
-				B72AE24827C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */,
+				B72AE24827C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift in Sources */,
 				B74A8D6427BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4627BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B72AE23A27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */,
@@ -1248,7 +1248,7 @@
 				B75F0DAA27C668360031412C /* GetProductRequestTests.swift in Sources */,
 				B746946327C1327600060003 /* DateExtensionTests.swift in Sources */,
 				B72AE26B27C51E2800525CCD /* StringExtensionTests.swift in Sources */,
-				B72AE24927C41BC500525CCD /* UpdateProductInCartUseCaseTests.swift in Sources */,
+				B72AE24927C41BC500525CCD /* LocalUpdateProductInCartUseCaseTests.swift in Sources */,
 				B74A8D6527BFEE77002F41CD /* Mocks.swift in Sources */,
 				B74A8D4727BFDCA1002F41CD /* HTTPMethodTests.swift in Sources */,
 				B72AE23B27C4099D00525CCD /* LocalAddProductToCartUseCaseTests.swift in Sources */,
