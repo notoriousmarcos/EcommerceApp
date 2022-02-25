@@ -13,19 +13,6 @@ class RemoteGetAllProductsClientTests: XCTestCase {
     private lazy var httpClient = MockHTTPClient()
     private lazy var sut = RemoteGetAllProductsClient(client: httpClient)
 
-    func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithNoProducts() {
-        // Arrange
-        httpClient.result = [Product]()
-        // Act
-        sut.dispatch { result in
-            if case let .success(products) = result {
-                XCTAssertEqual(products, [])
-            } else {
-                XCTFail("Should be succeed.")
-            }
-        }
-    }
-
     func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Assert
         httpClient.result = Mocks.products
