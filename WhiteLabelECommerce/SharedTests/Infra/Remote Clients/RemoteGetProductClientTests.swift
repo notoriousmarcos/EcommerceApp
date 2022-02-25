@@ -1,37 +1,37 @@
 //
-//  RemoteGetAllProductsClientTests.swift
+//  RemoteGetProductClientTests.swift
 //  WhiteLabelECommerce
 //
-//  Created by Marcos Vinicius Brito on 24/02/22.
+//  Created by Marcos Vinicius Brito on 25/02/22.
 //
 
 @testable import WhiteLabelECommerce
 import XCTest
 
-class RemoteGetAllProductsClientTests: XCTestCase {
+class RemoteGetProductClientTests: XCTestCase {
     private lazy var httpClient = MockHTTPClient()
-    private lazy var sut = RemoteGetAllProductsClient(client: httpClient)
+    private lazy var sut = RemoteGetProductClient(client: httpClient)
 
-    func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts() {
+    func testRemoteGetProductClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Assert
-        httpClient.result = Mocks.products
+        httpClient.result = Mocks.product
 
         // Act
-        sut.dispatch { result in
+        sut.dispatch(productId: 1) { result in
             if case let .success(products) = result {
-                XCTAssertEqual(products, Mocks.products)
+                XCTAssertEqual(products, Mocks.product)
             } else {
                 XCTFail("Should be succeed.")
             }
         }
     }
 
-    func testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError() {
+    func testRemoteGetProductClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
         httpClient.error = .requestError(error: .unauthorized)
 
         // Act
-        sut.dispatch { result in
+        sut.dispatch(productId: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
                 XCTAssertEqual(error, .unauthorized)
