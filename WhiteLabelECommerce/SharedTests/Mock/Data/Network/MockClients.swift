@@ -58,6 +58,15 @@ extension MockClients: UpdateCartClient {
 extension MockClients: AuthenticationClient {
     func dispatch(
         authentication: AuthenticationModel,
+        _ completion: @escaping ResultCompletionHandler<String, DomainError>
+    ) {
+        handleResult(completion)
+    }
+}
+
+extension MockClients: GetUserClient {
+    func dispatch(
+        userId: Int,
         _ completion: @escaping ResultCompletionHandler<User, DomainError>
     ) {
         handleResult(completion)

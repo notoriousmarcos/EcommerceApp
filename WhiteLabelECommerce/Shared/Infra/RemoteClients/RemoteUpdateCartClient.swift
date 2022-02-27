@@ -18,7 +18,11 @@ struct RemoteUpdateCartClient: UpdateCartClient {
 
     // MARK: - Functions
     func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>) {
-        client.dispatch(request: CreateCartRequest(cart: cart)) { result in
+        guard let request = UpdateCartRequest(cart: cart) else {
+            completion(.failure(.requestError(error: .badRequest)))
+            return
+        }
+        client.dispatch(request: request) { result in
             completion(result)
         }
     }

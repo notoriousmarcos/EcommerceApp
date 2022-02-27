@@ -1,5 +1,5 @@
 //
-//  RemoteGetCurrentCartClientTests.swift
+//  RemoteGetUserClientTests.swift
 //  WhiteLabelECommerce
 //
 //  Created by Marcos Vinicius Brito on 25/02/22.
@@ -8,30 +8,30 @@
 @testable import WhiteLabelECommerce
 import XCTest
 
-class RemoteGetCurrentCartClientTests: XCTestCase {
+class RemoteGetUserClientTests: XCTestCase {
     private lazy var httpClient = MockHTTPClient()
-    private lazy var sut = RemoteGetCurrentCartClient(client: httpClient)
+    private lazy var sut = RemoteGetUserClient(client: httpClient)
 
-    func testRemoteGetCurrentCartClient_dispatch_ShouldSuccessWithACart() {
+    func testRemoteGetUserClient_dispatch_ShouldSuccessWithUser() {
         // Assert
         httpClient.responses.append(
-            [GetCurrentCartRequest(userId: 1).toString(): (Mocks.cart, nil)]
+            [GetUserRequest(id: 1).toString(): (Mocks.user, nil)]
         )
 
         // Act
         sut.dispatch(userId: 1) { result in
-            if case let .success(cart) = result {
-                XCTAssertEqual(cart, Mocks.cart)
+            if case let .success(user) = result {
+                XCTAssertEqual(user, Mocks.user)
             } else {
                 XCTFail("Should be succeed.")
             }
         }
     }
 
-    func testRemoteGetCurrentCartClient_dispatch_ShouldReceiveAnHTTPError() {
+    func testRemoteGetUserClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
         httpClient.responses.append(
-            [GetCurrentCartRequest(userId: 1).toString(): (nil, .requestError(error: .unauthorized))]
+            [GetUserRequest(id: 1).toString(): (nil, .requestError(error: .unauthorized))]
         )
 
         // Act
