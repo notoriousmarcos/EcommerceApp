@@ -14,7 +14,9 @@ class RemoteCreateCartClientTests: XCTestCase {
 
     func testRemoteCreateCartClient_dispatch_ShouldSuccessWithACart() {
         // Assert
-        httpClient.result = Mocks.cart
+        httpClient.responses.append(
+            [CreateCartRequest(cart: Mocks.cart).toString(): (Mocks.cart, nil)]
+        )
 
         // Act
         sut.dispatch(createCart: Mocks.cart) { result in
@@ -28,7 +30,9 @@ class RemoteCreateCartClientTests: XCTestCase {
 
     func testRemoteCreateCartClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
-        httpClient.error = .requestError(error: .unauthorized)
+        httpClient.responses.append(
+            [CreateCartRequest(cart: Mocks.cart).toString(): (nil, .requestError(error: .unauthorized))]
+        )
 
         // Act
         sut.dispatch(createCart: Mocks.cart) { result in

@@ -10,7 +10,7 @@ import Foundation
 protocol AuthenticationClient {
     func dispatch(
         authentication: AuthenticationModel,
-        _ completion: @escaping ResultCompletionHandler<User, DomainError>
+        _ completion: @escaping ResultCompletionHandler<String, DomainError>
     )
 }
 

@@ -13,22 +13,15 @@ class RemoteAuthenticationUseCaseTests: XCTestCase {
     private let authentication = AuthenticationModel(email: "username", password: "password")
     private lazy var sut = RemoteAuthenticationUseCase(client: mockClient)
 
-    func testRemoteAuthenticationUseCase_executeWithSuccess_ShouldReturnUser() {
+    func testRemoteAuthenticationUseCase_executeWithSuccess_ShouldReturnToken() {
         // Arrange
-        mockClient.result = .success(Mocks.user)
+        mockClient.result = .success("token")
 
         // Act
         sut.execute(authenticationModel: authentication) { result in
-            if case let .success(user) = result {
+            if case let .success(token) = result {
                 // Assert
-                XCTAssertEqual(user.id, 1)
-                XCTAssertEqual(user.email, "a@a")
-                XCTAssertEqual(user.username, "username")
-                XCTAssertEqual(user.auth?.token, "token")
-                XCTAssertEqual(user.firstName, "firstname")
-                XCTAssertEqual(user.lastName, "lastname")
-                XCTAssertEqual(user.address, "address")
-                XCTAssertEqual(user.phone, "1111111")
+                XCTAssertEqual(token, "token")
             } else {
                 XCTFail("Should receive a valid response")
             }

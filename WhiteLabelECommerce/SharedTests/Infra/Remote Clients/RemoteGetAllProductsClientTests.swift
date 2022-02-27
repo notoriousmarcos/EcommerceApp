@@ -14,7 +14,9 @@ class RemoteGetAllProductsClientTests: XCTestCase {
 
     func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts() {
         // Assert
-        httpClient.result = Mocks.products
+        httpClient.responses.append(
+            [GetAllProductsRequest().toString(): (Mocks.products, nil)]
+        )
 
         // Act
         sut.dispatch { result in
@@ -28,7 +30,9 @@ class RemoteGetAllProductsClientTests: XCTestCase {
 
     func testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError() {
         // Assert
-        httpClient.error = .requestError(error: .unauthorized)
+        httpClient.responses.append(
+            [GetAllProductsRequest().toString(): (nil, .requestError(error: .unauthorized))]
+        )
 
         // Act
         sut.dispatch { result in
