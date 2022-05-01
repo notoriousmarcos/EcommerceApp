@@ -173,6 +173,8 @@
 		B75F0DD127C66B810031412C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75F0DCF27C66B810031412C /* MockURLProtocol.swift */; };
 		B75F0DD427C673F10031412C /* NativeHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75F0DD327C673F10031412C /* NativeHTTPClient.swift */; };
 		B75F0DD527C673F10031412C /* NativeHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75F0DD327C673F10031412C /* NativeHTTPClient.swift */; };
+		B776632B281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776632A281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift */; };
+		B776632C281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776632A281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift */; };
 		B7963E6927C91FBD009E78CC /* RemoteGetProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E6827C91FBD009E78CC /* RemoteGetProductClient.swift */; };
 		B7963E6A27C91FBD009E78CC /* RemoteGetProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E6827C91FBD009E78CC /* RemoteGetProductClient.swift */; };
 		B7963E6C27C92799009E78CC /* RemoteGetCurrentCartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E6B27C92799009E78CC /* RemoteGetCurrentCartClient.swift */; };
@@ -326,6 +328,7 @@
 		B75F0DCA27C66B400031412C /* NativeHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeHTTPClientTests.swift; sourceTree = "<group>"; };
 		B75F0DCF27C66B810031412C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		B75F0DD327C673F10031412C /* NativeHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeHTTPClient.swift; sourceTree = "<group>"; };
+		B776632A281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsIntegrationTests.swift; sourceTree = "<group>"; };
 		B7963E6827C91FBD009E78CC /* RemoteGetProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductClient.swift; sourceTree = "<group>"; };
 		B7963E6B27C92799009E78CC /* RemoteGetCurrentCartClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCurrentCartClient.swift; sourceTree = "<group>"; };
 		B7963E6E27C92818009E78CC /* RemoteGetCurrentCartClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCurrentCartClientTests.swift; sourceTree = "<group>"; };
@@ -535,6 +538,7 @@
 		B74A8CB227BEB73E002F41CD /* SharedTests */ = {
 			isa = PBXGroup;
 			children = (
+				B7766329281ED33B007B1A91 /* Integration */,
 				B74A8D5D27BFE847002F41CD /* Mock */,
 				B74A8D4227BFDC6B002F41CD /* Data */,
 				B74A8CB427BEB7EF002F41CD /* Domain */,
@@ -811,6 +815,14 @@
 				B7F20FB427C812330018ADAF /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B7766329281ED33B007B1A91 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				B776632A281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift */,
+			);
+			path = Integration;
 			sourceTree = "<group>";
 		};
 		B7F20FA327C7A88E0018ADAF /* Remote Clients */ = {
@@ -1299,6 +1311,7 @@
 				B75F0DAF27C668360031412C /* UpdateCartRequestTests.swift in Sources */,
 				B75F0DAD27C668360031412C /* RequestTests.swift in Sources */,
 				B7963E7E27C98385009E78CC /* RemoteAuthenticationClientTests.swift in Sources */,
+				B776632B281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift in Sources */,
 				B74A8D7727C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B7C4376027C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */,
 				B75F0DCB27C66B400031412C /* NativeHTTPClientTests.swift in Sources */,
@@ -1348,6 +1361,7 @@
 				B75F0DB027C668360031412C /* UpdateCartRequestTests.swift in Sources */,
 				B75F0DAE27C668360031412C /* RequestTests.swift in Sources */,
 				B7963E7F27C98385009E78CC /* RemoteAuthenticationClientTests.swift in Sources */,
+				B776632C281ED382007B1A91 /* RemoteGetAllProductsIntegrationTests.swift in Sources */,
 				B74A8D7827C0342F002F41CD /* RemoteGetProductUseCaseTests.swift in Sources */,
 				B7C4376127C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */,
 				B75F0DCC27C66B400031412C /* NativeHTTPClientTests.swift in Sources */,
