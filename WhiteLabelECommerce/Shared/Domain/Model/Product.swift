@@ -14,5 +14,5 @@ struct Product: Model {
     let price: Double
     let category: String
     let description: String
-    let imageURL: String
+    let imageURL: String?
 }
