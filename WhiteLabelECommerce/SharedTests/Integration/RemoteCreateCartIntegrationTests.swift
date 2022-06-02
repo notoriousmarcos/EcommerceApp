@@ -19,8 +19,8 @@ class RemoteCreateCartIntegrationTests: XCTestCase {
             cart: Cart(userId: 1, date: Date(), products: [])
         ) { result in
             // Assert
-            if case let .success(values) = result {
-                XCTAssertEqual(values.userId, 1)
+            if case let .success(cart) = result {
+                XCTAssertEqual(cart.userId, 1)
             }
             expectation.fulfill()
         }

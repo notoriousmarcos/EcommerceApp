@@ -17,8 +17,8 @@ class RemoteGetCurrentCartIntegrationTests: XCTestCase {
         // Act
         sut.execute(userId: 1) { result in
             // Assert
-            if case let .success(values) = result {
-                XCTAssertEqual(values.userId, 1)
+            if case let .success(cart) = result {
+                XCTAssertEqual(cart.userId, 1)
             }
             expectation.fulfill()
         }
