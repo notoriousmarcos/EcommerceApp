@@ -9,7 +9,7 @@
 import XCTest
 
 class RemoteGetAllProductsIntegrationTests: XCTestCase {
-    func testRemoteGetAllProductsUseCaseCase_integration_shouldAddWithSuccess() {
+    func testRemoteGetAllProductsUseCase_integration_shouldAddWithSuccess() {
         // Arrange
         let sut = RemoteGetAllProductsUseCase(client: RemoteGetAllProductsClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to get all products.")
