@@ -17,8 +17,8 @@ class RemoteGetUserIntegrationTests: XCTestCase {
         // Act
         sut.execute(userId: 1) { result in
             // Assert
-            if case let .success(values) = result {
-                XCTAssertEqual(values.id, 1)
+            if case let .success(user) = result {
+                XCTAssertEqual(user.id, 1)
             }
             expectation.fulfill()
         }

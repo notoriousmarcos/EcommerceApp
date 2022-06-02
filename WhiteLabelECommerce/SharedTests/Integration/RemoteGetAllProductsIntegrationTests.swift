@@ -17,8 +17,8 @@ class RemoteGetAllProductsIntegrationTests: XCTestCase {
         // Act
         sut.execute { result in
             // Assert
-            if case let .success(values) = result {
-                XCTAssertEqual(values.count, 20)
+            if case let .success(products) = result {
+                XCTAssertEqual(products.count, 20)
             }
             expectation.fulfill()
         }

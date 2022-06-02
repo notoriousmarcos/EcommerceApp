@@ -209,6 +209,8 @@
 		B7C7364E2848FCE900440310 /* RemoteUpdateCartIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7364C2848FCE800440310 /* RemoteUpdateCartIntegrationTests.swift */; };
 		B7C736502848FF2100440310 /* RemoteGetUserIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7364F2848FF2100440310 /* RemoteGetUserIntegrationTests.swift */; };
 		B7C736512848FF2100440310 /* RemoteGetUserIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7364F2848FF2100440310 /* RemoteGetUserIntegrationTests.swift */; };
+		B7C736532848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C736522848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift */; };
+		B7C736542848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C736522848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift */; };
 		B7F20FA527C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FA427C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift */; };
 		B7F20FA627C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FA427C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift */; };
 		B7F20FA827C7C1AA0018ADAF /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F20FA727C7C1AA0018ADAF /* URLRequestExtension.swift */; };
@@ -356,6 +358,7 @@
 		B7C736492848FB3000440310 /* RemoteCreateCartIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCreateCartIntegrationTests.swift; sourceTree = "<group>"; };
 		B7C7364C2848FCE800440310 /* RemoteUpdateCartIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUpdateCartIntegrationTests.swift; sourceTree = "<group>"; };
 		B7C7364F2848FF2100440310 /* RemoteGetUserIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetUserIntegrationTests.swift; sourceTree = "<group>"; };
+		B7C736522848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationIntegrationTests.swift; sourceTree = "<group>"; };
 		B7F20FA427C7A8DA0018ADAF /* RemoteGetAllProductsClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsClientTests.swift; sourceTree = "<group>"; };
 		B7F20FA727C7C1AA0018ADAF /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		B7F20FAB27C7CFDF0018ADAF /* RemoteGetAllProductsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetAllProductsClient.swift; sourceTree = "<group>"; };
@@ -841,6 +844,7 @@
 				B7C736492848FB3000440310 /* RemoteCreateCartIntegrationTests.swift */,
 				B7C7364C2848FCE800440310 /* RemoteUpdateCartIntegrationTests.swift */,
 				B7C7364F2848FF2100440310 /* RemoteGetUserIntegrationTests.swift */,
+				B7C736522848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift */,
 			);
 			path = Integration;
 			sourceTree = "<group>";
@@ -1367,6 +1371,7 @@
 				B7C7364A2848FB3000440310 /* RemoteCreateCartIntegrationTests.swift in Sources */,
 				B74A8CFC27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D7D27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B7C736532848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift in Sources */,
 				B75F0DA527C668360031412C /* GetCurrentCartRequestTests.swift in Sources */,
 				B72AE26427C51C0500525CCD /* ErrorExtensionTests.swift in Sources */,
 				B74A8D3227BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
@@ -1422,6 +1427,7 @@
 				B7C7364B2848FB3000440310 /* RemoteCreateCartIntegrationTests.swift in Sources */,
 				B74A8CFD27BED3F6002F41CD /* ProductTests.swift in Sources */,
 				B74A8D7E27C10F67002F41CD /* RemoteGetCurrentCartUseCaseTests.swift in Sources */,
+				B7C736542848FFA800440310 /* RemoteAuthenticationIntegrationTests.swift in Sources */,
 				B75F0DA627C668360031412C /* GetCurrentCartRequestTests.swift in Sources */,
 				B72AE26527C51C0500525CCD /* ErrorExtensionTests.swift in Sources */,
 				B74A8D3327BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
