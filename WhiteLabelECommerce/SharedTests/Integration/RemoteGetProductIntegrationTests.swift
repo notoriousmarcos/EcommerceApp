@@ -9,10 +9,10 @@
 import XCTest
 
 class RemoteGetProductIntegrationTests: XCTestCase {
-    func testRemoteGetProductUseCase_integration_shouldAddWithSuccess() {
+    func testRemoteGetProductUseCase_integration_shouldGetSuccess() {
         // Arrange
         let sut = RemoteGetProductUseCase(client: RemoteGetProductClient(client: NativeHTTPClient()))
-        let expectation = expectation(description: "Wait response to get all products.")
+        let expectation = expectation(description: "Wait response to get product.")
 
         // Act
         sut.execute(id: 1) { result in
@@ -23,6 +23,6 @@ class RemoteGetProductIntegrationTests: XCTestCase {
             expectation.fulfill()
         }
 
-        waitForExpectations(timeout: 2)
+        waitForExpectations(timeout: 5)
     }
 }
