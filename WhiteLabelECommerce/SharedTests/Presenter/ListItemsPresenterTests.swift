@@ -9,9 +9,15 @@
 import Combine
 import XCTest
 
+enum ViewState<T, E: Error> {
+    case idle
+    case loaded(_ data: T)
+    case failed(_ error: E)
+}
+
 class ListItemsViewModel {
     // MARK: - Public Properties
-    @Published private(set) var items: [Product] = []
+    @Published private(set) var state: ViewState<[Product], Error> = .idle
 
     // MARK: - Private Properties
     private let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
@@ -28,8 +34,11 @@ class ListItemsViewModel {
     // MARK: - Functions
     func onLoad() {
         fetchAllItems { [weak self] result in
-            if case let .success(items) = result {
-                self?.items = items
+            switch result {
+                case.success(let products):
+                    self?.state = .loaded(products)
+                case .failure(let error):
+                    self?.state = .failed(error)
             }
         }
     }
@@ -38,35 +47,18 @@ class ListItemsViewModel {
 class ListItemsPresenterTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()
 
-    func testListItemsViewModel_onLoad_ShouldUpdateItemsProperty() {
+    func testListItemsViewModel_onLoadWithSuccess_ShouldNotifySubscribersWhenFinished() {
         // Arrange
-        let expectation = expectation(description: "Expect to be called when Fetch is called.")
-        let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
-            expectation.fulfill()
-            completion(.success(Mocks.products))
-        }
-        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
-
-        // Act
-        sut.onLoad()
-        waitForExpectations(timeout: 1)
-
-        // Assert
-        XCTAssertEqual(sut.items, Mocks.products)
-    }
-
-    func testListItemsViewModel_onLoad_ShouldNotifySubscribersWhenFinished() {
-        // Arrange
-        let expectation = expectation(description: "Expect to be called when items change.")
+        let expectation = expectation(description: "Expect to be called when state change.")
         let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
             completion(.success(Mocks.products))
         }
         let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
 
         // Act
-        subscriptions.insert(sut.$items.sink { items in
+        subscriptions.insert(sut.$state.sink { state in
             // Assert
-            if !items.isEmpty {
+            if case let .loaded(items) = state {
                 expectation.fulfill()
                 XCTAssertEqual(items, Mocks.products)
             }
@@ -74,4 +66,25 @@ class ListItemsPresenterTests: XCTestCase {
         sut.onLoad()
         waitForExpectations(timeout: 1)
     }
+
+    func testListItemsViewModel_onLoadWithFailure_ShouldNotifySubscribersWhenFinished() {
+        // Arrange
+        let expectation = expectation(description: "Expect to be called when state change.")
+        let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
+            completion(.failure(.unknown(error: nil)))
+        }
+        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+
+        // Act
+        subscriptions.insert(sut.$state.sink { state in
+            // Assert
+            if case let .failed(error) = state {
+                expectation.fulfill()
+                XCTAssert(error is DomainError)
+            }
+        })
+        sut.onLoad()
+        waitForExpectations(timeout: 1)
+    }
+
 }
