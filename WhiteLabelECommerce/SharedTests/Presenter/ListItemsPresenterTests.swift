@@ -38,20 +38,6 @@ class ListItemsViewModel {
 class ListItemsPresenterTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()
 
-    func testListItemsPresenter_onLoad_shouldCallFetchItems() {
-        // Arrange
-        let expectation = expectation(description: "Expect to be called when Fetch is called.")
-        let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
-            expectation.fulfill()
-            completion(.success(Mocks.products))
-        }
-        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
-
-        // Act
-        sut.onLoad()
-        waitForExpectations(timeout: 1)
-    }
-
     func testListItemsViewModel_onLoad_ShouldUpdateItemsProperty() {
         // Arrange
         let expectation = expectation(description: "Expect to be called when Fetch is called.")
