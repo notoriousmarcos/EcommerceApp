@@ -8,12 +8,28 @@
 @testable import WhiteLabelECommerce
 import XCTest
 
-struct ListItemsViewModel {
-    let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
+class ListItemsViewModel {
+    // MARK: - Public Properties
+    private(set) var items: [Product] = []
 
+    // MARK: - Private Properties
+    private let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
+
+    // MARK: - Init
+    init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void) {
+        self.fetchAllItems = fetchAllItems
+    }
+
+    deinit {
+        print("Deinit ListItemsViewModel")
+    }
+
+    // MARK: - Functions
     func onLoad() {
-        fetchAllItems { result in
-
+        fetchAllItems { [weak self] result in
+            if case let .success(items) = result {
+                self?.items = items
+            }
         }
     }
 }
@@ -32,5 +48,22 @@ class ListItemsPresenterTests: XCTestCase {
         // Act
         sut.onLoad()
         waitForExpectations(timeout: 1)
+    }
+
+    func testListItemsViewModel_onLoad_ShouldUpdateItemsProperty() {
+        // Arrange
+        let expectation = expectation(description: "Expect to be called when Fetch is called.")
+        let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
+            expectation.fulfill()
+            completion(.success(Mocks.products))
+        }
+        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+
+        // Act
+        sut.onLoad()
+        waitForExpectations(timeout: 1)
+
+        // Assert
+        XCTAssertEqual(sut.items, Mocks.products)
     }
 }
