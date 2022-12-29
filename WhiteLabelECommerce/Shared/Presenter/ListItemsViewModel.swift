@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 29/12/22.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 class ListItemsViewModel {
     // MARK: - Public Properties
