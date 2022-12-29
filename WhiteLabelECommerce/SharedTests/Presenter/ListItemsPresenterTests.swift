@@ -43,9 +43,8 @@ class ListItemsPresenterTests: XCTestCase {
         // Act
         subscriptions.insert(sut.$state.sink { state in
             // Assert
-            if case let .failed(error) = state {
+            if case let .failed(error) = state, case .unknown = error {
                 expectation.fulfill()
-                XCTAssert(error is DomainError)
             }
         })
         sut.onLoad()
