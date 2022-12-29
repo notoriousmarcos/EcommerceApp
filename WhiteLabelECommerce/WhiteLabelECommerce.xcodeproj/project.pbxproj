@@ -197,6 +197,10 @@
 		B7963E8527C987AC009E78CC /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */; };
 		B797AC7728B5463A009B081F /* ListItemsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */; };
 		B797AC7828B5463A009B081F /* ListItemsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */; };
+		B7BA1D91295DE72500F05C5C /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */; };
+		B7BA1D92295DE72500F05C5C /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */; };
+		B7BA1D94295DE76700F05C5C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D93295DE76700F05C5C /* ViewState.swift */; };
+		B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D93295DE76700F05C5C /* ViewState.swift */; };
 		B7C4376027C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */; };
 		B7C4376127C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */; };
 		B7C4376327C662E60054CF33 /* RemoteAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4376227C662E60054CF33 /* RemoteAuthenticationUseCase.swift */; };
@@ -354,6 +358,8 @@
 		B7963E8027C985BC009E78CC /* AuthenticationRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequestTests.swift; sourceTree = "<group>"; };
 		B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsPresenterTests.swift; sourceTree = "<group>"; };
+		B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemsViewModel.swift; sourceTree = "<group>"; };
+		B7BA1D93295DE76700F05C5C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationUseCaseTests.swift; sourceTree = "<group>"; };
 		B7C4376227C662E60054CF33 /* RemoteAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		B7C736432848F7CB00440310 /* RemoteGetProductIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductIntegrationTests.swift; sourceTree = "<group>"; };
@@ -525,6 +531,7 @@
 		B74A8C6E27BEB5B1002F41CD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7BA1D8F295DE72500F05C5C /* Presenter */,
 				B74A8D3D27BFDA7C002F41CD /* Data */,
 				B74A8CBD27BEBE98002F41CD /* Domain */,
 				B75F0DB227C668480031412C /* Infra */,
@@ -859,6 +866,23 @@
 				B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B7BA1D8F295DE72500F05C5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */,
+				B7BA1D96295DE77000F05C5C /* Utils */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B7BA1D96295DE77000F05C5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7BA1D93295DE76700F05C5C /* ViewState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B7F20FA327C7A88E0018ADAF /* Remote Clients */ = {
@@ -1220,6 +1244,7 @@
 			files = (
 				B75F0DC327C6685F0031412C /* GetProductRequest.swift in Sources */,
 				B72AE24B27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */,
+				B7BA1D94295DE76700F05C5C /* ViewState.swift in Sources */,
 				B74A8D2027BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
 				B7F20FB527C812330018ADAF /* NetworkManager.swift in Sources */,
@@ -1241,6 +1266,7 @@
 				B74A8D4C27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B72AE22227C3F42100525CCD /* RemoteCreateCartUseCase.swift in Sources */,
 				B717A84527CBF62C002CED0C /* RemoteGetUserClient.swift in Sources */,
+				B7BA1D91295DE72500F05C5C /* ListItemsViewModel.swift in Sources */,
 				B75F0DC727C6687B0031412C /* CartExtension.swift in Sources */,
 				B7C4376327C662E60054CF33 /* RemoteAuthenticationUseCase.swift in Sources */,
 				B75F0DD427C673F10031412C /* NativeHTTPClient.swift in Sources */,
@@ -1283,6 +1309,7 @@
 			files = (
 				B75F0DC427C6685F0031412C /* GetProductRequest.swift in Sources */,
 				B72AE24C27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */,
+				B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */,
 				B74A8D2127BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
 				B7F20FB627C812330018ADAF /* NetworkManager.swift in Sources */,
@@ -1304,6 +1331,7 @@
 				B74A8D4D27BFDCB4002F41CD /* HTTPError.swift in Sources */,
 				B72AE22327C3F42100525CCD /* RemoteCreateCartUseCase.swift in Sources */,
 				B717A84627CBF62C002CED0C /* RemoteGetUserClient.swift in Sources */,
+				B7BA1D92295DE72500F05C5C /* ListItemsViewModel.swift in Sources */,
 				B75F0DC827C6687B0031412C /* CartExtension.swift in Sources */,
 				B7C4376427C662E60054CF33 /* RemoteAuthenticationUseCase.swift in Sources */,
 				B75F0DD527C673F10031412C /* NativeHTTPClient.swift in Sources */,
