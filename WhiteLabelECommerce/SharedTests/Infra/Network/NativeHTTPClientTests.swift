@@ -92,15 +92,16 @@ class NativeHTTPClientTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
-    func testNativeHTTPClient_dispatch_ShouldReceiveABadRequest() {
+    func testNativeHTTPClient_dispatch_ShouldReceiveUnknown() {
         // Arranged
+        let sut = NativeHTTPClient()
         let exp = expectation(description: "Waiting for Request")
 
         // Act
         sut.dispatch(request: StubRequest(baseURL: "http\\")) { (result: Result<[Product], DomainError>) in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                XCTAssertEqual(error, .badRequest)
+                XCTAssertEqual(error, .unknown)
             } else {
                 XCTFail("Should be Failed.")
             }
