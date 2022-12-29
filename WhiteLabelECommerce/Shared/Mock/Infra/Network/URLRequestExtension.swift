@@ -7,8 +7,10 @@
 
 import Foundation
 
+#if DEBUG
 extension URLRequest {
     var identifier: String {
         self.description
     }
 }
+#endif

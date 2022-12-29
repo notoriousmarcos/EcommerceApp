@@ -6,9 +6,8 @@
 //
 
 import Foundation
-@testable import WhiteLabelECommerce
-import XCTest
 
+#if DEBUG
 class MockClients {
     let url = URL(string: "https://google.com")!
     var result: Result<Codable, DomainError>?
@@ -20,7 +19,7 @@ class MockClients {
         } else if case let .failure(error) = result {
             completion(.failure(error))
         } else {
-            XCTFail("Result is nil or have an incorrect type.")
+            completion(.failure(.unknown(error: nil)))
         }
     }
 }
@@ -72,3 +71,4 @@ extension MockClients: GetUserClient {
         handleResult(completion)
     }
 }
+#endif

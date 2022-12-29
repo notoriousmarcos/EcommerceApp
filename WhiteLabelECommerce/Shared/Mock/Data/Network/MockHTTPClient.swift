@@ -6,9 +6,8 @@
 //
 
 import Foundation
-@testable import WhiteLabelECommerce
-import XCTest
 
+#if DEBUG
 extension Request {
     func toString() -> String {
         baseURL
@@ -35,3 +34,4 @@ class MockHTTPClient: HTTPClient {
         }
     }
 }
+#endif

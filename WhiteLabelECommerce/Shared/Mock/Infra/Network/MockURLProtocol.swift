@@ -5,8 +5,9 @@
 //  Created by Marcos Vinicius Brito on 23/02/22.
 //
 
-import XCTest
+import Foundation
 
+#if DEBUG
 class MockURLProtocol: URLProtocol {
     typealias RequestHandler = ((URLRequest) -> (URLResponse, Data?, Error?))
     static var requestHandler: RequestHandler?
@@ -21,7 +22,6 @@ class MockURLProtocol: URLProtocol {
 
     override func startLoading() {
         guard let (response, data, error) = Self.requestHandler?(request) else {
-            XCTFail("RequestHandler Shouldn't be nil")
             return
         }
 
@@ -38,3 +38,4 @@ class MockURLProtocol: URLProtocol {
         //
     }
 }
+#endif

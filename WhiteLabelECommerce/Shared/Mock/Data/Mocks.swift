@@ -6,8 +6,8 @@
 //
 
 import Foundation
-@testable import WhiteLabelECommerce
 
+#if DEBUG
 struct Mocks {
     static let product = Product(
         id: 1,
@@ -76,3 +76,4 @@ struct Mocks {
         phone: "1111111"
     )
 }
+#endif
