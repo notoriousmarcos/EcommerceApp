@@ -531,6 +531,7 @@
 		B74A8C6E27BEB5B1002F41CD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7563F32295DEBFA002C0F4F /* UI */,
 				B7BA1D8F295DE72500F05C5C /* Presenter */,
 				B74A8D3D27BFDA7C002F41CD /* Data */,
 				B74A8CBD27BEBE98002F41CD /* Domain */,
@@ -753,6 +754,29 @@
 				B72AE23827C408AE00525CCD /* Remote */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B7563F32295DEBFA002C0F4F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B7563F34295DEC1D002C0F4F /* Common */,
+				B7563F33295DEC10002C0F4F /* ListItemView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B7563F33295DEC10002C0F4F /* ListItemView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListItemView;
+			sourceTree = "<group>";
+		};
+		B7563F34295DEC1D002C0F4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B75F0D9D27C666950031412C /* Infra */ = {

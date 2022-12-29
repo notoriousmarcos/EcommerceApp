@@ -8,7 +8,17 @@
 import Combine
 import Foundation
 
-class ListItemsViewModel {
+protocol ListItemsViewModelProtocol {
+    var state: ViewState<[Product], Error> { get }
+
+    init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void)
+
+    func onLoad()
+
+    func reload()
+}
+
+class ListItemsViewModel: ListItemsViewModelProtocol {
     // MARK: - Public Properties
     @Published private(set) var state: ViewState<[Product], Error> = .idle
 
@@ -16,7 +26,7 @@ class ListItemsViewModel {
     private let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
 
     // MARK: - Init
-    init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void) {
+    required init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void) {
         self.fetchAllItems = fetchAllItems
     }
 
