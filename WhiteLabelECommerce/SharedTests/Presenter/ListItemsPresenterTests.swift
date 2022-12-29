@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/08/22.
 //
 
-@testable import WhiteLabelECommerce
 import Combine
+@testable import WhiteLabelECommerce
 import XCTest
 
 enum ViewState<T, E: Error> {
@@ -33,6 +33,15 @@ class ListItemsViewModel {
 
     // MARK: - Functions
     func onLoad() {
+        fetchItems()
+    }
+
+    func reload() {
+        fetchItems()
+    }
+
+    // MARK: - Private Functions
+    private func fetchItems() {
         fetchAllItems { [weak self] result in
             switch result {
                 case.success(let products):
@@ -87,4 +96,23 @@ class ListItemsPresenterTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
+    func testListItemsViewModel_reloadWithSuccess_ShouldNotifySubscribersWhenFinished() {
+        // Arrange
+        let expectation = expectation(description: "Expect to be called when state change.")
+        let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
+            completion(.success(Mocks.products))
+        }
+        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+
+        // Act
+        subscriptions.insert(sut.$state.sink { state in
+            // Assert
+            if case let .loaded(items) = state {
+                expectation.fulfill()
+                XCTAssertEqual(items, Mocks.products)
+            }
+        })
+        sut.reload()
+        waitForExpectations(timeout: 1)
+    }
 }
