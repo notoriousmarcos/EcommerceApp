@@ -30,9 +30,7 @@ class ListItemsViewModel: ListItemsViewModelProtocol {
         self.fetchAllItems = fetchAllItems
     }
 
-    deinit {
-        print("Deinit ListItemsViewModel")
-    }
+    deinit { }
 
     // MARK: - Functions
     func onLoad() {
