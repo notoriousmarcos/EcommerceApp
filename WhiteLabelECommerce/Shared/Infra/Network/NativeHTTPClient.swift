@@ -24,7 +24,7 @@ class NativeHTTPClient: HTTPClient {
         _ completion: @escaping ResultCompletionHandler<ReturnType, DomainError>
     ) {
         guard let request = request.asURLRequest() else {
-            completion(.failure(.requestError(error: .badRequest)))
+            completion(.failure(.requestError(error: .urlError)))
             return
         }
         var subscription: AnyCancellable?
@@ -57,31 +57,23 @@ class NativeHTTPClient: HTTPClient {
     private func dispatch(request: URLRequest) -> AnyPublisher<Data, HTTPError> {
         return session
             .dataTaskPublisher(for: request)
-            .tryMap({ [weak self] data, response in
+            .tryMap({ data, response in
                 if let response = response as? HTTPURLResponse,
                    !(200...299).contains(response.statusCode) {
-                    throw self?.handleError(response.statusCode) ?? .unknown
+                    throw HTTPError(rawValue: response.statusCode)
                 }
                 return data
             })
             .mapError { error in
                 guard let error = error as? HTTPError else {
+                    if let error = error as? URLError {
+                        return HTTPError(rawValue: error.errorCode)
+                    }
                     return .unknown
                 }
                 return error
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
-    }
-
-    private func handleError(_ statusCode: Int) -> HTTPError {
-        switch statusCode {
-            case 400: return .badRequest
-            case 401: return .unauthorized
-            case 403: return .forbidden
-            case 404: return .notFound
-            case 500: return .serverError
-            default: return .unknown
-        }
     }
 }

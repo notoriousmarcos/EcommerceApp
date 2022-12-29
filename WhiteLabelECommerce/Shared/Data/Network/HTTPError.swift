@@ -8,6 +8,7 @@
 import Foundation
 
 enum HTTPError: Int, Error {
+    case urlError = -1002
     case badRequest = 400
     case unauthorized = 401
     case forbidden = 403
@@ -18,6 +19,8 @@ enum HTTPError: Int, Error {
 
     init(rawValue: Int) {
         switch rawValue {
+            case -1002:
+                self = .urlError
             case 400:
                 self = .badRequest
             case 401:

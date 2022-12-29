@@ -18,6 +18,11 @@ class NativeHTTPClientTests: XCTestCase {
     private var request = StubRequest(baseURL: "http://google.com")
     private lazy var sut = NativeHTTPClient(session: session)
 
+    override func tearDown() {
+        MockURLProtocol.requestHandler = nil
+        super.tearDown()
+    }
+
     func testNativeHTTPClient_init_ShouldRetainProperties() {
         // Arrange
         let sut = NativeHTTPClient(session: session)
@@ -92,7 +97,7 @@ class NativeHTTPClientTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
-    func testNativeHTTPClient_dispatch_ShouldReceiveUnknown() {
+    func testNativeHTTPClient_dispatch_ShouldReceiveUrlError() {
         // Arranged
         let sut = NativeHTTPClient()
         let exp = expectation(description: "Waiting for Request")
@@ -101,9 +106,9 @@ class NativeHTTPClientTests: XCTestCase {
         sut.dispatch(request: StubRequest(baseURL: "http\\")) { (result: Result<[Product], DomainError>) in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                XCTAssertEqual(error, .unknown)
+                XCTAssertEqual(error, .urlError)
             } else {
-                XCTFail("Should be Failed.")
+                XCTFail("Should be Failed because error: \(result).")
             }
             exp.fulfill()
         }
