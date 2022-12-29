@@ -8,8 +8,8 @@
 import Combine
 import Foundation
 
-protocol ListItemsViewModelProtocol {
-    var state: ViewState<[Product], Error> { get }
+protocol ListItemsViewModelProtocol: ObservableObject {
+    var state: ViewState<[Product], DomainError> { get }
 
     init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void)
 
@@ -20,7 +20,7 @@ protocol ListItemsViewModelProtocol {
 
 class ListItemsViewModel: ListItemsViewModelProtocol {
     // MARK: - Public Properties
-    @Published private(set) var state: ViewState<[Product], Error> = .idle
+    @Published private(set) var state: ViewState<[Product], DomainError> = .idle
 
     // MARK: - Private Properties
     private let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
