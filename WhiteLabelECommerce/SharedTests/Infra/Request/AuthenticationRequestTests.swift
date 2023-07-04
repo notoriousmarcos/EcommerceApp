@@ -13,7 +13,7 @@ class AuthenticationRequestTests: XCTestCase {
 
     func testAuthenticationRequest_init_ShouldRetainCorrectValues() {
         // Assert
-        XCTAssertEqual(sut.baseURL, "https://fakestoreapi.com/auth/login")
+        XCTAssertEqual(sut.path, "/auth/login")
         XCTAssertEqual(sut.method, .post)
         XCTAssertEqual(sut.contentType, "application/json")
         XCTAssertNil(sut.params)

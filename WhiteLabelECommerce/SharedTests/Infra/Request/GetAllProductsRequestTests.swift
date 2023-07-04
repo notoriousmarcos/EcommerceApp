@@ -14,7 +14,7 @@ class GetAllProductsRequestTests: XCTestCase {
         let sut = GetAllProductsRequest()
 
         // Assert
-        XCTAssertEqual(sut.baseURL, "https://fakestoreapi.com/products")
+        XCTAssertEqual(sut.path, "/products")
         XCTAssertEqual(sut.method, .get)
         XCTAssertEqual(sut.contentType, "application/json")
         XCTAssertNil(sut.params)

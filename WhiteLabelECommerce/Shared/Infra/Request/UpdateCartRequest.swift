@@ -9,7 +9,7 @@ import Foundation
 
 struct UpdateCartRequest: Request {
     // MARK: - Properties
-    let baseURL: String
+    let path: String
     let method: HTTPMethod = .put
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
@@ -18,7 +18,7 @@ struct UpdateCartRequest: Request {
 
     init?(cart: Cart) {
         guard let cartId = cart.id else { return nil }
-        baseURL = "https://fakestoreapi.com/carts/\(cartId)"
+        path = "/carts/\(cartId)"
         self.body = cart.toJSON()
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct AuthenticationRequest: Request {
     // MARK: - Properties
-    let baseURL: String = "https://fakestoreapi.com/auth/login"
+    let path: String = "/auth/login"
     let method: HTTPMethod = .post
     let contentType: String = "application/json"
     let params: [String: Any]? = nil

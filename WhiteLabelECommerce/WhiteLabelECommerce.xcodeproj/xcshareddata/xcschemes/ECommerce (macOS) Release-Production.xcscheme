@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
+               BlueprintIdentifier = "B74A8C7E27BEB5B2002F41CD"
                BuildableName = "WhiteLabelECommerce.app"
-               BlueprintName = "WhiteLabelECommerce (iOS)"
+               BlueprintName = "WhiteLabelECommerce (macOS)"
                ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlan/UinitTest (iOS).xctestplan"
+            reference = "container:TestPlan/UnitTest (macOS).xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -48,9 +48,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
+            BlueprintIdentifier = "B74A8C7E27BEB5B2002F41CD"
             BuildableName = "WhiteLabelECommerce.app"
-            BlueprintName = "WhiteLabelECommerce (iOS)"
+            BlueprintName = "WhiteLabelECommerce (macOS)"
             ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,16 +61,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
+            BlueprintIdentifier = "B74A8C7E27BEB5B2002F41CD"
             BuildableName = "WhiteLabelECommerce.app"
-            BlueprintName = "WhiteLabelECommerce (iOS)"
+            BlueprintName = "WhiteLabelECommerce (macOS)"
             ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Release (Production)">

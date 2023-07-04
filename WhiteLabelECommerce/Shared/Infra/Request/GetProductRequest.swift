@@ -9,7 +9,7 @@ import Foundation
 
 struct GetProductRequest: Request {
     // MARK: - Properties
-    let baseURL: String
+    let path: String
     let method: HTTPMethod = .get
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
@@ -17,6 +17,6 @@ struct GetProductRequest: Request {
     let headers: [String: String]? = nil
 
     init(id: Int) {
-        baseURL = "https://fakestoreapi.com/products/\(id)"
+        path = "/products/\(id)"
     }
 }

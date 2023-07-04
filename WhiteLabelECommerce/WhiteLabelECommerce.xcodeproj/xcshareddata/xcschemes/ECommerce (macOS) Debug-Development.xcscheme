@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1430"
-   version = "1.7">
+   version = "2.2">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -9,33 +9,42 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
+               BlueprintIdentifier = "B74A8C7E27BEB5B2002F41CD"
                BuildableName = "WhiteLabelECommerce.app"
-               BlueprintName = "WhiteLabelECommerce (iOS)"
+               BlueprintName = "WhiteLabelECommerce (macOS)"
                ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
             </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Release (Production)"
+      buildConfiguration = "Debug (Development)"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlan/UinitTest (iOS).xctestplan"
+            reference = "container:TestPlan/UnitTest (macOS).xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release (Production)"
+      buildConfiguration = "Debug (Development)"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -48,35 +57,25 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
+            BlueprintIdentifier = "B74A8C7E27BEB5B2002F41CD"
             BuildableName = "WhiteLabelECommerce.app"
-            BlueprintName = "WhiteLabelECommerce (iOS)"
+            BlueprintName = "WhiteLabelECommerce (macOS)"
             ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release (Production)"
+      buildConfiguration = "Debug (Development)"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74A8C7827BEB5B2002F41CD"
-            BuildableName = "WhiteLabelECommerce.app"
-            BlueprintName = "WhiteLabelECommerce (iOS)"
-            ReferencedContainer = "container:WhiteLabelECommerce.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Release (Production)">
+      buildConfiguration = "Debug (Development)">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release (Production)"
+      buildConfiguration = "Debug (Development)"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

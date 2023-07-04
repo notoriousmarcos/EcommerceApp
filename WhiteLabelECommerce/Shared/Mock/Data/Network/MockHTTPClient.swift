@@ -10,7 +10,7 @@ import Foundation
 #if DEBUG
 extension Request {
     func toString() -> String {
-        baseURL
+        path
     }
 }
 

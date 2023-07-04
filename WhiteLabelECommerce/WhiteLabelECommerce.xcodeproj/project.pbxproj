@@ -26,6 +26,13 @@
 		B717A84627CBF62C002CED0C /* RemoteGetUserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B717A84427CBF62C002CED0C /* RemoteGetUserClient.swift */; };
 		B717A84827CBF6C2002CED0C /* RemoteGetUserClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B717A84727CBF6C2002CED0C /* RemoteGetUserClientTests.swift */; };
 		B717A84927CBF6C2002CED0C /* RemoteGetUserClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B717A84727CBF6C2002CED0C /* RemoteGetUserClientTests.swift */; };
+		B720808A2A54B05D005D237B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72080892A54B05D005D237B /* Config.swift */; };
+		B720808B2A54B05D005D237B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72080892A54B05D005D237B /* Config.swift */; };
+		B720808C2A54B817005D237B /* AuthenticationRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8027C985BC009E78CC /* AuthenticationRequestTests.swift */; };
+		B72080942A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
+		B72080952A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
+		B72080962A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */; };
+		B72080972A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */; };
 		B72AE22327C3F42100525CCD /* RemoteCreateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE22127C3F42100525CCD /* RemoteCreateCartUseCase.swift */; };
 		B72AE22F27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */; };
 		B72AE23027C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */; };
@@ -166,7 +173,6 @@
 		B7963E7C27C98320009E78CC /* RemoteUpdateCartClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E7727C982B4009E78CC /* RemoteUpdateCartClientTests.swift */; };
 		B7963E7E27C98385009E78CC /* RemoteAuthenticationClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E7D27C98362009E78CC /* RemoteAuthenticationClientTests.swift */; };
 		B7963E7F27C98385009E78CC /* RemoteAuthenticationClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E7D27C98362009E78CC /* RemoteAuthenticationClientTests.swift */; };
-		B7963E8127C985BC009E78CC /* AuthenticationRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8027C985BC009E78CC /* AuthenticationRequestTests.swift */; };
 		B7963E8227C985BC009E78CC /* AuthenticationRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8027C985BC009E78CC /* AuthenticationRequestTests.swift */; };
 		B7963E8427C987AC009E78CC /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */; };
 		B7963E8527C987AC009E78CC /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */; };
@@ -315,6 +321,13 @@
 		B717A84127CBF61C002CED0C /* RemoteAuthenticationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationClient.swift; sourceTree = "<group>"; };
 		B717A84427CBF62C002CED0C /* RemoteGetUserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetUserClient.swift; sourceTree = "<group>"; };
 		B717A84727CBF6C2002CED0C /* RemoteGetUserClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetUserClientTests.swift; sourceTree = "<group>"; };
+		B72080852A54A6FC005D237B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		B72080862A54A70B005D237B /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		B72080872A54A942005D237B /* Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Development.plist; sourceTree = "<group>"; };
+		B72080882A54A946005D237B /* Production.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
+		B72080892A54B05D005D237B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UinitTest (iOS).xctestplan"; sourceTree = "<group>"; };
+		B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UnitTest (macOS).xctestplan"; sourceTree = "<group>"; };
 		B72AE22127C3F42100525CCD /* RemoteCreateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCreateCartUseCase.swift; sourceTree = "<group>"; };
 		B72AE22E27C400C500525CCD /* RemoteUpdateCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUpdateCartUseCaseTests.swift; sourceTree = "<group>"; };
 		B72AE23127C404FE00525CCD /* UpdateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCartUseCase.swift; sourceTree = "<group>"; };
@@ -533,6 +546,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B72080842A54A6BE005D237B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B72080852A54A6FC005D237B /* Development.xcconfig */,
+				B72080862A54A70B005D237B /* Production.xcconfig */,
+				B72080882A54A946005D237B /* Production.plist */,
+				B72080872A54A942005D237B /* Development.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B72080902A54B930005D237B /* TestPlan */ = {
+			isa = PBXGroup;
+			children = (
+				B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */,
+				B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */,
+			);
+			path = TestPlan;
+			sourceTree = "<group>";
+		};
 		B72AE23727C4089C00525CCD /* Remote */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +635,8 @@
 		B74A8C6927BEB5B1002F41CD = {
 			isa = PBXGroup;
 			children = (
+				B72080902A54B930005D237B /* TestPlan */,
+				B72080842A54A6BE005D237B /* Configuration */,
 				B74A8C6E27BEB5B1002F41CD /* Shared */,
 				B74A8CF627BEC890002F41CD /* iOS */,
 				B74A8C8027BEB5B2002F41CD /* macOS */,
@@ -768,6 +803,7 @@
 		B74A8D3E27BFDAE6002F41CD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B72080892A54B05D005D237B /* Config.swift */,
 				B75F0DB427C6685F0031412C /* Request.swift */,
 				B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */,
 				B74A8D4B27BFDCB4002F41CD /* HTTPMethod.swift */,
@@ -1288,7 +1324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72080962A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */,
 				B7BB0A2A2A530D4100BA8AD4 /* Assets.xcassets in Resources */,
+				B72080942A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,7 +1334,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72080972A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */,
 				B7BB0A2B2A530D4100BA8AD4 /* Assets.xcassets in Resources */,
+				B72080952A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,6 +1526,7 @@
 			files = (
 				B75F0DC327C6685F0031412C /* GetProductRequest.swift in Sources */,
 				B7BB0AF22A530F7D00BA8AD4 /* ProductDetail.swift in Sources */,
+				B720808A2A54B05D005D237B /* Config.swift in Sources */,
 				B74A8CC627BEC1AF002F41CD /* Model.swift in Sources */,
 				B7F20FB527C812330018ADAF /* NetworkManager.swift in Sources */,
 				B717A84227CBF61C002CED0C /* RemoteAuthenticationClient.swift in Sources */,
@@ -1573,6 +1614,7 @@
 			files = (
 				B75F0DC427C6685F0031412C /* GetProductRequest.swift in Sources */,
 				B72AE24C27C420F400525CCD /* LocalUpdateProductInCartUseCase.swift in Sources */,
+				B720808B2A54B05D005D237B /* Config.swift in Sources */,
 				B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */,
 				B74A8D2127BFBE45002F41CD /* GetCurrentCartUseCase.swift in Sources */,
 				B74A8CCA27BEC464002F41CD /* Model.swift in Sources */,
@@ -1700,9 +1742,9 @@
 				B72AE26427C51C0500525CCD /* ErrorExtensionTests.swift in Sources */,
 				B74A8D3227BFC8BF002F41CD /* AuthenticationTests.swift in Sources */,
 				B746947A27C3F05C00060003 /* RemoteCreateCartUseCaseTests.swift in Sources */,
-				B7963E8127C985BC009E78CC /* AuthenticationRequestTests.swift in Sources */,
 				B74A8D0427BEDC95002F41CD /* CartTests.swift in Sources */,
 				B746946527C14B6F00060003 /* CartItemTests.swift in Sources */,
+				B720808C2A54B817005D237B /* AuthenticationRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1776,6 +1818,7 @@
 /* Begin XCBuildConfiguration section */
 		B720807A2A549B80005D237B /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72080852A54A6FC005D237B /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1846,6 +1889,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Development.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1881,6 +1925,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Development.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1944,6 +1989,7 @@
 		};
 		B720807F2A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72080862A54A70B005D237B /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2007,6 +2053,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Production.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2043,6 +2090,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Production.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2107,6 +2155,7 @@
 		};
 		B74A8CA427BEB5B2002F41CD /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72080862A54A70B005D237B /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2168,6 +2217,7 @@
 		};
 		B74A8CA527BEB5B2002F41CD /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72080852A54A6FC005D237B /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2231,6 +2281,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Production.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2262,6 +2313,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Development.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -2298,6 +2350,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Production.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2329,6 +2382,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/Development.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

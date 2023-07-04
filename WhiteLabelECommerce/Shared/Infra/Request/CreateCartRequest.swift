@@ -9,7 +9,7 @@ import Foundation
 
 struct CreateCartRequest: Request {
     // MARK: - Properties
-    let baseURL: String = "https://fakestoreapi.com/carts"
+    let path: String = "/carts"
     let method: HTTPMethod = .post
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
