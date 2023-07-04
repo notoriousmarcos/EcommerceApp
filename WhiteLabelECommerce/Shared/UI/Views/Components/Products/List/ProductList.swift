@@ -16,7 +16,7 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
   @State private var isSearching = false
 
   // MARK: - Public var
-  let displaySearch: Bool = false
+  let displaySearch = false
 
   // MARK: - Private var
   @ObservedObject private var viewModel: ViewModel
@@ -30,8 +30,12 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
   // MARK: - Computed views
   private func productRows(products: [Product]) -> some View {
     ForEach(products, id: \.id) { product in
-      NavigationLink(destination: ProductDetail(productId: product.id), tag: String(product.id), selection: $selectedItem) {
-        ProductRow(productId: product.id)
+      NavigationLink(
+        destination: ProductDetail(product: product),
+        tag: String(product.id),
+        selection: $selectedItem
+      ) {
+        ProductRow(product: product)
       }
     }
   }

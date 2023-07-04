@@ -108,7 +108,8 @@ struct SearchField_Previews : PreviewProvider {
                       placeholder: "Search anything",
                       isSearching: .constant(false))
         }
-      }.listStyle(GroupedListStyle())
+      }
+//      .listStyle(GroupedListStyle())
     }
   }
 }

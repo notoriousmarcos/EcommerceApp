@@ -11,11 +11,10 @@ import SwiftUI
 struct ProductDetail: View {
 
   // MARK: View States
-  @State var productId: Int
+  @State var product: Product
   @State var isAddSheetPresented = false
   @State var isAddedToCart = false
   @State var selectedPoster: ImageData?
-  @State private var product: Product?
 
   // MARK: - View actions
   func addToCart(_ product: Product) {
@@ -25,23 +24,6 @@ struct ProductDetail: View {
 
   func onAddButton() {
     isAddSheetPresented.toggle()
-  }
-
-  // MARK: - Computed views
-  func addActionSheet(_ product: Product) -> ActionSheet {
-    var buttons: [Alert.Button] = []
-    let addToCart: Alert.Button = .default(Text("Sort by added date")) {
-      self.addToCart(product)
-    }
-    let cancelButton = Alert.Button.cancel { }
-    buttons.append(addToCart)
-    buttons.append(cancelButton)
-    let sheet = ActionSheet(
-      title: Text("Add \(product.title) from your cart"),
-      message: nil,
-      buttons: buttons
-    )
-    return sheet
   }
 
   // MARK: - Body
@@ -57,27 +39,38 @@ struct ProductDetail: View {
 
   var body: some View {
     ZStack(alignment: .bottom) {
-      if let product = product {
-        List {
-          topSection(product)
-        }
-        .navigationBarTitle(Text(product.title), displayMode: .large)
-        .navigationBarItems(
-          trailing: Button(action: onAddButton) {
+      List {
+        topSection(product)
+      }
+      .navigationTitle(product.title)
+      .toolbar {
+        ToolbarItemGroup {
+          Button(action: onAddButton) {
             Image(systemName: "text.badge.plus").imageScale(.large)
           }
-        )
-        .actionSheet(isPresented: $isAddSheetPresented, content: { addActionSheet(product) })
-        .disabled(selectedPoster != nil)
-        .blur(radius: selectedPoster != nil ? 30 : 0)
-        .scaleEffect(selectedPoster != nil ? 0.8 : 1)
+        }
       }
-      else {
-        Rectangle()
-          .foregroundColor(.gray)
-          .imageStyle(loaded: false, size: .big)
-
+//      .navigationBarItems(
+//        trailing: Button(action: onAddButton) {
+//          Image(systemName: "text.badge.plus").imageScale(.large)
+//        }
+//      )
+      .confirmationDialog(
+        "Add \(product.title) from your cart",
+        isPresented: $isAddSheetPresented,
+        presenting: product
+      ) { product in
+        Button {
+          // TODO: Implement add to cart.
+        } label: {
+          Text("Add \(product.title) to cart")
+        }
+        Button("Cancel", role: .cancel) { }
       }
+//      .actionSheet(isPresented: $isAddSheetPresented, content: { addActionSheet(product) })
+      .disabled(selectedPoster != nil)
+      .blur(radius: selectedPoster != nil ? 30 : 0)
+      .scaleEffect(selectedPoster != nil ? 0.8 : 1)
     }
   }
 }
@@ -87,8 +80,9 @@ struct ProductDetail: View {
 struct ProductDetail_Previews: PreviewProvider {
   static var previews: some View {
     NavigationView {
-      ProductDetail(productId: Mocks.product.id)
-    }.navigationViewStyle(StackNavigationViewStyle())
+      ProductDetail(product: Mocks.product)
+    }
+//    .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 #endif

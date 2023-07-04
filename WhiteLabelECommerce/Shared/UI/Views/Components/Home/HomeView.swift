@@ -5,6 +5,11 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 import SwiftUI
 
 // MARK: - Shared View
@@ -20,8 +25,8 @@ struct HomeView: View {
     TabbarView().accentColor(.steamGold)
   }
 #endif
-
   private func setupApperance() {
+#if os(iOS) || os(tvOS) || os(watchOS)
     UINavigationBar.appearance().largeTitleTextAttributes = [
       NSAttributedString.Key.foregroundColor: UIColor(named: "steam_gold")!,
       NSAttributedString.Key.font: UIFont(name: "FjallaOne-Regular", size: 40)!
@@ -41,6 +46,10 @@ struct HomeView: View {
     )
 
     UIWindow.appearance().tintColor = UIColor(named: "steam_gold")
+#else
+    // TODO: Implement setup apperance for macOS
+#endif
+
   }
 }
 
@@ -71,6 +80,7 @@ struct TabbarView: View {
 
 // MARK: - MacOS implementation
 struct SplitView: View {
+  @EnvironmentObject var main: Main
   @State var selectedMenu: OutlineMenu = .products
 
   @ViewBuilder
@@ -95,10 +105,10 @@ struct SplitView: View {
       }
       .background(Color.primary.opacity(0.1))
 
-//      switch selectedMenu {
-//        case .products:
-//          ProductList(viewModel: <#T##ListItemsViewModelProtocol#>)
-//      }
+      switch selectedMenu {
+        case .products:
+          ProductList(viewModel: ListItemsViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
+      }
 //      selectedMenu.contentView
     }
   }

@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct WhiteLabelECommerceApp: App {
-    let persistenceController = PersistenceController.shared
 
-    var body: some Scene {
-        WindowGroup {
-            HomeView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+  let main = Main.shared
+
+  var body: some Scene {
+    WindowGroup {
+      HomeView()
+        .environmentObject(main)
     }
+  }
 }

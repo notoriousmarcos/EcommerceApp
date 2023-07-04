@@ -21,6 +21,7 @@ struct Products: View {
   }
 
   //    @StateObject private var selectedMenu = MoviesSelectedMenuStore(selectedMenu: MoviesMenu.allCases.first!)
+  @EnvironmentObject var main: Main
   @State private var isSettingPresented = false
   @State private var viewMode = ViewMode.list
 
@@ -46,8 +47,7 @@ struct Products: View {
 
   @ViewBuilder
   private var productsAsList: some View {
-    // TODO: Inject correct ViewModel
-    ProductList(viewModel: ListItemsViewModel(fetchAllItems: { _ in }))
+    ProductList(viewModel: ListItemsViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
   }
 
   private var productsAsGrid: some View {
@@ -65,15 +65,13 @@ struct Products: View {
             productsAsGrid
         }
       }
-      .navigationBarTitle("Products")
-      .navigationBarTitleDisplayMode(viewMode == .list ? .inline : .automatic)
-      .navigationBarItems(
-        trailing:
-          HStack {
-            swapModeButton
-            settingButton
-          }
-      )
+      .navigationTitle("Products")
+      .toolbar {
+        ToolbarItemGroup {
+          swapModeButton
+          settingButton
+        }
+      }
     }
   }
 }
