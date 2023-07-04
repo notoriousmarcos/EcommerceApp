@@ -283,17 +283,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CC80D6E7C05B00794056B74 /* Pods-WhiteLabelECommerce (macOS).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).release (production).xcconfig"; sourceTree = "<group>"; };
+		2E08513641C31080C03303C3 /* Pods-WhiteLabelECommerce (iOS).debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).debug (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).debug (development).xcconfig"; sourceTree = "<group>"; };
 		353C024767C7BFBC452EC9B8 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		395F3DB4AE2258DAA134808D /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (development).xcconfig"; sourceTree = "<group>"; };
 		410B6A8F18B63AC1B83567A5 /* Pods_WhiteLabelECommerce__iOS__WhiteLabelECommerceTests_iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS__WhiteLabelECommerceTests_iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A9CC098F96A7A400C0DF97 /* Pods-WhiteLabelECommerce (macOS).debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug (development).xcconfig"; sourceTree = "<group>"; };
 		4ECF3023D916280F28FD529E /* Pods-WhiteLabelECommerceTests(mac).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(mac).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).release.xcconfig"; sourceTree = "<group>"; };
+		51FF6560C9F1DA391D6BA9D8 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (development).xcconfig"; sourceTree = "<group>"; };
+		57F78983C303E4EB7EF866A0 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (development).xcconfig"; sourceTree = "<group>"; };
+		5837339C36F04DBF62215FBA /* Pods-WhiteLabelECommerce (macOS).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug (production).xcconfig"; sourceTree = "<group>"; };
+		5CCAF764B820B40F4731131A /* Pods-WhiteLabelECommerce (iOS).release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).release (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).release (development).xcconfig"; sourceTree = "<group>"; };
 		60E61A3B94C22716C2E0151E /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		6518F178CF11F79F3A9B504B /* Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6699D83C401AC3026BC1322C /* Pods-WhiteLabelECommerceTests(mac).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(mac).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerceTests(mac).debug.xcconfig"; sourceTree = "<group>"; };
 		70B308FDB1ADA6F52CD95A10 /* Pods-WhiteLabelECommerceTests(iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).release.xcconfig"; sourceTree = "<group>"; };
 		7B3A10C4B880D2F99CF1E8EE /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		83C7DE74CC7F993B1B24E1B4 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release.xcconfig"; sourceTree = "<group>"; };
+		9135EFF758964E41B4EFF59F /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (development).xcconfig"; sourceTree = "<group>"; };
 		91F47F37A635D63E7CC79D63 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		97579B8B7587CDA188889AA1 /* Pods-WhiteLabelECommerce (macOS).release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).release (development).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).release (development).xcconfig"; sourceTree = "<group>"; };
+		9F7B7375E5CE9FA7BD0475AC /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (production).xcconfig"; sourceTree = "<group>"; };
+		A37E77FC9C31395298833D82 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig"; sourceTree = "<group>"; };
 		AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA5705A97D02EBC80BF8D49 /* Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig"; sourceTree = "<group>"; };
 		B717A83227CBC69C002CED0C /* GetUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequestTests.swift; sourceTree = "<group>"; };
 		B717A83527CBC6EB002CED0C /* GetUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		B717A83827CBF061002CED0C /* RemoteGetUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetUserUseCaseTests.swift; sourceTree = "<group>"; };
@@ -428,9 +441,12 @@
 		B7F20FAE27C7E1F90018ADAF /* MockClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClients.swift; sourceTree = "<group>"; };
 		B7F20FB427C812330018ADAF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B7F20FBA27C91DD20018ADAF /* RemoteGetProductClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductClientTests.swift; sourceTree = "<group>"; };
+		B91F2592B8427C2A94CE26D4 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig"; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		BC560CDBF5BA1BAF3BADFEC1 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig"; sourceTree = "<group>"; };
 		C27BAD843FE856A0074B1D47 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig"; sourceTree = "<group>"; };
 		D698E6D0A117864912462B8C /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig"; sourceTree = "<group>"; };
+		F1690EBD77D4A428D2871EEB /* Pods-WhiteLabelECommerce (iOS).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).release (production).xcconfig"; sourceTree = "<group>"; };
 		FC3C6D586A0710DF9B23DE9C /* Pods_WhiteLabelECommerce__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1398C74CEE0A30D991E860 /* Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerceTests(iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -486,6 +502,22 @@
 				C27BAD843FE856A0074B1D47 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig */,
 				D698E6D0A117864912462B8C /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig */,
 				83C7DE74CC7F993B1B24E1B4 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release.xcconfig */,
+				AFA5705A97D02EBC80BF8D49 /* Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig */,
+				2E08513641C31080C03303C3 /* Pods-WhiteLabelECommerce (iOS).debug (development).xcconfig */,
+				5CCAF764B820B40F4731131A /* Pods-WhiteLabelECommerce (iOS).release (development).xcconfig */,
+				F1690EBD77D4A428D2871EEB /* Pods-WhiteLabelECommerce (iOS).release (production).xcconfig */,
+				9F7B7375E5CE9FA7BD0475AC /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (production).xcconfig */,
+				57F78983C303E4EB7EF866A0 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (development).xcconfig */,
+				9135EFF758964E41B4EFF59F /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (development).xcconfig */,
+				B91F2592B8427C2A94CE26D4 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig */,
+				5837339C36F04DBF62215FBA /* Pods-WhiteLabelECommerce (macOS).debug (production).xcconfig */,
+				47A9CC098F96A7A400C0DF97 /* Pods-WhiteLabelECommerce (macOS).debug (development).xcconfig */,
+				97579B8B7587CDA188889AA1 /* Pods-WhiteLabelECommerce (macOS).release (development).xcconfig */,
+				2CC80D6E7C05B00794056B74 /* Pods-WhiteLabelECommerce (macOS).release (production).xcconfig */,
+				BC560CDBF5BA1BAF3BADFEC1 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig */,
+				51FF6560C9F1DA391D6BA9D8 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (development).xcconfig */,
+				395F3DB4AE2258DAA134808D /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (development).xcconfig */,
+				A37E77FC9C31395298833D82 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1742,7 +1774,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B74A8CA427BEB5B2002F41CD /* Debug */ = {
+		B720807A2A549B80005D237B /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1801,9 +1833,116 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug (Development)";
 		};
-		B74A8CA527BEB5B2002F41CD /* Release */ = {
+		B720807B2A549B80005D237B /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E08513641C31080C03303C3 /* Pods-WhiteLabelECommerce (iOS).debug (development).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug (Development)";
+		};
+		B720807C2A549B80005D237B /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A9CC098F96A7A400C0DF97 /* Pods-WhiteLabelECommerce (macOS).debug (development).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Debug (Development)";
+		};
+		B720807D2A549B80005D237B /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F78983C303E4EB7EF866A0 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (development).xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/WhiteLabelECommerce";
+			};
+			name = "Debug (Development)";
+		};
+		B720807E2A549B80005D237B /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51FF6560C9F1DA391D6BA9D8 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (development).xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/Contents/MacOS/WhiteLabelECommerce";
+			};
+			name = "Debug (Development)";
+		};
+		B720807F2A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1855,42 +1994,11 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
-		B74A8CA727BEB5B2002F41CD /* Debug */ = {
+		B72080802A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60E61A3B94C22716C2E0151E /* Pods-WhiteLabelECommerce (iOS).debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 66KNLMFJQ2;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
-				PRODUCT_NAME = WhiteLabelECommerce;
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B74A8CA827BEB5B2002F41CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 353C024767C7BFBC452EC9B8 /* Pods-WhiteLabelECommerce (iOS).release.xcconfig */;
+			baseConfigurationReference = F1690EBD77D4A428D2871EEB /* Pods-WhiteLabelECommerce (iOS).release (production).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1918,11 +2026,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
-		B74A8CAA27BEB5B2002F41CD /* Debug */ = {
+		B72080812A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */;
+			baseConfigurationReference = 2CC80D6E7C05B00794056B74 /* Pods-WhiteLabelECommerce (macOS).release (production).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1949,64 +2057,11 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
-			name = Debug;
+			name = "Release (Production)";
 		};
-		B74A8CAB27BEB5B2002F41CD /* Release */ = {
+		B72080822A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91F47F37A635D63E7CC79D63 /* Pods-WhiteLabelECommerce (macOS).release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 66KNLMFJQ2;
-				ENABLE_HARDENED_RUNTIME = NO;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
-				PRODUCT_NAME = WhiteLabelECommerce;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		B74A8CD627BEC64C002F41CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B3A10C4B880D2F99CF1E8EE /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 66KNLMFJQ2;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/WhiteLabelECommerce";
-			};
-			name = Debug;
-		};
-		B74A8CD727BEC64C002F41CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C27BAD843FE856A0074B1D47 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release.xcconfig */;
+			baseConfigurationReference = B91F2592B8427C2A94CE26D4 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
@@ -2025,11 +2080,11 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/WhiteLabelECommerce";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
-		B74A8CF227BEC80C002F41CD /* Debug */ = {
+		B72080832A549BB3005D237B /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D698E6D0A117864912462B8C /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug.xcconfig */;
+			baseConfigurationReference = A37E77FC9C31395298833D82 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -2048,11 +2103,296 @@
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/Contents/MacOS/WhiteLabelECommerce";
 			};
-			name = Debug;
+			name = "Release (Production)";
 		};
-		B74A8CF327BEC80C002F41CD /* Release */ = {
+		B74A8CA427BEB5B2002F41CD /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83C7DE74CC7F993B1B24E1B4 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Production)";
+		};
+		B74A8CA527BEB5B2002F41CD /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = "Release (Development)";
+		};
+		B74A8CA727BEB5B2002F41CD /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFA5705A97D02EBC80BF8D49 /* Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug (Production)";
+		};
+		B74A8CA827BEB5B2002F41CD /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CCAF764B820B40F4731131A /* Pods-WhiteLabelECommerce (iOS).release (development).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		B74A8CAA27BEB5B2002F41CD /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5837339C36F04DBF62215FBA /* Pods-WhiteLabelECommerce (macOS).debug (production).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Debug (Production)";
+		};
+		B74A8CAB27BEB5B2002F41CD /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97579B8B7587CDA188889AA1 /* Pods-WhiteLabelECommerce (macOS).release (development).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
+				PRODUCT_NAME = WhiteLabelECommerce;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release (Development)";
+		};
+		B74A8CD627BEC64C002F41CD /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F7B7375E5CE9FA7BD0475AC /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).debug (production).xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/WhiteLabelECommerce";
+			};
+			name = "Debug (Production)";
+		};
+		B74A8CD727BEC64C002F41CD /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9135EFF758964E41B4EFF59F /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (development).xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/WhiteLabelECommerce";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		B74A8CF227BEC80C002F41CD /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC560CDBF5BA1BAF3BADFEC1 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -2071,7 +2411,30 @@
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/Contents/MacOS/WhiteLabelECommerce";
 			};
-			name = Release;
+			name = "Debug (Production)";
+		};
+		B74A8CF327BEC80C002F41CD /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 395F3DB4AE2258DAA134808D /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (development).xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66KNLMFJQ2;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteLabelECommerce.app/Contents/MacOS/WhiteLabelECommerce";
+			};
+			name = "Release (Development)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -2079,47 +2442,57 @@
 		B74A8C6D27BEB5B1002F41CD /* Build configuration list for PBXProject "WhiteLabelECommerce" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74A8CA427BEB5B2002F41CD /* Debug */,
-				B74A8CA527BEB5B2002F41CD /* Release */,
+				B74A8CA427BEB5B2002F41CD /* Debug (Production) */,
+				B720807A2A549B80005D237B /* Debug (Development) */,
+				B74A8CA527BEB5B2002F41CD /* Release (Development) */,
+				B720807F2A549BB3005D237B /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Debug (Production)";
 		};
 		B74A8CA627BEB5B2002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerce (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74A8CA727BEB5B2002F41CD /* Debug */,
-				B74A8CA827BEB5B2002F41CD /* Release */,
+				B74A8CA727BEB5B2002F41CD /* Debug (Production) */,
+				B720807B2A549B80005D237B /* Debug (Development) */,
+				B74A8CA827BEB5B2002F41CD /* Release (Development) */,
+				B72080802A549BB3005D237B /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Debug (Production)";
 		};
 		B74A8CA927BEB5B2002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerce (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74A8CAA27BEB5B2002F41CD /* Debug */,
-				B74A8CAB27BEB5B2002F41CD /* Release */,
+				B74A8CAA27BEB5B2002F41CD /* Debug (Production) */,
+				B720807C2A549B80005D237B /* Debug (Development) */,
+				B74A8CAB27BEB5B2002F41CD /* Release (Development) */,
+				B72080812A549BB3005D237B /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Debug (Production)";
 		};
 		B74A8CD527BEC64C002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerceTests(iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74A8CD627BEC64C002F41CD /* Debug */,
-				B74A8CD727BEC64C002F41CD /* Release */,
+				B74A8CD627BEC64C002F41CD /* Debug (Production) */,
+				B720807D2A549B80005D237B /* Debug (Development) */,
+				B74A8CD727BEC64C002F41CD /* Release (Development) */,
+				B72080822A549BB3005D237B /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Debug (Production)";
 		};
 		B74A8CF127BEC80C002F41CD /* Build configuration list for PBXNativeTarget "WhiteLabelECommerceTests(mac)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74A8CF227BEC80C002F41CD /* Debug */,
-				B74A8CF327BEC80C002F41CD /* Release */,
+				B74A8CF227BEC80C002F41CD /* Debug (Production) */,
+				B720807E2A549B80005D237B /* Debug (Development) */,
+				B74A8CF327BEC80C002F41CD /* Release (Development) */,
+				B72080832A549BB3005D237B /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Debug (Production)";
 		};
 /* End XCConfigurationList section */
 	};
