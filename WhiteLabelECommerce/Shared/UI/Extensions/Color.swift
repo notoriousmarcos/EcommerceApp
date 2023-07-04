@@ -1,6 +1,6 @@
 //
 //  ColorScheme.swift
-//  MovieSwift
+//  WhiteLabelECommerceApp
 //
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //

@@ -1,13 +1,13 @@
 //
 //  Collection.swift
-//  MovieSwift
+//  WhiteLabelECommerceApp
 //
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
 import Foundation
 
-enum MoviesSort {
+enum ProductSort {
     case byReleaseDate, byAddedDate, byScore, byPopularity
 
     func title() -> String {
@@ -37,21 +37,21 @@ enum MoviesSort {
     }
 }
 
-extension Sequence where Iterator.Element == Int {
-    func sortedMoviesIds(by: MoviesSort, state: AppState) -> [Int] {
-        switch by {
-        case .byAddedDate:
-            let metas = state.moviesState.moviesUserMeta.filter { self.contains($0.key) }
-            return metas.sorted { $0.value.addedToList ?? Date() > $1.value.addedToList ?? Date() }.compactMap { $0.key }
-        case .byReleaseDate:
-            let movies = state.moviesState.movies.filter { self.contains($0.key) }
-            return movies.sorted { $0.value.releaseDate ?? Date() > $1.value.releaseDate ?? Date() }.compactMap { $0.key }
-        case .byPopularity:
-            let movies = state.moviesState.movies.filter { self.contains($0.key) }
-            return movies.sorted { $0.value.popularity > $1.value.popularity }.compactMap { $0.key }
-        case .byScore:
-            let movies = state.moviesState.movies.filter { self.contains($0.key) }
-            return movies.sorted { $0.value.vote_average > $1.value.vote_average }.compactMap { $0.key }
-        }
-    }
-}
+//extension Sequence where Iterator.Element == Int {
+//    func sortedMoviesIds(by: ProductSort, state: AppState) -> [Int] {
+//        switch by {
+//        case .byAddedDate:
+//            let metas = state.ecommerceState.moviesUserMeta.filter { self.contains($0.key) }
+//            return metas.sorted { $0.value.addedToList ?? Date() > $1.value.addedToList ?? Date() }.compactMap { $0.key }
+//        case .byReleaseDate:
+//            let movies = state.ecommerceState.movies.filter { self.contains($0.key) }
+//            return movies.sorted { $0.value.releaseDate ?? Date() > $1.value.releaseDate ?? Date() }.compactMap { $0.key }
+//        case .byPopularity:
+//            let movies = state.ecommerceState.movies.filter { self.contains($0.key) }
+//            return movies.sorted { $0.value.popularity > $1.value.popularity }.compactMap { $0.key }
+//        case .byScore:
+//            let movies = state.ecommerceState.movies.filter { self.contains($0.key) }
+//            return movies.sorted { $0.value.vote_average > $1.value.vote_average }.compactMap { $0.key }
+//        }
+//    }
+//}
