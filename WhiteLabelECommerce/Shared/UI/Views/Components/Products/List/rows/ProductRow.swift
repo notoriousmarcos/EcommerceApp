@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProductRow: View {
-
   // MARK: - Init
   @State var product: Product
 
@@ -18,7 +17,7 @@ struct ProductRow: View {
         PosterImage(url: URL(string: product.imageURL ?? ""), size: .medium)
       }
       .fixedSize()
-      .animation(.spring())
+      .animation(.spring(), value: 1)
 
       VStack(alignment: .leading, spacing: 8) {
         Text(product.title)

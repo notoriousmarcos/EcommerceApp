@@ -8,16 +8,16 @@
 import Foundation
 import SwiftUI
 
-extension Font {
-    public static func fHACondFrenchNC(size: CGFloat) -> Font {
+public extension Font {
+    static func fHACondFrenchNC(size: CGFloat) -> Font {
         return Font.custom("FHA Condensed French NC", size: size)
     }
 
-    public static func americanCaptain(size: CGFloat) -> Font {
+    static func americanCaptain(size: CGFloat) -> Font {
         return Font.custom("American Captain", size: size)
     }
 
-    public static func fjallaOne(size: CGFloat) -> Font {
+    static func fjallaOne(size: CGFloat) -> Font {
         return Font.custom("FjallaOne-Regular", size: size)
     }
 }

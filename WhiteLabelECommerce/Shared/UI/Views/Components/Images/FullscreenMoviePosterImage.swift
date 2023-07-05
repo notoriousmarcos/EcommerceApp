@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FullscreenMoviePosterImage: View {
   let url: URL?
-  
+
   var body: some View {
     ZStack {
       if let url = url {

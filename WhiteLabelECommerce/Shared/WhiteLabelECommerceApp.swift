@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct WhiteLabelECommerceApp: App {
-
   let main = Main.shared
 
   var body: some Scene {

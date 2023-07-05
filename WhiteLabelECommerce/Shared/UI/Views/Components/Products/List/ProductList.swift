@@ -10,7 +10,6 @@ import SwiftUI
 
 // MARK: - Movies List
 struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
-
   // MARK: - binding
   @State private var searchTextWrapper = SearchTextObservable()
   @State private var isSearching = false
@@ -92,7 +91,7 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
       viewModel.onLoad()
       if selectedItem != nil {
         selectedItem = nil
-        /// Changing view id to refresh view to avoid a bug of SwiftUI List that selected list row remains highlighted
+        // Changing view id to refresh view to avoid a bug of SwiftUI List that selected list row remains highlighted
         listViewId = UUID()
       }
     }

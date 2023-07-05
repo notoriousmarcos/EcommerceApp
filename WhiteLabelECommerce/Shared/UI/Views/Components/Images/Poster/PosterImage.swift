@@ -23,7 +23,7 @@ struct PosterImage: View {
             .onAppear {
               isImageLoaded = true
             }
-            .animation(.easeInOut)
+            .animation(.easeInOut, value: isImageLoaded)
             .transition(.opacity)
         } placeholder: {
           Rectangle()

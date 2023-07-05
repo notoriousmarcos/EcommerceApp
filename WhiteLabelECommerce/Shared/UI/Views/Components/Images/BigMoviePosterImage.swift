@@ -12,8 +12,11 @@ struct BigMoviePosterImage: View {
   let size: ImageStyle.Size
   @State var isImageLoaded = false
 
-  var body: some View {
+  var scale: Double {
+    isImageLoaded ? 1 : 0.6
+  }
 
+  var body: some View {
     ZStack(alignment: .center) {
       if let url = url {
         AsyncImage(url: url) { image in
@@ -21,8 +24,8 @@ struct BigMoviePosterImage: View {
             .resizable()
             .renderingMode(.original)
             .imageStyle(loaded: true, size: .big)
-            .scaleEffect(self.isImageLoaded ? 1 : 0.6)
-            .animation(.spring())
+            .scaleEffect(scale)
+            .animation(.spring(), value: scale)
             .onAppear {
               self.isImageLoaded = true
             }

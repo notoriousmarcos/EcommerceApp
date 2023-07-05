@@ -9,7 +9,6 @@ import Combine
 import SwiftUI
 
 struct ProductDetail: View {
-
   // MARK: View States
   @State var product: Product
   @State var isAddSheetPresented = false
@@ -82,7 +81,6 @@ struct ProductDetail_Previews: PreviewProvider {
     NavigationView {
       ProductDetail(product: Mocks.product)
     }
-//    .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 #endif

@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 03/07/23.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 class SearchTextObservable: ObservableObject {
   @Published var searchText = "" {
@@ -42,16 +42,16 @@ class SearchTextObservable: ObservableObject {
       .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
       .removeDuplicates()
       .filter { !$0.isEmpty }
-      .sink(receiveValue: { (searchText) in
+      .sink(receiveValue: { searchText in
         self.onUpdateTextDebounced(text: searchText)
       })
   }
 
   func onUpdateText(text: String) {
-    /// Overwrite by your subclass to get instant text update.
+    // Overwrite by your subclass to get instant text update.
   }
 
   func onUpdateTextDebounced(text: String) {
-    /// Overwrite by your subclass to get debounced text update.
+    // Overwrite by your subclass to get debounced text update.
   }
 }

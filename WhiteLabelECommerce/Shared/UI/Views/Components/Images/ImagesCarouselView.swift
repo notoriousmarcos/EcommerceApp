@@ -59,14 +59,15 @@ struct ImagesCarouselView<ImageInfo: ImageData>: View {
   }
 
   private func closeButton(geoProxy: GeometryProxy) -> some View {
-    Button(action: {
-      self.selectedPoster = nil
-    }) {
-      Circle()
-        .strokeBorder(Color.red, lineWidth: 1)
-        .background(Image(systemName: "xmark").foregroundColor(.red))
-        .frame(width: 50, height: 50)
-    }
+    Button(
+      action: { self.selectedPoster = nil },
+      label: {
+        Circle()
+          .strokeBorder(Color.red, lineWidth: 1)
+          .background(Image(systemName: "xmark").foregroundColor(.red))
+          .frame(width: 50, height: 50)
+      }
+    )
     .scaleEffect(self.innerSelectedPoster != nil ? 0 : 1)
     .position(
       x: geoProxy.frame(in: .local).midX,
@@ -105,25 +106,4 @@ struct ImagesCarouselView<ImageInfo: ImageData>: View {
 }
 
 #if DEBUG
-//struct MoviePostersCarouselView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    ImagesCarouselView(posters: [ImageData(aspect_ratio: 0.666_666_666_666_667,
-//                                           file_path: "/fpemzjF623QVTe98pCVlwwtFC5N.jpg",
-//                                           height: 720,
-//                                           width: 1280),
-//                                 ImageData(aspect_ratio: 0.666_666_666_666_667,
-//                                           file_path: "/fpemzjF623QVTe98pCVlwwtFC5N.jpg",
-//                                           height: 720,
-//                                           width: 1280),
-//                                 ImageData(aspect_ratio: 0.666_666_666_666_667,
-//                                           file_path: "/fpemzjF623QVTe98pCVlwwtFC5N.jpg",
-//                                           height: 720,
-//                                           width: 1280),
-//                                 ImageData(aspect_ratio: 0.666_666_666_666_667,
-//                                           file_path: "/fpemzjF623QVTe98pCVlwwtFC5N.jpg",
-//                                           height: 720,
-//                                           width: 1280)],
-//                       selectedPoster: .constant(nil))
-//  }
-//}
 #endif

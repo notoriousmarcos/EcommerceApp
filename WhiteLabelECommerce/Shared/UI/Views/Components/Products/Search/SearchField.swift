@@ -5,17 +5,17 @@
 //  Created by Marcos Vinicius Brito on 03/07/23.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
-struct SearchField : View {
+struct SearchField: View {
   @ObservedObject var searchTextWrapper: SearchTextObservable
   @Binding var isSearching: Bool
   let placeholder: String
   var dismissButtonTitle: String
   var dismissButtonCallback: (() -> Void)?
 
-  private var searchCancellable: Cancellable? = nil
+  private var searchCancellable: Cancellable? 
 
   init(
     searchTextWrapper: SearchTextObservable,
@@ -36,7 +36,7 @@ struct SearchField : View {
   }
 
   var body: some View {
-    GeometryReader { reader in
+    GeometryReader { _ in
       HStack(alignment: .center, spacing: 0) {
         Image(systemName: "magnifyingglass")
 
@@ -59,7 +59,7 @@ struct SearchField : View {
             }
           )
           .buttonStyle(BorderlessButtonStyle())
-          .animation(.easeInOut)
+          .animation(.easeInOut, value: 1)
         }
       }
       .padding(4)
@@ -69,7 +69,7 @@ struct SearchField : View {
 }
 
 #if DEBUG
-struct SearchField_Previews : PreviewProvider {
+struct SearchField_Previews: PreviewProvider {
   static var previews: some View {
     let withText = SearchTextObservable()
     withText.searchText = "Test"
@@ -88,8 +88,7 @@ struct SearchField_Previews : PreviewProvider {
                     isSearching: .constant(false))
         Section(header: SearchField(searchTextWrapper: withText,
                                     placeholder: "Search anything",
-                                    isSearching: .constant(false)))
-        {
+                                    isSearching: .constant(false))) {
           SearchField(searchTextWrapper: withText,
                       placeholder: "Search anything",
                       isSearching: .constant(false))
@@ -102,14 +101,12 @@ struct SearchField_Previews : PreviewProvider {
                     isSearching: .constant(false))
         Section(header: SearchField(searchTextWrapper: withText,
                                     placeholder: "Search anything",
-                                    isSearching: .constant(false)))
-        {
+                                    isSearching: .constant(false))) {
           SearchField(searchTextWrapper: withText,
                       placeholder: "Search anything",
                       isSearching: .constant(false))
         }
       }
-//      .listStyle(GroupedListStyle())
     }
   }
 }

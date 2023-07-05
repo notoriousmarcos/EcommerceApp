@@ -15,7 +15,6 @@ import SwiftUI
 // MARK: - Shared View
 
 struct HomeView: View {
-
 #if targetEnvironment(macCatalyst)
   var body: some View {
     SplitView().accentColor(.steamGold)
@@ -49,7 +48,6 @@ struct HomeView: View {
 #else
     // TODO: Implement setup apperance for macOS
 #endif
-
   }
 }
 

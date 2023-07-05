@@ -26,23 +26,29 @@ struct Products: View {
   @State private var viewMode = ViewMode.list
 
   private var settingButton: some View {
-    Button(action: {
-      self.isSettingPresented = true
-    }) {
-      HStack {
-        Image(systemName: "wrench").imageScale(.medium)
-      }.frame(width: 30, height: 30)
-    }
+    Button(
+      action: {
+        self.isSettingPresented = true
+      },
+      label: {
+        HStack {
+          Image(systemName: "wrench").imageScale(.medium)
+        }.frame(width: 30, height: 30)
+      }
+    )
   }
 
   private var swapModeButton: some View {
-    Button(action: {
-      self.viewMode = self.viewMode == .grid ? .list : .grid
-    }) {
-      HStack {
-        Image(systemName: self.viewMode.icon()).imageScale(.medium)
-      }.frame(width: 30, height: 30)
-    }
+    Button(
+      action: {
+        self.viewMode = self.viewMode == .grid ? .list : .grid
+      },
+      label: {
+        HStack {
+          Image(systemName: self.viewMode.icon()).imageScale(.medium)
+        }.frame(width: 30, height: 30)
+      }
+    )
   }
 
   @ViewBuilder
