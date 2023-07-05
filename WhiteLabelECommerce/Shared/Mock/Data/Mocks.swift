@@ -43,7 +43,7 @@ struct Mocks {
                 \"price\":10.0,
                 \"category\":\"men's clothing\",
                 \"description\":\"Product description\",
-                \"imageURL\":\"https://imageurl\"
+                \"image\":\"https://imageurl\"
             },
             {
                 \"id\":2,
@@ -51,7 +51,7 @@ struct Mocks {
                 \"price\":10.0,
                 \"category\":\"Women's clothing\",
                 \"description\":\"Product description\",
-                \"imageURL\":\"https://imageurl\"
+                \"image\":\"https://imageurl\"
             }
         ]
     """.data(using: .utf8)
