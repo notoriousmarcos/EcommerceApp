@@ -13,7 +13,7 @@ class CreateCartRequestTests: XCTestCase {
 
     func testCreateCartRequest_init_ShouldRetainCorrectValues() {
         // Assert
-        XCTAssertEqual(sut.baseURL, "https://fakestoreapi.com/carts")
+        XCTAssertEqual(sut.path, "/carts")
         XCTAssertEqual(sut.method, .post)
         XCTAssertEqual(sut.contentType, "application/json")
         XCTAssertNil(sut.params)

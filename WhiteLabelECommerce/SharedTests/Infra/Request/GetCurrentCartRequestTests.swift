@@ -14,7 +14,7 @@ class GetCurrentCartRequestTests: XCTestCase {
         let sut = GetCurrentCartRequest(userId: 1)
 
         // Assert
-        XCTAssertEqual(sut.baseURL, "https://fakestoreapi.com/carts/user/1")
+        XCTAssertEqual(sut.path, "/carts/user/1")
         XCTAssertEqual(sut.method, .get)
         XCTAssertEqual(sut.contentType, "application/json")
         XCTAssertNil(sut.params)

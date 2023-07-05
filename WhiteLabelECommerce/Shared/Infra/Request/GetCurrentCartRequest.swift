@@ -9,7 +9,7 @@ import Foundation
 
 struct GetCurrentCartRequest: Request {
     // MARK: - Properties
-    let baseURL: String
+    let path: String
     let method: HTTPMethod = .get
     let contentType: String = "application/json"
     let params: [String: Any]? = nil
@@ -17,6 +17,6 @@ struct GetCurrentCartRequest: Request {
     let headers: [String: String]? = nil
 
     init(userId: Int) {
-        baseURL = "https://fakestoreapi.com/carts/user/\(userId)"
+        path = "/carts/user/\(userId)"
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 protocol ListItemsViewModelProtocol: ObservableObject {
     var state: ViewState<[Product], DomainError> { get }
 
-    init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void)
+    init(fetchAllItems: @escaping (@escaping ResultCompletionHandler<[Product], DomainError>) -> Void)
 
     func onLoad()
 
@@ -23,10 +23,10 @@ class ListItemsViewModel: ListItemsViewModelProtocol {
     @Published private(set) var state: ViewState<[Product], DomainError> = .idle
 
     // MARK: - Private Properties
-    private let fetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void
+    private let fetchAllItems: (@escaping ResultCompletionHandler<[Product], DomainError>) -> Void
 
     // MARK: - Init
-    required init(fetchAllItems: @escaping (ResultCompletionHandler<[Product], DomainError>) -> Void) {
+    required init(fetchAllItems: @escaping (@escaping ResultCompletionHandler<[Product], DomainError>) -> Void) {
         self.fetchAllItems = fetchAllItems
     }
 

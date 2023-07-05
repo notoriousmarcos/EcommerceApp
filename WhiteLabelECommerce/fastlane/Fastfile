@@ -18,13 +18,13 @@
 platform :ios do
   desc "Run Tests for iOS"
   lane :test do
-    run_tests(scheme: "WhiteLabelECommerce (iOS)")
+    run_tests(scheme: "ECommerce (iOS) Debug-Production")
   end
 end
 
 platform :mac do 
   desc "Run Tests for macOS"
   lane :test do
-    run_tests(scheme: "WhiteLabelECommerce (macOS)")
+    run_tests(scheme: "ECommerce (macOS) Debug-Production")
   end
 end

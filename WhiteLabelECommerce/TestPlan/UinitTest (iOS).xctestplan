@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "FA8919E6-5ED4-4908-A8CB-51B4B5B07826",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WhiteLabelECommerce.xcodeproj",
+        "identifier" : "B74A8CCE27BEC64C002F41CD",
+        "name" : "WhiteLabelECommerceTests(iOS)"
+      }
+    }
+  ],
+  "version" : 1
+}

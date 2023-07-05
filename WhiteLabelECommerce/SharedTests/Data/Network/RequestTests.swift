@@ -19,7 +19,7 @@ class RequestTests: XCTestCase {
 
         // Assert
         XCTAssertNotNil(urlRequest)
-        XCTAssertEqual(urlRequest?.url?.absoluteString, "http://google.com?AnyParam=param")
+        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://fakestoreapi.com?AnyParam=param")
         XCTAssertNotNil(urlRequest?.httpBody)
         XCTAssertNotNil(urlRequest?.allHTTPHeaderFields)
         XCTAssertEqual(urlRequest?.allHTTPHeaderFields?["Content-Type"], "application/json")
@@ -36,7 +36,7 @@ class RequestTests: XCTestCase {
 
         // Assert
         XCTAssertNotNil(urlRequest)
-        XCTAssertEqual(urlRequest?.url?.absoluteString, "http://google.com")
+        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://fakestoreapi.com")
         XCTAssertNil(urlRequest?.httpBody)
         XCTAssertNotNil(urlRequest?.allHTTPHeaderFields)
         XCTAssertEqual(urlRequest?.allHTTPHeaderFields?["Content-Type"], "application/json")
@@ -47,7 +47,7 @@ class RequestTests: XCTestCase {
 private struct MockRequest: Request {
     typealias ReturnType = String
 
-    let baseURL: String = "http://google.com"
+    let path: String = ""
     let method: HTTPMethod = .get
     let contentType: String = "application/json"
     let params: [String: Any]?
