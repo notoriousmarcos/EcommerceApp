@@ -9,18 +9,10 @@ import Combine
 import SwiftUI
 
 // MARK: - Movies List
-struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
-  // MARK: - binding
-  @State private var searchTextWrapper = SearchTextObservable()
-  @State private var isSearching = false
-
-  // MARK: - Public var
-  let displaySearch = false
-
+struct ProductList<ViewModel: ProductListViewModelProtocol>: View {
   // MARK: - Private var
   @ObservedObject private var viewModel: ViewModel
   @State private var selectedItem: String?
-  @State private var listViewId = UUID()
 
   init(viewModel: ViewModel) {
     self.viewModel = viewModel
@@ -41,9 +33,9 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
 
   private func productSection(products: [Product]) -> some View {
     Group {
-      if isSearching {
-        Section(header: Text("Results for \(searchTextWrapper.searchText)")) {
-          if isSearching && products.isEmpty {
+      if viewModel.isSearching {
+        Section(header: Text("Results for \(viewModel.searchTextViewModel.searchText)")) {
+          if viewModel.isSearching && products.isEmpty {
             Text("No results")
           } else {
             productRows(products: products)
@@ -59,9 +51,9 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
 
   private var searchField: some View {
     SearchField(
-      searchTextWrapper: searchTextWrapper,
+      viewModel: viewModel.searchTextViewModel,
       placeholder: "Search any product",
-      isSearching: $isSearching
+      isSearching: $viewModel.isSearching
     )
   }
 
@@ -70,13 +62,13 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
     List {
       switch viewModel.state {
         case .loaded(let items):
-          if displaySearch {
+          if viewModel.displaySearch {
             Section {
               searchField
             }
           }
 
-          productSection(products: items).id(listViewId)
+          productSection(products: items)
         case .failed(let error):
           VStack {
             Text("Sorry, we get something wrong: \(error.localizedDescription)")
@@ -91,8 +83,6 @@ struct ProductList<ViewModel: ListItemsViewModelProtocol>: View {
       viewModel.onLoad()
       if selectedItem != nil {
         selectedItem = nil
-        // Changing view id to refresh view to avoid a bug of SwiftUI List that selected list row remains highlighted
-        listViewId = UUID()
       }
     }
   }

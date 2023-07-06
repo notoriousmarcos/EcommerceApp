@@ -105,7 +105,7 @@ struct SplitView: View {
 
       switch selectedMenu {
         case .products:
-          ProductList(viewModel: ListItemsViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
+          ProductList(viewModel: ProductListViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
       }
 //      selectedMenu.contentView
     }

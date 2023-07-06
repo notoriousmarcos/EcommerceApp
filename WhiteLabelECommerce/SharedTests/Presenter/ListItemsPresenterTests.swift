@@ -18,7 +18,7 @@ class ListItemsPresenterTests: XCTestCase {
         let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
             completion(.success(Mocks.products))
         }
-        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+        let sut = ProductListViewModel(fetchAllItems: stubFetchAllItems)
 
         // Act
         subscriptions.insert(sut.$state.sink { state in
@@ -38,7 +38,7 @@ class ListItemsPresenterTests: XCTestCase {
         let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
             completion(.failure(.unknown(error: nil)))
         }
-        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+        let sut = ProductListViewModel(fetchAllItems: stubFetchAllItems)
 
         // Act
         subscriptions.insert(sut.$state.sink { state in
@@ -57,7 +57,7 @@ class ListItemsPresenterTests: XCTestCase {
         let stubFetchAllItems: (ResultCompletionHandler<[Product], DomainError>) -> Void = { completion in
             completion(.success(Mocks.products))
         }
-        let sut = ListItemsViewModel(fetchAllItems: stubFetchAllItems)
+        let sut = ProductListViewModel(fetchAllItems: stubFetchAllItems)
 
         // Act
         subscriptions.insert(sut.$state.sink { state in

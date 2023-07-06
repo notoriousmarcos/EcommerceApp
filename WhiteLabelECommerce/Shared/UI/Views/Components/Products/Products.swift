@@ -53,7 +53,7 @@ struct Products: View {
 
   @ViewBuilder
   private var productsAsList: some View {
-    ProductList(viewModel: ListItemsViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
+    ProductList(viewModel: ProductListViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
   }
 
   private var productsAsGrid: some View {

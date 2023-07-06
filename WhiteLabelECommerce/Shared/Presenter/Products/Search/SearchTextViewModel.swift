@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-class SearchTextObservable: ObservableObject {
+class SearchTextViewModel: ObservableObject {
   @Published var searchText = "" {
     willSet {
       DispatchQueue.main.async {
@@ -17,11 +17,13 @@ class SearchTextObservable: ObservableObject {
     }
     didSet {
       DispatchQueue.main.async {
-        self.onUpdateText(text: self.searchText)
+        self.onUpdateText?(self.searchText)
       }
     }
   }
 
+  var onUpdateText: ((String) -> Void)?
+  var onUpdateTextDebounced: ((String) -> Void)?
   let searchSubject = PassthroughSubject<String, Never>()
 
   private var searchCancellable: Cancellable? {
@@ -34,24 +36,19 @@ class SearchTextObservable: ObservableObject {
     searchCancellable?.cancel()
   }
 
-  init() {
+  init(
+    onUpdateText: ((String) -> Void)? = nil,
+    onUpdateTextDebounced: ((String) -> Void)? = nil
+  ) {
+    self.onUpdateText = onUpdateText
+    self.onUpdateTextDebounced = onUpdateTextDebounced
     searchCancellable = searchSubject.eraseToAnyPublisher()
-      .map {
-        $0
-      }
+      .map { $0 }
       .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
       .removeDuplicates()
       .filter { !$0.isEmpty }
       .sink(receiveValue: { searchText in
-        self.onUpdateTextDebounced(text: searchText)
+        self.onUpdateTextDebounced?(searchText)
       })
-  }
-
-  func onUpdateText(text: String) {
-    // Overwrite by your subclass to get instant text update.
-  }
-
-  func onUpdateTextDebounced(text: String) {
-    // Overwrite by your subclass to get debounced text update.
   }
 }

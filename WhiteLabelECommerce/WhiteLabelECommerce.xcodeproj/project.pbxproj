@@ -178,7 +178,7 @@
 		B7963E8527C987AC009E78CC /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */; };
 		B797AC7728B5463A009B081F /* ListItemsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */; };
 		B797AC7828B5463A009B081F /* ListItemsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */; };
-		B7BA1D92295DE72500F05C5C /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */; };
+		B7BA1D92295DE72500F05C5C /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ProductListViewModel.swift */; };
 		B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D93295DE76700F05C5C /* ViewState.swift */; };
 		B7BB0A2A2A530D4100BA8AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BB0A292A530D4100BA8AD4 /* Assets.xcassets */; };
 		B7BB0A2B2A530D4100BA8AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BB0A292A530D4100BA8AD4 /* Assets.xcassets */; };
@@ -209,7 +209,7 @@
 		B7BB0AC22A530F7D00BA8AD4 /* PosterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB09C82A53080A00BA8AD4 /* PosterImage.swift */; };
 		B7BB0AC32A530F7D00BA8AD4 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D4A27BFDCB4002F41CD /* HTTPError.swift */; };
 		B7BB0AC52A530F7D00BA8AD4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8D3F27BFDB1A002F41CD /* HTTPClient.swift */; };
-		B7BB0AC82A530F7D00BA8AD4 /* ListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */; };
+		B7BB0AC82A530F7D00BA8AD4 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D90295DE72500F05C5C /* ProductListViewModel.swift */; };
 		B7BB0AC92A530F7D00BA8AD4 /* OutlineMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB09E52A53091A00BA8AD4 /* OutlineMenu.swift */; };
 		B7BB0ACA2A530F7D00BA8AD4 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0A202A53091A00BA8AD4 /* ProductRow.swift */; };
 		B7BB0ACE2A530F7D00BA8AD4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB09E22A53091A00BA8AD4 /* HomeView.swift */; };
@@ -244,8 +244,8 @@
 		B7BB0B522A53406A00BA8AD4 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B502A53406A00BA8AD4 /* Main.swift */; };
 		B7BB0B552A53597D00BA8AD4 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B542A53597D00BA8AD4 /* SearchField.swift */; };
 		B7BB0B562A53597D00BA8AD4 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B542A53597D00BA8AD4 /* SearchField.swift */; };
-		B7BB0B582A5359C700BA8AD4 /* SearchTextObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextObservable.swift */; };
-		B7BB0B592A5359C700BA8AD4 /* SearchTextObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextObservable.swift */; };
+		B7BB0B582A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */; };
+		B7BB0B592A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */; };
 		B7C4376027C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */; };
 		B7C4376127C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */; };
 		B7C4376427C662E60054CF33 /* RemoteAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4376227C662E60054CF33 /* RemoteAuthenticationUseCase.swift */; };
@@ -414,7 +414,7 @@
 		B7963E8027C985BC009E78CC /* AuthenticationRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequestTests.swift; sourceTree = "<group>"; };
 		B7963E8327C987AC009E78CC /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		B797AC7628B5463A009B081F /* ListItemsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsPresenterTests.swift; sourceTree = "<group>"; };
-		B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemsViewModel.swift; sourceTree = "<group>"; };
+		B7BA1D90295DE72500F05C5C /* ProductListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		B7BA1D93295DE76700F05C5C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		B7BB09C72A53080A00BA8AD4 /* PosterStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterStyle.swift; sourceTree = "<group>"; };
 		B7BB09C82A53080A00BA8AD4 /* PosterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImage.swift; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 		B7BB0A292A530D4100BA8AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BB0B502A53406A00BA8AD4 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		B7BB0B542A53597D00BA8AD4 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
-		B7BB0B572A5359C700BA8AD4 /* SearchTextObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextObservable.swift; sourceTree = "<group>"; };
+		B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextViewModel.swift; sourceTree = "<group>"; };
 		B7C4375F27C6625F0054CF33 /* RemoteAuthenticationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationUseCaseTests.swift; sourceTree = "<group>"; };
 		B7C4376227C662E60054CF33 /* RemoteAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		B7C736432848F7CB00440310 /* RemoteGetProductIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetProductIntegrationTests.swift; sourceTree = "<group>"; };
@@ -1003,7 +1003,7 @@
 		B7BA1D8F295DE72500F05C5C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B7BA1D90295DE72500F05C5C /* ListItemsViewModel.swift */,
+				B7F673462A56FC4F00D8B01B /* Products */,
 				B7BA1D96295DE77000F05C5C /* Utils */,
 			);
 			path = Presenter;
@@ -1158,7 +1158,6 @@
 			isa = PBXGroup;
 			children = (
 				B7BB0B542A53597D00BA8AD4 /* SearchField.swift */,
-				B7BB0B572A5359C700BA8AD4 /* SearchTextObservable.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1189,6 +1188,31 @@
 				B717A84127CBF61C002CED0C /* RemoteAuthenticationClient.swift */,
 			);
 			path = RemoteClients;
+			sourceTree = "<group>";
+		};
+		B7F673462A56FC4F00D8B01B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7F673482A56FCA700D8B01B /* List */,
+				B7F673472A56FC6000D8B01B /* Search */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		B7F673472A56FC6000D8B01B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B7F673482A56FCA700D8B01B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B7BA1D90295DE72500F05C5C /* ProductListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1565,10 +1589,10 @@
 				B74A8D2C27BFC551002F41CD /* RemoveProductInCartUseCase.swift in Sources */,
 				B7BB0AC22A530F7D00BA8AD4 /* PosterImage.swift in Sources */,
 				B7BB0AE12A530F7D00BA8AD4 /* BigMoviePosterImage.swift in Sources */,
-				B7BB0B582A5359C700BA8AD4 /* SearchTextObservable.swift in Sources */,
+				B7BB0B582A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */,
 				B7BB0AC32A530F7D00BA8AD4 /* HTTPError.swift in Sources */,
 				B7BB0AF42A530F7D00BA8AD4 /* RemoteGetCurrentCartUseCase.swift in Sources */,
-				B7BB0AC82A530F7D00BA8AD4 /* ListItemsViewModel.swift in Sources */,
+				B7BB0AC82A530F7D00BA8AD4 /* ProductListViewModel.swift in Sources */,
 				B7563F44295E0F42002C0F4F /* Mocks.swift in Sources */,
 				B74A8D0D27BEE42C002F41CD /* User.swift in Sources */,
 				B7BB0AB72A530F7D00BA8AD4 /* HTTPMethod.swift in Sources */,
@@ -1646,7 +1670,7 @@
 				B72AE22327C3F42100525CCD /* RemoteCreateCartUseCase.swift in Sources */,
 				B717A84627CBF62C002CED0C /* RemoteGetUserClient.swift in Sources */,
 				B7BB0AAC2A530F7C00BA8AD4 /* FullscreenMoviePosterImage.swift in Sources */,
-				B7BA1D92295DE72500F05C5C /* ListItemsViewModel.swift in Sources */,
+				B7BA1D92295DE72500F05C5C /* ProductListViewModel.swift in Sources */,
 				B75F0DC827C6687B0031412C /* CartExtension.swift in Sources */,
 				B7C4376427C662E60054CF33 /* RemoteAuthenticationUseCase.swift in Sources */,
 				B75F0DD527C673F10031412C /* NativeHTTPClient.swift in Sources */,
@@ -1655,7 +1679,7 @@
 				B746945F27C1317800060003 /* DateExtension.swift in Sources */,
 				B7563F40295E0F41002C0F4F /* Mocks.swift in Sources */,
 				B74A8D1727BFBAE4002F41CD /* TypeAlias.swift in Sources */,
-				B7BB0B592A5359C700BA8AD4 /* SearchTextObservable.swift in Sources */,
+				B7BB0B592A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */,
 				B7BB0AA72A530F7C00BA8AD4 /* PosterImage.swift in Sources */,
 				B74A8D0E27BEE42C002F41CD /* User.swift in Sources */,
 				B717A83F27CBF1E1002CED0C /* GetUserUseCase.swift in Sources */,
@@ -1895,7 +1919,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1931,7 +1955,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
 				PRODUCT_NAME = WhiteLabelECommerce;
@@ -1952,7 +1976,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1975,7 +1999,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2059,7 +2083,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2096,7 +2120,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
 				PRODUCT_NAME = WhiteLabelECommerce;
@@ -2117,7 +2141,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2141,7 +2165,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2287,7 +2311,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2319,7 +2343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2356,7 +2380,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
 				PRODUCT_NAME = WhiteLabelECommerce;
@@ -2388,7 +2412,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notorious.WhiteLabelECommerce;
 				PRODUCT_NAME = WhiteLabelECommerce;
@@ -2409,7 +2433,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2431,7 +2455,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2455,7 +2479,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2478,7 +2502,7 @@
 				DEVELOPMENT_TEAM = 66KNLMFJQ2;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notorious.WhiteLabelECommerceTests-mac-";
 				PRODUCT_NAME = "$(TARGET_NAME)";

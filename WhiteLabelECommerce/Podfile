@@ -1,7 +1,7 @@
 pod 'SwiftLint'
 
 target 'WhiteLabelECommerce (iOS)' do
-  platform :ios, '15.0'
+  platform :ios, '16.0'
   use_frameworks!
 
   target 'WhiteLabelECommerceTests(iOS)' do
@@ -10,7 +10,7 @@ target 'WhiteLabelECommerce (iOS)' do
 end
 
 target 'WhiteLabelECommerce (macOS)' do
-  platform :osx, '12.0'
+  platform :osx, '13.0'
   use_frameworks!
   target 'WhiteLabelECommerceTests(mac)' do
     inherit! :complete

@@ -9,28 +9,30 @@ import Combine
 import SwiftUI
 
 struct SearchField: View {
-  @ObservedObject var searchTextWrapper: SearchTextObservable
+  @ObservedObject var viewModel: SearchTextViewModel
   @Binding var isSearching: Bool
+  @FocusState private var focused: Bool
+
   let placeholder: String
   var dismissButtonTitle: String
   var dismissButtonCallback: (() -> Void)?
 
-  private var searchCancellable: Cancellable? 
+  private var searchCancellable: Cancellable?
 
   init(
-    searchTextWrapper: SearchTextObservable,
+    viewModel: SearchTextViewModel,
     placeholder: String,
     isSearching: Binding<Bool>,
     dismissButtonTitle: String = "Cancel",
     dismissButtonCallback: (() -> Void)? = nil
   ) {
-    self.searchTextWrapper = searchTextWrapper
+    self.viewModel = viewModel
     self.placeholder = placeholder
     self._isSearching = isSearching
     self.dismissButtonTitle = dismissButtonTitle
     self.dismissButtonCallback = dismissButtonCallback
 
-    self.searchCancellable = searchTextWrapper.searchSubject.sink(receiveValue: { value in
+    self.searchCancellable = viewModel.searchSubject.sink(receiveValue: { value in
       isSearching.wrappedValue = !value.isEmpty
     })
   }
@@ -42,15 +44,16 @@ struct SearchField: View {
 
         TextField(
           self.placeholder,
-          text: self.$searchTextWrapper.searchText
+          text: self.$viewModel.searchText
         )
+        .focused($focused)
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .padding(.horizontal)
 
-        if !self.searchTextWrapper.searchText.isEmpty {
+        if !self.viewModel.searchText.isEmpty {
           Button(
             action: {
-              self.searchTextWrapper.searchText = ""
+              self.viewModel.searchText = ""
               self.isSearching = false
               self.dismissButtonCallback?()
             },
@@ -71,38 +74,38 @@ struct SearchField: View {
 #if DEBUG
 struct SearchField_Previews: PreviewProvider {
   static var previews: some View {
-    let withText = SearchTextObservable()
+    let withText = SearchTextViewModel()
     withText.searchText = "Test"
 
     return VStack {
-      SearchField(searchTextWrapper: SearchTextObservable(),
+      SearchField(viewModel: SearchTextViewModel(),
                   placeholder: "Search anything",
                   isSearching: .constant(false))
-      SearchField(searchTextWrapper: withText,
+      SearchField(viewModel: withText,
                   placeholder: "Search anything",
                   isSearching: .constant(false))
 
       List {
-        SearchField(searchTextWrapper: withText,
+        SearchField(viewModel: withText,
                     placeholder: "Search anything",
                     isSearching: .constant(false))
-        Section(header: SearchField(searchTextWrapper: withText,
+        Section(header: SearchField(viewModel: withText,
                                     placeholder: "Search anything",
                                     isSearching: .constant(false))) {
-          SearchField(searchTextWrapper: withText,
+          SearchField(viewModel: withText,
                       placeholder: "Search anything",
                       isSearching: .constant(false))
         }
       }
 
       List {
-        SearchField(searchTextWrapper: withText,
+        SearchField(viewModel: withText,
                     placeholder: "Search anything",
                     isSearching: .constant(false))
-        Section(header: SearchField(searchTextWrapper: withText,
+        Section(header: SearchField(viewModel: withText,
                                     placeholder: "Search anything",
                                     isSearching: .constant(false))) {
-          SearchField(searchTextWrapper: withText,
+          SearchField(viewModel: withText,
                       placeholder: "Search anything",
                       isSearching: .constant(false))
         }
