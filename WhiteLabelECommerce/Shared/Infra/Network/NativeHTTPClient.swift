@@ -28,43 +28,36 @@ class NativeHTTPClient: HTTPClient {
       return
     }
 
-    var subscription: AnyCancellable?
-
     session
       .dataTaskPublisher(for: request)
       .tryMap { data, response in
-        if let response = response as? HTTPURLResponse,
-           !(200...299).contains(response.statusCode) {
-          throw HTTPError(rawValue: response.statusCode)
+        guard let response = response as? HTTPURLResponse, case 200..<300 = response.statusCode else {
+          throw HTTPError(rawValue: (response as? HTTPURLResponse)?.statusCode ?? -1)
         }
-        return data
+
+        return try JSONDecoder().decode(ReturnType.self, from: data)
       }
-      .mapError { error in
+      .mapError { error -> DomainError in
         guard let error = error as? HTTPError else {
           if let error = error as? URLError {
-            return HTTPError(rawValue: error.errorCode)
+            return .requestError(error: .init(rawValue: error.errorCode))
+          } else if let error = error as? DecodingError {
+            return .errorOnParsing(error: error)
           }
-          return .unknown
+          return .requestError(error: .unknown)
         }
-        return error
+        return .requestError(error: error)
       }
-      .sink { [weak self] result in
+      .receive(on: DispatchQueue.main)
+      .sink { result in
         switch result {
           case .failure(let error):
-            completion(.failure(.requestError(error: error)))
+            completion(.failure(error))
           case .finished:
             break
         }
-        if let subscription = subscription {
-          self?.subscriptions.remove(subscription)
-        }
-      } receiveValue: { response in
-        do {
-          let parsedValue = try JSONDecoder().decode(ReturnType.self, from: response)
+      } receiveValue: { parsedValue in
           completion(.success(parsedValue))
-        } catch {
-          completion(.failure(.errorOnParsing(error: error)))
-        }
       }
       .store(in: &subscriptions)
   }
