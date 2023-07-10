@@ -5,6 +5,11 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 import SwiftUI
 
 @main
@@ -14,12 +19,15 @@ struct WhiteLabelECommerceApp: App {
   var body: some Scene {
     WindowGroup {
       HomeView()
+#if targetEnvironment(macCatalyst)
         .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
+#endif
         .environmentObject(main)
     }
   }
 }
 
+#if targetEnvironment(macCatalyst)
 extension UIApplication {
   func addTapGestureRecognizer() {
     guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -41,3 +49,4 @@ extension UIApplication: UIGestureRecognizerDelegate {
     return true // set to `false` if you don't want to detect tap during other gestures
   }
 }
+#endif
