@@ -13,7 +13,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Backend",
-            targets: ["Backend"]),
+            targets: ["Backend"]
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,10 +25,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Backend",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources"
+        ),
         .testTarget(
             name: "BackendTests",
-            dependencies: ["Backend"]),
+            dependencies: ["Backend"]
+        )
     ],
     swiftLanguageVersions: [
       .version("5.5")

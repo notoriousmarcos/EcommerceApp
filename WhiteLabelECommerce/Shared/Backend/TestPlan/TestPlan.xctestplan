@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "BAEF283A-7731-43EB-9FE4-5408BC7AD8E5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Backend.xcodeproj",
+        "identifier" : "B7CC978E2A68496E0009EAF4",
+        "name" : "BackendTests"
+      }
+    }
+  ],
+  "version" : 1
+}

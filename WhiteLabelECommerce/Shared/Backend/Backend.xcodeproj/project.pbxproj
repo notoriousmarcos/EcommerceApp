@@ -231,7 +231,8 @@
 		B7CC989C2A685B600009EAF4 /* Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Development.plist; sourceTree = "<group>"; };
 		B7CC989D2A685B600009EAF4 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		B7CC989E2A685B600009EAF4 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		B7CC98B32A687BD90009EAF4 /* Backend.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Backend.xctestplan; sourceTree = "<group>"; };
+		B7CC98B32A687BD90009EAF4 /* BackendTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BackendTests.xctestplan; sourceTree = "<group>"; };
+		B7CC98B42A688B5E0009EAF4 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = TestPlan.xctestplan; path = TestPlan/TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +257,7 @@
 		B7CC977B2A68496E0009EAF4 = {
 			isa = PBXGroup;
 			children = (
+				B7CC98B42A688B5E0009EAF4 /* TestPlan.xctestplan */,
 				B7CC98A42A6864A20009EAF4 /* TestPlan */,
 				B7CC989A2A685B600009EAF4 /* Configuration */,
 				B7CC979F2A6849CC0009EAF4 /* Sources */,
@@ -668,7 +670,7 @@
 		B7CC98A42A6864A20009EAF4 /* TestPlan */ = {
 			isa = PBXGroup;
 			children = (
-				B7CC98B32A687BD90009EAF4 /* Backend.xctestplan */,
+				B7CC98B32A687BD90009EAF4 /* BackendTests.xctestplan */,
 			);
 			path = TestPlan;
 			sourceTree = "<group>";

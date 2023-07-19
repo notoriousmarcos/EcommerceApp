@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1430"
-   version = "1.7">
+   version = "2.1">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -21,18 +21,14 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7CC978E2A68496E0009EAF4"
-               BuildableName = "BackendTests.xctest"
-               BlueprintName = "BackendTests"
-               ReferencedContainer = "container:Backend.xcodeproj">
-            </BuildableReference>
+            <TestPlanReference
+               reference = "container:TestPlan/Backend.xctestplan">
+            </TestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -43,7 +39,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TestPlan/BackendTestPlan.xctestplan"
+            reference = "container:TestPlan/TestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
