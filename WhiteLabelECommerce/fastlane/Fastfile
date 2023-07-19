@@ -18,13 +18,19 @@
 platform :ios do
   desc "Run Tests for iOS"
   lane :test do
-    run_tests(scheme: "ECommerce (iOS) Debug-Production")
+    run_tests(project: "Shared/Backend/Backend.xcodeproj",
+              scheme: "Backend")
+    run_tests(workspace: "WhiteLabelECommerce.xcworkspace",
+              scheme: "ECommerce (iOS) Debug-Production")
   end
 end
 
 platform :mac do 
   desc "Run Tests for macOS"
   lane :test do
-    run_tests(scheme: "ECommerce (macOS) Debug-Production")
+    run_tests(project: "Shared/Backend/Backend.xcodeproj",
+              scheme: "Backend")
+    run_tests(workspace: "WhiteLabelECommerce.xcworkspace",
+              scheme: "ECommerce (macOS) Debug-Production")
   end
 end
