@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import Backend
 
 struct ProductDetail: View {
   // MARK: View States
@@ -76,11 +77,11 @@ struct ProductDetail: View {
 
 // MARK: - Preview
 #if DEBUG
-struct ProductDetail_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationView {
-      ProductDetail(product: Mocks.product)
-    }
-  }
-}
+//struct ProductDetail_Previews: PreviewProvider {
+//  static var previews: some View {
+//    NavigationView {
+//      ProductDetail(product: Mocks.product)
+//    }
+//  }
+//}
 #endif

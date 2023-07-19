@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Foundation
+import Backend
 
 protocol ProductListViewModelProtocol: ObservableObject {
   typealias FetchAllItems = (@escaping ResultCompletionHandler<[Product], DomainError>) -> Void

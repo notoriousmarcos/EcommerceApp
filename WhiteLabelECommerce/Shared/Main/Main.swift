@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Backend
 
 class Main: ObservableObject {
   static var shared = Main()

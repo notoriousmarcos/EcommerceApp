@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Backend
 
 struct ProductOverview: View {
   @State var product: Product
@@ -43,9 +44,9 @@ struct ProductOverview: View {
 }
 
 #if DEBUG
-struct ProductOverview_Previews: PreviewProvider {
-  static var previews: some View {
-    ProductOverview(product: Mocks.product)
-  }
-}
+//struct ProductOverview_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ProductOverview(product: Mocks.product)
+//  }
+//}
 #endif

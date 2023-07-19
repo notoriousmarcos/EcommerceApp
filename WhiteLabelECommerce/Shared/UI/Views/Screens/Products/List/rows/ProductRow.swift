@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Backend
 
 struct ProductRow: View {
   // MARK: - Init
@@ -45,11 +46,11 @@ struct ProductRow: View {
 }
 
 #if DEBUG
-struct MovieRow_Previews: PreviewProvider {
-  static var previews: some View {
-    List {
-      ProductRow(product: Mocks.product)
-    }
-  }
-}
+//struct MovieRow_Previews: PreviewProvider {
+//  static var previews: some View {
+//    List {
+//      ProductRow(product: Mocks.product)
+//    }
+//  }
+//}
 #endif

@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import Backend
 
 // MARK: - Movies List
 struct ProductList<ViewModel: ProductListViewModelProtocol>: View {

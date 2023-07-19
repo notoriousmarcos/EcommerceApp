@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Backend
 
 struct ProductCoverRow: View {
     let product: Product
@@ -29,9 +30,9 @@ struct ProductCoverRow: View {
 }
 
 #if DEBUG
-struct MovieCoverRow_Previews: PreviewProvider {
-    static var previews: some View {
-      ProductCoverRow(product: Mocks.product)
-    }
-}
+//struct MovieCoverRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//      ProductCoverRow(product: Mocks.product)
+//    }
+//}
 #endif

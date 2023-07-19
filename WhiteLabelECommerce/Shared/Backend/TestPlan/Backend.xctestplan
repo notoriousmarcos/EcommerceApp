@@ -1,0 +1,19 @@
+{
+  "configurations" : [
+
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Backend.xcodeproj",
+        "identifier" : "B7CC978E2A68496E0009EAF4",
+        "name" : "BackendTests"
+      }
+    }
+  ],
+  "version" : 1
+}

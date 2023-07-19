@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 23/08/22.
 //
 
+import Backend
 import Combine
 @testable import WhiteLabelECommerce
 import XCTest
