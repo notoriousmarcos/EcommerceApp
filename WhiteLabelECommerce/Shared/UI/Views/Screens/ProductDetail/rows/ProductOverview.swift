@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
-import SwiftUI
 import Backend
+import SwiftUI
 
 struct ProductOverview: View {
   @State var product: Product
@@ -44,9 +44,9 @@ struct ProductOverview: View {
 }
 
 #if DEBUG
-//struct ProductOverview_Previews: PreviewProvider {
+// struct ProductOverview_Previews: PreviewProvider {
 //  static var previews: some View {
 //    ProductOverview(product: Mocks.product)
 //  }
-//}
+// }
 #endif

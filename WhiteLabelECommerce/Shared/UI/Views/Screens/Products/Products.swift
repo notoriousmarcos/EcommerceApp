@@ -51,8 +51,7 @@ struct Products: View {
     )
   }
 
-  @ViewBuilder
-  private var productsAsList: some View {
+  @ViewBuilder private var productsAsList: some View {
     ProductList(viewModel: ProductListViewModel(fetchAllItems: main.getAllProductsUseCase.execute))
   }
 

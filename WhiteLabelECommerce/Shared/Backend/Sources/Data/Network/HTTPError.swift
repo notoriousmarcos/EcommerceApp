@@ -16,7 +16,7 @@ public enum HTTPError: Int, Error {
   case timeOut = 408
   case serverError = 500
   case unknown = -1
-  
+
   public init(rawValue: Int) {
     switch rawValue {
       case -1002:

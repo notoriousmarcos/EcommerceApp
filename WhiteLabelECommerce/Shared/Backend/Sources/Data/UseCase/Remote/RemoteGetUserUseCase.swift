@@ -16,11 +16,11 @@ public protocol GetUserClient {
 
 public class RemoteGetUserUseCase: GetUserUseCase {
   let client: GetUserClient
-  
+
   public init(client: GetUserClient) {
     self.client = client
   }
-  
+
   public func execute(
     userId: Int,
     completion: @escaping CompletionHandler

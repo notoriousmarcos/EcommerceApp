@@ -13,26 +13,38 @@ struct Mocks {
         id: 1,
         title: "Product",
         price: 10.0,
-        category: "men's clothing",
+        category: Category(
+          id: 5,
+          name: "Others",
+          imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+        ),
         description: "Product description",
-        imageURL: "https:imageurl"
+        imagesURL: ["https://imageurl"]
     )
     static let products = [
         Product(
             id: 1,
             title: "Product",
             price: 10.0,
-            category: "men's clothing",
+            category: Category(
+              id: 5,
+              name: "Others",
+              imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+            ),
             description: "Product description",
-            imageURL: "https://imageurl"
+            imagesURL: ["https://imageurl"]
         ),
         Product(
             id: 2,
             title: "Product",
             price: 10.0,
-            category: "Women's clothing",
+            category: Category(
+              id: 5,
+              name: "Others",
+              imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+            ),
             description: "Product description",
-            imageURL: "https://imageurl"
+            imagesURL: ["https://imageurl"]
         )
     ]
     static let productsData = """
@@ -41,17 +53,25 @@ struct Mocks {
                 \"id\":1,
                 \"title\":\"Product\",
                 \"price\":10.0,
-                \"category\":\"men's clothing\",
+                \"category\": {
+                  \"id\": 5,
+                  \"name\": \"Others\",
+                  \"image\": \"https://placeimg.com/640/480/any?r=0.591926261873231\"
+                },
                 \"description\":\"Product description\",
-                \"image\":\"https://imageurl\"
+                \"images\": [\"https://imageurl\"]
             },
             {
                 \"id\":2,
                 \"title\":\"Product\",
                 \"price\":10.0,
-                \"category\":\"Women's clothing\",
+                \"category\": {
+                  \"id\": 5,
+                  \"name\": \"Others\",
+                  \"image\": \"https://placeimg.com/640/480/any?r=0.591926261873231\"
+                },
                 \"description\":\"Product description\",
-                \"image\":\"https://imageurl\"
+                \"images\": [\"https://imageurl\"]
             }
         ]
     """.data(using: .utf8)

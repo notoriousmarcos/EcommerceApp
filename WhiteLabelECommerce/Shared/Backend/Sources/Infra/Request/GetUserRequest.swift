@@ -12,7 +12,7 @@ struct GetUserRequest: Request {
     let path: String
     let method: HTTPMethod = .get
     let contentType: String = "application/json"
-    let params: [String: Any]? = nil
+    let params: [String: String]? = nil
     let body: [String: Any]? = nil
     let headers: [String: String]? = nil
 

@@ -5,11 +5,11 @@
 //  Created by Marcos Vinicius Brito on 29/12/22.
 //
 
-import Combine
 import Backend
+import Combine
 
 protocol ProductListViewModelProtocol: ObservableObject {
-  typealias FetchAllItems = (@escaping ResultCompletionHandler<[Product], DomainError>) -> Void
+  typealias FetchAllItems = (Int?, Int?, @escaping ResultCompletionHandler<[Product], DomainError>) -> Void
 
   var state: ViewState<[Product], DomainError> { get }
   var searchTextViewModel: SearchTextViewModel { get }
@@ -67,7 +67,7 @@ class ProductListViewModel: ProductListViewModelProtocol {
   // MARK: - Private Functions
   private func fetchItems() {
     guard !isSearching else { return }
-    fetchAllItems { [weak self] result in
+    fetchAllItems(nil, nil) { [weak self] result in
       switch result {
         case.success(let products):
           self?.fetchedProducts = products

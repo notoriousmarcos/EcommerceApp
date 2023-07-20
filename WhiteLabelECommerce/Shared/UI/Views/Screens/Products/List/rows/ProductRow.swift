@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
-import SwiftUI
 import Backend
+import SwiftUI
 
 struct ProductRow: View {
   // MARK: - Init
@@ -15,7 +15,7 @@ struct ProductRow: View {
   var body: some View {
     HStack {
       ZStack(alignment: .topLeading) {
-        PosterImage(url: URL(string: product.imageURL ?? ""), size: .medium)
+        PosterImage(url: URL(string: product.imagesURL.first ?? ""), size: .medium)
       }
       .fixedSize()
       .animation(.spring(), value: 1)
@@ -46,11 +46,11 @@ struct ProductRow: View {
 }
 
 #if DEBUG
-//struct MovieRow_Previews: PreviewProvider {
+// struct MovieRow_Previews: PreviewProvider {
 //  static var previews: some View {
 //    List {
 //      ProductRow(product: Mocks.product)
 //    }
 //  }
-//}
+// }
 #endif

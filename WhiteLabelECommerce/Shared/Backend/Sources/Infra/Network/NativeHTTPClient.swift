@@ -9,16 +9,15 @@ import Combine
 import Foundation
 
 public class NativeHTTPClient: HTTPClient {
-  
   // MARK: - Properties
   let session: URLSession
   private var subscriptions = Set<AnyCancellable>()
-  
+
   // MARK: - Init
   public init(session: URLSession = .shared) {
     self.session = session
   }
-  
+
   // MARK: - Functions
   public func dispatch<ReturnType: Codable>(
     request: Request,
@@ -28,7 +27,7 @@ public class NativeHTTPClient: HTTPClient {
       completion(.failure(.requestError(error: .urlError)))
       return
     }
-    
+
     session
       .dataTaskPublisher(for: request)
       .tryMap { data, response in

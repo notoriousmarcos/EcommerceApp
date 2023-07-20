@@ -5,9 +5,9 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
+import Backend
 import Combine
 import SwiftUI
-import Backend
 
 struct ProductDetail: View {
   // MARK: View States
@@ -77,11 +77,11 @@ struct ProductDetail: View {
 
 // MARK: - Preview
 #if DEBUG
-//struct ProductDetail_Previews: PreviewProvider {
+// struct ProductDetail_Previews: PreviewProvider {
 //  static var previews: some View {
 //    NavigationView {
 //      ProductDetail(product: Mocks.product)
 //    }
 //  }
-//}
+// }
 #endif

@@ -7,12 +7,24 @@
 
 import Foundation
 
-struct GetAllProductsRequest: Request {
+struct GetProductsRequest: Request {
   // MARK: - Properties
   let path: String = "/products"
   let method: HTTPMethod = .get
   let contentType: String = "application/json"
-  let params: [String: Any]? = nil
+  var params: [String: String]?
   let body: [String: Any]? = nil
   let headers: [String: String]? = nil
+
+  init(
+    offset: Int? = nil,
+    limit: Int? = nil
+  ) {
+    if let offset = offset, let limit = limit {
+      params = [
+        "offset": String(offset),
+        "limit": String(limit)
+      ]
+    }
+  }
 }

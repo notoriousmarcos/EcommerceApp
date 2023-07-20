@@ -11,7 +11,7 @@ public protocol Request {
   var path: String { get }
   var method: HTTPMethod { get }
   var contentType: String { get }
-  var params: [String: Any]? { get }
+  var params: [String: String]? { get }
   var body: [String: Any]? { get }
   var headers: [String: String]? { get }
 }
@@ -25,13 +25,13 @@ extension Request {
     return httpBody
   }
 
-  private func makeURLComponents(_ path: String, params: [String: Any]?) -> URL? {
+  private func makeURLComponents(_ path: String, params: [String: String]?) -> URL? {
     var urlComponents = URLComponents(url: Config.baseURL, resolvingAgainstBaseURL: true)
-    urlComponents?.path = path
+    urlComponents?.path += path
     if let params = params {
-      urlComponents?.queryItems = params.map({ param in
-        URLQueryItem(name: param.key, value: param.value as? String)
-      })
+      urlComponents?.queryItems = params.map { param in
+        URLQueryItem(name: param.key, value: param.value)
+      }
     }
     return urlComponents?.url
   }

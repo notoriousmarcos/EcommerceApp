@@ -12,7 +12,7 @@ struct UpdateCartRequest: Request {
     let path: String
     let method: HTTPMethod = .put
     let contentType: String = "application/json"
-    let params: [String: Any]? = nil
+    let params: [String: String]? = nil
     let body: [String: Any]?
     let headers: [String: String]? = nil
 

@@ -10,12 +10,12 @@ import Foundation
 public struct RemoteUpdateCartClient: UpdateCartClient {
   // MARK: - Properties
   private let client: HTTPClient
-  
+
   // MARK: - init
   public init(client: HTTPClient) {
     self.client = client
   }
-  
+
   // MARK: - Functions
   public func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>) {
     guard let request = UpdateCartRequest(cart: cart) else {

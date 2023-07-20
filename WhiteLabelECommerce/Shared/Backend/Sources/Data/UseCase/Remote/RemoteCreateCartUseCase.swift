@@ -13,11 +13,11 @@ public protocol CreateCartClient {
 
 public class RemoteCreateCartUseCase: CreateCartUseCase {
   let client: CreateCartClient
-  
+
   public init(client: CreateCartClient) {
     self.client = client
   }
-  
+
   public func execute(cart: Cart, completion: @escaping CompletionHandler) {
     client.dispatch(createCart: cart) { result in
       completion(result)

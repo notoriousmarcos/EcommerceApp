@@ -8,7 +8,6 @@
 import Foundation
 
 public struct LocalAddProductToCartUseCase: AddProductToCartUseCase {
-
   public init() { }
 
   public func execute(_ product: Product, toCart cart: Cart, completion: @escaping CompletionHandler) {
@@ -28,7 +27,7 @@ public struct LocalAddProductToCartUseCase: AddProductToCartUseCase {
       return
     }
     products[itemIndex].setQuantity(products[itemIndex].quantity + 1)
-    
+
     completion(
       .success(
         Cart(

@@ -1,5 +1,5 @@
 //
-//  RemoteGetAllProductsUseCaseTests.swift
+//  RemoteGetProductsUseCaseTests.swift
 //  Backend
 //
 //  Created by Marcos Vinicius Brito on 18/02/22.
@@ -8,13 +8,13 @@
 @testable import Backend
 import XCTest
 
-class RemoteGetAllProductsUseCaseTests: XCTestCase {
+class RemoteGetProductsUseCaseTests: XCTestCase {
     private let mockClient = MockClients()
 
-    func testRemoteGetAllProductsUseCase_executeWithSuccess_ShouldReturnProducts() {
+    func testRemoteGetProductsUseCase_executeWithSuccess_ShouldReturnProducts() {
         // Arrange
         mockClient.result = .success([Mocks.product])
-        let sut = RemoteGetAllProductsUseCase(client: mockClient)
+        let sut = RemoteGetProductsUseCase(client: mockClient)
 
         // Act
         sut.execute { result in
@@ -27,10 +27,10 @@ class RemoteGetAllProductsUseCaseTests: XCTestCase {
         }
     }
 
-    func testRemoteGetAllProductsUseCase_executeWithFailure_ShouldReturnError() {
+    func testRemoteGetProductsUseCase_executeWithFailure_ShouldReturnError() {
         // Arrange
         mockClient.result = .failure(.requestError(error: .badRequest))
-        let sut = RemoteGetAllProductsUseCase(client: mockClient)
+        let sut = RemoteGetProductsUseCase(client: mockClient)
 
         // Act
         sut.execute { result in

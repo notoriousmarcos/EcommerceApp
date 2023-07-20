@@ -5,9 +5,9 @@
 //  Created by Marcos Vinicius Brito on 17/02/22.
 //
 
+import Backend
 import Combine
 import SwiftUI
-import Backend
 
 // MARK: - Movies List
 struct ProductList<ViewModel: ProductListViewModelProtocol>: View {

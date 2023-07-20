@@ -51,7 +51,7 @@ public struct Cart: Model {
       )
     }
 
-    self = Cart(
+    self = Self(
       id: id,
       userId: userId,
       date: date,

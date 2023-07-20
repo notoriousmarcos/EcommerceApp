@@ -12,9 +12,9 @@ public struct Product: Model {
   public let id: Int
   public let title: String
   public let price: Double
-  public let category: String
+  public let category: Category
   public let description: String
-  public let imageURL: String?
+  public let imagesURL: [String]
 
   enum CodingKeys: String, CodingKey {
     case id
@@ -22,15 +22,15 @@ public struct Product: Model {
     case price
     case category
     case description
-    case imageURL = "image"
+    case imagesURL = "images"
   }
 
-  public init(id: Int, title: String, price: Double, category: String, description: String, imageURL: String?) {
+  public init(id: Int, title: String, price: Double, category: Category, description: String, imagesURL: [String]) {
     self.id = id
     self.title = title
     self.price = price
     self.category = category
     self.description = description
-    self.imageURL = imageURL
+    self.imagesURL = imagesURL
   }
 }

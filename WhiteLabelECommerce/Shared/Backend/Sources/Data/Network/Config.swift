@@ -11,7 +11,8 @@ enum Config {
   static let baseURL: URL = {
     var components = URLComponents()
     components.scheme = "https"
-    components.host = "fakestoreapi.com"
+    components.host = "api.escuelajs.co"
+    components.path = "/api/v1"
     guard let url = components.url else {
       fatalError("Base URL is invalid")
     }

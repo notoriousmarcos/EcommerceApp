@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
-import Foundation
 @testable import Backend
+import Foundation
 
 extension Request {
     func toString() -> String {

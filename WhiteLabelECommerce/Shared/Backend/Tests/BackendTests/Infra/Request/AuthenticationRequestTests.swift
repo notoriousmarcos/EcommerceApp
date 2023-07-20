@@ -28,7 +28,7 @@ class AuthenticationRequestTests: XCTestCase {
 
         // Assert
         XCTAssertNotNil(urlRequest)
-        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://fakestoreapi.com/auth/login")
+        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/auth/login")
         XCTAssertNotNil(urlRequest?.httpBody)
         XCTAssertNotNil(urlRequest?.allHTTPHeaderFields)
         XCTAssertEqual(urlRequest?.allHTTPHeaderFields?["Content-Type"], "application/json")

@@ -12,7 +12,7 @@ struct AuthenticationRequest: Request {
     let path: String = "/auth/login"
     let method: HTTPMethod = .post
     let contentType: String = "application/json"
-    let params: [String: Any]? = nil
+    let params: [String: String]? = nil
     let body: [String: Any]?
     let headers: [String: String]? = nil
 

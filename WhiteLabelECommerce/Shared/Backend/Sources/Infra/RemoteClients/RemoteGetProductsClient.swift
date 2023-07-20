@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RemoteGetAllProductsClient: GetAllProductsClient {
+public struct RemoteGetProductsClient: GetProductsClient {
   // MARK: - Properties
   private let client: HTTPClient
 
@@ -17,8 +17,12 @@ public struct RemoteGetAllProductsClient: GetAllProductsClient {
   }
 
   // MARK: - Functions
-  public func dispatch(_ completion: @escaping ResultCompletionHandler<[Product], DomainError>) {
-    client.dispatch(request: GetAllProductsRequest()) { result in
+  public func dispatch(
+    offset: Int?,
+    limit: Int?,
+    _ completion: @escaping ResultCompletionHandler<[Product], DomainError>
+  ) {
+    client.dispatch(request: GetProductsRequest(offset: offset, limit: limit)) { result in
       completion(result)
     }
   }

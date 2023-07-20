@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/02/22.
 //
 
-import Foundation
 import Backend
+import Foundation
 
 class MockURLProtocol: URLProtocol {
     typealias RequestHandler = ((URLRequest) -> (URLResponse, Data?, Error?))

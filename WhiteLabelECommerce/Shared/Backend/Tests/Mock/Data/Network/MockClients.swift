@@ -24,8 +24,8 @@ class MockClients {
     }
 }
 
-extension MockClients: GetAllProductsClient {
-    func dispatch(_ completion: @escaping ResultCompletionHandler<[Product], DomainError>) {
+extension MockClients: GetProductsClient {
+  func dispatch(offset: Int?, limit: Int?, _ completion: @escaping ResultCompletionHandler<[Product], DomainError>) {
         handleResult(completion)
     }
 }

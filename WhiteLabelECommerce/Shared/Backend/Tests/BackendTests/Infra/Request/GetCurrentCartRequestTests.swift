@@ -31,7 +31,7 @@ class GetCurrentCartRequestTests: XCTestCase {
 
         // Assert
         XCTAssertNotNil(urlRequest)
-        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://fakestoreapi.com/carts/user/1")
+        XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/carts/user/1")
         XCTAssertNil(urlRequest?.httpBody)
         XCTAssertNotNil(urlRequest?.allHTTPHeaderFields)
         XCTAssertEqual(urlRequest?.allHTTPHeaderFields?["Content-Type"], "application/json")

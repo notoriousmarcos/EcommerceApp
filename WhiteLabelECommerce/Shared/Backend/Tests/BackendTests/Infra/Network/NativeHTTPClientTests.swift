@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/02/22.
 //
 
-import Combine
 @testable import Backend
+import Combine
 import XCTest
 
 class NativeHTTPClientTests: XCTestCase {
@@ -106,7 +106,7 @@ class NativeHTTPClientTests: XCTestCase {
     sut.dispatch(request: StubRequest(path: "http\\")) { (result: Result<[Product], DomainError>) in
       if case let .failure(error) = result,
          case let .requestError(error) = error {
-        XCTAssertEqual(error, .urlError)
+        XCTAssertEqual(error, .notFound)
       } else {
         XCTFail("Should be Failed because error: \(result).")
       }
@@ -148,7 +148,7 @@ class NativeHTTPClientTests: XCTestCase {
     var path: String
     var method: HTTPMethod = .get
     var contentType: String = ""
-    var params: [String: Any]?
+    var params: [String: String]?
     var body: [String: Any]?
     var headers: [String: String]?
   }
