@@ -30,7 +30,8 @@ let package = Package(
         ),
         .testTarget(
             name: "BackendTests",
-            dependencies: ["Backend"]
+            dependencies: ["Backend"],
+            path: "Tests"
         )
     ],
     swiftLanguageVersions: [

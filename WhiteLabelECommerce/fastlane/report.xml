@@ -5,17 +5,7 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Switch to ios testBackend lane" time="0.000142">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="1: run_tests" time="35.756316">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: run_tests" time="33.612958">
+      <testcase classname="fastlane.lanes" name="0: run_tests" time="29.131973">
         
       </testcase>
     

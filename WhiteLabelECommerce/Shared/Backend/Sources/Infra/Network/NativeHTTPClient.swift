@@ -35,7 +35,7 @@ public class NativeHTTPClient: HTTPClient {
         guard let response = response as? HTTPURLResponse, case 200..<300 = response.statusCode else {
           throw HTTPError(rawValue: (response as? HTTPURLResponse)?.statusCode ?? -1)
         }
-        
+
         return try JSONDecoder().decode(ReturnType.self, from: data)
       }
       .mapError { error -> DomainError in

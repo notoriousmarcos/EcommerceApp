@@ -18,6 +18,22 @@
         "identifier" : "B74A8CEA27BEC80C002F41CD",
         "name" : "WhiteLabelECommerceTests(mac)"
       }
+    },
+    {
+      "skippedTests" : [
+        "RemoteAuthenticationIntegrationTests",
+        "RemoteCreateCartIntegrationTests",
+        "RemoteGetAllProductsIntegrationTests",
+        "RemoteGetCurrentCartIntegrationTests",
+        "RemoteGetProductIntegrationTests",
+        "RemoteGetUserIntegrationTests",
+        "RemoteUpdateCartIntegrationTests"
+      ],
+      "target" : {
+        "containerPath" : "container:Shared\/Backend",
+        "identifier" : "BackendTests",
+        "name" : "BackendTests"
+      }
     }
   ],
   "version" : 1
