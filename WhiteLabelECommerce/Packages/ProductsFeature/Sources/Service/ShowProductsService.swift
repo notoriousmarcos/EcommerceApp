@@ -10,12 +10,12 @@ import Combine
 import Backend
 
 protocol ProductsService {
-  func fetchProducts(for offset: Int?, and limit: Int?) -> AnyPublisher<[Product], ServiceError>
+  func fetchProducts(for offset: Int?, and limit: Int?) -> AnyPublisher<[Product], ShowProductsServiceError>
 }
 
 class ShowProductsService: ProductsService {
 
-  func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ServiceError> {
+  func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
     Just([
       Product(
         id: 1,
@@ -42,7 +42,7 @@ class ShowProductsService: ProductsService {
         imagesURL: ["https://imageurl"]
       )
     ])
-    .setFailureType(to: ServiceError.self)
+    .setFailureType(to: ShowProductsServiceError.self)
     .eraseToAnyPublisher()
   }
 }

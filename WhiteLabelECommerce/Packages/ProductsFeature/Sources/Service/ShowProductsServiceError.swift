@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum ServiceError: String, Error, Equatable {
+enum ShowProductsServiceError: String, Error, Equatable {
   case unknown
 }

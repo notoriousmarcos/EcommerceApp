@@ -107,7 +107,7 @@ struct ShowProductsView_Previews: PreviewProvider {
           viewState: .fetching
         )
       )
-      ShowProductsView(viewModel: MockShowProductsViewModel(products: [], viewState: .finished, error: ServiceError.unknown))
+      ShowProductsView(viewModel: MockShowProductsViewModel(products: [], viewState: .finished, error: ShowProductsServiceError.unknown))
     }
   }
 }

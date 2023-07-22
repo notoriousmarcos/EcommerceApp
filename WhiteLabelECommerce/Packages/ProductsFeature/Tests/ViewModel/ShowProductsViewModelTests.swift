@@ -87,7 +87,7 @@ final class ShowProductsViewModelTests: XCTestCase {
       paramsOfFetchExpectation.fulfill()
     }
 
-    var expectedErrors: [ServiceError?] = [
+    var expectedErrors: [ShowProductsServiceError?] = [
       nil,
       .unknown
     ]
@@ -95,7 +95,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     sut.$error.sink { error in
       // Assert
       let expectedError = expectedErrors.removeFirst()
-      XCTAssertEqual(error as? ServiceError, expectedError)
+      XCTAssertEqual(error as? ShowProductsServiceError, expectedError)
       errorExpectation.fulfill()
     }
     .store(in: &cancellables)
@@ -291,23 +291,23 @@ final class ShowProductsViewModelTests: XCTestCase {
   private class MockProductsService: ProductsService {
 
     /// This response will be used to mock the response when fetch is called.
-    var response: [Result<[Product], ServiceError>?]?
+    var response: [Result<[Product], ShowProductsServiceError>?]?
 
     /// This closure will be called when fetchProducts is called.
     var fetchProductsParamsClosure: ((_ offset: Int?, _ limit: Int?) -> Void)?
 
     init() { }
 
-    func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ServiceError> {
+    func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
       fetchProductsParamsClosure?(offset, limit)
       guard let response = response?.removeFirst() else {
-        return Fail(error: ServiceError.unknown)
+        return Fail(error: ShowProductsServiceError.unknown)
           .eraseToAnyPublisher()
       }
       switch response {
         case .success(let output):
           return Just(output)
-            .setFailureType(to: ServiceError.self)
+            .setFailureType(to: ShowProductsServiceError.self)
             .eraseToAnyPublisher()
         case .failure(let error):
           return Fail(error: error)
