@@ -59,7 +59,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     // Act
-    sut.fetchProducts()
+    sut.fetchProducts(shouldReset: true)
 
     waitForExpectations(timeout: 1)
   }
@@ -76,7 +76,6 @@ final class ShowProductsViewModelTests: XCTestCase {
     mockService.response = [.failure(.unknown)]
     
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
-      nil,
       nil,
       .loading,
       .finished
@@ -129,7 +128,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     callFetchExpectation.expectedFulfillmentCount = 2
     var viewStateExpectation = expectation(description: "Expect to updateViewState.")
-    viewStateExpectation.expectedFulfillmentCount = 4
+    viewStateExpectation.expectedFulfillmentCount = 3
 
     var expectedProducts: [[ProductViewItem]] = [
       [],
@@ -142,7 +141,6 @@ final class ShowProductsViewModelTests: XCTestCase {
     ]
 
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
-      nil,
       nil,
       .loading,
       .finished
@@ -188,7 +186,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     viewStateExpectation.expectedFulfillmentCount = 2
 
     expectedViewStates = [
-      .loading,
+      .fetching,
       .finished
     ]
 
@@ -204,7 +202,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     var viewStateExpectation = expectation(description: "Expect to updateViewState.")
     callFetchExpectation.expectedFulfillmentCount = 2
-    viewStateExpectation.expectedFulfillmentCount = 4
+    viewStateExpectation.expectedFulfillmentCount = 3
 
     var expectedProducts: [[ProductViewItem]] = [
       [],
@@ -221,7 +219,6 @@ final class ShowProductsViewModelTests: XCTestCase {
 
 
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
-      nil,
       nil,
       .loading,
       .finished
@@ -267,7 +264,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     viewStateExpectation.expectedFulfillmentCount = 2
 
     expectedViewStates = [
-      .loading,
+      .fetching,
       .finished
     ]
 
@@ -279,10 +276,9 @@ final class ShowProductsViewModelTests: XCTestCase {
     paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     viewStateExpectation = expectation(description: "Expect to updateViewState.")
-    viewStateExpectation.expectedFulfillmentCount = 3
+    viewStateExpectation.expectedFulfillmentCount = 2
 
     expectedViewStates = [
-      nil,
       .loading,
       .finished
     ]

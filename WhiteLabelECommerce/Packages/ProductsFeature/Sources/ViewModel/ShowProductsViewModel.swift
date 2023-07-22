@@ -10,16 +10,35 @@ import Combine
 import Backend
 
 class ShowProductsViewModel: ObservableObject {
-  
+
+  // MARK: - Properties
+  /// An array of `ProductViewItem` objects that represent the products fetched from the service and ready for presentation in the UI.
   @Published private(set) var products: [ProductViewItem] = []
+
+  /// The current state of the product fetching process, which can be `.fetching`, `.loading`, or `.finished`.
   @Published private(set) var viewState: ViewState?
+
+  /// An optional `Error` object that holds any error encountered during the product fetching process. If nil, it indicates no errors occurred.
   @Published private(set) var error: Error?
+
+  /// The current offset/index for pagination. It is used to request products from the service with the appropriate offset.
   private var currentOffset = 0
+
+  /// The maximum number of products to be fetched in a single API call. This value is used for pagination to limit the number of products returned in each request.
   private var pageLimit: Int
-  
+
+  /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are canceled automatically when the `ShowProductsViewModel` instance is deallocated, preventing potential memory leaks.
   private var cancellables = Set<AnyCancellable>()
+
+  /// An instance of `ProductsService`, which is a service responsible for fetching product data from the backend or any external data source.
   private let service: ProductsService
-  
+
+  // MARK: - Initializer
+  /// Initializes the `ShowProductsViewModel` with the provided `ProductsService` instance and an optional `pageLimit`.
+  ///
+  /// - Parameters:
+  ///   - service: An instance of `ProductsService` used for fetching products.
+  ///   - pageLimit: The maximum number of products to fetch in each API call. Default value is 10.
   init(
     service: ProductsService,
     pageLimit: Int = 10
@@ -27,33 +46,46 @@ class ShowProductsViewModel: ObservableObject {
     self.service = service
     self.pageLimit = pageLimit
   }
-  
+
+  // MARK: - Public Methods
+  /// Initiates the process of fetching products.
+  ///
+  /// - Parameter shouldReset: A boolean value indicating whether to reset the fetch process. If `true`, the `viewState` and `currentOffset` properties are reset before initiating the fetch process. Default value is `false`.
   func fetchProducts(shouldReset: Bool = false) {
     if shouldReset {
-      viewState = nil
       currentOffset = 0
+      viewState = .loading
+    }
+    else {
+      viewState = .fetching
     }
     fetchProductsOnService()
   }
 
-
+  // MARK: - Private Methods
+  /// Fetches products from the service and updates the view state accordingly.
   private func fetchProductsOnService() {
-    viewState = .loading
+
     service
       .fetchProducts(for: currentOffset, and: pageLimit)
       .sink { [weak self] status in
         if case let .failure(error) = status {
           self?.error = error
         }
+        self?.viewState = .finished
       } receiveValue: { [weak self] products in
         guard let self = self else { return }
-        var productsItemView = productsToViewItem(products)
+        let productsItemView = self.productsToViewItem(products)
         self.products = self.currentOffset == 0 ? productsItemView : self.products + productsItemView
         self.currentOffset += self.pageLimit
-        self.viewState = .finished
       }
+      .store(in: &cancellables)
   }
 
+  /// Converts an array of `Product` objects into an array of `ProductViewItem` objects.
+  ///
+  /// - Parameter products: The array of `Product` objects to be converted.
+  /// - Returns: An array of `ProductViewItem` objects.
   private func productsToViewItem(_ products: [Product]) -> [ProductViewItem] {
     return products.map { product in
       ProductViewItem(
@@ -72,10 +104,17 @@ class ShowProductsViewModel: ObservableObject {
   }
 }
 
+// MARK: - Nested Enum
 extension ShowProductsViewModel {
+  /// Represents the various states of the product fetching process.
   enum ViewState {
+    /// Indicates that products are currently being fetched.
     case fetching
+
+    /// Indicates that the product fetching process is loading.
     case loading
+
+    /// Indicates that the product fetching process has finished.
     case finished
   }
 }
