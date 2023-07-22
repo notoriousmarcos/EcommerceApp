@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ShowProductsView: View {
-  @ObservedObject var viewModel: ShowProductsViewModel
+struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
+  @ObservedObject var viewModel: ViewModel
 
-  init(viewModel: ShowProductsViewModel) {
+  init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
   var body: some View {
@@ -21,7 +21,7 @@ struct ShowProductsView: View {
     }
     .navigationTitle("Products")
     .onAppear {
-      viewModel.fetchProducts()
+      viewModel.fetchProducts(shouldReset: true)
     }
   }
 }

@@ -9,7 +9,18 @@ import Foundation
 import Combine
 import Backend
 
-class ShowProductsViewModel: ObservableObject {
+protocol ShowProductsViewModelProtocol: ObservableObject {
+
+  // MARK: - Properties
+  var products: [ProductViewItem] { get }
+  var viewState: ShowProductsViewModel.ViewState? { get }
+  var error: Error? { get }
+
+  // MARK: - Methods
+  func fetchProducts(shouldReset: Bool)
+}
+
+final class ShowProductsViewModel: ShowProductsViewModelProtocol {
 
   // MARK: - Properties
   /// An array of `ProductViewItem` objects that represent the products fetched from the service and ready for presentation in the UI.
