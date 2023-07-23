@@ -14,9 +14,9 @@ class RemoteGetProductIntegrationTests: XCTestCase {
         let sut = RemoteGetProductUseCase(client: RemoteGetProductClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to get product.")
 
-        // Act
+        // When
         sut.execute(id: 1) { result in
-            // Assert
+            // Then
             if case let .success(product) = result {
                 XCTAssertEqual(product.id, 1)
             }

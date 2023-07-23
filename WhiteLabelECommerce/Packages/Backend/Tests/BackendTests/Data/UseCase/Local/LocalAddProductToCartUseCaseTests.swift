@@ -10,10 +10,10 @@ import XCTest
 
 class LocalAddProductToCartUseCaseTests: XCTestCase {
     func testLocalAddProductToCartUseCase_addProduct_ShouldReturnACartWithOneProduct() {
-        // Assert
+        // Then
         let sut = LocalAddProductToCartUseCase()
 
-        // Act
+        // When
         sut.execute(
             Mocks.product,
             toCart: Cart(
@@ -24,7 +24,7 @@ class LocalAddProductToCartUseCaseTests: XCTestCase {
             )
         ) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertNotNil(cart.id)
                 XCTAssertEqual(cart.userId, Mocks.cart.userId)
                 XCTAssertEqual(cart.date, Mocks.cart.date)
@@ -37,13 +37,13 @@ class LocalAddProductToCartUseCaseTests: XCTestCase {
     }
 
     func testLocalAddProductToCartUseCase_addSameProduct_ShouldReturnUpdatedCartWithOneProductAndQuantityTwo() {
-        // Assert
+        // Then
         let sut = LocalAddProductToCartUseCase()
 
-        // Act
+        // When
         sut.execute(Mocks.product, toCart: Mocks.cart) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertNotNil(cart.id)
                 XCTAssertEqual(cart.userId, Mocks.cart.userId)
                 XCTAssertEqual(cart.date, Mocks.cart.date)

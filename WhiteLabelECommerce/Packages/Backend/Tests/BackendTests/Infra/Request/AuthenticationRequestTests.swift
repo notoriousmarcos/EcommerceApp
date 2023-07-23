@@ -12,7 +12,7 @@ class AuthenticationRequestTests: XCTestCase {
     private let sut = AuthenticationRequest(model: AuthenticationModel(email: "email", password: "password"))
 
     func testAuthenticationRequest_init_ShouldRetainCorrectValues() {
-        // Assert
+        // Then
         XCTAssertEqual(sut.path, "/auth/login")
         XCTAssertEqual(sut.method, .post)
         XCTAssertEqual(sut.contentType, "application/json")
@@ -23,10 +23,10 @@ class AuthenticationRequestTests: XCTestCase {
     }
 
     func testAuthenticationRequest_asURLRequest_ShouldReturnURLRequest() {
-        // Act
+        // When
         let urlRequest = sut.asURLRequest()
 
-        // Assert
+        // Then
         XCTAssertNotNil(urlRequest)
         XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/auth/login")
         XCTAssertNotNil(urlRequest?.httpBody)

@@ -53,27 +53,20 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
               .scaledToFit()
           case .finished, .fetching:
             List(viewModel.products, id: \.id) { product in
-              NavigationLink {
-                // TODO: use here the ProductDetailView
-                Text(product.title)
-              } label: {
-                // TODO: use here the ProductView
-                HStack(alignment: .center, spacing: 16) {
-                  if let imageURL = product.imagesURL.first {
-                    PosterImage(url: imageURL, size: .small)
-                  }
-                  VStack(alignment: .leading, spacing: 8) {
-                    Text(product.title)
-                      .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    Text(product.description)
-                      .font(.system(size: 15, weight: .light, design: .rounded))
-                    Spacer()
-                  }
-                  .padding(.vertical, 16)
+              ZStack {
+                NavigationLink {
+                  // TODO: use here the ProductDetailView
+                  Text(product.title)
+                } label: {
+                  EmptyView()
                 }
-                .frame(minHeight: 90)
+                .opacity(0)
+
+                ProductView(ProductViewModel(product: product))
+                  .frame(maxWidth: .infinity, minHeight: 112)
               }
             }
+            .buttonStyle(.plain)
           default:
             EmptyView()
         }

@@ -13,7 +13,7 @@ class GetCurrentCartRequestTests: XCTestCase {
         // Arrange
         let sut = GetCurrentCartRequest(userId: 1)
 
-        // Assert
+        // Then
         XCTAssertEqual(sut.path, "/carts/user/1")
         XCTAssertEqual(sut.method, .get)
         XCTAssertEqual(sut.contentType, "application/json")
@@ -26,10 +26,10 @@ class GetCurrentCartRequestTests: XCTestCase {
         // Arrange
         let sut = GetCurrentCartRequest(userId: 1)
 
-        // Act
+        // When
         let urlRequest = sut.asURLRequest()
 
-        // Assert
+        // Then
         XCTAssertNotNil(urlRequest)
         XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/carts/user/1")
         XCTAssertNil(urlRequest?.httpBody)

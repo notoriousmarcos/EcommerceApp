@@ -13,7 +13,7 @@ class AuthenticationTests: XCTestCase {
         // Arrange
         let sut = Authentication(token: "authentication")
 
-        // Assert
+        // Then
         XCTAssertEqual(sut.token, "authentication")
     }
 }

@@ -12,7 +12,7 @@ class GetProductsRequestTests: XCTestCase {
   private let sut = GetProductsRequest(offset: 0, limit: 10)
 
   func testGetProductsRequest_init_ShouldRetainCorrectValues() {
-    // Assert
+    // Then
     XCTAssertEqual(sut.path, "/products")
     XCTAssertEqual(sut.method, .get)
     XCTAssertEqual(sut.contentType, "application/json")
@@ -23,11 +23,11 @@ class GetProductsRequestTests: XCTestCase {
   }
 
   func testGetProductsRequest_asURLRequest_ShouldReturnURLRequest() {
-    // Act
+    // When
     let urlRequest = sut.asURLRequest()
     let params: [URLQueryItem]? = URLComponents(string: urlRequest?.url?.absoluteString ?? "")?.queryItems
 
-    // Assert
+    // Then
     XCTAssertNotNil(urlRequest)
     XCTAssertNil(urlRequest?.httpBody)
     XCTAssertEqual(params?.count, 2)

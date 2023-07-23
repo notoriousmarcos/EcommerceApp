@@ -14,9 +14,9 @@ class RemoteGetUserIntegrationTests: XCTestCase {
         let sut = RemoteGetUserUseCase(client: RemoteGetUserClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to get user.")
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
-            // Assert
+            // Then
             if case let .success(user) = result {
                 XCTAssertEqual(user.id, 1)
             }

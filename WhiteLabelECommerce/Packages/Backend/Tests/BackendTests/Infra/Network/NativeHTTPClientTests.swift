@@ -30,7 +30,7 @@ class NativeHTTPClientTests: XCTestCase {
   }
 
   func testNativeHTTPClient_init_ShouldRetainProperties() {
-    // Assert
+    // Then
     XCTAssertNotNil(sut.session)
   }
 
@@ -43,7 +43,7 @@ class NativeHTTPClientTests: XCTestCase {
       return (HTTPURLResponse(), "[]".data(using: .utf8), nil)
     }
 
-    // Act
+    // When
     sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
       if case let .success(products) = result {
         XCTAssertEqual(products, [])
@@ -88,7 +88,7 @@ class NativeHTTPClientTests: XCTestCase {
       return (HTTPURLResponse(), Data(), nil)
     }
 
-    // Act
+    // When
     sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
       if case let .failure(error) = result,
          case let .errorOnParsing(error) = error {
@@ -106,7 +106,7 @@ class NativeHTTPClientTests: XCTestCase {
     // Arranged
     let exp = expectation(description: "Waiting for Request")
 
-    // Act
+    // When
     sut.dispatch(request: StubRequest(path: "/path")) { (result: Result<[Product], DomainError>) in
       if case let .failure(error) = result,
          case let .requestError(error) = error {
@@ -169,7 +169,7 @@ class NativeHTTPClientTests: XCTestCase {
       return (requestHandlerResponse, nil, nil)
     }
 
-    // Act
+    // When
     sut.dispatch(request: request) { (result: Result<[Product], DomainError>) in
       if case let .failure(error) = result,
          case let .requestError(receivedError) = error {

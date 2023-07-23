@@ -13,12 +13,12 @@ class RemoteGetUserClientTests: XCTestCase {
     private lazy var sut = RemoteGetUserClient(client: httpClient)
 
     func testRemoteGetUserClient_dispatch_ShouldSuccessWithUser() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [GetUserRequest(id: 1).toString(): (Mocks.user, nil)]
         )
 
-        // Act
+        // When
         sut.dispatch(userId: 1) { result in
             if case let .success(user) = result {
                 XCTAssertEqual(user, Mocks.user)
@@ -29,12 +29,12 @@ class RemoteGetUserClientTests: XCTestCase {
     }
 
     func testRemoteGetUserClient_dispatch_ShouldReceiveAnHTTPError() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [GetUserRequest(id: 1).toString(): (nil, .requestError(error: .unauthorized))]
         )
 
-        // Act
+        // When
         sut.dispatch(userId: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {

@@ -14,11 +14,11 @@ class RequestTests: XCTestCase {
     let sut = MockRequest(params: ["AnyParam": "param"], body: ["AnyBody": "body"],
                           headers: ["AnyHeader": "header"])
 
-    // Act
+    // When
     let urlRequest = sut.asURLRequest()
     let params: [URLQueryItem]? = URLComponents(string: urlRequest?.url?.absoluteString ?? "")?.queryItems
 
-    // Assert
+    // Then
     XCTAssertNotNil(urlRequest)
     XCTAssertNotNil(urlRequest?.httpBody)
     XCTAssertEqual(params?.count, 1)
@@ -33,10 +33,10 @@ class RequestTests: XCTestCase {
     // Arrange
     let sut = MockRequest(params: nil, body: nil, headers: nil)
 
-    // Act
+    // When
     let urlRequest = sut.asURLRequest()
 
-    // Assert
+    // Then
     XCTAssertNotNil(urlRequest)
     XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1")
     XCTAssertNil(urlRequest?.httpBody)

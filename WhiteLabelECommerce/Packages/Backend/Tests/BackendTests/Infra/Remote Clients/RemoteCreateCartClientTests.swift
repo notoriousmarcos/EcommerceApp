@@ -13,12 +13,12 @@ class RemoteCreateCartClientTests: XCTestCase {
     private lazy var sut = RemoteCreateCartClient(client: httpClient)
 
     func testRemoteCreateCartClient_dispatch_ShouldSuccessWithACart() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [CreateCartRequest(cart: Mocks.cart).toString(): (Mocks.cart, nil)]
         )
 
-        // Act
+        // When
         sut.dispatch(createCart: Mocks.cart) { result in
             if case let .success(cart) = result {
                 XCTAssertEqual(cart, Mocks.cart)
@@ -29,12 +29,12 @@ class RemoteCreateCartClientTests: XCTestCase {
     }
 
     func testRemoteCreateCartClient_dispatch_ShouldReceiveAnHTTPError() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [CreateCartRequest(cart: Mocks.cart).toString(): (nil, .requestError(error: .unauthorized))]
         )
 
-        // Act
+        // When
         sut.dispatch(createCart: Mocks.cart) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {

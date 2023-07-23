@@ -12,7 +12,7 @@ class UpdateCartRequestTests: XCTestCase {
     private let sut = UpdateCartRequest(cart: Mocks.cart)
 
     func testUpdateCartRequest_initWithValidCart_ShouldRetainCorrectValues() {
-        // Assert
+        // Then
         XCTAssertEqual(sut?.path, "/carts/1")
         XCTAssertEqual(sut?.method, .put)
         XCTAssertEqual(sut?.contentType, "application/json")
@@ -39,15 +39,15 @@ class UpdateCartRequestTests: XCTestCase {
             )
         )
 
-        // Assert
+        // Then
         XCTAssertNil(sut)
     }
 
     func testUpdateCartRequest_asURLRequest_ShouldReturnURLRequest() {
-        // Act
+        // When
         let urlRequest = sut?.asURLRequest()
 
-        // Assert
+        // Then
         XCTAssertNotNil(urlRequest)
         XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/carts/1")
         XCTAssertNotNil(urlRequest?.httpBody)

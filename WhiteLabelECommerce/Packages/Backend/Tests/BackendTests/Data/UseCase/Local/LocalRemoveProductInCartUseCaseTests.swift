@@ -13,10 +13,10 @@ class LocalRemoveProductInCartUseCaseTests: XCTestCase {
         // Arrange
         let sut = LocalRemoveProductInCartUseCase()
 
-        // Act
+        // When
         sut.execute(Mocks.product, inCart: Mocks.cart) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertEqual(cart.id, Mocks.cart.id)
                 XCTAssertEqual(cart.userId, Mocks.cart.userId)
                 XCTAssertEqual(cart.date, Mocks.cart.date)
@@ -40,10 +40,10 @@ class LocalRemoveProductInCartUseCaseTests: XCTestCase {
             ]
         )
 
-        // Act
+        // When
         sut.execute(Mocks.product, inCart: cart) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertEqual(cart.id, cart.id)
                 XCTAssertEqual(cart.userId, cart.userId)
                 XCTAssertEqual(cart.date, cart.date)

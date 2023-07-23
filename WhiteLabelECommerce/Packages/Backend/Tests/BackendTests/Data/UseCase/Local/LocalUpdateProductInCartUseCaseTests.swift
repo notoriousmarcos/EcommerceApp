@@ -13,10 +13,10 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
     // Arrange
     let sut = LocalUpdateProductInCartUseCase()
 
-    // Act
+    // When
     sut.execute(Mocks.product, withQuantity: 0, inCart: Mocks.cart) { result in
       if case let .success(cart) = result {
-        // Assert
+        // Then
         XCTAssertEqual(cart.id, Mocks.cart.id)
         XCTAssertEqual(cart.userId, Mocks.cart.userId)
         XCTAssertEqual(cart.date, Mocks.cart.date)
@@ -31,10 +31,10 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
     // Arrange
     let sut = LocalUpdateProductInCartUseCase()
 
-    // Act
+    // When
     sut.execute(Mocks.product, withQuantity: 2, inCart: Mocks.cart) { result in
       if case let .success(cart) = result {
-        // Assert
+        // Then
         XCTAssertEqual(cart.id, cart.id)
         XCTAssertEqual(cart.userId, cart.userId)
         XCTAssertEqual(cart.date, cart.date)
@@ -58,10 +58,10 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
       ]
     )
 
-    // Act
+    // When
     sut.execute(Mocks.product, withQuantity: 1, inCart: cart) { result in
       if case let .success(cart) = result {
-        // Assert
+        // Then
         XCTAssertEqual(cart.id, cart.id)
         XCTAssertEqual(cart.userId, cart.userId)
         XCTAssertEqual(cart.date, cart.date)
@@ -78,10 +78,10 @@ class LocalUpdateProductInCartUseCaseTests: XCTestCase {
     let sut = LocalUpdateProductInCartUseCase()
     let product = Mocks.product
 
-    // Act
+    // When
     sut.execute(product, withQuantity: 1, inCart: Mocks.cart) { result in
       if case let .success(cart) = result {
-        // Assert
+        // Then
         XCTAssertEqual(cart.id, Mocks.cart.id)
         XCTAssertEqual(cart.userId, Mocks.cart.userId)
         XCTAssertEqual(cart.date, Mocks.cart.date)

@@ -14,12 +14,12 @@ class RemoteAuthenticationClientTests: XCTestCase {
     private let authenticationModel = AuthenticationModel(email: "email", password: "password")
 
     func testRemoteAuthenticationClient_dispatch_ShouldSuccessAUser() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [AuthenticationRequest(model: authenticationModel).toString(): ("token", nil) ]
         )
 
-        // Act
+        // When
         sut.dispatch(authentication: authenticationModel) { result in
             if case let .success(token) = result {
                 XCTAssertEqual(token, "token")
@@ -30,12 +30,12 @@ class RemoteAuthenticationClientTests: XCTestCase {
     }
 
     func testRemoteAuthenticationClient_dispatch_ShouldReceiveAnHTTPError() {
-        // Assert
+        // Then
         httpClient.responses.append(
             [AuthenticationRequest(model: authenticationModel).toString(): (nil, .requestError(error: .unauthorized))]
         )
 
-        // Act
+        // When
         sut.dispatch(authentication: authenticationModel) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {

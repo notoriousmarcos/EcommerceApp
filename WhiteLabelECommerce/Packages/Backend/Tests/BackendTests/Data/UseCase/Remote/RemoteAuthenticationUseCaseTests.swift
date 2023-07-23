@@ -17,10 +17,10 @@ class RemoteAuthenticationUseCaseTests: XCTestCase {
     // Arrange
     mockClient.result = .success("token")
 
-    // Act
+    // When
     sut.execute(authenticationModel: authentication) { result in
       if case let .success(token) = result {
-        // Assert
+        // Then
         XCTAssertEqual(token, "token")
       } else {
         XCTFail("Should receive a valid response")
@@ -32,11 +32,11 @@ class RemoteAuthenticationUseCaseTests: XCTestCase {
     // Arrange
     mockClient.result = .failure(.requestError(error: .badRequest))
 
-    // Act
+    // When
     sut.execute(authenticationModel: authentication) { result in
       if case let .failure(error) = result,
          case let .requestError(error) = error {
-        // Assert
+        // Then
         XCTAssertEqual(error, .badRequest)
       } else {
         XCTFail("Should receive an error response")

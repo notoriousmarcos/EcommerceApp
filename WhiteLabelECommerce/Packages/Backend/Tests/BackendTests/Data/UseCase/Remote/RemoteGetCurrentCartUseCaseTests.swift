@@ -16,10 +16,10 @@ class RemoteGetCurrentCartUseCaseTests: XCTestCase {
         mockClient.result = .success(Mocks.cart)
         let sut = RemoteGetCurrentCartUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertEqual(cart, Mocks.cart)
             } else {
                 XCTFail("Should receive a valid response")
@@ -32,11 +32,11 @@ class RemoteGetCurrentCartUseCaseTests: XCTestCase {
         mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteGetCurrentCartUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                // Assert
+                // Then
                 XCTAssertEqual(error, .badRequest)
             } else {
                 XCTFail("Should receive an error response")

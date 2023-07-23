@@ -14,9 +14,9 @@ class RemoteAuthenticationIntegrationTests: XCTestCase {
         let sut = RemoteAuthenticationUseCase(client: RemoteAuthenticationClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to authenticate.")
 
-        // Act
+        // When
         sut.execute(authenticationModel: AuthenticationModel(email: "mor_2314", password: "83r5^_")) { result in
-            // Assert
+            // Then
             if case let .success(token) = result {
                 XCTAssertEqual(token, "")
             }

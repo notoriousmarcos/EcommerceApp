@@ -24,7 +24,7 @@ class ProductTests: XCTestCase {
       imagesURL: ["https:imageurl"]
     )
 
-    // Assert
+    // Then
     XCTAssertEqual(sut.id, 1)
     XCTAssertEqual(sut.title, "Product")
     XCTAssertEqual(sut.price, 10.0)

@@ -12,7 +12,7 @@ class ModelTests: XCTestCase {
     private let sut = TestModel(property: "Test")
 
     func testModel_toData_ShouldCreateValidData() throws {
-        // Act
+        // When
         guard let data = sut.toData() else {
             XCTFail("Should return a valid data.")
             return
@@ -22,18 +22,18 @@ class ModelTests: XCTestCase {
             from: data
         )
 
-        // Assert
+        // Then
         XCTAssertEqual(wrappedData, sut)
     }
 
     func testModel_toJSON_ShouldCreateAValidJSON() {
-        // Act
+        // When
         guard let dictionary = sut.toJSON() else {
             XCTFail("Should return a valid dictionary.")
             return
         }
 
-        // Assert
+        // Then
         XCTAssertTrue(dictionary.keys.contains("property"))
         XCTAssertEqual(dictionary["property"] as? String, sut.property)
     }

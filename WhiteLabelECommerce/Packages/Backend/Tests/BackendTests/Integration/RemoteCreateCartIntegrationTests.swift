@@ -14,11 +14,11 @@ class RemoteCreateCartIntegrationTests: XCTestCase {
         let sut = RemoteCreateCartUseCase(client: RemoteCreateCartClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to create cart.")
 
-        // Act
+        // When
         sut.execute(
             cart: Cart(userId: 1, date: Date(), products: [])
         ) { result in
-            // Assert
+            // Then
             if case let .success(cart) = result {
                 XCTAssertEqual(cart.userId, 1)
             }

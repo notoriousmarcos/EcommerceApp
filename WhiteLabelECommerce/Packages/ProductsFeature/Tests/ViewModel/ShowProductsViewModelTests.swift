@@ -42,7 +42,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     ]
 
     sut.$viewState.sink { viewState in
-      // Assert
+      // Then
       let expectedViewState = expectedViewStates.removeFirst()
       XCTAssertEqual(viewState, expectedViewState)
       viewStateExpectation.fulfill()
@@ -50,14 +50,14 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     sut.$products.sink { products in
-      // Assert
+      // Then
       let expectedProducts = expectedProducts.removeFirst()
       XCTAssertEqual(products, expectedProducts)
       callFetchExpectation.fulfill()
     }
     .store(in: &cancellables)
 
-    // Act
+    // When
     sut.fetchProducts(shouldReset: true)
 
     waitForExpectations(timeout: 1)
@@ -92,7 +92,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     ]
 
     sut.$error.sink { error in
-      // Assert
+      // Then
       let expectedError = expectedErrors.removeFirst()
       XCTAssertEqual(error as? ShowProductsServiceError, expectedError)
       errorExpectation.fulfill()
@@ -100,7 +100,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     sut.$viewState.sink { viewState in
-      // Assert
+      // Then
       let expectedViewState = expectedViewStates.removeFirst()
       XCTAssertEqual(viewState, expectedViewState)
       viewStateExpectation.fulfill()
@@ -108,13 +108,13 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     sut.$products.sink { products in
-      // Assert
+      // Then
       XCTAssertEqual(products, [])
       callFetchExpectation.fulfill()
     }
     .store(in: &cancellables)
 
-    // Act
+    // When
     sut.fetchProducts(shouldReset: true)
 
     waitForExpectations(timeout: 1)
@@ -158,7 +158,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     }
 
     sut.$viewState.sink { viewState in
-      // Assert
+      // Then
       let expectedViewState = expectedViewStates.removeFirst()
       XCTAssertEqual(viewState, expectedViewState)
       viewStateExpectation.fulfill()
@@ -166,14 +166,14 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     sut.$products.sink { products in
-      // Assert
+      // Then
       let expectedProducts = expectedProducts.removeFirst()
       XCTAssertEqual(products, expectedProducts)
       callFetchExpectation.fulfill()
     }
     .store(in: &cancellables)
 
-    // Act
+    // When
     sut.fetchProducts(shouldReset: true)
 
     waitForExpectations(timeout: 1)
@@ -235,7 +235,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     }
 
     sut.$viewState.sink { viewState in
-      // Assert
+      // Then
       let expectedViewState = expectedViewStates.removeFirst()
       XCTAssertEqual(viewState, expectedViewState)
       viewStateExpectation.fulfill()
@@ -243,14 +243,14 @@ final class ShowProductsViewModelTests: XCTestCase {
     .store(in: &cancellables)
 
     sut.$products.sink { products in
-      // Assert
+      // Then
       let expectedProducts = expectedProducts.removeFirst()
       XCTAssertEqual(products, expectedProducts)
       callFetchExpectation.fulfill()
     }
     .store(in: &cancellables)
 
-    // Act
+    // When
     sut.fetchProducts(shouldReset: true)
 
     waitForExpectations(timeout: 1)
@@ -288,7 +288,7 @@ final class ShowProductsViewModelTests: XCTestCase {
 //    let indext = 0
 //    let expectedProductDetailView =
 //
-//    // Act
+//    // When
 //    sut.detailView(to: index), expectedProductDetailView)
 //  }
 

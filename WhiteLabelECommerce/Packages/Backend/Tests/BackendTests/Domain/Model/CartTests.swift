@@ -21,7 +21,7 @@ class CartTests: XCTestCase {
             products: [item]
         )
 
-       // Assert
+       // Then
         XCTAssertEqual(sut.id, 1)
         XCTAssertEqual(sut.userId, 1)
         XCTAssertEqual(sut.date, creationDate)

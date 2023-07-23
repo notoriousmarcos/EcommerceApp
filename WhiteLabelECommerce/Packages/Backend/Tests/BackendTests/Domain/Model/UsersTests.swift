@@ -22,7 +22,7 @@ class UsersTests: XCTestCase {
             phone: "1111111"
         )
 
-       // Assert
+       // Then
         XCTAssertEqual(sut.id, 1)
         XCTAssertEqual(sut.email, "a@a")
         XCTAssertEqual(sut.username, "username")

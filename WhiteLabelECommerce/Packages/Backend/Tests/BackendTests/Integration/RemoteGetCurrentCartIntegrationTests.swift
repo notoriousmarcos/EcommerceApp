@@ -14,9 +14,9 @@ class RemoteGetCurrentCartIntegrationTests: XCTestCase {
         let sut = RemoteGetCurrentCartUseCase(client: RemoteGetCurrentCartClient(client: NativeHTTPClient()))
         let expectation = expectation(description: "Wait response to get cart.")
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
-            // Assert
+            // Then
             if case let .success(cart) = result {
                 XCTAssertEqual(cart.userId, 1)
             }

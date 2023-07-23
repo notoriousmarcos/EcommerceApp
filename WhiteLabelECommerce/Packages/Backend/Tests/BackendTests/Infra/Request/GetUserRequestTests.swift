@@ -13,7 +13,7 @@ class GetUserRequestTests: XCTestCase {
         // Arrange
         let sut = GetUserRequest(id: 1)
 
-        // Assert
+        // Then
         XCTAssertEqual(sut.path, "/users/1")
         XCTAssertEqual(sut.method, .get)
         XCTAssertEqual(sut.contentType, "application/json")
@@ -26,10 +26,10 @@ class GetUserRequestTests: XCTestCase {
         // Arrange
         let sut = GetUserRequest(id: 1)
 
-        // Act
+        // When
         let urlRequest = sut.asURLRequest()
 
-        // Assert
+        // Then
         XCTAssertNotNil(urlRequest)
         XCTAssertEqual(urlRequest?.url?.absoluteString, "https://api.escuelajs.co/api/v1/users/1")
         XCTAssertNil(urlRequest?.httpBody)

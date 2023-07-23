@@ -16,10 +16,10 @@ class RemoteGetProductUseCaseTests: XCTestCase {
         mockClient.result = .success(Mocks.product)
         let sut = RemoteGetProductUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(id: 1) { result in
             if case let .success(product) = result {
-                // Assert
+                // Then
                 XCTAssertEqual(product, Mocks.product)
             } else {
                 XCTFail("Should receive a valid response")
@@ -32,11 +32,11 @@ class RemoteGetProductUseCaseTests: XCTestCase {
         mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteGetProductUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(id: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                // Assert
+                // Then
                 XCTAssertEqual(error, .badRequest)
             } else {
                 XCTFail("Should receive an error response")

@@ -16,10 +16,10 @@ class RemoteGetUserUseCaseTests: XCTestCase {
         // Arrange
         mockClient.result = .success(Mocks.user)
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
             if case let .success(user) = result {
-                // Assert
+                // Then
                 XCTAssertEqual(user.id, 1)
                 XCTAssertEqual(user.email, "a@a")
                 XCTAssertEqual(user.username, "username")
@@ -38,11 +38,11 @@ class RemoteGetUserUseCaseTests: XCTestCase {
         // Arrange
         mockClient.result = .failure(.requestError(error: .badRequest))
 
-        // Act
+        // When
         sut.execute(userId: 1) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                // Assert
+                // Then
                 XCTAssertEqual(error, .badRequest)
             } else {
                 XCTFail("Should receive an error response")

@@ -12,16 +12,16 @@ class CartItemTests: XCTestCase {
     private var sut = CartItem(productId: 1, quantity: 1)
 
     func testCartItem_init_ShouldRetainProperties() {
-        // Assert
+        // Then
         XCTAssertEqual(sut.productId, 1)
         XCTAssertEqual(sut.quantity, 1)
     }
 
     func testCartItem_setQuantity_ShouldUpdateQuantity() {
-        // Act
+        // When
         sut.setQuantity(2)
 
-        // Assert
+        // Then
         XCTAssertEqual(sut.quantity, 2)
     }
 }

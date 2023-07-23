@@ -16,10 +16,10 @@ class RemoteUpdateCartUseCaseTests: XCTestCase {
         mockClient.result = .success(Mocks.cart)
         let sut = RemoteUpdateCartUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(cart: Mocks.cart) { result in
             if case let .success(cart) = result {
-                // Assert
+                // Then
                 XCTAssertNotNil(cart.id)
                 XCTAssertEqual(cart.userId, Mocks.cart.userId)
                 XCTAssertEqual(cart.date, Mocks.cart.date)
@@ -35,11 +35,11 @@ class RemoteUpdateCartUseCaseTests: XCTestCase {
         mockClient.result = .failure(.requestError(error: .badRequest))
         let sut = RemoteUpdateCartUseCase(client: mockClient)
 
-        // Act
+        // When
         sut.execute(cart: Mocks.cart) { result in
             if case let .failure(error) = result,
                case let .requestError(error) = error {
-                // Assert
+                // Then
                 XCTAssertEqual(error, .badRequest)
             } else {
                 XCTFail("Should receive an error response")

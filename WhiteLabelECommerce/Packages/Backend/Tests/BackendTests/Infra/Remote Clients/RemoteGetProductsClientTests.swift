@@ -13,12 +13,12 @@ class RemoteGetProductsClientTests: XCTestCase {
   private lazy var sut = RemoteGetProductsClient(client: httpClient)
 
   func testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts() {
-    // Assert
+    // Then
     httpClient.responses.append(
       [GetProductsRequest().toString(): (Mocks.products, nil)]
     )
 
-    // Act
+    // When
     sut.dispatch(offset: nil, limit: nil) { result in
       if case let .success(products) = result {
         XCTAssertEqual(products, Mocks.products)
@@ -29,12 +29,12 @@ class RemoteGetProductsClientTests: XCTestCase {
   }
 
   func testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError() {
-    // Assert
+    // Then
     httpClient.responses.append(
       [GetProductsRequest().toString(): (nil, .requestError(error: .unauthorized))]
     )
 
-    // Act
+    // When
     sut.dispatch(offset: nil, limit: nil) { result in
       if case let .failure(error) = result,
          case let .requestError(error) = error {
