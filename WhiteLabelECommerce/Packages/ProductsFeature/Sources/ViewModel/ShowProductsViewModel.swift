@@ -32,15 +32,17 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// it indicates no errors occurred.
   @Published private(set) var error: Error?
 
-  /// The current offset/index for pagination. It is used to request products from the service with the appropriate offset.
+  /// The current offset/index for pagination. It is used to request products from the service with
+  /// the appropriate offset.
   private var currentOffset = 0
 
   /// The maximum number of products to be fetched in a single API call. This value is used for pagination to
   /// limit the number of products returned in each request.
   private var pageLimit: Int
 
-  /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are canceled automatically when
-  /// the `ShowProductsViewModel` instance is deallocated, preventing potential memory leaks.
+  /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are
+  /// canceled automatically when the `ShowProductsViewModel` instance is deallocated,
+  /// preventing potential memory leaks.
   private var cancellables = Set<AnyCancellable>()
 
   /// An instance of `ProductsService`, which is a service responsible for fetching product data from the backend or
