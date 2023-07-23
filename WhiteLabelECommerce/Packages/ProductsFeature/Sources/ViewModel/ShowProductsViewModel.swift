@@ -5,12 +5,11 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
-import Foundation
-import Combine
 import Backend
+import Combine
+import Foundation
 
 protocol ShowProductsViewModelProtocol: ObservableObject {
-
   // MARK: - Properties
   var products: [ProductViewItem] { get }
   var viewState: ShowProductsViewModel.ViewState? { get }
@@ -21,7 +20,6 @@ protocol ShowProductsViewModelProtocol: ObservableObject {
 }
 
 final class ShowProductsViewModel: ShowProductsViewModelProtocol {
-
   // MARK: - Properties
   /// An array of `ProductViewItem` objects that represent the products fetched from the service and
   /// ready for presentation in the UI.
@@ -73,8 +71,7 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
     if shouldReset {
       currentOffset = 0
       viewState = .loading
-    }
-    else {
+    } else {
       viewState = .fetching
     }
     fetchProductsOnService()

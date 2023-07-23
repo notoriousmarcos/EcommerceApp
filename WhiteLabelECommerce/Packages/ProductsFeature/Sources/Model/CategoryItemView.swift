@@ -9,7 +9,7 @@ import Foundation
 
 struct CategoryItemView: Equatable {
   // MARK: - Properties
-  public let id: Int
-  public let name: String
-  public let imageURL: String?
+  let id: Int
+  let name: String
+  let imageURL: String?
 }

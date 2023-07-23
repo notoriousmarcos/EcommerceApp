@@ -5,16 +5,15 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
-import Foundation
-import Combine
 import Backend
+import Combine
+import Foundation
 
 protocol ProductsService {
   func fetchProducts(for offset: Int?, and limit: Int?) -> AnyPublisher<[Product], ShowProductsServiceError>
 }
 
 class ShowProductsService: ProductsService {
-
   func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
     Just([
       Product(

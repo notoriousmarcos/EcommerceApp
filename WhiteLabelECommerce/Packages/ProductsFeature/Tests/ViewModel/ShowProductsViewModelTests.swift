@@ -5,14 +5,13 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
-import Combine
-import XCTest
 import Backend
+import Combine
 import Mock
 @testable import ProductsFeature
+import XCTest
 
 final class ShowProductsViewModelTests: XCTestCase {
-
   private lazy var sut = ShowProductsViewModel(service: mockService)
   private var mockService = MockProductsService()
   private var cancellables: Set<AnyCancellable> = []
@@ -74,7 +73,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     viewStateExpectation.expectedFulfillmentCount = 3
 
     mockService.response = [.failure(.unknown)]
-    
+
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
       nil,
       .loading,
@@ -136,8 +135,8 @@ final class ShowProductsViewModelTests: XCTestCase {
       Mocks.productsItemView
     ]
     var expectedParams: [(Int, Int)] = [
-      (0,1), // offset 0 and pageLimit 1
-      (1,1) // offset 1 and pageLimit 1
+      (0, 1), // offset 0 and pageLimit 1
+      (1, 1) // offset 1 and pageLimit 1
     ]
 
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
@@ -177,7 +176,6 @@ final class ShowProductsViewModelTests: XCTestCase {
     // Act
     sut.fetchProducts(shouldReset: true)
 
-
     waitForExpectations(timeout: 1)
 
     paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
@@ -208,15 +206,14 @@ final class ShowProductsViewModelTests: XCTestCase {
       [],
       [Mocks.productsItemView.first!],
       Mocks.productsItemView,
-      [Mocks.productsItemView.first!],
+      [Mocks.productsItemView.first!]
     ]
 
     var expectedParams: [(Int, Int)] = [
-      (0,1), // offset 0 and pageLimit 1
-      (1,1), // offset 1 and pageLimit 1
-      (0,1) // offset 0 and pageLimit 1
+      (0, 1), // offset 0 and pageLimit 1
+      (1, 1), // offset 1 and pageLimit 1
+      (0, 1) // offset 0 and pageLimit 1
     ]
-
 
     var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
       nil,
@@ -227,7 +224,7 @@ final class ShowProductsViewModelTests: XCTestCase {
     mockService.response = [
       .success([Mocks.products.first!]),
       .success([Mocks.products.last!]),
-      .success([Mocks.products.first!]),
+      .success([Mocks.products.first!])
     ]
 
     mockService.fetchProductsParamsClosure = { offset, limit in
@@ -272,7 +269,6 @@ final class ShowProductsViewModelTests: XCTestCase {
 
     waitForExpectations(timeout: 1)
 
-
     paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     viewStateExpectation = expectation(description: "Expect to updateViewState.")
@@ -289,7 +285,6 @@ final class ShowProductsViewModelTests: XCTestCase {
   }
 
   private class MockProductsService: ProductsService {
-
     /// This response will be used to mock the response when fetch is called.
     var response: [Result<[Product], ShowProductsServiceError>?]?
 
@@ -316,7 +311,6 @@ final class ShowProductsViewModelTests: XCTestCase {
     }
   }
 }
-
 
 extension Mocks {
   static var productsItemView: [ProductViewItem] {

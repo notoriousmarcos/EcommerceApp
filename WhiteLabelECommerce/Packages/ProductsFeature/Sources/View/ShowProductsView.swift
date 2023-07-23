@@ -9,7 +9,6 @@ import SwiftUI
 
 /// A view responsible for displaying a list of products fetched from the `ShowProductsViewModelProtocol`.
 struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
-
   /// The view model conforming to `ShowProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
 
@@ -83,7 +82,7 @@ struct ShowProductsView_Previews: PreviewProvider {
               ),
               description: "Description",
               imagesURL: ["https://picsum.photos/640/640?r=2738"]
-            ),
+            )
           ],
           viewState: .finished
         )
@@ -102,7 +101,7 @@ struct ShowProductsView_Previews: PreviewProvider {
               ),
               description: "Description",
               imagesURL: ["https://picsum.photos/640/640?r=2738"]
-            ),
+            )
           ],
           viewState: .fetching
         )

@@ -13,10 +13,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Mock",
-            targets: ["Mock"]),
+            targets: ["Mock"])
     ],
     dependencies: [
-      .package(path: "../Backend"),
+      .package(path: "../Backend")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -27,7 +27,7 @@ let package = Package(
               "Backend"
             ],
             path: "Sources"
-        ),
+        )
     ],
     swiftLanguageVersions: [
       .version("5.5")
