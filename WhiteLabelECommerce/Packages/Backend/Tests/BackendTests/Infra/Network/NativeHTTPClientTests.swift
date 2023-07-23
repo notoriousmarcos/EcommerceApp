@@ -18,21 +18,25 @@ class NativeHTTPClientTests: XCTestCase {
   private var request = StubRequest(path: "")
   private lazy var sut = NativeHTTPClient(session: session)
 
+  override func setUp() {
+    super.setUp()
+    MockURLProtocol.requestHandler = nil
+    super.tearDown()
+  }
+
   override func tearDown() {
     MockURLProtocol.requestHandler = nil
     super.tearDown()
   }
 
   func testNativeHTTPClient_init_ShouldRetainProperties() {
-    // Arrange
-    let sut = NativeHTTPClient(session: session)
-
     // Assert
     XCTAssertNotNil(sut.session)
   }
 
   func testNativeHTTPClient_dispatch_ShouldSuccessWithNoProducts() {
     // Arranged
+    request.path = "/testNativeHTTPClient_dispatch_ShouldSuccessWithNoProducts"
     let exp = expectation(description: "Waiting for Request")
 
     MockURLProtocol.requestHandler = { _ in
@@ -54,7 +58,7 @@ class NativeHTTPClientTests: XCTestCase {
 
   func testNativeHTTPClient_dispatch_ShouldSuccessWithTwoProducts() {
     // Arrange
-    let sut = NativeHTTPClient(session: session)
+    request.path = "/testNativeHTTPClient_dispatch_ShouldSuccessWithTwoProducts"
     let expectedProducts = Mocks.products
     let validData = Mocks.productsData
     let exp = expectation(description: "Waiting for Request")
@@ -77,6 +81,7 @@ class NativeHTTPClientTests: XCTestCase {
 
   func testNativeHTTPClient_dispatch_ShouldReceiveAParseError() {
     // Arranged
+    request.path = "/testNativeHTTPClient_dispatch_ShouldReceiveAParseError"
     let exp = expectation(description: "Waiting for Request")
 
     MockURLProtocol.requestHandler = { _ in
@@ -99,14 +104,13 @@ class NativeHTTPClientTests: XCTestCase {
 
   func testNativeHTTPClient_dispatch_ShouldReceiveUrlError() {
     // Arranged
-    let sut = NativeHTTPClient()
     let exp = expectation(description: "Waiting for Request")
 
     // Act
-    sut.dispatch(request: StubRequest(path: "http\\")) { (result: Result<[Product], DomainError>) in
+    sut.dispatch(request: StubRequest(path: "/path")) { (result: Result<[Product], DomainError>) in
       if case let .failure(error) = result,
          case let .requestError(error) = error {
-        XCTAssertEqual(error, .notFound)
+        XCTAssertEqual(error, .unknown)
       } else {
         XCTFail("Should be Failed because error: \(result).")
       }
@@ -158,6 +162,7 @@ class NativeHTTPClientTests: XCTestCase {
     expectedError: HTTPError
   ) {
     // Arranged
+    request.path = "/\(expectedError.localizedDescription)"
     let exp = expectation(description: "Waiting for Request")
 
     MockURLProtocol.requestHandler = { _ in

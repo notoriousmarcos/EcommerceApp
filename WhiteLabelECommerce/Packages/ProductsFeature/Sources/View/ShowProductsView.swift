@@ -23,7 +23,7 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
   var body: some View {
     ZStack {
       NavigationView {
-        ProductsView()
+        productsView()
           .navigationTitle("Products")
       }
       .refreshable {
@@ -43,7 +43,7 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
   /// A helper method that creates the main content of the `ShowProductsView`.
   ///
   /// - Returns: A SwiftUI `View` representing the main content of the view.
-  private func ProductsView() -> some View {
+  private func productsView() -> some View {
     ZStack {
       if let error = viewModel.error {
         Text(error.localizedDescription)

@@ -20,17 +20,24 @@
       }
     },
     {
+      "target" : {
+        "containerPath" : "container:Packages\/ProductsFeature",
+        "identifier" : "ProductsFeatureTests",
+        "name" : "ProductsFeatureTests"
+      }
+    },
+    {
       "skippedTests" : [
         "RemoteAuthenticationIntegrationTests",
         "RemoteCreateCartIntegrationTests",
-        "RemoteGetAllProductsIntegrationTests",
         "RemoteGetCurrentCartIntegrationTests",
         "RemoteGetProductIntegrationTests",
+        "RemoteGetProductsIntegrationTests",
         "RemoteGetUserIntegrationTests",
         "RemoteUpdateCartIntegrationTests"
       ],
       "target" : {
-        "containerPath" : "container:Shared\/Backend",
+        "containerPath" : "container:Packages\/Backend",
         "identifier" : "BackendTests",
         "name" : "BackendTests"
       }

@@ -33,6 +33,28 @@
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ProductsFeatureTests"
+               BuildableName = "ProductsFeatureTests"
+               BlueprintName = "ProductsFeatureTests"
+               ReferencedContainer = "container:Packages/ProductsFeature">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BackendTests"
+               BuildableName = "BackendTests"
+               BlueprintName = "BackendTests"
+               ReferencedContainer = "container:Packages/Backend">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug (Development)"

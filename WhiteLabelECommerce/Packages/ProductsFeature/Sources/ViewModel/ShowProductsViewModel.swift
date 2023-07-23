@@ -23,25 +23,30 @@ protocol ShowProductsViewModelProtocol: ObservableObject {
 final class ShowProductsViewModel: ShowProductsViewModelProtocol {
 
   // MARK: - Properties
-  /// An array of `ProductViewItem` objects that represent the products fetched from the service and ready for presentation in the UI.
+  /// An array of `ProductViewItem` objects that represent the products fetched from the service and
+  /// ready for presentation in the UI.
   @Published private(set) var products: [ProductViewItem] = []
 
   /// The current state of the product fetching process, which can be `.fetching`, `.loading`, or `.finished`.
   @Published private(set) var viewState: ViewState?
 
-  /// An optional `Error` object that holds any error encountered during the product fetching process. If nil, it indicates no errors occurred.
+  /// An optional `Error` object that holds any error encountered during the product fetching process. If nil,
+  /// it indicates no errors occurred.
   @Published private(set) var error: Error?
 
   /// The current offset/index for pagination. It is used to request products from the service with the appropriate offset.
   private var currentOffset = 0
 
-  /// The maximum number of products to be fetched in a single API call. This value is used for pagination to limit the number of products returned in each request.
+  /// The maximum number of products to be fetched in a single API call. This value is used for pagination to
+  /// limit the number of products returned in each request.
   private var pageLimit: Int
 
-  /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are canceled automatically when the `ShowProductsViewModel` instance is deallocated, preventing potential memory leaks.
+  /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are canceled automatically when
+  /// the `ShowProductsViewModel` instance is deallocated, preventing potential memory leaks.
   private var cancellables = Set<AnyCancellable>()
 
-  /// An instance of `ProductsService`, which is a service responsible for fetching product data from the backend or any external data source.
+  /// An instance of `ProductsService`, which is a service responsible for fetching product data from the backend or
+  /// any external data source.
   private let service: ProductsService
 
   // MARK: - Initializer
@@ -61,7 +66,9 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   // MARK: - Public Methods
   /// Initiates the process of fetching products.
   ///
-  /// - Parameter shouldReset: A boolean value indicating whether to reset the fetch process. If `true`, the `viewState` and `currentOffset` properties are reset before initiating the fetch process. Default value is `false`.
+  /// - Parameter shouldReset: A boolean value indicating whether to reset the fetch process.
+  /// If `true`, the `viewState` and `currentOffset` properties are reset before initiating the fetch process.
+  /// Default value is `false`.
   func fetchProducts(shouldReset: Bool = false) {
     if shouldReset {
       currentOffset = 0
@@ -76,7 +83,6 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   // MARK: - Private Methods
   /// Fetches products from the service and updates the view state accordingly.
   private func fetchProductsOnService() {
-
     service
       .fetchProducts(for: currentOffset, and: pageLimit)
       .sink { [weak self] status in
