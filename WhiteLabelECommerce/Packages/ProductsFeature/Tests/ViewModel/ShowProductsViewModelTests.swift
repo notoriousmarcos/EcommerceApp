@@ -284,6 +284,14 @@ final class ShowProductsViewModelTests: XCTestCase {
     waitForExpectations(timeout: 1)
   }
 
+//  func testGoToProductDetailShouldReturnCorrectDataToProductView() {
+//    let indext = 0
+//    let expectedProductDetailView =
+//
+//    // Act
+//    sut.detailView(to: index), expectedProductDetailView)
+//  }
+
   private class MockProductsService: ProductsService {
     /// This response will be used to mock the response when fetch is called.
     var response: [Result<[Product], ShowProductsServiceError>?]?
@@ -322,10 +330,10 @@ extension Mocks {
         category: CategoryItemView(
           id: product.category.id,
           name: product.category.name,
-          imageURL: product.category.imageURL
+          imageURL: URL(string: product.category.imageURL ?? "")
         ),
         description: product.description,
-        imagesURL: product.imagesURL
+        imagesURL: product.imagesURL.compactMap { URL(string: $0) }
       )
     }
   }

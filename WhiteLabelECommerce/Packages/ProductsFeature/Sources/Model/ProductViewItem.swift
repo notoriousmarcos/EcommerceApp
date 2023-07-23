@@ -14,5 +14,5 @@ struct ProductViewItem: Equatable {
   let price: Double
   let category: CategoryItemView
   let description: String
-  let imagesURL: [String]
+  let imagesURL: [URL]
 }

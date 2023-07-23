@@ -111,10 +111,10 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
         category: CategoryItemView(
           id: product.category.id,
           name: product.category.name,
-          imageURL: product.category.imageURL
+          imageURL: URL(string: product.category.imageURL ?? "")
         ),
         description: product.description,
-        imagesURL: product.imagesURL
+        imagesURL: product.imagesURL.compactMap { URL(string: $0 ) }
       )
     }
   }

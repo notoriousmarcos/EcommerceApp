@@ -11,5 +11,5 @@ struct CategoryItemView: Equatable {
   // MARK: - Properties
   let id: Int
   let name: String
-  let imageURL: String?
+  let imageURL: URL?
 }

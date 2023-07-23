@@ -53,7 +53,26 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
               .scaledToFit()
           case .finished, .fetching:
             List(viewModel.products, id: \.id) { product in
-              Text(product.title)
+              NavigationLink {
+                // TODO: use here the ProductDetailView
+                Text(product.title)
+              } label: {
+                // TODO: use here the ProductView
+                HStack(alignment: .center, spacing: 16) {
+                  if let imageURL = product.imagesURL.first {
+                    PosterImage(url: imageURL, size: .small)
+                  }
+                  VStack(alignment: .leading, spacing: 8) {
+                    Text(product.title)
+                      .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    Text(product.description)
+                      .font(.system(size: 15, weight: .light, design: .rounded))
+                    Spacer()
+                  }
+                  .padding(.vertical, 16)
+                }
+                .frame(minHeight: 90)
+              }
             }
           default:
             EmptyView()
@@ -78,10 +97,10 @@ struct ShowProductsView_Previews: PreviewProvider {
               category: .init(
                 id: 1,
                 name: "Category",
-                imageURL: "https://picsum.photos/640/640?r=2738"
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
               ),
               description: "Description",
-              imagesURL: ["https://picsum.photos/640/640?r=2738"]
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
             )
           ],
           viewState: .finished
@@ -97,16 +116,22 @@ struct ShowProductsView_Previews: PreviewProvider {
               category: .init(
                 id: 1,
                 name: "Category",
-                imageURL: "https://picsum.photos/640/640?r=2738"
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
               ),
               description: "Description",
-              imagesURL: ["https://picsum.photos/640/640?r=2738"]
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
             )
           ],
           viewState: .fetching
         )
       )
-      ShowProductsView(viewModel: MockShowProductsViewModel(products: [], viewState: .finished, error: ShowProductsServiceError.unknown))
+      ShowProductsView(
+        viewModel: MockShowProductsViewModel(
+          products: [],
+          viewState: .finished,
+          error: ShowProductsServiceError.unknown
+        )
+      )
     }
   }
 }
