@@ -9,7 +9,6 @@
 import XCTest
 
 final class DoubleExtensionTests: XCTestCase {
-
   /// The device should be in English(US) and United States Region
   func testProductPriceFormatting() {
     // Given

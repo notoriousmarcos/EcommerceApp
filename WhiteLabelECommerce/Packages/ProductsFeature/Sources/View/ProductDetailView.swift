@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
-import UI
 import SwiftUI
+import UI
 
 struct ProductDetailView: View {
   // MARK: - Properties
@@ -20,7 +20,7 @@ struct ProductDetailView: View {
   var body: some View {
     ZStack {
       Color.backgroundColor
-      
+
       ScrollView {
         LazyVStack(
           alignment: .center,

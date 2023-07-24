@@ -68,7 +68,7 @@ struct ProductView_Previews: PreviewProvider {
         product: ProductViewItem(
           id: 1,
           title: "Title",
-          price: 12222.99,
+          price: 12_222.99,
           category: .init(
             id: 1,
             name: "Category",
