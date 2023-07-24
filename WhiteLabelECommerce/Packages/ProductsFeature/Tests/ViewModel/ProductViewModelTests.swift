@@ -23,7 +23,7 @@ class ProductViewModelTests: XCTestCase {
     imagesURL: []
   )
 
-  /// The device should be in English(USA)
+  /// The device should be in English(US) and United States Region
   func testProductPriceFormatting() {
     // Given
     let locale = Locale(identifier: "en_US") // Use a specific locale for testing (USD in this case)
@@ -33,10 +33,10 @@ class ProductViewModelTests: XCTestCase {
     let formattedPrice = sut.productPrice()
 
     // Then
-    XCTAssertEqual(formattedPrice, "US$ 9,99")
+    XCTAssertEqual(formattedPrice, "$9.99")
   }
 
-  /// The device should be in English(USA)
+  /// The device should be in English(US) and United States Region
   func testProductPriceFormattingWithDifferentLocale() {
     // Given
     let locale = Locale(identifier: "fr_FR") // Use a different locale for testing (Euro in this case)
@@ -46,6 +46,6 @@ class ProductViewModelTests: XCTestCase {
     let formattedPrice = sut.productPrice()
 
     // Then
-    XCTAssertEqual(formattedPrice, "€ 9,99")
+    XCTAssertEqual(formattedPrice, "€9.99")
   }
 }
