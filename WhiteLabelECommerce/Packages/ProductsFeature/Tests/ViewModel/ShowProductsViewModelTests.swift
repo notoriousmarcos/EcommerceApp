@@ -301,7 +301,7 @@ final class ShowProductsViewModelTests: XCTestCase {
 
     init() { }
 
-    func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
+    func fetchProducts(for offset: Int? = nil, andLimit limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
       fetchProductsParamsClosure?(offset, limit)
       guard let response = response?.removeFirst() else {
         return Fail(error: ShowProductsServiceError.unknown)

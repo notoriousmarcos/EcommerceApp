@@ -10,38 +10,30 @@ import Combine
 import Foundation
 
 protocol ProductsService {
-  func fetchProducts(for offset: Int?, and limit: Int?) -> AnyPublisher<[Product], ShowProductsServiceError>
+  func fetchProducts(for offset: Int?, andLimit limit: Int?) -> AnyPublisher<[Product], ShowProductsServiceError>
 }
 
 class ShowProductsService: ProductsService {
-  func fetchProducts(for offset: Int? = nil, and limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
-    Just([
-      Product(
-        id: 1,
-        title: "Product",
-        price: 10.0,
-        category: Category(
-          id: 5,
-          name: "Others",
-          imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
-        ),
-        description: "Product description",
-        imagesURL: ["https://imageurl"]
-      ),
-      Product(
-        id: 2,
-        title: "Product",
-        price: 10.0,
-        category: Category(
-          id: 5,
-          name: "Others",
-          imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
-        ),
-        description: "Product description",
-        imagesURL: ["https://imageurl"]
-      )
-    ])
-    .setFailureType(to: ShowProductsServiceError.self)
+
+  private var fetchProductsUseCase: GetProductsUseCase
+
+  init(fetchProductsUseCase: GetProductsUseCase) {
+    self.fetchProductsUseCase = fetchProductsUseCase
+  }
+
+  func fetchProducts(for offset: Int? = nil, andLimit limit: Int? = nil) -> AnyPublisher<[Product], ShowProductsServiceError> {
+    Deferred {
+      Future { [weak self] promise in
+        self?.fetchProductsUseCase.execute(offset: offset, limit: limit) { result in
+          switch result {
+            case .success(let products):
+              promise(.success(products))
+            case .failure(let error):
+              promise(.failure(.unknown))
+          }
+        }
+      }
+    }
     .eraseToAnyPublisher()
   }
 }

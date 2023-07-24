@@ -83,7 +83,7 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// Fetches products from the service and updates the view state accordingly.
   private func fetchProductsOnService() {
     service
-      .fetchProducts(for: currentOffset, and: pageLimit)
+      .fetchProducts(for: currentOffset, andLimit: pageLimit)
       .sink { [weak self] status in
         if case let .failure(error) = status {
           self?.error = error
