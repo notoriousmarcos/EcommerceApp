@@ -17,6 +17,7 @@ let package = Package(
   ],
   dependencies: [
     .package(path: "../Backend"),
+    .package(path: "../UI"),
     .package(path: "../Mock")
   ],
   targets: [
@@ -25,7 +26,8 @@ let package = Package(
     .target(
       name: "ProductsFeature",
       dependencies: [
-        "Backend"
+        "Backend",
+        "UI"
       ],
       path: "Sources"
     ),

@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ProductView.swift
 //  
 //
 //  Created by Marcos Vinicius Brito on 23/07/23.
@@ -12,9 +12,6 @@ struct ProductView: View {
   private enum Constants {
     static let leadingTrailingPadding: CGFloat = 16
     static let topBottomPadding: CGFloat = 16
-    static let titleFont: Font = .system(.title2, design: .rounded)
-    static let descriptionFont: Font = .system(.caption, design: .rounded)
-    static let priceFont: Font = .system(.headline, design: .rounded)
     static let viewMaxHeight: CGFloat = 112
   }
 
@@ -37,7 +34,7 @@ struct ProductView: View {
         VStack(alignment: .leading, spacing: 8) {
           HStack {
             Text(viewModel.product.title)
-              .font(Constants.titleFont)
+              .textFont(size: 24)
               .multilineTextAlignment(.leading)
               .lineLimit(1)
             Spacer()
@@ -45,15 +42,15 @@ struct ProductView: View {
 
           HStack {
             Text(viewModel.product.description)
-              .font(Constants.descriptionFont)
+              .textFont(size: 16)
               .multilineTextAlignment(.leading)
             Spacer()
           }
 
           HStack {
             Spacer()
-            Text(viewModel.productPrice())
-              .font(Constants.priceFont)
+            Text(viewModel.product.price.toCurrencyFormat())
+              .textFont(size: 20)
               .multilineTextAlignment(.trailing)
           }
         }

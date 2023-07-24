@@ -23,7 +23,6 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
     ZStack {
       NavigationView {
         productsView()
-          .navigationTitle("Products")
       }
       .refreshable {
         viewModel.fetchProducts(shouldReset: true)
@@ -55,8 +54,8 @@ struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
             List(viewModel.products, id: \.id) { product in
               ZStack {
                 NavigationLink {
-                  // TODO: use here the ProductDetailView
-                  Text(product.title)
+                  // TODO: Need to inject this view in future.
+                  ProductDetailView(ProductDetailViewModel(product: product))
                 } label: {
                   EmptyView()
                 }
