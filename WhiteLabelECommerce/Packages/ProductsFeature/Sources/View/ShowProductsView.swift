@@ -121,7 +121,7 @@ struct ShowProductsView_Previews: PreviewProvider {
         viewModel: MockShowProductsViewModel(
           products: [],
           viewState: .finished,
-          error: ShowProductsServiceError.unknown
+          error: ProductsServiceError.unknown
         )
       )
     }
