@@ -41,6 +41,13 @@
         "identifier" : "BackendTests",
         "name" : "BackendTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/UI",
+        "identifier" : "UITests",
+        "name" : "UITests"
+      }
     }
   ],
   "version" : 1

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ProductViewModel: ObservableObject {
+final class ProductDetailViewModel: ObservableObject {
   @Published var product: ProductViewItem
 
   init(product: ProductViewItem) {

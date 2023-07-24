@@ -54,6 +54,16 @@
                ReferencedContainer = "container:Packages/Backend">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "UITests"
+               BuildableName = "UITests"
+               BlueprintName = "UITests"
+               ReferencedContainer = "container:Packages/UI">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
