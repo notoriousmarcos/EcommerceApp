@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProductsServiceError: String, Error, Equatable {
+public enum ProductsServiceError: String, Error, Equatable {
   case decoding
   case requestFail
   case guardError

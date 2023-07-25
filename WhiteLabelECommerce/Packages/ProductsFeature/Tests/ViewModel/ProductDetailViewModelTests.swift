@@ -1,5 +1,5 @@
 //
-//  ProductViewModelTests.swift
+//  ProductDetailViewModelTests.swift
 //  
 //
 //  Created by Marcos Vinicius Brito on 23/07/23.
@@ -10,7 +10,7 @@ import Mock
 @testable import ProductsFeature
 import XCTest
 
-class ProductViewModelTests: XCTestCase {
+class ProductDetailViewModelTests: XCTestCase {
   private let product = ProductViewItem(
     id: 1,
     title: "Sample Product",
@@ -27,7 +27,7 @@ class ProductViewModelTests: XCTestCase {
 
   func testInstantiateShouldHaveProductPropertyAsPublished() {
     // Given
-    let sut = ProductViewModel(product: product)
+    let sut = ProductDetailViewModel(product: product)
     let productExpectation = expectation(description: "Expect to receive value of the product.")
 
     sut.$product.sink { [weak self] currentProduct in

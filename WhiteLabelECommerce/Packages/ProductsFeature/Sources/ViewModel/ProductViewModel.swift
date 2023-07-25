@@ -8,7 +8,7 @@
 import Foundation
 
 final class ProductViewModel: ObservableObject {
-  @Published var product: ProductViewItem
+  @Published private(set) var product: ProductViewItem
 
   init(product: ProductViewItem) {
     self.product = product

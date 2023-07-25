@@ -8,18 +8,18 @@
 import SwiftUI
 
 /// A view responsible for displaying a list of products fetched from the `ShowProductsViewModelProtocol`.
-struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
+public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
   /// The view model conforming to `ShowProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
 
   /// Initializes the `ShowProductsView` with the given view model.
   ///
   /// - Parameter viewModel: The view model conforming to `ShowProductsViewModelProtocol`.
-  init(viewModel: ViewModel) {
+  public init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
 
-  var body: some View {
+  public var body: some View {
     ZStack {
       NavigationView {
         productsView()

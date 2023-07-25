@@ -9,18 +9,18 @@ import Backend
 import Combine
 import Foundation
 
-protocol ProductsService {
+public protocol ProductsService {
   func fetchProducts(for offset: Int?, andLimit limit: Int?) -> AnyPublisher<[Product], ProductsServiceError>
 }
 
-final class ShowProductsService: ProductsService {
+public final class ShowProductsService: ProductsService {
   private var fetchProductsUseCase: GetProductsUseCase
 
-  init(fetchProductsUseCase: GetProductsUseCase) {
+  public init(fetchProductsUseCase: GetProductsUseCase) {
     self.fetchProductsUseCase = fetchProductsUseCase
   }
 
-  func fetchProducts(
+  public func fetchProducts(
     for offset: Int? = nil,
     andLimit limit: Int? = nil
   ) -> AnyPublisher<[Product], ProductsServiceError> {

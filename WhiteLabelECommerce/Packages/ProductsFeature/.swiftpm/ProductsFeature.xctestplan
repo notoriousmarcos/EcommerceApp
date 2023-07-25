@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "1D33DBFC-7D13-405D-A6D8-9E347094296F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "ProductsFeatureTests",
+        "name" : "ProductsFeatureTests"
+      }
+    }
+  ],
+  "version" : 1
+}

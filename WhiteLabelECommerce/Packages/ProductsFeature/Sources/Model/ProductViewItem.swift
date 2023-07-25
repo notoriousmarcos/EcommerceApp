@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductViewItem: Equatable {
+public struct ProductViewItem: Equatable {
   // MARK: - Properties
   let id: Int
   let title: String

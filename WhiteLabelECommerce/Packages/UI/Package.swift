@@ -23,7 +23,7 @@ let package = Package(
       name: "UI",
       dependencies: [],
       path: "Sources",
-      resources: [.process("../Assets.xcassets"), .process("Fonts")]
+      resources: [.process("Assets.xcassets"), .process("Fonts")]
     ),
     .testTarget(
       name: "UITests",

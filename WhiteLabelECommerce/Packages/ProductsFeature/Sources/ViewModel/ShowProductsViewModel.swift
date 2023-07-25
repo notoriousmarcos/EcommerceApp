@@ -9,7 +9,7 @@ import Backend
 import Combine
 import Foundation
 
-protocol ShowProductsViewModelProtocol: ObservableObject {
+public protocol ShowProductsViewModelProtocol: ObservableObject {
   // MARK: - Properties
   var products: [ProductViewItem] { get }
   var viewState: ShowProductsViewModel.ViewState? { get }
@@ -19,18 +19,18 @@ protocol ShowProductsViewModelProtocol: ObservableObject {
   func fetchProducts(shouldReset: Bool)
 }
 
-final class ShowProductsViewModel: ShowProductsViewModelProtocol {
+public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   // MARK: - Properties
   /// An array of `ProductViewItem` objects that represent the products fetched from the service and
   /// ready for presentation in the UI.
-  @Published private(set) var products: [ProductViewItem] = []
+  @Published public private(set) var products: [ProductViewItem] = []
 
   /// The current state of the product fetching process, which can be `.fetching`, `.loading`, or `.finished`.
-  @Published private(set) var viewState: ViewState?
+  @Published public private(set) var viewState: ViewState?
 
   /// An optional `Error` object that holds any error encountered during the product fetching process. If nil,
   /// it indicates no errors occurred.
-  @Published private(set) var error: Error?
+  @Published public private(set) var error: Error?
 
   /// The current offset/index for pagination. It is used to request products from the service with
   /// the appropriate offset.
@@ -55,7 +55,7 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// - Parameters:
   ///   - service: An instance of `ProductsService` used for fetching products.
   ///   - pageLimit: The maximum number of products to fetch in each API call. Default value is 10.
-  init(
+  public init(
     service: ProductsService,
     pageLimit: Int = 10
   ) {
@@ -69,7 +69,7 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// - Parameter shouldReset: A boolean value indicating whether to reset the fetch process.
   /// If `true`, the `viewState` and `currentOffset` properties are reset before initiating the fetch process.
   /// Default value is `false`.
-  func fetchProducts(shouldReset: Bool = false) {
+  public func fetchProducts(shouldReset: Bool = false) {
     if shouldReset {
       currentOffset = 0
       viewState = .loading
@@ -121,7 +121,7 @@ final class ShowProductsViewModel: ShowProductsViewModelProtocol {
 }
 
 // MARK: - Nested Enum
-extension ShowProductsViewModel {
+public extension ShowProductsViewModel {
   /// Represents the various states of the product fetching process.
   enum ViewState {
     /// Indicates that products are currently being fetched.

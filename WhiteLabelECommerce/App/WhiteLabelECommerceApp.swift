@@ -10,19 +10,17 @@ import UIKit
 #elseif canImport(AppKit)
 import AppKit
 #endif
+import ProductsFeature
 import SwiftUI
 
 @main
 struct WhiteLabelECommerceApp: App {
-  let main = Main.shared
-
   var body: some Scene {
     WindowGroup {
-      Rectangle()
+      CompositionRoot.showProductsView
 #if targetEnvironment(macCatalyst)
         .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
 #endif
-        .environmentObject(main)
     }
   }
 }
