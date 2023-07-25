@@ -11,12 +11,14 @@ import Foundation
 
 public protocol ShowProductsViewModelProtocol: ObservableObject {
   // MARK: - Properties
+  var searchValue: String { get set }
   var products: [ProductViewItem] { get }
   var viewState: ShowProductsViewModel.ViewState? { get }
   var error: Error? { get }
 
   // MARK: - Methods
   func fetchProducts(shouldReset: Bool)
+  func fetchNextPage(_ product: ProductViewItem)
 }
 
 public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
@@ -31,6 +33,13 @@ public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// An optional `Error` object that holds any error encountered during the product fetching process. If nil,
   /// it indicates no errors occurred.
   @Published public private(set) var error: Error?
+
+  public var searchValue: String = "" {
+    didSet {
+      // TODO: Implement searchable.
+//      service.fetchProducts(for: <#T##Int?#>, andLimit: <#T##Int?#>)
+    }
+  }
 
   /// The current offset/index for pagination. It is used to request products from the service with
   /// the appropriate offset.
@@ -70,6 +79,7 @@ public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
   /// If `true`, the `viewState` and `currentOffset` properties are reset before initiating the fetch process.
   /// Default value is `false`.
   public func fetchProducts(shouldReset: Bool = false) {
+    guard viewState != .loading else { return }
     if shouldReset {
       currentOffset = 0
       viewState = .loading
@@ -77,6 +87,14 @@ public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
       viewState = .fetching
     }
     fetchProductsOnService()
+  }
+
+  public func fetchNextPage(_ product: ProductViewItem) {
+    guard
+      let lastIndex = products.lastIndex(where: { $0 == product }),
+      lastIndex == products.count - 4
+    else { return }
+    fetchProducts(shouldReset: false)
   }
 
   // MARK: - Private Methods

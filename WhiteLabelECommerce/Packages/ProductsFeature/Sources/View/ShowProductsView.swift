@@ -24,6 +24,7 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
       NavigationView {
         productsView()
       }
+      .searchable(text: $viewModel.searchValue, placement: .sidebar)
       .refreshable {
         viewModel.fetchProducts(shouldReset: true)
       }
@@ -63,6 +64,9 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
 
                 ProductView(ProductViewModel(product: product))
                   .frame(maxWidth: .infinity, minHeight: 112)
+              }
+              .onAppear {
+                viewModel.fetchNextPage(product)
               }
             }
             .buttonStyle(.plain)
@@ -130,15 +134,25 @@ struct ShowProductsView_Previews: PreviewProvider {
 
 /// A mock implementation of `ShowProductsViewModelProtocol` used for previews and testing purposes.
 private class MockShowProductsViewModel: ShowProductsViewModelProtocol {
+
   var products: [ProductViewItem]
   var viewState: ShowProductsViewModel.ViewState?
   var error: Error?
+  var searchValue: String
 
-  init(products: [ProductViewItem], viewState: ShowProductsViewModel.ViewState? = nil, error: Error? = nil) {
+  init(
+    products: [ProductViewItem],
+    viewState: ShowProductsViewModel.ViewState? = nil,
+    error: Error? = nil,
+    searchValue: String = ""
+  ) {
     self.products = products
     self.viewState = viewState
     self.error = error
+    self.searchValue = searchValue
   }
 
   func fetchProducts(shouldReset: Bool) { }
+
+  func fetchNextPage(_ product: ProductViewItem) { }
 }
