@@ -17,7 +17,7 @@ import SwiftUI
 struct WhiteLabelECommerceApp: App {
   var body: some Scene {
     WindowGroup {
-      CompositionRoot.showProductsView
+      CompositionRoot.rootView
 #if targetEnvironment(macCatalyst)
         .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
 #endif

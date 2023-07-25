@@ -8,9 +8,25 @@
 import Backend
 import Foundation
 import ProductsFeature
+import SwiftUI
 
-enum CompositionRoot {
-  static var showProductsView: ShowProductsView<ShowProductsViewModel> {
+protocol Root {
+  associatedtype View: SwiftUI.View
+  static var rootView: View { get }
+}
+
+enum CompositionRoot: Root {
+  static var rootView: ShowProductsView<ShowProductsViewModel> {
+    ProductsCompositionRoot.rootView
+  }
+
+  static var httpClient: HTTPClient {
+    NativeHTTPClient()
+  }
+}
+
+enum ProductsCompositionRoot: Root {
+  static var rootView: ShowProductsView<ShowProductsViewModel> {
     ShowProductsView(viewModel: showProductsViewModel)
   }
 
@@ -27,10 +43,6 @@ enum CompositionRoot {
   }
 
   private static var remoteGetProductsClient: GetProductsClient {
-    RemoteGetProductsClient(client: httpClient)
-  }
-
-  private static var httpClient: HTTPClient {
-    NativeHTTPClient()
+    RemoteGetProductsClient(client: CompositionRoot.httpClient)
   }
 }
