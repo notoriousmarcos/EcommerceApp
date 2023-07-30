@@ -53,6 +53,7 @@ opt_in_rules:
   - reduce_into
   - redundant_nil_coalescing
   - redundant_type_annotation
+  - required_deinit
   - single_test_class
   - sorted_first_last
   - sorted_imports

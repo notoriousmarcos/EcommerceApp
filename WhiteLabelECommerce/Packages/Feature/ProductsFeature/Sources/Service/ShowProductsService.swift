@@ -51,4 +51,10 @@ public final class ShowProductsService: ProductsService {
         return .guardError
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

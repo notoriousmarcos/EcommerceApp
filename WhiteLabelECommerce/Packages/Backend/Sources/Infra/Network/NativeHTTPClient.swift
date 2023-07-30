@@ -61,4 +61,10 @@ public class NativeHTTPClient: HTTPClient {
       }
       .store(in: &subscriptions)
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

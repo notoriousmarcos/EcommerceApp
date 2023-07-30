@@ -13,4 +13,10 @@ final class ProductViewModel: ObservableObject {
   init(product: ProductViewItem) {
     self.product = product
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

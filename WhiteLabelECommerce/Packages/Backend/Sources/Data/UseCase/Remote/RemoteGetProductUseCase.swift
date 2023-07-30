@@ -23,4 +23,10 @@ public class RemoteGetProductUseCase: GetProductUseCase {
       completion(result)
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

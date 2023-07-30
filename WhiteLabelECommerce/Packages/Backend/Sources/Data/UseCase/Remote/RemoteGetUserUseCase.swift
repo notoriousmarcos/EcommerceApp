@@ -29,4 +29,10 @@ public class RemoteGetUserUseCase: GetUserUseCase {
       completion(result)
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

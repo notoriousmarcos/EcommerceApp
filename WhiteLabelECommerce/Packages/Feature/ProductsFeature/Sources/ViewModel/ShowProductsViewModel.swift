@@ -142,6 +142,12 @@ public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
       )
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }
 
 // MARK: - Nested Enum

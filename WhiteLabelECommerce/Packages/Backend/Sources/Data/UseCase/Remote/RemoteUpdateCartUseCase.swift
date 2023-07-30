@@ -26,4 +26,10 @@ public class RemoteUpdateCartUseCase: UpdateCartUseCase {
       completion(result)
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }

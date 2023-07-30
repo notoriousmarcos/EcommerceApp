@@ -23,4 +23,10 @@ public class RemoteCreateCartUseCase: CreateCartUseCase {
       completion(result)
     }
   }
+
+  deinit {
+#if DEBUG
+    print("Deinit \(Self.self)")
+#endif
+  }
 }
