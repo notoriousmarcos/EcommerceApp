@@ -86,7 +86,7 @@ public struct RegistrationView: View {
       set: { viewModel.email = $0 })
     )
     .textFieldStyle(PrimaryTextField())
-    .autocorrectionDisabled()
+    .disableAutocorrection(true)
     .placeHolder(Text("E-mail"), show: viewModel.email?.isEmpty ?? true)
   }
 
@@ -96,7 +96,7 @@ public struct RegistrationView: View {
       set: { viewModel.password = $0 })
     )
     .textFieldStyle(PrimaryTextField())
-    .autocorrectionDisabled()
+    .disableAutocorrection(true)
     .placeHolder(Text("Password"), show: viewModel.password?.isEmpty ?? true)
   }
 
@@ -106,7 +106,7 @@ public struct RegistrationView: View {
       set: { viewModel.confirmPassword = $0 })
     )
     .textFieldStyle(PrimaryTextField())
-    .autocorrectionDisabled()
+    .disableAutocorrection(true)
     .placeHolder(Text("Confirm password"), show: viewModel.confirmPassword?.isEmpty ?? true)
   }
 

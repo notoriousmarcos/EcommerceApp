@@ -85,7 +85,7 @@ public struct LoginView<Registration: View>: View {
     )
     .textFieldStyle(PrimaryTextField())
     .textContentType(.username)
-    .autocorrectionDisabled()
+    .disableAutocorrection(true)
     .placeHolder(Text("E-mail"), show: viewModel.email?.isEmpty ?? true)
   }
 
@@ -95,7 +95,7 @@ public struct LoginView<Registration: View>: View {
       set: { viewModel.password = $0 })
     )
     .textFieldStyle(PrimaryTextField())
-    .autocorrectionDisabled()
+    .disableAutocorrection(true)
     .placeHolder(Text("Password"), show: viewModel.password?.isEmpty ?? true)
   }
 
