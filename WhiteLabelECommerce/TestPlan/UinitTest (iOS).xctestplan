@@ -20,13 +20,6 @@
       }
     },
     {
-      "target" : {
-        "containerPath" : "container:Packages\/ProductsFeature",
-        "identifier" : "ProductsFeatureTests",
-        "name" : "ProductsFeatureTests"
-      }
-    },
-    {
       "skippedTests" : [
         "RemoteAuthenticationIntegrationTests",
         "RemoteCreateCartIntegrationTests",
@@ -44,9 +37,65 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/UI",
-        "identifier" : "UITests",
-        "name" : "UITests"
+        "containerPath" : "container:Packages\/AppCore",
+        "identifier" : "AppCoreTests",
+        "name" : "AppCoreTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/AppState",
+        "identifier" : "AppStateTests",
+        "name" : "AppStateTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/LoginFeature",
+        "identifier" : "LoginFeatureTests",
+        "name" : "LoginFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/NotoriousComponentsKit",
+        "identifier" : "NotoriousComponentsKitTests",
+        "name" : "NotoriousComponentsKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/ProductsFeature",
+        "identifier" : "ProductsFeatureTests",
+        "name" : "ProductsFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/RegistrationFeature",
+        "identifier" : "RegistrationFeatureTests",
+        "name" : "RegistrationFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/RootFeature",
+        "identifier" : "RootFeatureTests",
+        "name" : "RootFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/TabBarFeature",
+        "identifier" : "TabBarFeatureTests",
+        "name" : "TabBarFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/WelcomeFeature",
+        "identifier" : "WelcomeFeatureTests",
+        "name" : "WelcomeFeatureTests"
       }
     }
   ],

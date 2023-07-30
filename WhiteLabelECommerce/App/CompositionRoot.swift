@@ -10,14 +10,18 @@ import Foundation
 import ProductsFeature
 import SwiftUI
 
-protocol Root {
+protocol Composer {
   associatedtype View: SwiftUI.View
   static var rootView: View { get }
 }
 
-enum CompositionRoot: Root {
+enum CompositionRoot: Composer {
   static var rootView: ShowProductsView<ShowProductsViewModel> {
-    ProductsCompositionRoot.rootView
+    ProductsComposer.rootView
+  }
+
+  static var productsView: ShowProductsView<ShowProductsViewModel> {
+    ProductsComposer.rootView
   }
 
   static var httpClient: HTTPClient {
@@ -25,13 +29,15 @@ enum CompositionRoot: Root {
   }
 }
 
-enum ProductsCompositionRoot: Root {
+enum ProductsComposer: Composer {
   static var rootView: ShowProductsView<ShowProductsViewModel> {
     ShowProductsView(viewModel: showProductsViewModel)
   }
 
   private static var showProductsViewModel: ShowProductsViewModel {
-    ShowProductsViewModel(service: productsService, pageLimit: 15)
+    let viewModel = ShowProductsViewModel(service: productsService, pageLimit: 15)
+    viewModel.title = "Products"
+    return viewModel
   }
 
   private static var productsService: ShowProductsService {

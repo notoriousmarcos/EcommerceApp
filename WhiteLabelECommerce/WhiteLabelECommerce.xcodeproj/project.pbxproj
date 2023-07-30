@@ -11,24 +11,20 @@
 		5213C68AEA13C24B585F5AAA /* Pods_WhiteLabelECommerce__iOS__WhiteLabelECommerceTests_iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410B6A8F18B63AC1B83567A5 /* Pods_WhiteLabelECommerce__iOS__WhiteLabelECommerceTests_iOS_.framework */; };
 		5C4727EAF6C0285EE6D6B537 /* Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6518F178CF11F79F3A9B504B /* Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework */; };
 		852BCCFAA351D2E9CE327B84 /* Pods_WhiteLabelECommerce__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */; };
+		B71BAC8B2A76AD770059E2B9 /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = B71BAC8A2A76AD770059E2B9 /* AppCore */; };
+		B71BAC8D2A76AD770059E2B9 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = B71BAC8C2A76AD770059E2B9 /* Backend */; };
 		B72080942A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
 		B72080952A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
 		B72080962A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */; };
 		B72080972A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */; };
-		B722C51C2A6AD21400703D9D /* ProductsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B722C51B2A6AD21400703D9D /* ProductsFeature */; };
-		B722C51E2A6AD21D00703D9D /* ProductsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B722C51D2A6AD21D00703D9D /* ProductsFeature */; };
 		B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */; };
 		B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */; };
-		B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D93295DE76700F05C5C /* ViewState.swift */; };
-		B7BB0AD22A530F7D00BA8AD4 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BA1D93295DE76700F05C5C /* ViewState.swift */; };
+		B776C63F2A74502000EBEF0B /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = B776C63E2A74502000EBEF0B /* AppCore */; };
 		B7BB0B512A53406A00BA8AD4 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B502A53406A00BA8AD4 /* CompositionRoot.swift */; };
 		B7BB0B522A53406A00BA8AD4 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B502A53406A00BA8AD4 /* CompositionRoot.swift */; };
-		B7BB0B582A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */; };
-		B7BB0B592A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */; };
 		B7CC98AA2A686DEA0009EAF4 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC98A92A686DEA0009EAF4 /* Backend */; };
 		B7CC98AE2A6870380009EAF4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC98AD2A6870380009EAF4 /* Mocks.swift */; };
 		B7CC98AF2A6870380009EAF4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC98AD2A6870380009EAF4 /* Mocks.swift */; };
-		B7CC98B12A6870A70009EAF4 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC98B02A6870A70009EAF4 /* Backend */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +69,11 @@
 		A37E77FC9C31395298833D82 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).release (production).xcconfig"; sourceTree = "<group>"; };
 		AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteLabelECommerce__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA5705A97D02EBC80BF8D49 /* Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)/Pods-WhiteLabelECommerce (iOS).debug (production).xcconfig"; sourceTree = "<group>"; };
+		B70F699E2A76893A005E094F /* RegistrationFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RegistrationFeature; sourceTree = "<group>"; };
+		B70F699F2A768945005E094F /* RootFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RootFeature; sourceTree = "<group>"; };
+		B70F69A02A768950005E094F /* TabBarFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TabBarFeature; sourceTree = "<group>"; };
+		B70F69A12A76895E005E094F /* WelcomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WelcomeFeature; sourceTree = "<group>"; };
+		B70F69A22A768992005E094F /* NotoriousComponentsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NotoriousComponentsKit; sourceTree = "<group>"; };
 		B72080852A54A6FC005D237B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		B72080862A54A70B005D237B /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		B72080872A54A942005D237B /* Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Development.plist; sourceTree = "<group>"; };
@@ -87,12 +88,12 @@
 		B74A8C8127BEB5B2002F41CD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B74A8CCF27BEC64C002F41CD /* WhiteLabelECommerceTests(iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74A8CEB27BEC80C002F41CD /* WhiteLabelECommerceTests(mac).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(mac).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7BA1D93295DE76700F05C5C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		B776C63D2A744FE800EBEF0B /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
+		B776C6482A7456E700EBEF0B /* LoginFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LoginFeature; sourceTree = "<group>"; };
 		B7BB0B502A53406A00BA8AD4 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
-		B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextViewModel.swift; sourceTree = "<group>"; };
 		B7CC977A2A6847990009EAF4 /* Backend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Backend; sourceTree = "<group>"; };
 		B7CC98AD2A6870380009EAF4 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
-		B7D98F762A6EE9510010CBE1 /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
+		B7D3A9EB2A74418E009D5F76 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 		B91F2592B8427C2A94CE26D4 /* Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS)/Pods-WhiteLabelECommerce (iOS)-WhiteLabelECommerceTests(iOS).release (production).xcconfig"; sourceTree = "<group>"; };
 		BA6E0B546F4FD4A3350FF362 /* Pods-WhiteLabelECommerce (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)/Pods-WhiteLabelECommerce (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		BC560CDBF5BA1BAF3BADFEC1 /* Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig"; path = "Target Support Files/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac)/Pods-WhiteLabelECommerce (macOS)-WhiteLabelECommerceTests(mac).debug (production).xcconfig"; sourceTree = "<group>"; };
@@ -109,8 +110,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E707A6DC2A8EA278EACFE99 /* Pods_WhiteLabelECommerce__iOS_.framework in Frameworks */,
+				B776C63F2A74502000EBEF0B /* AppCore in Frameworks */,
 				B7CC98AA2A686DEA0009EAF4 /* Backend in Frameworks */,
-				B722C51C2A6AD21400703D9D /* ProductsFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71BAC8D2A76AD770059E2B9 /* Backend in Frameworks */,
 				852BCCFAA351D2E9CE327B84 /* Pods_WhiteLabelECommerce__macOS_.framework in Frameworks */,
-				B7CC98B12A6870A70009EAF4 /* Backend in Frameworks */,
-				B722C51E2A6AD21D00703D9D /* ProductsFeature in Frameworks */,
+				B71BAC8B2A76AD770059E2B9 /* AppCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +190,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B71BAC892A7689C10059E2B9 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B776C6482A7456E700EBEF0B /* LoginFeature */,
+				B722C51A2A6ACF6900703D9D /* ProductsFeature */,
+				B70F699E2A76893A005E094F /* RegistrationFeature */,
+				B70F699F2A768945005E094F /* RootFeature */,
+				B70F69A02A768950005E094F /* TabBarFeature */,
+				B70F69A12A76895E005E094F /* WelcomeFeature */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		B72080842A54A6BE005D237B /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,11 +242,12 @@
 		B74A8C6E27BEB5B1002F41CD /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				B7D98F762A6EE9510010CBE1 /* UI */,
+				B71BAC892A7689C10059E2B9 /* Feature */,
+				B776C63D2A744FE800EBEF0B /* AppState */,
+				B7D3A9EB2A74418E009D5F76 /* AppCore */,
 				B722C51F2A6AEB8800703D9D /* Mock */,
-				B722C51A2A6ACF6900703D9D /* ProductsFeature */,
 				B7CC977A2A6847990009EAF4 /* Backend */,
-				B7BA1D8F295DE72500F05C5C /* Presenter */,
+				B70F69A22A768992005E094F /* NotoriousComponentsKit */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -272,23 +287,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		B7BA1D8F295DE72500F05C5C /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				B7F673462A56FC4F00D8B01B /* Products */,
-				B7BA1D96295DE77000F05C5C /* Utils */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		B7BA1D96295DE77000F05C5C /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B7BA1D93295DE76700F05C5C /* ViewState.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		B7BB09D22A53085100BA8AD4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,30 +300,6 @@
 				B7CC98AD2A6870380009EAF4 /* Mocks.swift */,
 			);
 			path = Mock;
-			sourceTree = "<group>";
-		};
-		B7F673462A56FC4F00D8B01B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B7F673482A56FCA700D8B01B /* List */,
-				B7F673472A56FC6000D8B01B /* Search */,
-			);
-			path = Products;
-			sourceTree = "<group>";
-		};
-		B7F673472A56FC6000D8B01B /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				B7BB0B572A5359C700BA8AD4 /* SearchTextViewModel.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		B7F673482A56FCA700D8B01B /* List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		B7F673E22A5C814400D8B01B /* App */ = {
@@ -357,7 +331,7 @@
 			name = "WhiteLabelECommerce (iOS)";
 			packageProductDependencies = (
 				B7CC98A92A686DEA0009EAF4 /* Backend */,
-				B722C51B2A6AD21400703D9D /* ProductsFeature */,
+				B776C63E2A74502000EBEF0B /* AppCore */,
 			);
 			productName = "WhiteLabelECommerce (iOS)";
 			productReference = B74A8C7927BEB5B2002F41CD /* WhiteLabelECommerce.app */;
@@ -379,8 +353,8 @@
 			);
 			name = "WhiteLabelECommerce (macOS)";
 			packageProductDependencies = (
-				B7CC98B02A6870A70009EAF4 /* Backend */,
-				B722C51D2A6AD21D00703D9D /* ProductsFeature */,
+				B71BAC8A2A76AD770059E2B9 /* AppCore */,
+				B71BAC8C2A76AD770059E2B9 /* Backend */,
 			);
 			productName = "WhiteLabelECommerce (macOS)";
 			productReference = B74A8C7F27BEB5B2002F41CD /* WhiteLabelECommerce.app */;
@@ -676,8 +650,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BB0B582A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */,
-				B7BB0AD22A530F7D00BA8AD4 /* ViewState.swift in Sources */,
 				B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B7BB0B512A53406A00BA8AD4 /* CompositionRoot.swift in Sources */,
 			);
@@ -687,8 +659,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BA1D95295DE76700F05C5C /* ViewState.swift in Sources */,
-				B7BB0B592A5359C700BA8AD4 /* SearchTextViewModel.swift in Sources */,
 				B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */,
 				B7BB0B522A53406A00BA8AD4 /* CompositionRoot.swift in Sources */,
 			);
@@ -1475,19 +1445,19 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B722C51B2A6AD21400703D9D /* ProductsFeature */ = {
+		B71BAC8A2A76AD770059E2B9 /* AppCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ProductsFeature;
+			productName = AppCore;
 		};
-		B722C51D2A6AD21D00703D9D /* ProductsFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProductsFeature;
-		};
-		B7CC98A92A686DEA0009EAF4 /* Backend */ = {
+		B71BAC8C2A76AD770059E2B9 /* Backend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Backend;
 		};
-		B7CC98B02A6870A70009EAF4 /* Backend */ = {
+		B776C63E2A74502000EBEF0B /* AppCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppCore;
+		};
+		B7CC98A92A686DEA0009EAF4 /* Backend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Backend;
 		};

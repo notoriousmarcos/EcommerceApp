@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test Backend",
+            "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+            "args": [
+                ".build/debug/BackendPackageTests.xctest"
+            ],
+            "cwd": "${workspaceFolder:WhiteLabelECommerce}/Packages/Backend",
+            "preLaunchTask": "swift: Build All (Packages/Backend)"
+        }
+    ]
+}
