@@ -7,18 +7,21 @@
 
 import SwiftUI
 
-struct PosterImage: View {
+public struct PrettyImage: View {
   let url: URL
-  let size: ImageStyle.Size
   @State var isImageLoaded = false
 
-  var body: some View {
+  public init(url: URL) {
+    self.url = url
+  }
+
+  public var body: some View {
     Group {
       AsyncImage(url: url) { image in
         image
           .resizable()
           .renderingMode(.original)
-          .imageStyle(loaded: true, size: size)
+          .imageStyle(loaded: true)
           .onAppear {
             isImageLoaded = true
           }
@@ -27,18 +30,16 @@ struct PosterImage: View {
       } placeholder: {
         Rectangle()
           .foregroundColor(.gray)
-          .imageStyle(loaded: false, size: size)
+          .imageStyle(loaded: false)
       }
     }
   }
 }
 
-struct PosterImage_Previews: PreviewProvider {
+struct PrettyImage_Previews: PreviewProvider {
   static var previews: some View {
     VStack(alignment: .center, spacing: 8) {
-      PosterImage(url: URL(string: "https://picsum.photos/640/640?r=2738")!, size: .small)
-      PosterImage(url: URL(string: "https://picsum.photos/640/640?r=2738")!, size: .medium)
-      PosterImage(url: URL(string: "https://picsum.photos/640/640?r=2738")!, size: .big)
+      PrettyImage(url: URL(string: "https://picsum.photos/640/640?r=2738")!)
     }
   }
 }

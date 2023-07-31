@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NotoriousComponentsKit
 
 struct ProductView: View {
   // MARK: - Constants
@@ -27,7 +28,7 @@ struct ProductView: View {
     ZStack {
       HStack(alignment: .center, spacing: 16) {
         if let imageURL = viewModel.product.imagesURL.first {
-          PosterImage(url: imageURL, size: .small)
+          PrettyImage(url: imageURL)
             .scaledToFit()
         }
 
