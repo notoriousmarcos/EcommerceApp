@@ -25,40 +25,41 @@ struct ProductView: View {
 
   // MARK: - Body
   var body: some View {
-    ZStack {
-      HStack(alignment: .center, spacing: 16) {
-        if let imageURL = viewModel.product.imagesURL.first {
-          PrettyImage(url: imageURL)
-            .scaledToFit()
-        }
-
-        VStack(alignment: .leading, spacing: 8) {
-          HStack {
-            Text(viewModel.product.title)
-              .textFont(size: 24)
-              .multilineTextAlignment(.leading)
-              .lineLimit(1)
-            Spacer()
-          }
-
-          HStack {
-            Text(viewModel.product.description)
-              .textFont(size: 16)
-              .multilineTextAlignment(.leading)
-            Spacer()
-          }
-
-          HStack {
-            Spacer()
-            Text(viewModel.product.price.toCurrencyFormat())
-              .textFont(size: 20)
-              .multilineTextAlignment(.trailing)
-          }
-        }
-        .frame(maxWidth: .infinity)
+    HStack(alignment: .top, spacing: 16) {
+      // MARK: - Image
+      if let imageURL = viewModel.product.imagesURL.first {
+        PrettyImage(url: imageURL)
+          .frame(width: 80, height: 80)
       }
-    }
-    .frame(maxWidth: .infinity, maxHeight: Constants.viewMaxHeight)
+
+      // MARK: - Row Content
+      VStack(alignment: .leading, spacing: 8) {
+        HStack {
+          Text(viewModel.product.title)
+            .textFont(size: 16)
+            .foregroundColor(.primaryColor)
+            .multilineTextAlignment(.leading)
+            .lineLimit(1)
+          Spacer()
+        } // HSTack
+
+        HStack {
+          Text(viewModel.product.description)
+            .textFont(size: 12)
+            .foregroundColor(.secondaryColor)
+            .multilineTextAlignment(.leading)
+          Spacer()
+        } // HSTack
+
+        HStack {
+          Spacer()
+          Text(viewModel.product.price.toCurrencyFormat())
+            .textFont(size: 16)
+            .foregroundColor(.primaryColor)
+            .multilineTextAlignment(.trailing)
+        } // HSTack
+      } // VSTack
+    } // HSTack
   }
 }
 
@@ -80,6 +81,7 @@ struct ProductView_Previews: PreviewProvider {
         )
       )
     )
-    .frame(width: .infinity, height: 112, alignment: .center)
+    .previewLayout(.sizeThatFits)
+    .padding()
   }
 }

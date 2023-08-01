@@ -8,7 +8,7 @@ public class LoginDataService: LoginDataServiceType {
 
   deinit {
 #if DEBUG
-    print("Deinit \(Self.self)")
+    // print("Deinit \(Self.self)")
 #endif
   }
 }

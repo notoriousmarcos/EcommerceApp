@@ -90,6 +90,10 @@ struct CarouselView_Previews : PreviewProvider {
         PrettyImage(url: URL(string: "https://picsum.photos/640/640?r=273")!)
           .frame(width: geometry.size.width, height: geometry.size.height)
       }
-    }.frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
+    }
+#if os(iOS)
+      .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
+#endif
+
   }
 }

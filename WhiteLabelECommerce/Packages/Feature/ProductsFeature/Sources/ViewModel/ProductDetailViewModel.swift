@@ -16,7 +16,7 @@ final class ProductDetailViewModel: ObservableObject {
 
   deinit {
 #if DEBUG
-    print("Deinit \(Self.self)")
+    // print("Deinit \(Self.self)")
 #endif
   }
 }

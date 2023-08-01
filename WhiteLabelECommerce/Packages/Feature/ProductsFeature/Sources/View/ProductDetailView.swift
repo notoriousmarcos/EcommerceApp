@@ -19,45 +19,12 @@ struct ProductDetailView: View {
   // MARK: - Body
   var body: some View {
     ZStack {
-      Color.backgroundColor
-
       ScrollView {
         LazyVStack(
           alignment: .center,
           spacing: 16
         ) {
-          Section {
-            VStack(alignment: .leading) {
-              HStack(alignment: .top, spacing: 16) {
-                Text(viewModel.product.title)
-                  .textFont(size: 32)
-                  .multilineTextAlignment(.leading)
-                  .lineLimit(1)
-                Spacer()
-                Text(viewModel.product.price.toCurrencyFormat())
-                  .textFont(size: 20)
-                  .font(.system(.title3, design: .rounded))
-                  .multilineTextAlignment(.trailing)
-                  .lineLimit(1)
-              }
-              .padding(.bottom, 4)
-
-              Text("Details")
-                .textFont(size: 20)
-                .foregroundColor(.primaryColor)
-                .multilineTextAlignment(.leading)
-                .lineLimit(1)
-                .padding(.bottom, 2)
-
-              Text(viewModel.product.description)
-                .textFont(size: 16)
-                .shadow(color: .secondaryColor, radius: 4)
-                .font(.system(.body, design: .rounded))
-                .multilineTextAlignment(.leading)
-
-            }
-            .padding(16)
-          } header: {
+          VStack(alignment: .leading) {
             GeometryReader { geometry in
               CarouselView(numberOfImages: viewModel.product.imagesURL.count) {
                 ForEach(viewModel.product.imagesURL, id: \.absoluteString) { url in
@@ -69,13 +36,45 @@ struct ProductDetailView: View {
             }
             .frame(height: 350, alignment: .center)
             .padding(.vertical, 15)
-          } footer: {
-            EmptyView()
+
+            HStack(alignment: .top, spacing: 16) {
+              Text(viewModel.product.title)
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(.primaryColor)
+                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+              Spacer()
+              Text(viewModel.product.price.toCurrencyFormat())
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.secondaryColor)
+                .multilineTextAlignment(.trailing)
+                .lineLimit(1)
+            }
+            .padding(.bottom, 4)
+
+            Text("Details")
+              .font(.title3)
+              .fontWeight(.bold)
+              .foregroundColor(.secondaryColor)
+              .multilineTextAlignment(.leading)
+              .lineLimit(1)
+              .padding(.bottom, 2)
+
+            Text(viewModel.product.description)
+              .font(.body)
+              .foregroundColor(.secondaryColor)
+              .multilineTextAlignment(.leading)
           }
+          .padding(16)
         }
         .frame(maxWidth: .infinity)
       }
     }
+#if os(iOS)
+    .navigationBarTitleDisplayMode(.inline)
+#endif
   }
 }
 

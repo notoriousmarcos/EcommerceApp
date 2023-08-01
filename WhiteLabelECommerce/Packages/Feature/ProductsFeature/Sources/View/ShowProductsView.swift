@@ -24,7 +24,6 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
       productsView()
         .navigationTitle(viewModel.title)
     }
-    .searchable(text: $viewModel.searchValue, placement: .sidebar)
     .refreshable {
       viewModel.fetchProducts(shouldReset: true)
     }
@@ -52,7 +51,7 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
               .scaledToFit()
           case .finished, .fetching:
             List(viewModel.products, id: \.id) { product in
-              ZStack {
+              VStack {
                 NavigationLink {
                   // TODO: Need to inject this view in future.
                   ProductDetailView(ProductDetailViewModel(product: product))
@@ -62,13 +61,14 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
                 .opacity(0)
 
                 ProductView(ProductViewModel(product: product))
-                  .frame(maxWidth: .infinity, minHeight: 112)
+                  .frame(maxWidth: .infinity)
               }
+              .searchable(text: $viewModel.searchValue, placement: .sidebar)
               .onAppear {
                 viewModel.fetchNextPage(product)
               }
+              .listRowBackground(Color.backgroundColor)
             }
-            .buttonStyle(.plain)
           default:
             EmptyView()
         }
@@ -96,6 +96,18 @@ struct ShowProductsView_Previews: PreviewProvider {
               ),
               description: "Description",
               imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
+            ),
+            ProductViewItem(
+              id: 2,
+              title: "Title2",
+              price: 122.99,
+              category: .init(
+                id: 1,
+                name: "Category",
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
+              ),
+              description: "Description",
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
             )
           ],
           viewState: .finished
@@ -108,6 +120,18 @@ struct ShowProductsView_Previews: PreviewProvider {
               id: 1,
               title: "Title",
               price: 2.99,
+              category: .init(
+                id: 1,
+                name: "Category",
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
+              ),
+              description: "Description",
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
+            ),
+            ProductViewItem(
+              id: 2,
+              title: "Title2",
+              price: 122.99,
               category: .init(
                 id: 1,
                 name: "Category",
