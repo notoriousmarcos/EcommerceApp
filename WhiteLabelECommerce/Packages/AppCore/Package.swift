@@ -18,6 +18,7 @@ let package = Package(
   dependencies: [
     .package(path: "../AppState"),
     .package(path: "../NotoriousComponentsKit"),
+    .package(path: "../Feature/HomeFeature"),
     .package(path: "../Feature/LoginFeature"),
     .package(path: "../Feature/ProductsFeature"),
     .package(path: "../Feature/RegistrationFeature"),
@@ -33,6 +34,7 @@ let package = Package(
       dependencies: [
         "AppState",
         "NotoriousComponentsKit",
+        "HomeFeature",
         "LoginFeature",
         "ProductsFeature",
         "RegistrationFeature",

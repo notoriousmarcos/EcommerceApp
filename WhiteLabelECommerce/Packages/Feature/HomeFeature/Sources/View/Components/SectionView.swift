@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct SectionView: View {
-  let title: String
-  let actionTitle: String
-  let action: () -> Void
+  let section: Section
 
   var body: some View {
     VStack {
       HStack {
-        Text(title)
+        Text(section.title)
         Spacer(minLength: 8)
 
         Button {
           // TODO: - Action
-          action()
+          section.action()
         } label: {
-          Text(actionTitle)
+          Text(section.actionTitle)
             .foregroundColor(.primaryColor)
         }
       } //: HStack
@@ -33,12 +31,12 @@ struct SectionView: View {
 struct SectionView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SectionView(title: "Title", actionTitle: "Button Title", action: {})
+      SectionView(section: Section(title: "Title", actionTitle: "Button Title", action: {}))
         .previewLayout(.sizeThatFits)
-      SectionView(title: "Title", actionTitle: "Button Title", action: {})
+      SectionView(section: Section(title: "Title", actionTitle: "Button Title", action: {}))
         .previewLayout(.sizeThatFits)
         .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-      SectionView(title: "Title", actionTitle: "Button Title", action: {})
+      SectionView(section: Section(title: "Title", actionTitle: "Button Title", action: {}))
         .previewLayout(.sizeThatFits)
         .preferredColorScheme(.dark)
     }

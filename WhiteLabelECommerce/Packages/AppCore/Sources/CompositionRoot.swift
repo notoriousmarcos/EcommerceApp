@@ -8,19 +8,19 @@
 import Backend
 import Foundation
 import ProductsFeature
+import HomeFeature
 import SwiftUI
 
 protocol Composer {
-  associatedtype View: SwiftUI.View
-  static var rootView: View { get }
+  static var rootView: AnyView { get }
 }
 
 enum CompositionRoot: Composer {
-  static var rootView: ShowProductsView<ShowProductsViewModel> {
-    ProductsComposer.rootView
+  static var rootView: AnyView {
+    HomeComposer.rootView
   }
 
-  static var productsView: ShowProductsView<ShowProductsViewModel> {
+  static var productsView: AnyView {
     ProductsComposer.rootView
   }
 
@@ -29,13 +29,36 @@ enum CompositionRoot: Composer {
   }
 }
 
-enum ProductsComposer: Composer {
-  static var rootView: ShowProductsView<ShowProductsViewModel> {
-    ShowProductsView(viewModel: showProductsViewModel)
+enum HomeComposer: Composer {
+
+  static var rootView: AnyView {
+    AnyView(
+      HomeView(viewModel: viewModel)
+    )
   }
 
-  private static var showProductsViewModel: ShowProductsViewModel {
-    let viewModel = ShowProductsViewModel(service: productsService, pageLimit: 15)
+  static var viewModel: HomeViewViewModel {
+    HomeViewViewModel(searchText: .constant("")) {
+      ProductsComposer.rootView
+    }
+  }
+}
+
+enum ProductsComposer: Composer {
+  static var rootView: AnyView {
+    AnyView(Self.productsGridView)
+  }
+
+  static var productsGridView: ProductsGridView<ProductsViewModel> {
+    ProductsGridView(viewModel: productsViewModel)
+  }
+
+  static var productsListView: ProductsListView<ProductsViewModel> {
+    ProductsListView(viewModel: productsViewModel)
+  }
+
+  private static var productsViewModel: ProductsViewModel {
+    let viewModel = ProductsViewModel(service: productsService, pageLimit: 15)
     viewModel.title = "Products"
     return viewModel
   }

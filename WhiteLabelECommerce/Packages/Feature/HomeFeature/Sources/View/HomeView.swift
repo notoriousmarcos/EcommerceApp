@@ -7,14 +7,17 @@
 
 import SwiftUI
 import NotoriousComponentsKit
-import ProductsFeature
 
-struct HomeView: View {
+public struct HomeView: View {
   // MARK: - Properties
-  @State var searchText = ""
+  @ObservedObject var viewModel: HomeViewViewModel
+
+  public init(viewModel: HomeViewViewModel) {
+    self.viewModel = viewModel
+  }
 
   // MARK: - Body
-  var body: some View {
+  public var body: some View {
     ZStack {
       // MARK: - Background
       Color.backgroundColor
@@ -26,10 +29,18 @@ struct HomeView: View {
           //        BrandView()
           //          .padding(.top, 16)
 
-          HomeToolBarView(searchText: $searchText)
+          HomeToolBarView(searchText: viewModel.searchText)
 
-          SectionAndContentView {
-            ProductsGridView()
+          SectionAndContentView(
+            section: Section(
+              title: "Top products",
+              actionTitle: "See All",
+              action: {
+                // TODO: - Action
+              }
+            )
+          ) {
+            viewModel.topProductsContentView()
           }
 
         } //: VStack
@@ -42,10 +53,31 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      HomeView()
-      HomeView()
+      HomeView(
+        viewModel: HomeViewViewModel(
+          searchText: .constant(""),
+          topProductsContentView: {
+            AnyView(Text("All Products"))
+          }
+        )
+      )
+      HomeView(
+        viewModel: HomeViewViewModel(
+          searchText: .constant(""),
+          topProductsContentView: {
+            AnyView(Text("All Products"))
+          }
+        )
+      )
         .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-      HomeView()
+      HomeView(
+        viewModel: HomeViewViewModel(
+          searchText: .constant(""),
+          topProductsContentView: {
+            AnyView(Text("All Products"))
+          }
+        )
+      )
         .preferredColorScheme(.dark)
     }
   }

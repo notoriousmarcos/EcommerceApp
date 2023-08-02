@@ -10,9 +10,15 @@ import SwiftUI
 struct BrandView: View {
   var body: some View {
     VStack {
-      SectionView(title: "Choose your brand", actionTitle: "See all") {
-
-      }
+      SectionView(
+        section: Section(
+          title: "Choose your brand",
+          actionTitle: "See all",
+          action: {
+            // TODO: - Action
+          }
+        )
+      )
 
       ScrollView(.horizontal, showsIndicators: false) {
         HStack {

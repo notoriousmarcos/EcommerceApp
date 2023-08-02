@@ -9,20 +9,17 @@ import SwiftUI
 
 struct SectionAndContentView<Content: View>: View {
 
+  let section: Section
   let content: () -> Content
 
-  init(@ViewBuilder content: @escaping () -> Content) {
+  init(section: Section, @ViewBuilder content: @escaping () -> Content) {
+    self.section = section
     self.content = content
   }
 
   var body: some View {
     VStack {
-      SectionView(
-        title: "Top Headphone",
-        actionTitle: "See all"
-      ) {
-        // TODO: - Action
-      }
+      SectionView(section: section)
 
       content()
     }
@@ -32,10 +29,19 @@ struct SectionAndContentView<Content: View>: View {
 struct SectionAndProductsGridView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SectionAndContentView(content: { Text("Content") })
-      SectionAndContentView(content: { Text("Content") })
+      SectionAndContentView(
+        section: Section(title: "Title", actionTitle: "Button Title", action: {}),
+        content: { Text("Content") }
+      )
+      SectionAndContentView(
+        section: Section(title: "Title", actionTitle: "Button Title", action: {}),
+        content: { Text("Content") }
+      )
         .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-      SectionAndContentView(content: { Text("Content") })
+      SectionAndContentView(
+        section: Section(title: "Title", actionTitle: "Button Title", action: {}),
+        content: { Text("Content") }
+      )
         .preferredColorScheme(.dark)
     }
   }
