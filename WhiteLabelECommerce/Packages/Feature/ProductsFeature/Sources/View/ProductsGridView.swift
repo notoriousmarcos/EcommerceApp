@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NotoriousComponentsKit
 
 public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
 
@@ -20,66 +21,50 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
   }
 
   public var body: some View {
-    LazyVGrid(
-      columns: Array(
-        repeating: GridItem(.flexible(), spacing: 16, alignment: .topLeading),
-        count: 2
-      )
-    ) {
-      ForEach(0..<40) { index in
-        VStack {
-          VStack(spacing: 4) {
-            Image(systemName: "beats.headphones")
-              .resizable()
-              .frame(minHeight: 110)
+    productsView()
+    .overlay(alignment: .bottom) {
+      if viewModel.viewState == .fetching {
+        ProgressView()
+      }
+    }
+    .onAppear {
+      viewModel.fetchProducts(shouldReset: true)
+    }
+  }
 
-            HStack {
-              VStack(alignment: .leading, spacing: 4) {
-                Text("Headphone title")
-                  .fontWeight(.medium)
-                  .foregroundColor(.primary)
-                  .font(.subheadline)
-                  .multilineTextAlignment(.leading)
-                  .lineLimit(2)
-                Text("$574.34")
-                  .font(.title3)
-                  .fontWeight(.semibold)
-                  .multilineTextAlignment(.leading)
-
-              }
-              .frame(maxWidth: .infinity)
-
-              VStack(alignment: .trailing) {
-                Spacer()
-                ZStack {
-                  Color.secondaryColor
-
-                  Button {
-                    // TODO: - Action
-                  } label: {
-                    Image(systemName: "arrow.forward")
-                      .foregroundColor(.white)
+  /// A helper method that creates the main content of the `ProductsListView`.
+  ///
+  /// - Returns: A SwiftUI `View` representing the main content of the view.
+  private func productsView() -> some View {
+    ZStack {
+      if let error = viewModel.error {
+        Text(error.localizedDescription)
+      } else {
+        switch viewModel.viewState {
+          case .loading:
+            ProgressView()
+              .scaledToFit()
+          case .finished, .fetching:
+            LazyVGrid(
+              columns: Array(
+                repeating: GridItem(.flexible(), spacing: 16, alignment: .topLeading),
+                count: 2
+              )
+            ) {
+              ForEach(viewModel.products, id: \.id) { product in
+                ProductGridItemView(ProductViewModel(product: product))
+                  .frame(maxWidth: .infinity)
+                  .onAppear {
+                    viewModel.fetchNextPage(product)
                   }
-                }
-                .frame(width: 40, height: 40)
-                .cornerRadius(20)
-              }
-              .padding(.horizontal, 4)
-              .frame(minHeight: 60)
-            } //: HStack
+              } //: ForEach
+            } //: LazyGrid
             .frame(maxWidth: .infinity)
-
-            Spacer(minLength: 4)
-
-          } //: VStack
-          .background(Color.backgroundColor)
-          .cornerRadius(12)
-          .padding(.vertical, 4)
-          .shadow(color: .gray, radius: 1)
-
-        } //: VStack
-      } //: ForEach
-    } //: LazyGrid
+          default:
+            EmptyView()
+        }
+      }
+    }
   }
 }
 
@@ -87,6 +72,7 @@ struct ProductsGridView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       ProductsGridView(viewModel: MockShowProductsViewModel(products: []))
+        .previewLayout(.sizeThatFits)
       ProductsGridView(viewModel: MockShowProductsViewModel(products: [], viewState: .loading))
       ProductsGridView(
         viewModel: MockShowProductsViewModel(

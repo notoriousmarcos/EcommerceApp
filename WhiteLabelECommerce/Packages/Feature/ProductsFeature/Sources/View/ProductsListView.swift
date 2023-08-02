@@ -60,7 +60,7 @@ public struct ProductsListView<ViewModel: ProductsViewModelProtocol>: View {
                 }
                 .opacity(0)
 
-                ProductView(ProductViewModel(product: product))
+                ProductRowView(ProductViewModel(product: product))
                   .frame(maxWidth: .infinity)
               }
               .searchable(text: $viewModel.searchValue, placement: .sidebar)

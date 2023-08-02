@@ -12,9 +12,7 @@ public struct ImageStyle: ViewModifier {
 
   public func body(content: Content) -> some View {
     return content
-      .cornerRadius(5)
       .opacity(loaded ? 1 : 0.1)
-      .shadow(radius: 8)
   }
 }
 

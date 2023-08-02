@@ -8,7 +8,7 @@
 import SwiftUI
 import NotoriousComponentsKit
 
-struct ProductView: View {
+struct ProductRowView: View {
   // MARK: - Constants
   private enum Constants {
     static let leadingTrailingPadding: CGFloat = 16
@@ -65,7 +65,7 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
   static var previews: some View {
-    ProductView(
+    ProductRowView(
       ProductViewModel(
         product: ProductViewItem(
           id: 1,
