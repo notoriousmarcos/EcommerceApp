@@ -46,13 +46,14 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
           case .finished, .fetching:
             LazyVGrid(
               columns: Array(
-                repeating: GridItem(.flexible(), spacing: 16, alignment: .topLeading),
+                repeating: GridItem(.flexible(), spacing: 12, alignment: .topLeading),
                 count: 2
               )
             ) {
               ForEach(viewModel.products, id: \.id) { product in
                 ProductGridItemView(ProductViewModel(product: product))
                   .frame(maxWidth: .infinity)
+                  .padding(.top, 16)
                   .onAppear {
                     viewModel.fetchNextPage(product)
                   }
@@ -90,6 +91,30 @@ struct ProductsGridView_Previews: PreviewProvider {
             ),
             ProductViewItem(
               id: 2,
+              title: "Title2",
+              price: 122.99,
+              category: .init(
+                id: 1,
+                name: "Category",
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
+              ),
+              description: "Description",
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
+            ),
+            ProductViewItem(
+              id: 3,
+              title: "Title2",
+              price: 122.99,
+              category: .init(
+                id: 1,
+                name: "Category",
+                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
+              ),
+              description: "Description",
+              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
+            ),
+            ProductViewItem(
+              id: 4,
               title: "Title2",
               price: 122.99,
               category: .init(

@@ -23,7 +23,6 @@ struct ProductGridItemView: View {
         if let imagesURL = viewModel.product.imagesURL.first {
           PrettyImage(url: imagesURL)
             .frame(height: 110)
-//            .scaledToFill()
         } else {
           EmptyView()
             .frame(height: 110)
@@ -40,7 +39,7 @@ struct ProductGridItemView: View {
                 .lineLimit(2)
               Spacer()
             }
-            Text("\(viewModel.product.price)")
+            Text("\(viewModel.product.price.toCurrencyFormat())")
               .font(.title3)
               .fontWeight(.semibold)
               .multilineTextAlignment(.leading)
