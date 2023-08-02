@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 01/08/23.
 //
 
-import SwiftUI
 import NotoriousComponentsKit
+import SwiftUI
 
 public struct HomeView: View {
   // MARK: - Properties
@@ -42,7 +42,6 @@ public struct HomeView: View {
           ) {
             viewModel.topProductsContentView()
           }
-
         } //: VStack
         .padding(.horizontal, 24)
       }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeToolBarView: View {
-
   // MARK: - Properties
   let searchText: Binding<String>
 
@@ -28,7 +27,6 @@ struct HomeToolBarView: View {
 }
 
 struct HomeToolBarView_Previews: PreviewProvider {
-
   static var searchText: Binding<String> = .constant("")
   static var previews: some View {
     Group {

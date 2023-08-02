@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
-import SwiftUI
 import NotoriousComponentsKit
+import SwiftUI
 
 struct ProductRowView: View {
   // MARK: - Constants

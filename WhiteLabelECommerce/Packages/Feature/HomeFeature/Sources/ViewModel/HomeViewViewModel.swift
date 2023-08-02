@@ -20,6 +20,5 @@ public class HomeViewViewModel: ObservableObject {
   }
 
   deinit {
-
   }
 }

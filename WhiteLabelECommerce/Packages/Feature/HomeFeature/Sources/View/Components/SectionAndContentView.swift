@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SectionAndContentView<Content: View>: View {
-
   let section: Section
   let content: () -> Content
 

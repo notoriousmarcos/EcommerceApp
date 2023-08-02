@@ -5,11 +5,10 @@
 //  Created by Marcos Vinicius Brito on 02/08/23.
 //
 
-import SwiftUI
 import NotoriousComponentsKit
+import SwiftUI
 
 public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
-
   /// The view model conforming to `ProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
 

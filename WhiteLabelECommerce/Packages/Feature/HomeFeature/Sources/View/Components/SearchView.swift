@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SearchView: View {
-
   // MARK: - Properties
   let searchText: Binding<String>
 
@@ -27,7 +26,6 @@ struct SearchView: View {
 }
 
 struct SearchView_Previews: PreviewProvider {
-
   static var searchText: Binding<String> = .constant("")
   static var previews: some View {
     Group {

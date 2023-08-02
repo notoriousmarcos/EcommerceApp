@@ -9,7 +9,6 @@ import NotoriousComponentsKit
 import SwiftUI
 
 struct ProductGridItemView: View {
-
   // MARK: - Properties
   @ObservedObject private var viewModel: ProductViewModel
 
@@ -45,7 +44,6 @@ struct ProductGridItemView: View {
               .font(.title3)
               .fontWeight(.semibold)
               .multilineTextAlignment(.leading)
-
           }
           .frame(maxWidth: .infinity)
 
@@ -70,13 +68,11 @@ struct ProductGridItemView: View {
         .padding(.horizontal, 4)
 
         Spacer(minLength: 4)
-
       } //: VStack
       .background(Color.backgroundColor)
       .cornerRadius(12)
       .padding(.vertical, 4)
       .shadow(color: .gray, radius: 1)
-
     } //: VStack
     .frame(height: 170)
   }

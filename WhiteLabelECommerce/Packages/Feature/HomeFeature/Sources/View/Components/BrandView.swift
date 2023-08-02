@@ -22,7 +22,7 @@ struct BrandView: View {
 
       ScrollView(.horizontal, showsIndicators: false) {
         HStack {
-          ForEach(0..<60) { index in
+          ForEach(0..<60) { _ in
             VStack {
               Image(systemName: "square.and.arrow.up")
                 .frame(width: 40, height: 40)

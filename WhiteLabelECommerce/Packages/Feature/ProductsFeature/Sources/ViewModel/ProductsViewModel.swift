@@ -165,7 +165,6 @@ public extension ProductsViewModel {
   }
 }
 
-
 /// A mock implementation of `ShowProductsViewModelProtocol` used for previews and testing purposes.
 internal class MockShowProductsViewModel: ProductsViewModelProtocol {
   var title: String

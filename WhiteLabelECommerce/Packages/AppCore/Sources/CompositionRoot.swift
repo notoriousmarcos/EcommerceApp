@@ -7,8 +7,8 @@
 
 import Backend
 import Foundation
-import ProductsFeature
 import HomeFeature
+import ProductsFeature
 import SwiftUI
 
 protocol Composer {
@@ -30,7 +30,6 @@ enum CompositionRoot: Composer {
 }
 
 enum HomeComposer: Composer {
-
   static var rootView: AnyView {
     AnyView(
       HomeView(viewModel: viewModel)

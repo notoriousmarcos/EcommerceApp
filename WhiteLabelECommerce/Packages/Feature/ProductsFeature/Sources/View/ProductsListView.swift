@@ -154,4 +154,3 @@ struct ShowProductsView_Previews: PreviewProvider {
     }
   }
 }
-
