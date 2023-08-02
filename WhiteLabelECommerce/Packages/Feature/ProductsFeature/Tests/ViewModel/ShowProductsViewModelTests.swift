@@ -11,8 +11,8 @@ import Mock
 @testable import ProductsFeature
 import XCTest
 
-final class ShowProductsViewModelTests: XCTestCase {
-  private lazy var sut = ShowProductsViewModel(service: mockService)
+final class ProductsViewModelTests: XCTestCase {
+  private lazy var sut = ProductsViewModel(service: mockService)
   private var mockService = MockProductsService()
   private var cancellables: Set<AnyCancellable> = []
 
@@ -35,7 +35,7 @@ final class ShowProductsViewModelTests: XCTestCase {
       paramsOfFetchExpectation.fulfill()
     }
 
-    var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
       nil,
       .loading,
       .finished
@@ -74,7 +74,7 @@ final class ShowProductsViewModelTests: XCTestCase {
 
     mockService.response = [.failure(.unknown)]
 
-    var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
       nil,
       .loading,
       .finished
@@ -122,7 +122,7 @@ final class ShowProductsViewModelTests: XCTestCase {
 
   func testFetchNextProductsShouldFetchNextPageAndReturnMoreProducts() {
     // Arrange
-    let sut = ShowProductsViewModel(service: mockService, pageLimit: 1)
+    let sut = ProductsViewModel(service: mockService, pageLimit: 1)
     var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     callFetchExpectation.expectedFulfillmentCount = 2
@@ -139,7 +139,7 @@ final class ShowProductsViewModelTests: XCTestCase {
       (1, 1) // offset 1 and pageLimit 1
     ]
 
-    var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
       nil,
       .loading,
       .finished
@@ -195,7 +195,7 @@ final class ShowProductsViewModelTests: XCTestCase {
 
   func testFetchProductsShouldFetchFirstPageAlways() {
     // Arrange
-    let sut = ShowProductsViewModel(service: mockService, pageLimit: 1)
+    let sut = ProductsViewModel(service: mockService, pageLimit: 1)
     var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     var viewStateExpectation = expectation(description: "Expect to updateViewState.")
@@ -215,7 +215,7 @@ final class ShowProductsViewModelTests: XCTestCase {
       (0, 1) // offset 0 and pageLimit 1
     ]
 
-    var expectedViewStates: [ShowProductsViewModel.ViewState?] = [
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
       nil,
       .loading,
       .finished

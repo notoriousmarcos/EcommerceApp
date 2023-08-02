@@ -1,5 +1,5 @@
 //
-//  ShowProductsView.swift
+//  ProductsView.swift
 //  
 //
 //  Created by Marcos Vinicius Brito on 21/07/23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-/// A view responsible for displaying a list of products fetched from the `ShowProductsViewModelProtocol`.
-public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
-  /// The view model conforming to `ShowProductsViewModelProtocol` responsible for managing the product data and state.
+/// A view responsible for displaying a list of products fetched from the `ProductsViewModelProtocol`.
+public struct ProductsListView<ViewModel: ProductsViewModelProtocol>: View {
+  /// The view model conforming to `ProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
 
-  /// Initializes the `ShowProductsView` with the given view model.
+  /// Initializes the `ProductsListView` with the given view model.
   ///
-  /// - Parameter viewModel: The view model conforming to `ShowProductsViewModelProtocol`.
+  /// - Parameter viewModel: The view model conforming to `ProductsViewModelProtocol`.
   public init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
@@ -37,7 +37,7 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
     }
   }
 
-  /// A helper method that creates the main content of the `ShowProductsView`.
+  /// A helper method that creates the main content of the `ProductsListView`.
   ///
   /// - Returns: A SwiftUI `View` representing the main content of the view.
   private func productsView() -> some View {
@@ -80,9 +80,9 @@ public struct ShowProductsView<ViewModel: ShowProductsViewModelProtocol>: View {
 struct ShowProductsView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      ShowProductsView(viewModel: MockShowProductsViewModel(products: []))
-      ShowProductsView(viewModel: MockShowProductsViewModel(products: [], viewState: .loading))
-      ShowProductsView(
+      ProductsListView(viewModel: MockShowProductsViewModel(products: []))
+      ProductsListView(viewModel: MockShowProductsViewModel(products: [], viewState: .loading))
+      ProductsListView(
         viewModel: MockShowProductsViewModel(
           products: [
             ProductViewItem(
@@ -113,7 +113,7 @@ struct ShowProductsView_Previews: PreviewProvider {
           viewState: .finished
         )
       )
-      ShowProductsView(
+      ProductsListView(
         viewModel: MockShowProductsViewModel(
           products: [
             ProductViewItem(
@@ -144,7 +144,7 @@ struct ShowProductsView_Previews: PreviewProvider {
           viewState: .fetching
         )
       )
-      ShowProductsView(
+      ProductsListView(
         viewModel: MockShowProductsViewModel(
           products: [],
           viewState: .finished,
@@ -155,29 +155,3 @@ struct ShowProductsView_Previews: PreviewProvider {
   }
 }
 
-/// A mock implementation of `ShowProductsViewModelProtocol` used for previews and testing purposes.
-private class MockShowProductsViewModel: ShowProductsViewModelProtocol {
-  var title: String
-  var products: [ProductViewItem]
-  var viewState: ShowProductsViewModel.ViewState?
-  var error: Error?
-  var searchValue: String
-
-  init(
-    title: String = "",
-    products: [ProductViewItem],
-    viewState: ShowProductsViewModel.ViewState? = nil,
-    error: Error? = nil,
-    searchValue: String = ""
-  ) {
-    self.title = title
-    self.products = products
-    self.viewState = viewState
-    self.error = error
-    self.searchValue = searchValue
-  }
-
-  func fetchProducts(shouldReset: Bool) { }
-
-  func fetchNextPage(_ product: ProductViewItem) { }
-}

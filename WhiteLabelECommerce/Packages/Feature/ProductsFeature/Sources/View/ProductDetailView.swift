@@ -75,6 +75,7 @@ struct ProductDetailView: View {
 #if os(iOS)
     .navigationBarTitleDisplayMode(.inline)
 #endif
+    .frame(minWidth: 375)
   }
 }
 

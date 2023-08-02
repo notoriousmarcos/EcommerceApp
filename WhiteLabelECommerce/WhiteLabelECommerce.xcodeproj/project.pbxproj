@@ -86,6 +86,7 @@
 		B74A8C8127BEB5B2002F41CD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B74A8CCF27BEC64C002F41CD /* WhiteLabelECommerceTests(iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74A8CEB27BEC80C002F41CD /* WhiteLabelECommerceTests(mac).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(mac).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74E31AE2A7980DE00FE8FFA /* HomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeFeature; path = Packages/Feature/HomeFeature; sourceTree = SOURCE_ROOT; };
 		B776C63D2A744FE800EBEF0B /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
 		B776C6482A7456E700EBEF0B /* LoginFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LoginFeature; sourceTree = "<group>"; };
 		B7CC977A2A6847990009EAF4 /* Backend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Backend; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		B71BAC892A7689C10059E2B9 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B74E31AE2A7980DE00FE8FFA /* HomeFeature */,
 				B776C6482A7456E700EBEF0B /* LoginFeature */,
 				B722C51A2A6ACF6900703D9D /* ProductsFeature */,
 				B70F699E2A76893A005E094F /* RegistrationFeature */,

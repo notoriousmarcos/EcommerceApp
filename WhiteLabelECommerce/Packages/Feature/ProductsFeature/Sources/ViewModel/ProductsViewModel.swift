@@ -9,12 +9,12 @@ import Backend
 import Combine
 import Foundation
 
-public protocol ShowProductsViewModelProtocol: ObservableObject {
+public protocol ProductsViewModelProtocol: ObservableObject {
   // MARK: - Properties
   var title: String { get set }
   var searchValue: String { get set }
   var products: [ProductViewItem] { get }
-  var viewState: ShowProductsViewModel.ViewState? { get }
+  var viewState: ProductsViewModel.ViewState? { get }
   var error: Error? { get }
 
   // MARK: - Methods
@@ -22,7 +22,7 @@ public protocol ShowProductsViewModelProtocol: ObservableObject {
   func fetchNextPage(_ product: ProductViewItem)
 }
 
-public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
+public final class ProductsViewModel: ProductsViewModelProtocol {
   // MARK: - Properties
 
   /// An array of `ProductViewItem` objects that represent the products fetched from the service and
@@ -151,7 +151,7 @@ public final class ShowProductsViewModel: ShowProductsViewModelProtocol {
 }
 
 // MARK: - Nested Enum
-public extension ShowProductsViewModel {
+public extension ProductsViewModel {
   /// Represents the various states of the product fetching process.
   enum ViewState {
     /// Indicates that products are currently being fetched.
@@ -163,4 +163,32 @@ public extension ShowProductsViewModel {
     /// Indicates that the product fetching process has finished.
     case finished
   }
+}
+
+
+/// A mock implementation of `ShowProductsViewModelProtocol` used for previews and testing purposes.
+internal class MockShowProductsViewModel: ProductsViewModelProtocol {
+  var title: String
+  var products: [ProductViewItem]
+  var viewState: ProductsViewModel.ViewState?
+  var error: Error?
+  var searchValue: String
+
+  init(
+    title: String = "",
+    products: [ProductViewItem],
+    viewState: ProductsViewModel.ViewState? = nil,
+    error: Error? = nil,
+    searchValue: String = ""
+  ) {
+    self.title = title
+    self.products = products
+    self.viewState = viewState
+    self.error = error
+    self.searchValue = searchValue
+  }
+
+  func fetchProducts(shouldReset: Bool) { }
+
+  func fetchNextPage(_ product: ProductViewItem) { }
 }
