@@ -14,6 +14,7 @@ public protocol ProductsViewModelProtocol: ObservableObject {
   var title: String { get set }
   var searchValue: String { get set }
   var products: [ProductViewItem] { get }
+  var selectedProduct: ProductViewItem? { get set }
   var viewState: ProductsViewModel.ViewState? { get }
   var error: Error? { get }
 
@@ -32,6 +33,10 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   /// An array of `ProductViewItem` objects that represent the products fetched from the service and
   /// ready for presentation in the UI.
   @Published public private(set) var products: [ProductViewItem] = []
+
+  /// An array of `ProductViewItem` objects that represent the products fetched from the service and
+  /// ready for presentation in the UI.
+  @Published public var selectedProduct: ProductViewItem?
 
   /// The current state of the product fetching process, which can be `.fetching`, `.loading`, or `.finished`.
   @Published public private(set) var viewState: ViewState?
@@ -169,6 +174,7 @@ public extension ProductsViewModel {
 internal class MockShowProductsViewModel: ProductsViewModelProtocol {
   var title: String
   var products: [ProductViewItem]
+  var selectedProduct: ProductViewItem?
   var viewState: ProductsViewModel.ViewState?
   var error: Error?
   var searchValue: String

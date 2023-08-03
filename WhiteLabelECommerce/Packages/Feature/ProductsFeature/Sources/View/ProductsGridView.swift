@@ -11,26 +11,26 @@ import SwiftUI
 public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
   /// The view model conforming to `ProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
-
+  
   /// Initializes the `ProductsGridView` with the given view model.
   ///
   /// - Parameter viewModel: The view model conforming to `ProductsViewModelProtocol`.
   public init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
-
+  
   public var body: some View {
     productsView()
-    .overlay(alignment: .bottom) {
-      if viewModel.viewState == .fetching {
-        ProgressView()
+      .overlay(alignment: .bottom) {
+        if viewModel.viewState == .fetching {
+          ProgressView()
+        }
       }
-    }
-    .onAppear {
-      viewModel.fetchProducts(shouldReset: true)
-    }
+      .onAppear {
+        viewModel.fetchProducts(shouldReset: true)
+      }
   }
-
+  
   /// A helper method that creates the main content of the `ProductsListView`.
   ///
   /// - Returns: A SwiftUI `View` representing the main content of the view.
@@ -51,12 +51,21 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
               )
             ) {
               ForEach(viewModel.products, id: \.id) { product in
-                ProductGridItemView(ProductViewModel(product: product))
-                  .frame(maxWidth: .infinity)
-                  .padding(.top, 16)
-                  .onAppear {
-                    viewModel.fetchNextPage(product)
-                  }
+                NavigationLink {
+                  // TODO: Need to inject this view in future.
+                  ProductDetailView(ProductDetailViewModel(product: product))
+                } label: {
+                  ProductGridItemView(ProductViewModel(product: product))
+                    .frame(height: 170)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.top, 16)
+                .onTapGesture {
+                  viewModel.selectedProduct = product
+                }
+                .onAppear {
+                  viewModel.fetchNextPage(product)
+                }
               } //: ForEach
             } //: LazyGrid
             .frame(maxWidth: .infinity)

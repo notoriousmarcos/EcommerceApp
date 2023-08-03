@@ -18,32 +18,34 @@ public struct HomeView: View {
 
   // MARK: - Body
   public var body: some View {
-    ZStack {
-      // MARK: - Background
-      Color.backgroundColor
+    NavigationView {
+      ZStack {
+        // MARK: - Background
+        Color.backgroundColor
 
-      ScrollView(.vertical, showsIndicators: true) {
-        VStack(spacing: 24) {
-          HeaderView() //: HStack
+        ScrollView(.vertical, showsIndicators: true) {
+          VStack(spacing: 24) {
+            HeaderView() //: HStack
 
-          //        BrandView()
-          //          .padding(.top, 16)
+            //        BrandView()
+            //          .padding(.top, 16)
 
-          HomeToolBarView(searchText: viewModel.searchText)
+            HomeToolBarView(searchText: viewModel.searchText)
 
-          SectionAndContentView(
-            section: Section(
-              title: "Top products",
-              actionTitle: "See All",
-              action: {
-                // TODO: - Action
-              }
-            )
-          ) {
-            viewModel.topProductsContentView()
-          }
-        } //: VStack
-        .padding(.horizontal, 24)
+            SectionAndContentView(
+              section: Section(
+                title: "Top products",
+                actionTitle: "See All",
+                action: {
+                  // TODO: - Action
+                }
+              )
+            ) {
+              viewModel.topProductsContentView()
+            }
+          } //: VStack
+          .padding(.horizontal, 24)
+        }
       }
     }
   }

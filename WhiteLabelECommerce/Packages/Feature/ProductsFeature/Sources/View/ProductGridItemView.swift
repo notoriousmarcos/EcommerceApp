@@ -33,8 +33,8 @@ struct ProductGridItemView: View {
             HStack {
               Text(viewModel.product.title)
                 .fontWeight(.medium)
-                .foregroundColor(.primary)
                 .font(.subheadline)
+                .foregroundColor(.primary)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
               Spacer()
@@ -42,6 +42,7 @@ struct ProductGridItemView: View {
             Text("\(viewModel.product.price.toCurrencyFormat())")
               .font(.title3)
               .fontWeight(.semibold)
+              .foregroundColor(.primary)
               .multilineTextAlignment(.leading)
           }
           .frame(maxWidth: .infinity)

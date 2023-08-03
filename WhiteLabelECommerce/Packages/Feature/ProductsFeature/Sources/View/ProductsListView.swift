@@ -20,21 +20,18 @@ public struct ProductsListView<ViewModel: ProductsViewModelProtocol>: View {
   }
 
   public var body: some View {
-    NavigationView {
-      productsView()
-        .navigationTitle(viewModel.title)
-    }
-    .refreshable {
-      viewModel.fetchProducts(shouldReset: true)
-    }
-    .overlay(alignment: .bottom) {
-      if viewModel.viewState == .fetching {
-        ProgressView()
+    productsView()
+      .refreshable {
+        viewModel.fetchProducts(shouldReset: true)
       }
-    }
-    .onAppear {
-      viewModel.fetchProducts(shouldReset: true)
-    }
+      .overlay(alignment: .bottom) {
+        if viewModel.viewState == .fetching {
+          ProgressView()
+        }
+      }
+      .onAppear {
+        viewModel.fetchProducts(shouldReset: true)
+      }
   }
 
   /// A helper method that creates the main content of the `ProductsListView`.

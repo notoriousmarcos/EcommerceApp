@@ -1,39 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='RootFeatureTests.xctest' tests='88' failures='2'>
   <testsuite name='BackendTests.AuthenticationRequestTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.AuthenticationRequestTests' name='testAuthenticationRequest_asURLRequest_ShouldReturnURLRequest' time='0.003'/>
-    <testcase classname='BackendTests.AuthenticationRequestTests' name='testAuthenticationRequest_init_ShouldRetainCorrectValues' time='0.001'/>
+    <testcase classname='BackendTests.AuthenticationRequestTests' name='testAuthenticationRequest_asURLRequest_ShouldReturnURLRequest' time='0.001'/>
+    <testcase classname='BackendTests.AuthenticationRequestTests' name='testAuthenticationRequest_init_ShouldRetainCorrectValues' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.AuthenticationTests' tests='1' failures='0'>
     <testcase classname='BackendTests.AuthenticationTests' name='testAuthentication_init_ShouldRetainProperties' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.CartItemTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.CartItemTests' name='testCartItem_init_ShouldRetainProperties' time='0.002'/>
-    <testcase classname='BackendTests.CartItemTests' name='testCartItem_setQuantity_ShouldUpdateQuantity' time='0.001'/>
+    <testcase classname='BackendTests.CartItemTests' name='testCartItem_init_ShouldRetainProperties' time='0.000'/>
+    <testcase classname='BackendTests.CartItemTests' name='testCartItem_setQuantity_ShouldUpdateQuantity' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.CartTests' tests='1' failures='0'>
-    <testcase classname='BackendTests.CartTests' name='testCart_init_ShouldRetainProperties' time='0.001'/>
+    <testcase classname='BackendTests.CartTests' name='testCart_init_ShouldRetainProperties' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.CreateCartRequestTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.CreateCartRequestTests' name='testCreateCartRequest_asURLRequest_ShouldReturnURLRequest' time='0.004'/>
-    <testcase classname='BackendTests.CreateCartRequestTests' name='testCreateCartRequest_init_ShouldRetainCorrectValues' time='0.003'/>
+    <testcase classname='BackendTests.CreateCartRequestTests' name='testCreateCartRequest_asURLRequest_ShouldReturnURLRequest' time='0.000'/>
+    <testcase classname='BackendTests.CreateCartRequestTests' name='testCreateCartRequest_init_ShouldRetainCorrectValues' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.DateExtensionTests' tests='1' failures='0'>
-    <testcase classname='BackendTests.DateExtensionTests' name='testDate_toString_ShouldReturnAValidString' time='0.006'/>
+    <testcase classname='BackendTests.DateExtensionTests' name='testDate_toString_ShouldReturnAValidString' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.ErrorExtensionTests' tests='1' failures='0'>
-    <testcase classname='BackendTests.ErrorExtensionTests' name='testError_createError_ShouldReturnAValidError' time='0.002'/>
+    <testcase classname='BackendTests.ErrorExtensionTests' name='testError_createError_ShouldReturnAValidError' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.GetCurrentCartRequestTests' tests='2' failures='0'>
     <testcase classname='BackendTests.GetCurrentCartRequestTests' name='testGetCurrentCartRequest_init_ShouldRetainCorrectValues' time='0.002'/>
-    <testcase classname='BackendTests.GetCurrentCartRequestTests' name='testGetGetCurrentCartRequest_asURLRequest_ShouldReturnURLRequest' time='0.002'/>
+    <testcase classname='BackendTests.GetCurrentCartRequestTests' name='testGetGetCurrentCartRequest_asURLRequest_ShouldReturnURLRequest' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.GetProductRequestTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.GetProductRequestTests' name='testGetProductRequest_asURLRequest_ShouldReturnURLRequest' time='0.002'/>
-    <testcase classname='BackendTests.GetProductRequestTests' name='testGetProductRequest_init_ShouldRetainCorrectValues' time='0.002'/>
+    <testcase classname='BackendTests.GetProductRequestTests' name='testGetProductRequest_asURLRequest_ShouldReturnURLRequest' time='0.001'/>
+    <testcase classname='BackendTests.GetProductRequestTests' name='testGetProductRequest_init_ShouldRetainCorrectValues' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.GetProductsRequestTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.GetProductsRequestTests' name='testGetProductsRequest_asURLRequest_ShouldReturnURLRequest' time='0.002'/>
+    <testcase classname='BackendTests.GetProductsRequestTests' name='testGetProductsRequest_asURLRequest_ShouldReturnURLRequest' time='0.001'/>
     <testcase classname='BackendTests.GetProductsRequestTests' name='testGetProductsRequest_init_ShouldRetainCorrectValues' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.GetUserRequestTests' tests='2' failures='0'>
@@ -41,43 +41,43 @@
     <testcase classname='BackendTests.GetUserRequestTests' name='testGetUserRequest_init_ShouldRetainCorrectValues' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.HTTPErrorTests' tests='1' failures='0'>
-    <testcase classname='BackendTests.HTTPErrorTests' name='testHTTPError_initWithRawValue_ShouldReceiveCorrectError' time='0.002'/>
+    <testcase classname='BackendTests.HTTPErrorTests' name='testHTTPError_initWithRawValue_ShouldReceiveCorrectError' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.HTTPMethodTests' tests='1' failures='0'>
-    <testcase classname='BackendTests.HTTPMethodTests' name='testHTTPMethod_initWithRawValue_ShouldReceiveCorrectHTTPMethod' time='0.002'/>
+    <testcase classname='BackendTests.HTTPMethodTests' name='testHTTPMethod_initWithRawValue_ShouldReceiveCorrectHTTPMethod' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.LocalAddProductToCartUseCaseTests' tests='2' failures='0'>
     <testcase classname='BackendTests.LocalAddProductToCartUseCaseTests' name='testLocalAddProductToCartUseCase_addProduct_ShouldReturnACartWithOneProduct' time='0.001'/>
-    <testcase classname='BackendTests.LocalAddProductToCartUseCaseTests' name='testLocalAddProductToCartUseCase_addSameProduct_ShouldReturnUpdatedCartWithOneProductAndQuantityTwo' time='0.002'/>
+    <testcase classname='BackendTests.LocalAddProductToCartUseCaseTests' name='testLocalAddProductToCartUseCase_addSameProduct_ShouldReturnUpdatedCartWithOneProductAndQuantityTwo' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.LocalRemoveProductInCartUseCaseTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithEmptyProducts' time='0.002'/>
-    <testcase classname='BackendTests.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithOneProduct' time='0.001'/>
+    <testcase classname='BackendTests.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithEmptyProducts' time='0.000'/>
+    <testcase classname='BackendTests.LocalRemoveProductInCartUseCaseTests' name='testLocalRemoveProductInCartUseCase_removeProduct_ShouldReturnACartWithOneProduct' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.LocalUpdateProductInCartUseCaseTests' tests='4' failures='0'>
-    <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateInvalidProduct_ShouldReturnSameCart' time='0.002'/>
+    <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateInvalidProduct_ShouldReturnSameCart' time='0.001'/>
     <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithEmptyProducts' time='0.001'/>
-    <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithOneProductAndQuantityOne' time='0.001'/>
+    <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithOneProductAndQuantityOne' time='0.000'/>
     <testcase classname='BackendTests.LocalUpdateProductInCartUseCaseTests' name='testLocalUpdateProductInCartUseCase_UpdateProduct_ShouldReturnACartWithOneProductAndQuantityTwo' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.ModelTests' tests='2' failures='0'>
     <testcase classname='BackendTests.ModelTests' name='testModel_toData_ShouldCreateValidData' time='0.001'/>
-    <testcase classname='BackendTests.ModelTests' name='testModel_toJSON_ShouldCreateAValidJSON' time='0.001'/>
+    <testcase classname='BackendTests.ModelTests' name='testModel_toJSON_ShouldCreateAValidJSON' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.NativeHTTPClientTests' tests='6' failures='0'>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldReceiveAParseError' time='0.007'/>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldReceiveUrlError' time='0.003'/>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldSuccessWithNoProducts' time='0.002'/>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldSuccessWithTwoProducts' time='0.005'/>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_init_ShouldRetainProperties' time='0.003'/>
-    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_makeRequest_ShouldValidateMapError' time='0.010'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldReceiveAParseError' time='0.005'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldReceiveUrlError' time='0.002'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldSuccessWithNoProducts' time='0.001'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_dispatch_ShouldSuccessWithTwoProducts' time='0.001'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_init_ShouldRetainProperties' time='0.000'/>
+    <testcase classname='BackendTests.NativeHTTPClientTests' name='testNativeHTTPClient_makeRequest_ShouldValidateMapError' time='0.005'/>
   </testsuite>
   <testsuite name='BackendTests.ProductTests' tests='1' failures='0'>
     <testcase classname='BackendTests.ProductTests' name='testProduct_init_ShouldRetainProperties' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteAuthenticationClientTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteAuthenticationClientTests' name='testRemoteAuthenticationClient_dispatch_ShouldReceiveAnHTTPError' time='0.002'/>
-    <testcase classname='BackendTests.RemoteAuthenticationClientTests' name='testRemoteAuthenticationClient_dispatch_ShouldSuccessAUser' time='0.002'/>
+    <testcase classname='BackendTests.RemoteAuthenticationClientTests' name='testRemoteAuthenticationClient_dispatch_ShouldSuccessAUser' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteAuthenticationUseCaseTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteAuthenticationUseCaseTests' name='testRemoteAuthenticationUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
@@ -88,39 +88,39 @@
     <testcase classname='BackendTests.RemoteCreateCartClientTests' name='testRemoteCreateCartClient_dispatch_ShouldSuccessWithACart' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteCreateCartUseCaseTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteCreateCartUseCaseTests' name='testRemoteCreateCartUse_executeWithSuccess_ShouldReturnCart' time='0.002'/>
+    <testcase classname='BackendTests.RemoteCreateCartUseCaseTests' name='testRemoteCreateCartUse_executeWithSuccess_ShouldReturnCart' time='0.000'/>
     <testcase classname='BackendTests.RemoteCreateCartUseCaseTests' name='testRemoteCreateCartUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetCurrentCartClientTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteGetCurrentCartClientTests' name='testRemoteGetCurrentCartClient_dispatch_ShouldReceiveAnHTTPError' time='0.002'/>
-    <testcase classname='BackendTests.RemoteGetCurrentCartClientTests' name='testRemoteGetCurrentCartClient_dispatch_ShouldSuccessWithACart' time='0.002'/>
+    <testcase classname='BackendTests.RemoteGetCurrentCartClientTests' name='testRemoteGetCurrentCartClient_dispatch_ShouldReceiveAnHTTPError' time='0.000'/>
+    <testcase classname='BackendTests.RemoteGetCurrentCartClientTests' name='testRemoteGetCurrentCartClient_dispatch_ShouldSuccessWithACart' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetCurrentCartUseCaseTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteGetCurrentCartUseCaseTests' name='testRemoteGetCurrentCartUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
     <testcase classname='BackendTests.RemoteGetCurrentCartUseCaseTests' name='testRemoteGetCurrentCartUseCase_executeWithSuccess_ShouldReturnProduct' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetProductClientTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteGetProductClientTests' name='testRemoteGetProductClient_dispatch_ShouldReceiveAnHTTPError' time='0.002'/>
-    <testcase classname='BackendTests.RemoteGetProductClientTests' name='testRemoteGetProductClient_dispatch_ShouldSuccessWithTwoProduct' time='0.002'/>
+    <testcase classname='BackendTests.RemoteGetProductClientTests' name='testRemoteGetProductClient_dispatch_ShouldReceiveAnHTTPError' time='0.001'/>
+    <testcase classname='BackendTests.RemoteGetProductClientTests' name='testRemoteGetProductClient_dispatch_ShouldSuccessWithTwoProduct' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetProductUseCaseTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteGetProductUseCaseTests' name='testRemoteGetProductUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
-    <testcase classname='BackendTests.RemoteGetProductUseCaseTests' name='testRemoteGetProductUseCase_executeWithSuccess_ShouldReturnProduct' time='0.002'/>
+    <testcase classname='BackendTests.RemoteGetProductUseCaseTests' name='testRemoteGetProductUseCase_executeWithSuccess_ShouldReturnProduct' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetProductsClientTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteGetProductsClientTests' name='testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError' time='0.002'/>
+    <testcase classname='BackendTests.RemoteGetProductsClientTests' name='testRemoteGetAllProductsClient_dispatch_ShouldReceiveAnHTTPError' time='0.000'/>
     <testcase classname='BackendTests.RemoteGetProductsClientTests' name='testRemoteGetAllProductsClient_dispatch_ShouldSuccessWithTwoProducts' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetProductsUseCaseTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteGetProductsUseCaseTests' name='testRemoteGetProductsUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
+    <testcase classname='BackendTests.RemoteGetProductsUseCaseTests' name='testRemoteGetProductsUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
     <testcase classname='BackendTests.RemoteGetProductsUseCaseTests' name='testRemoteGetProductsUseCase_executeWithSuccess_ShouldReturnProducts' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetUserClientTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteGetUserClientTests' name='testRemoteGetUserClient_dispatch_ShouldReceiveAnHTTPError' time='0.001'/>
-    <testcase classname='BackendTests.RemoteGetUserClientTests' name='testRemoteGetUserClient_dispatch_ShouldSuccessWithUser' time='0.001'/>
+    <testcase classname='BackendTests.RemoteGetUserClientTests' name='testRemoteGetUserClient_dispatch_ShouldSuccessWithUser' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteGetUserUseCaseTests' tests='2' failures='0'>
-    <testcase classname='BackendTests.RemoteGetUserUseCaseTests' name='testRemoteGetUserUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
+    <testcase classname='BackendTests.RemoteGetUserUseCaseTests' name='testRemoteGetUserUseCase_executeWithFailure_ShouldReturnError' time='0.000'/>
     <testcase classname='BackendTests.RemoteGetUserUseCaseTests' name='testRemoteGetUserUseCase_executeWithSuccess_ShouldReturnUser' time='0.001'/>
   </testsuite>
   <testsuite name='BackendTests.RemoteUpdateCartClientTests' tests='2' failures='0'>
@@ -129,7 +129,7 @@
   </testsuite>
   <testsuite name='BackendTests.RemoteUpdateCartUseCaseTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RemoteUpdateCartUseCaseTests' name='testRemoteUpdateCartUseCase_executeWithFailure_ShouldReturnError' time='0.001'/>
-    <testcase classname='BackendTests.RemoteUpdateCartUseCaseTests' name='testRemoteUpdateCartUseCase_executeWithSuccess_ShouldReturnCart' time='0.001'/>
+    <testcase classname='BackendTests.RemoteUpdateCartUseCaseTests' name='testRemoteUpdateCartUseCase_executeWithSuccess_ShouldReturnCart' time='0.000'/>
   </testsuite>
   <testsuite name='BackendTests.RequestTests' tests='2' failures='0'>
     <testcase classname='BackendTests.RequestTests' name='testRequest_asURLRequestWithAllProperties_ShouldReturnAValidURLRequest' time='0.001'/>
@@ -154,7 +154,7 @@
     <testcase classname='AppStateTests.AuthStateTests' name='testAuthStateIsAuthorized_ShouldBe_FalseByDefault' time='0.000'/>
   </testsuite>
   <testsuite name='LoginFeatureTests.LoginFeatureTests' tests='1' failures='0'>
-    <testcase classname='LoginFeatureTests.LoginFeatureTests' name='testExample' time='0.002'/>
+    <testcase classname='LoginFeatureTests.LoginFeatureTests' name='testExample' time='0.001'/>
   </testsuite>
   <testsuite name='NotoriousComponentsKitTests.DoubleExtensionTests' tests='2' failures='2'>
     <testcase classname='NotoriousComponentsKitTests.DoubleExtensionTests' name='testProductPriceFormatting'>
@@ -170,15 +170,15 @@
   <testsuite name='ProductsFeatureTests.ProductViewModelTests' tests='1' failures='0'>
     <testcase classname='ProductsFeatureTests.ProductViewModelTests' name='testInstantiateShouldHaveProductPropertyAsPublished' time='0.001'/>
   </testsuite>
-  <testsuite name='ProductsFeatureTests.ShowProductsServiceTests' tests='2' failures='0'>
-    <testcase classname='ProductsFeatureTests.ShowProductsServiceTests' name='testFetchProductsShouldFailAndMapError' time='0.002'/>
-    <testcase classname='ProductsFeatureTests.ShowProductsServiceTests' name='testFetchProductsShouldFetchProducts' time='0.001'/>
+  <testsuite name='ProductsFeatureTests.ProductsViewModelTests' tests='4' failures='0'>
+    <testcase classname='ProductsFeatureTests.ProductsViewModelTests' name='testFetchNextProductsShouldFetchNextPageAndReturnMoreProducts' time='0.002'/>
+    <testcase classname='ProductsFeatureTests.ProductsViewModelTests' name='testFetchProductshouldFetchFirstPageOfProductsAndReceiveError' time='0.000'/>
+    <testcase classname='ProductsFeatureTests.ProductsViewModelTests' name='testFetchProductsShouldFetchFirstPageAlways' time='0.001'/>
+    <testcase classname='ProductsFeatureTests.ProductsViewModelTests' name='testFetchProductsShouldFetchFirstPageOfProducts' time='0.000'/>
   </testsuite>
-  <testsuite name='ProductsFeatureTests.ShowProductsViewModelTests' tests='4' failures='0'>
-    <testcase classname='ProductsFeatureTests.ShowProductsViewModelTests' name='testFetchNextProductsShouldFetchNextPageAndReturnMoreProducts' time='0.001'/>
-    <testcase classname='ProductsFeatureTests.ShowProductsViewModelTests' name='testFetchProductshouldFetchFirstPageOfProductsAndReceiveError' time='0.001'/>
-    <testcase classname='ProductsFeatureTests.ShowProductsViewModelTests' name='testFetchProductsShouldFetchFirstPageAlways' time='0.001'/>
-    <testcase classname='ProductsFeatureTests.ShowProductsViewModelTests' name='testFetchProductsShouldFetchFirstPageOfProducts' time='0.001'/>
+  <testsuite name='ProductsFeatureTests.ShowProductsServiceTests' tests='2' failures='0'>
+    <testcase classname='ProductsFeatureTests.ShowProductsServiceTests' name='testFetchProductsShouldFailAndMapError' time='0.001'/>
+    <testcase classname='ProductsFeatureTests.ShowProductsServiceTests' name='testFetchProductsShouldFetchProducts' time='0.000'/>
   </testsuite>
   <testsuite name='RegistrationFeatureTests.RegistrationFeatureTests' tests='1' failures='0'>
     <testcase classname='RegistrationFeatureTests.RegistrationFeatureTests' name='testExample' time='0.001'/>

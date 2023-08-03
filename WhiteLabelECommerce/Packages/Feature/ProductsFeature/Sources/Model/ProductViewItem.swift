@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ProductViewItem: Equatable {
+public struct ProductViewItem: Hashable, Equatable {
   // MARK: - Properties
   let id: Int
   let title: String
@@ -15,4 +15,8 @@ public struct ProductViewItem: Equatable {
   let category: CategoryItemView
   let description: String
   let imagesURL: [URL]
+
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
 }
