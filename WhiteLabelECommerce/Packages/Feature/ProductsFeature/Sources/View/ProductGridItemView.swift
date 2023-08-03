@@ -22,30 +22,29 @@ struct ProductGridItemView: View {
       VStack(spacing: 4) {
         if let imagesURL = viewModel.product.imagesURL.first {
           PrettyImage(url: imagesURL)
-            .frame(height: 110)
+            .frame(height: 160)
         } else {
           EmptyView()
-            .frame(height: 110)
+            .frame(height: 160)
         }
 
-        HStack {
+        HStack(alignment: .top) {
           VStack(alignment: .leading, spacing: 4) {
-            HStack {
-              Text(viewModel.product.title)
-                .fontWeight(.medium)
-                .font(.subheadline)
-                .foregroundColor(.primary)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
-              Spacer()
-            }
+            Text(viewModel.product.title)
+              .fontWeight(.medium)
+              .font(.subheadline)
+              .foregroundColor(.primary)
+              .multilineTextAlignment(.leading)
+              .lineLimit(2)
+              .frame(maxWidth: .infinity, alignment: .leading)
             Text("\(viewModel.product.price.toCurrencyFormat())")
               .font(.title3)
               .fontWeight(.semibold)
               .foregroundColor(.primary)
               .multilineTextAlignment(.leading)
+              .frame(maxWidth: .infinity, alignment: .leading)
           }
-          .frame(maxWidth: .infinity)
+          .frame(maxWidth: .infinity, alignment: .leading)
 
           VStack(alignment: .trailing) {
             Spacer()
@@ -55,14 +54,13 @@ struct ProductGridItemView: View {
               Button {
                 // TODO: - Action
               } label: {
-                Image(systemName: "arrow.forward")
+                Image(systemName: "cart.badge.plus")
                   .foregroundColor(.white)
               }
             }
             .frame(width: 40, height: 40)
             .cornerRadius(20)
           }
-          .frame(height: 60)
         } //: HStack
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 4)
@@ -74,7 +72,9 @@ struct ProductGridItemView: View {
       .padding(.vertical, 4)
       .shadow(color: .gray, radius: 1)
     } //: VStack
-    .frame(height: 170)
+    .aspectRatio(0.9, contentMode: .fit)
+    .frame(height: 240)
+
   }
 }
 

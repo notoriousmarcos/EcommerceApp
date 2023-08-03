@@ -56,7 +56,7 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
                   ProductDetailView(ProductDetailViewModel(product: product))
                 } label: {
                   ProductGridItemView(ProductViewModel(product: product))
-                    .frame(height: 170)
+                    .frame(height: 240)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 16)
