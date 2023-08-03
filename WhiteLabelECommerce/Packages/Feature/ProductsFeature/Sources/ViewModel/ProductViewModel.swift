@@ -9,9 +9,15 @@ import Foundation
 
 final class ProductViewModel: ObservableObject {
   @Published private(set) var product: ProductViewItem
+  private let addToCartAction: ((ProductViewItem) -> Void)?
 
-  init(product: ProductViewItem) {
+  init(product: ProductViewItem, addToCartAction: ((ProductViewItem) -> Void)? = nil) {
     self.product = product
+    self.addToCartAction = addToCartAction
+  }
+
+  func addToCart() {
+    addToCartAction?(product)
   }
 
   deinit {

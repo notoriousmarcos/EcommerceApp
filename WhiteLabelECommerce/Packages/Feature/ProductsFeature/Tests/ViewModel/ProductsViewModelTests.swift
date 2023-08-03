@@ -12,8 +12,9 @@ import Mock
 import XCTest
 
 final class ProductsViewModelTests: XCTestCase {
-  private lazy var sut = ProductsViewModel(service: mockService)
-  private var mockService = MockProductsService()
+  private lazy var sut = ProductsViewModel(productsService: mockProductService, cartService: mockCartService)
+  private var mockProductService = MockProductsService()
+  private var mockCartService = MockCartService()
   private var cancellables: Set<AnyCancellable> = []
 
   func testFetchProductsShouldFetchFirstPageOfProducts() {
@@ -28,8 +29,8 @@ final class ProductsViewModelTests: XCTestCase {
     let callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     callFetchExpectation.expectedFulfillmentCount = 2
 
-    mockService.response = [.success(Mocks.products)]
-    mockService.fetchProductsParamsClosure = { offset, limit in
+    mockProductService.response = [.success(Mocks.products)]
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
       XCTAssertEqual(offset, 0)
       XCTAssertEqual(limit, 10)
       paramsOfFetchExpectation.fulfill()
@@ -72,7 +73,7 @@ final class ProductsViewModelTests: XCTestCase {
     errorExpectation.expectedFulfillmentCount = 2
     viewStateExpectation.expectedFulfillmentCount = 3
 
-    mockService.response = [.failure(.unknown)]
+    mockProductService.response = [.failure(.unknown)]
 
     var expectedViewStates: [ProductsViewModel.ViewState?] = [
       nil,
@@ -80,7 +81,7 @@ final class ProductsViewModelTests: XCTestCase {
       .finished
     ]
 
-    mockService.fetchProductsParamsClosure = { offset, limit in
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
       XCTAssertEqual(offset, 0)
       XCTAssertEqual(limit, 10)
       paramsOfFetchExpectation.fulfill()
@@ -122,7 +123,7 @@ final class ProductsViewModelTests: XCTestCase {
 
   func testFetchNextProductsShouldFetchNextPageAndReturnMoreProducts() {
     // Arrange
-    let sut = ProductsViewModel(service: mockService, pageLimit: 1)
+    let sut = ProductsViewModel(productsService: mockProductService, cartService: mockCartService, pageLimit: 1)
     var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     callFetchExpectation.expectedFulfillmentCount = 2
@@ -132,7 +133,7 @@ final class ProductsViewModelTests: XCTestCase {
     var expectedProducts: [[ProductViewItem]] = [
       [],
       [Mocks.productsItemView.first!],
-      Mocks.productsItemView
+      Array(Mocks.productsItemView[0..<2])
     ]
     var expectedParams: [(Int, Int)] = [
       (0, 1), // offset 0 and pageLimit 1
@@ -145,12 +146,12 @@ final class ProductsViewModelTests: XCTestCase {
       .finished
     ]
 
-    mockService.response = [
+    mockProductService.response = [
       .success([Mocks.products.first!]),
-      .success([Mocks.products.last!])
+      .success([Mocks.products[1]])
     ]
 
-    mockService.fetchProductsParamsClosure = { offset, limit in
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
       let (expectedOffset, expectedLimit) = expectedParams.removeFirst()
       XCTAssertEqual(offset, expectedOffset)
       XCTAssertEqual(limit, expectedLimit)
@@ -195,7 +196,7 @@ final class ProductsViewModelTests: XCTestCase {
 
   func testFetchProductsShouldFetchFirstPageAlways() {
     // Arrange
-    let sut = ProductsViewModel(service: mockService, pageLimit: 1)
+    let sut = ProductsViewModel(productsService: mockProductService, cartService: mockCartService, pageLimit: 1)
     var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
     var viewStateExpectation = expectation(description: "Expect to updateViewState.")
@@ -205,7 +206,7 @@ final class ProductsViewModelTests: XCTestCase {
     var expectedProducts: [[ProductViewItem]] = [
       [],
       [Mocks.productsItemView.first!],
-      Mocks.productsItemView,
+      Array(Mocks.productsItemView[0..<2]),
       [Mocks.productsItemView.first!]
     ]
 
@@ -221,13 +222,13 @@ final class ProductsViewModelTests: XCTestCase {
       .finished
     ]
 
-    mockService.response = [
+    mockProductService.response = [
       .success([Mocks.products.first!]),
-      .success([Mocks.products.last!]),
+      .success([Mocks.products[1]]),
       .success([Mocks.products.first!])
     ]
 
-    mockService.fetchProductsParamsClosure = { offset, limit in
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
       let (expectedOffset, expectedLimit) = expectedParams.removeFirst()
       XCTAssertEqual(offset, expectedOffset)
       XCTAssertEqual(limit, expectedLimit)
@@ -284,13 +285,161 @@ final class ProductsViewModelTests: XCTestCase {
     waitForExpectations(timeout: 1)
   }
 
-//  func testGoToProductDetailShouldReturnCorrectDataToProductView() {
-//    let indext = 0
-//    let expectedProductDetailView =
-//
-//    // When
-//    sut.detailView(to: index), expectedProductDetailView)
-//  }
+  func testFetchNextProductsShouldFetchNextPage() {
+    // Arrange
+    let sut = ProductsViewModel(productsService: mockProductService, cartService: mockCartService, pageLimit: 5)
+    var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
+    var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
+    var viewStateExpectation = expectation(description: "Expect to updateViewState.")
+    callFetchExpectation.expectedFulfillmentCount = 2
+    viewStateExpectation.expectedFulfillmentCount = 3
+
+    var expectedProducts: [[ProductViewItem]] = [
+      [],
+      Array(Mocks.productsItemView[0..<5]),
+      Mocks.productsItemView
+    ]
+
+    var expectedParams: [(Int, Int)] = [
+      (0, 5), // offset 0 and pageLimit 5
+      (5, 5) // offset 5 and pageLimit 5
+    ]
+
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
+      nil,
+      .loading,
+      .finished
+    ]
+
+    mockProductService.response = [
+      .success(Array(Mocks.products[0..<5])),
+      .success(Array(Mocks.products[5..<7]))
+    ]
+
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
+      let (expectedOffset, expectedLimit) = expectedParams.removeFirst()
+      XCTAssertEqual(offset, expectedOffset)
+      XCTAssertEqual(limit, expectedLimit)
+      paramsOfFetchExpectation.fulfill()
+    }
+
+    sut.$viewState.sink { viewState in
+      // Then
+      let expectedViewState = expectedViewStates.removeFirst()
+      XCTAssertEqual(viewState, expectedViewState)
+      viewStateExpectation.fulfill()
+    }
+    .store(in: &cancellables)
+
+    sut.$products.sink { products in
+      // Then
+      let expectedProducts = expectedProducts.removeFirst()
+      XCTAssertEqual(products, expectedProducts)
+      callFetchExpectation.fulfill()
+    }
+    .store(in: &cancellables)
+
+    // When
+    sut.fetchProducts(shouldReset: true)
+
+    waitForExpectations(timeout: 1)
+
+    paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
+    callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
+    viewStateExpectation = expectation(description: "Expect to updateViewState.")
+    viewStateExpectation.expectedFulfillmentCount = 2
+
+    expectedViewStates = [
+      .fetching,
+      .finished
+    ]
+
+    sut.fetchNextPage(Mocks.productsItemView.first { $0.id == 2 }!)
+
+    waitForExpectations(timeout: 1)
+  }
+
+  func testFetchNextProductsShouldNotFetchNextPage() {
+    // Arrange
+    let sut = ProductsViewModel(productsService: mockProductService, cartService: mockCartService, pageLimit: 5)
+    var paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
+    var callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
+    var viewStateExpectation = expectation(description: "Expect to updateViewState.")
+    callFetchExpectation.expectedFulfillmentCount = 2
+    viewStateExpectation.expectedFulfillmentCount = 3
+
+    var expectedProducts: [[ProductViewItem]] = [
+      [],
+      Array(Mocks.productsItemView[0..<5])
+    ]
+
+    var expectedParams: [(Int, Int)] = [
+      (0, 5) // offset 0 and pageLimit 5
+    ]
+
+    var expectedViewStates: [ProductsViewModel.ViewState?] = [
+      nil,
+      .loading,
+      .finished
+    ]
+
+    mockProductService.response = [
+      .success(Array(Mocks.products[0..<5]))
+    ]
+
+    mockProductService.fetchProductsParamsClosure = { offset, limit in
+      let (expectedOffset, expectedLimit) = expectedParams.removeFirst()
+      XCTAssertEqual(offset, expectedOffset)
+      XCTAssertEqual(limit, expectedLimit)
+      paramsOfFetchExpectation.fulfill()
+    }
+
+    sut.$viewState.sink { viewState in
+      // Then
+      let expectedViewState = expectedViewStates.removeFirst()
+      XCTAssertEqual(viewState, expectedViewState)
+      viewStateExpectation.fulfill()
+    }
+    .store(in: &cancellables)
+
+    sut.$products.sink { products in
+      // Then
+      let expectedProducts = expectedProducts.removeFirst()
+      XCTAssertEqual(products, expectedProducts)
+      callFetchExpectation.fulfill()
+    }
+    .store(in: &cancellables)
+
+    // When
+    sut.fetchProducts(shouldReset: true)
+
+    waitForExpectations(timeout: 1)
+
+    paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
+    paramsOfFetchExpectation.isInverted = true
+    callFetchExpectation = expectation(description: "Expect to be called when viewModel products change.")
+    callFetchExpectation.isInverted = true
+    viewStateExpectation = expectation(description: "Expect to updateViewState.")
+    viewStateExpectation.isInverted = true
+
+    sut.fetchNextPage(Mocks.productsItemView.first { $0.id == 1 }!)
+
+    waitForExpectations(timeout: 1)
+  }
+
+  func testAddToCartShouldCallAddToCartService() {
+    // Arrange
+    let expectedProduct = Mocks.productsItemView.first
+    mockCartService.addToCartParamsClosure = { product in
+      // Assert
+      XCTAssertEqual(product, expectedProduct)
+    }
+
+    // Act
+    sut.addToCart(expectedProduct!)
+  }
+
+  // MARK: - Helpers
 
   private class MockProductsService: ProductsService {
     /// This response will be used to mock the response when fetch is called.
@@ -316,6 +465,14 @@ final class ProductsViewModelTests: XCTestCase {
           return Fail(error: error)
             .eraseToAnyPublisher()
       }
+    }
+  }
+
+  private class MockCartService: CartService {
+    var addToCartParamsClosure: ((ProductViewItem) -> Void)?
+
+    func addToCart(_ product: ProductViewItem) {
+      addToCartParamsClosure?(product)
     }
   }
 }

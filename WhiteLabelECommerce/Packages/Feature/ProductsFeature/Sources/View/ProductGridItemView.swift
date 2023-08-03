@@ -53,6 +53,7 @@ struct ProductGridItemView: View {
 
               Button {
                 // TODO: - Action
+                viewModel.addToCart()
               } label: {
                 Image(systemName: "cart.badge.plus")
                   .foregroundColor(.white)

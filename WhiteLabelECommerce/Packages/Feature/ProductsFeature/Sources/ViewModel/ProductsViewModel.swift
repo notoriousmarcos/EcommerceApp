@@ -19,6 +19,7 @@ public protocol ProductsViewModelProtocol: ObservableObject {
   var error: Error? { get }
 
   // MARK: - Methods
+  func addToCart(_ product: ProductViewItem)
   func fetchProducts(shouldReset: Bool)
   func fetchNextPage(_ product: ProductViewItem)
 }
@@ -67,23 +68,35 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
 
   /// An instance of `ProductsService`, which is a service responsible for fetching product data from the backend or
   /// any external data source.
-  private let service: ProductsService
+  private let productsService: ProductsService
+
+
+  /// An instance of `CartService`, which is a service responsible for fetching product data from the backend or
+  /// any external data source.
+  private let cartService: CartService
 
   // MARK: - Initializer
   /// Initializes the `ShowProductsViewModel` with the provided `ProductsService` instance and an optional `pageLimit`.
   ///
   /// - Parameters:
-  ///   - service: An instance of `ProductsService` used for fetching products.
+  ///   - productsService: An instance of `ProductsService` used for fetching products.
   ///   - pageLimit: The maximum number of products to fetch in each API call. Default value is 10.
   public init(
-    service: ProductsService,
+    productsService: ProductsService,
+    cartService: CartService,
     pageLimit: Int = 10
   ) {
-    self.service = service
+    self.productsService = productsService
+    self.cartService = cartService
     self.pageLimit = pageLimit
   }
 
   // MARK: - Public Methods
+
+  public func addToCart(_ product: ProductViewItem) {
+    cartService.addToCart(product)
+  }
+
   /// Initiates the process of fetching products.
   ///
   /// - Parameter shouldReset: A boolean value indicating whether to reset the fetch process.
@@ -111,7 +124,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   // MARK: - Private Methods
   /// Fetches products from the service and updates the view state accordingly.
   private func fetchProductsOnService() {
-    service
+    productsService
       .fetchProducts(for: currentOffset, andLimit: pageLimit)
       .sink { [weak self] status in
         if case let .failure(error) = status {
@@ -192,6 +205,8 @@ internal class MockShowProductsViewModel: ProductsViewModelProtocol {
     self.error = error
     self.searchValue = searchValue
   }
+
+  func addToCart(_ product: ProductViewItem) { }
 
   func fetchProducts(shouldReset: Bool) { }
 

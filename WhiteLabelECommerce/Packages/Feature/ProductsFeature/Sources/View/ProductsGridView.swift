@@ -55,7 +55,7 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
                   // TODO: Need to inject this view in future.
                   ProductDetailView(ProductDetailViewModel(product: product))
                 } label: {
-                  ProductGridItemView(ProductViewModel(product: product))
+                  ProductGridItemView(ProductViewModel(product: product, addToCartAction: viewModel.addToCart))
                     .frame(height: 240)
                 }
                 .frame(maxWidth: .infinity)

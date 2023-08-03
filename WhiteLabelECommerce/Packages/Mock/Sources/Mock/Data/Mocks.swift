@@ -36,7 +36,67 @@ public struct Mocks {
     ),
     Product(
       id: 2,
-      title: "Product",
+      title: "Produc 2",
+      price: 10.0,
+      category: Category(
+        id: 5,
+        name: "Others",
+        imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+      ),
+      description: "Product description",
+      imagesURL: ["https://imageurl"]
+    ),
+    Product(
+      id: 3,
+      title: "Product 3",
+      price: 10.0,
+      category: Category(
+        id: 5,
+        name: "Others",
+        imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+      ),
+      description: "Product description",
+      imagesURL: ["https://imageurl"]
+    ),
+    Product(
+      id: 4,
+      title: "Product 4 ",
+      price: 10.0,
+      category: Category(
+        id: 5,
+        name: "Others",
+        imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+      ),
+      description: "Product description",
+      imagesURL: ["https://imageurl"]
+    ),
+    Product(
+      id: 5,
+      title: "Product 5",
+      price: 10.0,
+      category: Category(
+        id: 5,
+        name: "Others",
+        imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+      ),
+      description: "Product description",
+      imagesURL: ["https://imageurl"]
+    ),
+    Product(
+      id: 6,
+      title: "Product 6",
+      price: 10.0,
+      category: Category(
+        id: 5,
+        name: "Others",
+        imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
+      ),
+      description: "Product description",
+      imagesURL: ["https://imageurl"]
+    ),
+    Product(
+      id: 7,
+      title: "Product 7",
       price: 10.0,
       category: Category(
         id: 5,
