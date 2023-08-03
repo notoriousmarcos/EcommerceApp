@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 02/08/23.
 //
 
+import Mock
 import NotoriousComponentsKit
 import SwiftUI
 
@@ -20,8 +21,8 @@ struct ProductGridItemView: View {
   var body: some View {
     VStack {
       VStack(spacing: 4) {
-        if let imagesURL = viewModel.product.imagesURL.first {
-          PrettyImage(url: imagesURL)
+        if let imageURL = viewModel.product.imagesURL.first, let url = URL(string: imageURL) {
+          PrettyImage(url: url)
             .frame(height: 160)
         } else {
           EmptyView()
@@ -75,7 +76,6 @@ struct ProductGridItemView: View {
     } //: VStack
     .aspectRatio(0.9, contentMode: .fit)
     .frame(height: 240)
-
   }
 }
 
@@ -83,18 +83,7 @@ struct ProductGridItemView_Previews: PreviewProvider {
   static var previews: some View {
     ProductGridItemView(
       ProductViewModel(
-        product: ProductViewItem(
-          id: 1,
-          title: "Title",
-          price: 12_222.99,
-          category: .init(
-            id: 1,
-            name: "Category",
-            imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-          ),
-          description: "Description",
-          imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-        )
+        product: Mocks.product
       )
     )
     .previewLayout(.sizeThatFits)

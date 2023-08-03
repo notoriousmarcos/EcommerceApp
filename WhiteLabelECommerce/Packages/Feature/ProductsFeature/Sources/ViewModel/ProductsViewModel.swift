@@ -13,31 +13,29 @@ public protocol ProductsViewModelProtocol: ObservableObject {
   // MARK: - Properties
   var title: String { get set }
   var searchValue: String { get set }
-  var products: [ProductViewItem] { get }
-  var selectedProduct: ProductViewItem? { get set }
+  var products: [Product] { get }
+  var selectedProduct: Product? { get set }
   var viewState: ProductsViewModel.ViewState? { get }
   var error: Error? { get }
 
   // MARK: - Methods
-  func addToCart(_ product: ProductViewItem)
+  func addToCart(_ product: Product)
   func fetchProducts(shouldReset: Bool)
-  func fetchNextPage(_ product: ProductViewItem)
+  func fetchNextPage(_ product: Product)
 }
 
 public final class ProductsViewModel: ProductsViewModelProtocol {
   // MARK: - Properties
 
-  /// An array of `ProductViewItem` objects that represent the products fetched from the service and
+  /// An array of `Product` objects that represent the products fetched from the service and
   /// ready for presentation in the UI.
   @Published public var title: String = "Products"
 
-  /// An array of `ProductViewItem` objects that represent the products fetched from the service and
+  /// An array of `Product` objects that represent the products fetched from the service and
   /// ready for presentation in the UI.
-  @Published public private(set) var products: [ProductViewItem] = []
+  @Published public private(set) var products: [Product] = []
 
-  /// An array of `ProductViewItem` objects that represent the products fetched from the service and
-  /// ready for presentation in the UI.
-  @Published public var selectedProduct: ProductViewItem?
+  @Published public var selectedProduct: Product?
 
   /// The current state of the product fetching process, which can be `.fetching`, `.loading`, or `.finished`.
   @Published public private(set) var viewState: ViewState?
@@ -70,7 +68,6 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   /// any external data source.
   private let productsService: ProductsService
 
-
   /// An instance of `CartService`, which is a service responsible for fetching product data from the backend or
   /// any external data source.
   private let cartService: CartService
@@ -93,7 +90,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
 
   // MARK: - Public Methods
 
-  public func addToCart(_ product: ProductViewItem) {
+  public func addToCart(_ product: Product) {
     cartService.addToCart(product)
   }
 
@@ -113,7 +110,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
     fetchProductsOnService()
   }
 
-  public func fetchNextPage(_ product: ProductViewItem) {
+  public func fetchNextPage(_ product: Product) {
     guard
       let lastIndex = products.lastIndex(where: { $0 == product }),
       lastIndex == products.count - 4
@@ -133,32 +130,10 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
         self?.viewState = .finished
       } receiveValue: { [weak self] products in
         guard let self = self else { return }
-        let productsItemView = self.productsToViewItem(products)
-        self.products = self.currentOffset == 0 ? productsItemView : self.products + productsItemView
+        self.products = self.currentOffset == 0 ? products : self.products + products
         self.currentOffset += self.pageLimit
       }
       .store(in: &cancellables)
-  }
-
-  /// Converts an array of `Product` objects into an array of `ProductViewItem` objects.
-  ///
-  /// - Parameter products: The array of `Product` objects to be converted.
-  /// - Returns: An array of `ProductViewItem` objects.
-  private func productsToViewItem(_ products: [Product]) -> [ProductViewItem] {
-    return products.map { product in
-      ProductViewItem(
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        category: CategoryItemView(
-          id: product.category.id,
-          name: product.category.name,
-          imageURL: URL(string: product.category.imageURL ?? "")
-        ),
-        description: product.description,
-        imagesURL: product.imagesURL.compactMap { URL(string: $0 ) }
-      )
-    }
   }
 
   deinit {
@@ -168,7 +143,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   }
 }
 
-// MARK: - Nested Enum
+// MARK: - ViewState
 public extension ProductsViewModel {
   /// Represents the various states of the product fetching process.
   enum ViewState {
@@ -186,15 +161,15 @@ public extension ProductsViewModel {
 /// A mock implementation of `ShowProductsViewModelProtocol` used for previews and testing purposes.
 internal class MockShowProductsViewModel: ProductsViewModelProtocol {
   var title: String
-  var products: [ProductViewItem]
-  var selectedProduct: ProductViewItem?
+  var products: [Product]
+  var selectedProduct: Product?
   var viewState: ProductsViewModel.ViewState?
   var error: Error?
   var searchValue: String
 
   init(
     title: String = "",
-    products: [ProductViewItem],
+    products: [Product],
     viewState: ProductsViewModel.ViewState? = nil,
     error: Error? = nil,
     searchValue: String = ""
@@ -206,9 +181,9 @@ internal class MockShowProductsViewModel: ProductsViewModelProtocol {
     self.searchValue = searchValue
   }
 
-  func addToCart(_ product: ProductViewItem) { }
+  func addToCart(_ product: Product) { }
 
   func fetchProducts(shouldReset: Bool) { }
 
-  func fetchNextPage(_ product: ProductViewItem) { }
+  func fetchNextPage(_ product: Product) { }
 }

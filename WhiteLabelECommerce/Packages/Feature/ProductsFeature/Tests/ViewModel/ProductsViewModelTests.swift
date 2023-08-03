@@ -19,9 +19,9 @@ final class ProductsViewModelTests: XCTestCase {
 
   func testFetchProductsShouldFetchFirstPageOfProducts() {
     // Arrange
-    var expectedProducts: [[ProductViewItem]] = [
+    var expectedProducts: [[Product]] = [
       [],
-      Mocks.productsItemView
+      Mocks.products
     ]
     let paramsOfFetchExpectation = expectation(description: "Expect to call fetchProducts on service.")
     let viewStateExpectation = expectation(description: "Expect to updateViewState.")
@@ -130,10 +130,10 @@ final class ProductsViewModelTests: XCTestCase {
     var viewStateExpectation = expectation(description: "Expect to updateViewState.")
     viewStateExpectation.expectedFulfillmentCount = 3
 
-    var expectedProducts: [[ProductViewItem]] = [
+    var expectedProducts: [[Product]] = [
       [],
-      [Mocks.productsItemView.first!],
-      Array(Mocks.productsItemView[0..<2])
+      [Mocks.products.first!],
+      Array(Mocks.products[0..<2])
     ]
     var expectedParams: [(Int, Int)] = [
       (0, 1), // offset 0 and pageLimit 1
@@ -203,11 +203,11 @@ final class ProductsViewModelTests: XCTestCase {
     callFetchExpectation.expectedFulfillmentCount = 2
     viewStateExpectation.expectedFulfillmentCount = 3
 
-    var expectedProducts: [[ProductViewItem]] = [
+    var expectedProducts: [[Product]] = [
       [],
-      [Mocks.productsItemView.first!],
-      Array(Mocks.productsItemView[0..<2]),
-      [Mocks.productsItemView.first!]
+      [Mocks.products.first!],
+      Array(Mocks.products[0..<2]),
+      [Mocks.products.first!]
     ]
 
     var expectedParams: [(Int, Int)] = [
@@ -294,10 +294,10 @@ final class ProductsViewModelTests: XCTestCase {
     callFetchExpectation.expectedFulfillmentCount = 2
     viewStateExpectation.expectedFulfillmentCount = 3
 
-    var expectedProducts: [[ProductViewItem]] = [
+    var expectedProducts: [[Product]] = [
       [],
-      Array(Mocks.productsItemView[0..<5]),
-      Mocks.productsItemView
+      Array(Mocks.products[0..<5]),
+      Mocks.products
     ]
 
     var expectedParams: [(Int, Int)] = [
@@ -354,7 +354,7 @@ final class ProductsViewModelTests: XCTestCase {
       .finished
     ]
 
-    sut.fetchNextPage(Mocks.productsItemView.first { $0.id == 2 }!)
+    sut.fetchNextPage(Mocks.products.first { $0.id == 2 }!)
 
     waitForExpectations(timeout: 1)
   }
@@ -368,9 +368,9 @@ final class ProductsViewModelTests: XCTestCase {
     callFetchExpectation.expectedFulfillmentCount = 2
     viewStateExpectation.expectedFulfillmentCount = 3
 
-    var expectedProducts: [[ProductViewItem]] = [
+    var expectedProducts: [[Product]] = [
       [],
-      Array(Mocks.productsItemView[0..<5])
+      Array(Mocks.products[0..<5])
     ]
 
     var expectedParams: [(Int, Int)] = [
@@ -422,14 +422,14 @@ final class ProductsViewModelTests: XCTestCase {
     viewStateExpectation = expectation(description: "Expect to updateViewState.")
     viewStateExpectation.isInverted = true
 
-    sut.fetchNextPage(Mocks.productsItemView.first { $0.id == 1 }!)
+    sut.fetchNextPage(Mocks.products.first { $0.id == 1 }!)
 
     waitForExpectations(timeout: 1)
   }
 
   func testAddToCartShouldCallAddToCartService() {
     // Arrange
-    let expectedProduct = Mocks.productsItemView.first
+    let expectedProduct = Mocks.products.first
     mockCartService.addToCartParamsClosure = { product in
       // Assert
       XCTAssertEqual(product, expectedProduct)
@@ -469,29 +469,10 @@ final class ProductsViewModelTests: XCTestCase {
   }
 
   private class MockCartService: CartService {
-    var addToCartParamsClosure: ((ProductViewItem) -> Void)?
+    var addToCartParamsClosure: ((Product) -> Void)?
 
-    func addToCart(_ product: ProductViewItem) {
+    func addToCart(_ product: Product) {
       addToCartParamsClosure?(product)
-    }
-  }
-}
-
-extension Mocks {
-  static var productsItemView: [ProductViewItem] {
-    products.map { product in
-      ProductViewItem(
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        category: CategoryItemView(
-          id: product.category.id,
-          name: product.category.name,
-          imageURL: URL(string: product.category.imageURL ?? "")
-        ),
-        description: product.description,
-        imagesURL: product.imagesURL.compactMap { URL(string: $0) }
-      )
     }
   }
 }

@@ -27,13 +27,14 @@ let package = Package(
       name: "ProductsFeature",
       dependencies: [
         "Backend",
-        "NotoriousComponentsKit"
+        "NotoriousComponentsKit",
+        "Mock"
       ],
       path: "Sources"
     ),
     .testTarget(
       name: "ProductsFeatureTests",
-      dependencies: ["ProductsFeature", "Mock"],
+      dependencies: ["ProductsFeature", "Backend", "Mock"],
       path: "Tests"
     )
   ],

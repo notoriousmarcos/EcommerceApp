@@ -18,9 +18,9 @@ public struct RootView<Welcome: View, TabBar: View>: View {
 
     public var body: some View {
         if viewModel.isAuthorized {
-            AnyView(tabBarViewProvider())
+            tabBarViewProvider()
         } else {
-            AnyView(welcomeViewProvider())
+            welcomeViewProvider()
         }
     }
 }

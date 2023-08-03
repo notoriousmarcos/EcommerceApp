@@ -4,31 +4,36 @@
 import PackageDescription
 
 let package = Package(
-  name: "LoginFeature",
+  name: "CartFeature",
   platforms: [
     .iOS(.v15),
     .macOS(.v12)
   ],
   products: [
-    // Products define the executables and libraries a package produces, and make them visible to other packages.
+    // Cart define the executables and libraries a package produces, and make them visible to other packages.
     .library(
-      name: "LoginFeature",
-      targets: ["LoginFeature"])
+      name: "CartFeature",
+      targets: ["CartFeature"])
   ],
   dependencies: [
-    .package(path: "../../NotoriousComponentsKit")
+    .package(path: "../../Backend"),
+    .package(path: "../../NotoriousComponentsKit"),
+    .package(path: "../../Mock")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
     // Targets can depend on other targets in this package, and on products in packages this package depends on.
     .target(
-      name: "LoginFeature",
-      dependencies: ["NotoriousComponentsKit"],
+      name: "CartFeature",
+      dependencies: [
+        "Backend",
+        "NotoriousComponentsKit"
+      ],
       path: "Sources"
     ),
     .testTarget(
-      name: "LoginFeatureTests",
-      dependencies: ["LoginFeature"],
+      name: "CartFeatureTests",
+      dependencies: ["CartFeature", "Mock"],
       path: "Tests"
     )
   ],

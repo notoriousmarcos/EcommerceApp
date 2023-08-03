@@ -5,20 +5,21 @@
 //  Created by Marcos Vinicius Brito on 02/08/23.
 //
 
+import Mock
 import NotoriousComponentsKit
 import SwiftUI
 
 public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
   /// The view model conforming to `ProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
-  
+
   /// Initializes the `ProductsGridView` with the given view model.
   ///
   /// - Parameter viewModel: The view model conforming to `ProductsViewModelProtocol`.
   public init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
-  
+
   public var body: some View {
     productsView()
       .overlay(alignment: .bottom) {
@@ -30,7 +31,7 @@ public struct ProductsGridView<ViewModel: ProductsViewModelProtocol>: View {
         viewModel.fetchProducts(shouldReset: true)
       }
   }
-  
+
   /// A helper method that creates the main content of the `ProductsListView`.
   ///
   /// - Returns: A SwiftUI `View` representing the main content of the view.
@@ -85,87 +86,13 @@ struct ProductsGridView_Previews: PreviewProvider {
       ProductsGridView(viewModel: MockShowProductsViewModel(products: [], viewState: .loading))
       ProductsGridView(
         viewModel: MockShowProductsViewModel(
-          products: [
-            ProductViewItem(
-              id: 1,
-              title: "Title",
-              price: 2.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 2,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 3,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 4,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            )
-          ],
+          products: Mocks.products,
           viewState: .finished
         )
       )
       ProductsGridView(
         viewModel: MockShowProductsViewModel(
-          products: [
-            ProductViewItem(
-              id: 1,
-              title: "Title",
-              price: 2.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 2,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            )
-          ],
+          products: Mocks.products,
           viewState: .fetching
         )
       )

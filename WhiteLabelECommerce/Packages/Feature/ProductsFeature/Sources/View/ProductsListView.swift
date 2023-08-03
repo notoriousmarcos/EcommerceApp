@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
+import Mock
 import SwiftUI
 
 /// A view responsible for displaying a list of products fetched from the `ProductsViewModelProtocol`.
@@ -81,63 +82,13 @@ struct ShowProductsView_Previews: PreviewProvider {
       ProductsListView(viewModel: MockShowProductsViewModel(products: [], viewState: .loading))
       ProductsListView(
         viewModel: MockShowProductsViewModel(
-          products: [
-            ProductViewItem(
-              id: 1,
-              title: "Title",
-              price: 2.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 2,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            )
-          ],
+          products: Mocks.products,
           viewState: .finished
         )
       )
       ProductsListView(
         viewModel: MockShowProductsViewModel(
-          products: [
-            ProductViewItem(
-              id: 1,
-              title: "Title",
-              price: 2.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            ),
-            ProductViewItem(
-              id: 2,
-              title: "Title2",
-              price: 122.99,
-              category: .init(
-                id: 1,
-                name: "Category",
-                imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-              ),
-              description: "Description",
-              imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-            )
-          ],
+          products: Mocks.products,
           viewState: .fetching
         )
       )

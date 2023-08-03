@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
+import Mock
 import NotoriousComponentsKit
 import SwiftUI
 
@@ -27,8 +28,8 @@ struct ProductRowView: View {
   var body: some View {
     HStack(alignment: .top, spacing: 16) {
       // MARK: - Image
-      if let imageURL = viewModel.product.imagesURL.first {
-        PrettyImage(url: imageURL)
+      if let imageURL = viewModel.product.imagesURL.first, let url = URL(string: imageURL) {
+        PrettyImage(url: url)
           .frame(width: 80, height: 80)
       }
 
@@ -67,18 +68,7 @@ struct ProductView_Previews: PreviewProvider {
   static var previews: some View {
     ProductRowView(
       ProductViewModel(
-        product: ProductViewItem(
-          id: 1,
-          title: "Title",
-          price: 12_222.99,
-          category: .init(
-            id: 1,
-            name: "Category",
-            imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-          ),
-          description: "Description",
-          imagesURL: [URL(string: "https://picsum.photos/640/640?r=2738")!]
-        )
+        product: Mocks.product
       )
     )
     .previewLayout(.sizeThatFits)

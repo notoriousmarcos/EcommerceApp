@@ -5,13 +5,14 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
+import Backend
 import Foundation
 
 final class ProductViewModel: ObservableObject {
-  @Published private(set) var product: ProductViewItem
-  private let addToCartAction: ((ProductViewItem) -> Void)?
+  @Published private(set) var product: Product
+  private let addToCartAction: ((Product) -> Void)?
 
-  init(product: ProductViewItem, addToCartAction: ((ProductViewItem) -> Void)? = nil) {
+  init(product: Product, addToCartAction: ((Product) -> Void)? = nil) {
     self.product = product
     self.addToCartAction = addToCartAction
   }

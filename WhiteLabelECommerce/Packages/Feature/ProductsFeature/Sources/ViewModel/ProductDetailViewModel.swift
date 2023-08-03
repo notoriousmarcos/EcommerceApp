@@ -5,12 +5,13 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
+import Backend
 import Foundation
 
 final class ProductDetailViewModel: ObservableObject {
-  @Published var product: ProductViewItem
+  @Published var product: Product
 
-  init(product: ProductViewItem) {
+  init(product: Product) {
     self.product = product
   }
 

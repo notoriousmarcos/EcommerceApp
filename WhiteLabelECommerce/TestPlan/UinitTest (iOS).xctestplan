@@ -51,13 +51,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/LoginFeature",
-        "identifier" : "LoginFeatureTests",
-        "name" : "LoginFeatureTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Packages\/NotoriousComponentsKit",
         "identifier" : "NotoriousComponentsKitTests",
         "name" : "NotoriousComponentsKitTests"
@@ -68,13 +61,6 @@
         "containerPath" : "container:Packages\/Feature\/ProductsFeature",
         "identifier" : "ProductsFeatureTests",
         "name" : "ProductsFeatureTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Packages\/Feature\/RegistrationFeature",
-        "identifier" : "RegistrationFeatureTests",
-        "name" : "RegistrationFeatureTests"
       }
     },
     {
@@ -93,9 +79,9 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/WelcomeFeature",
-        "identifier" : "WelcomeFeatureTests",
-        "name" : "WelcomeFeatureTests"
+        "containerPath" : "container:Packages\/Feature\/HomeFeature",
+        "identifier" : "HomeFeatureTests",
+        "name" : "HomeFeatureTests"
       }
     }
   ],

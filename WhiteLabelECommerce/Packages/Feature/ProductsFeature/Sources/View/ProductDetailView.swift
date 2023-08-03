@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
+import Mock
 import NotoriousComponentsKit
 import SwiftUI
 
@@ -27,7 +28,7 @@ struct ProductDetailView: View {
           VStack(alignment: .leading) {
             GeometryReader { geometry in
               CarouselView(numberOfImages: viewModel.product.imagesURL.count) {
-                ForEach(viewModel.product.imagesURL, id: \.absoluteString) { url in
+                ForEach(viewModel.product.imagesURL.compactMap { URL(string: $0) }, id: \.absoluteString) { url in
                   PrettyImage(url: url)
                     .padding(.horizontal, 16)
                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -83,26 +84,7 @@ struct ProductDetailView_Previews: PreviewProvider {
   static var previews: some View {
     ProductDetailView(
       ProductDetailViewModel(
-        product: ProductViewItem(
-          id: 1,
-          title: "Title",
-          price: 12_222.99,
-          category: .init(
-            id: 1,
-            name: "Category",
-            imageURL: URL(string: "https://picsum.photos/640/640?r=2738")
-          ),
-          description: """
-                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                     """,
-          imagesURL: [
-            URL(string: "https://picsum.photos/640/640?r=2738")!,
-            URL(string: "https://picsum.photos/640/640?r=2738")!,
-            URL(string: "https://picsum.photos/640/640?r=2738")!
-          ]
-        )
+        product: Mocks.product
       )
     )
   }

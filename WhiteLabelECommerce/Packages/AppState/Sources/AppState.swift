@@ -1,16 +1,25 @@
+import Backend
+
 public struct AppState: Equatable {
   public var auth = AuthState()
   public var user = UserData()
-  public var routing = ViewRouting()
+  public var shopCart = ShopCart()
   public var system = System()
 
   public init() {}
 
   public static func == (lhs: Self, rhs: Self) -> Bool {
     return lhs.auth == rhs.auth &&
-    lhs.routing == rhs.routing &&
+    lhs.shopCart == rhs.shopCart &&
     lhs.system == rhs.system &&
     lhs.user == rhs.user
+  }
+}
+
+public extension AppState {
+  struct ShopCart: Equatable {
+    // TODO: - inject this dependencies and user info.
+    public var cart = Cart(userId: 1, date: .now, products: [])
   }
 }
 

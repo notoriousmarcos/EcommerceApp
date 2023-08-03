@@ -19,12 +19,9 @@ let package = Package(
     .package(path: "../AppState"),
     .package(path: "../NotoriousComponentsKit"),
     .package(path: "../Feature/HomeFeature"),
-    .package(path: "../Feature/LoginFeature"),
     .package(path: "../Feature/ProductsFeature"),
-    .package(path: "../Feature/RegistrationFeature"),
     .package(path: "../Feature/RootFeature"),
-    .package(path: "../Feature/TabBarFeature"),
-    .package(path: "../Feature/WelcomeFeature")
+    .package(path: "../Feature/TabBarFeature")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -35,12 +32,9 @@ let package = Package(
         "AppState",
         "NotoriousComponentsKit",
         "HomeFeature",
-        "LoginFeature",
         "ProductsFeature",
-        "RegistrationFeature",
         "RootFeature",
-        "TabBarFeature",
-        "WelcomeFeature"
+        "TabBarFeature"
       ],
       path: "Sources"
     ),
