@@ -8,7 +8,7 @@
 import Backend
 import Foundation
 
-public class CartViewData: ObservableObject {
+class CartViewData: ObservableObject {
   var id: Int?
   var userId: Int
   var date: Date
@@ -24,7 +24,7 @@ public class CartViewData: ObservableObject {
   deinit { }
 }
 
-public class CartItemData: ObservableObject {
+class CartItemData: ObservableObject {
   var product: Product
   var quantity: Int
 
