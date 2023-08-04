@@ -12,14 +12,17 @@ import Combine
 public class CartService {
   let getProductUseCase: GetProductUseCase
   let addProductHandler: ((Product) -> Void)?
+  let updateProductHandler: ((Product, Int) -> Void)?
   let removeProductHandler: ((Product) -> Void)?
 
   public init(
     addProductHandler: ((Product) -> Void)?,
+    updateProductHandler: ((Product, Int) -> Void)?,
     removeProductHandler: ((Product) -> Void)?,
     getProductUseCase: GetProductUseCase
   ) {
     self.addProductHandler = addProductHandler
+    self.updateProductHandler = updateProductHandler
     self.removeProductHandler = removeProductHandler
     self.getProductUseCase = getProductUseCase
   }
@@ -46,12 +49,16 @@ public class CartService {
       .eraseToAnyPublisher()
   }
 
-  public func addProduct(_ product: Product) {
-    addProductHandler?(product)
+  func addProduct(_ item: CartItemData) {
+    addProductHandler?(item.product)
   }
 
-  public func removeProduct(_ product: Product) {
-    removeProductHandler?(product)
+  func updateProduct(_ item: CartItemData, quantity: Int) {
+    updateProductHandler?(item.product, quantity)
+  }
+
+  func removeProduct(_ item: CartItemData) {
+    removeProductHandler?(item.product)
   }
 }
 

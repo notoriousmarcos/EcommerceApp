@@ -12,10 +12,13 @@ import Mock
 import AppState
 
 public class CartViewModel: ObservableObject {
-  @Published var cart: Cart
+  @Published var cart = Cart(userId: 1, date: .now, products: []) {
+    didSet {
+      reload()
+    }
+  }
   @Published var items: [CartItemData] = []
   private var cartService: CartService
-  private var appState: Store<AppState>
 
   /// A set of `AnyCancellable` objects used to store Combine publishers. These publishers are
   /// canceled automatically when the `CartViewModel` instance is deallocated,
@@ -24,32 +27,29 @@ public class CartViewModel: ObservableObject {
 
   public init(cartService: CartService, appState: Store<AppState>) {
     self.cartService = cartService
-    self.cart = appState.value.shopCart.cart
-    self.appState = appState
-  }
-
-  func onAppear() {
     appState.map(\.shopCart.cart)
       .removeDuplicates()
       .assign(to: \.cart, on: self)
       .store(in: &cancellables)
+  }
 
+  func reload() {
     cartService.getCartItems(cart)
       .sink { res in
         // TODO: - Deal with errors
       } receiveValue: { [weak self] items in
-        self?.items = items
+        self?.items = items.sorted { $0.product.title > $1.product.title }
       }
       .store(in: &cancellables)
-
   }
 
   func decreaseOrRemoveQuantityFor(_ item: CartItemData) {
-    cartService.addProduct(item.product)
+    item.quantity > 1 ? cartService.updateProduct(item, quantity: item.quantity - 1) :
+                        cartService.removeProduct(item)
   }
 
   func increaseQuantityFor(_ item: CartItemData) {
-//    cart.products[getItemIndex(item)].quantity += 1
+    cartService.addProduct(item)
   }
 
   deinit { }

@@ -10,7 +10,7 @@ import NotoriousComponentsKit
 import SwiftUI
 
 struct CartListRow: View {
-  @State var item: CartItemData
+  @Binding var item: CartItemData
   var minusAction: ((CartItemData) -> Void)?
   var plusAction: ((CartItemData) -> Void)?
 
@@ -67,7 +67,7 @@ struct CartListRow_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       CartListRow(
-        item: item,
+        item: .constant(item),
         minusAction: { _ in
           item.quantity -= 1
           print("finded \(item.quantity)")
@@ -78,7 +78,7 @@ struct CartListRow_Previews: PreviewProvider {
         }
       )
       CartListRow(
-        item: item,
+        item: .constant(item),
         minusAction: { _ in
           item.quantity -= 1
           print("finded \(item.quantity)")
@@ -90,7 +90,7 @@ struct CartListRow_Previews: PreviewProvider {
       )
       .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
       CartListRow(
-        item: item,
+        item: .constant(item),
         minusAction: { _ in
           item.quantity -= 1
           print("finded \(item.quantity)")

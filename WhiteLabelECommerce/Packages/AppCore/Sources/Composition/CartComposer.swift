@@ -34,7 +34,22 @@ extension CompositionRoot {
               break
           }
         }
-    },
+      }, updateProductHandler: { product, quantity in
+        updateProductToCartUseCase.execute(
+          product,
+          withQuantity: quantity,
+          inCart: appState.value.shopCart.cart
+        ) { result in
+          switch result {
+            case .success(let cart):
+              appState.bulkUpdate { state in
+                state.shopCart.cart = cart
+              }
+            case .failure:
+              break
+          }
+        }
+      },
       removeProductHandler: { product in
         removeProductToCartUseCase.execute(product, inCart: appState.value.shopCart.cart) { result in
           switch result {
@@ -53,6 +68,10 @@ extension CompositionRoot {
 
   static var addProductToCartUseCase: AddProductToCartUseCase {
     LocalAddProductToCartUseCase()
+  }
+
+  static var updateProductToCartUseCase: UpdateProductInCartUseCase {
+    LocalUpdateProductInCartUseCase()
   }
 
   static var removeProductToCartUseCase: RemoveProductInCartUseCase {

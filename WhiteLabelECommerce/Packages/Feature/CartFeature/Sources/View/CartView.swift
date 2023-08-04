@@ -21,15 +21,11 @@ public struct CartView: View {
     ZStack {
       List(viewModel.items, id: \.product.id) { item in
         CartListRow(
-          item: item,
+          item: $viewModel.items[getIndex(item)],
           minusAction: { _ in
-            // TODO: - action
-            print("Minus action")
             viewModel.decreaseOrRemoveQuantityFor(item)
           },
           plusAction: { _ in
-            // TODO: - action
-            print("Plus action")
             viewModel.increaseQuantityFor(item)
           }
         )
@@ -38,8 +34,12 @@ public struct CartView: View {
       .navigationTitle("My Cart")
     }
     .onAppear {
-      viewModel.onAppear()
+      viewModel.reload()
     }
+  }
+
+  func getIndex(_ item: CartItemData) -> Int {
+    viewModel.items.firstIndex { $0.product.id == item.product.id } ?? 0
   }
 }
 
