@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
-import CartFeature
 import Backend
+import CartFeature
 import SwiftUI
 
 // MARK: - CartComposer
@@ -18,11 +18,15 @@ extension CompositionRoot {
   }
 
   private static var viewModel: CartViewModel {
-    CartViewModel(cartService: cartService, appState: appState)
+    CartViewModel(
+      cartService: cartService,
+      appState: appState,
+      getProductUseCase: getProductUseCase
+    )
   }
 
-  private static var cartService: CartService {
-    CartService(
+  static var cartService: CartService {
+    DefaultCartService(
       addProductHandler: { product in
         addProductToCartUseCase.execute(product, toCart: appState.value.shopCart.cart) { result in
           switch result {
@@ -61,8 +65,7 @@ extension CompositionRoot {
               break
           }
         }
-    },
-      getProductUseCase: getProductUseCase
+      }
     )
   }
 

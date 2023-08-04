@@ -6,6 +6,7 @@
 //
 
 import Backend
+import CartFeature
 import Combine
 import Foundation
 
@@ -91,7 +92,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   // MARK: - Public Methods
 
   public func addToCart(_ product: Product) {
-    cartService.addToCart(product)
+    cartService.addProduct(product)
   }
 
   /// Initiates the process of fetching products.

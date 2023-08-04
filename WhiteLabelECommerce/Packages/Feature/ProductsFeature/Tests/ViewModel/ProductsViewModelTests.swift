@@ -6,6 +6,7 @@
 //
 
 import Backend
+import CartFeature
 import Combine
 import Mock
 @testable import ProductsFeature
@@ -470,9 +471,10 @@ final class ProductsViewModelTests: XCTestCase {
 
   private class MockCartService: CartService {
     var addToCartParamsClosure: ((Product) -> Void)?
-
-    func addToCart(_ product: Product) {
+    func addProduct(_ product: Product) {
       addToCartParamsClosure?(product)
     }
+    func updateProduct(_ product: Product, quantity: Int) {  }
+    func removeProduct(_ product: Product) { }
   }
 }

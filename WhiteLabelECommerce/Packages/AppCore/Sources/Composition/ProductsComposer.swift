@@ -49,19 +49,4 @@ extension CompositionRoot {
   private static var remoteGetProductsClient: GetProductsClient {
     RemoteGetProductsClient(client: CompositionRoot.httpClient)
   }
-
-  private static var cartService: CartService {
-    DefaultCartService { product in
-      addProductToCartUseCase.execute(product, toCart: appState.value.shopCart.cart) { result in
-        switch result {
-          case .success(let cart):
-            appState.bulkUpdate { state in
-              state.shopCart.cart = cart
-            }
-          case .failure:
-            break
-        }
-      }
-    }
-  }
 }
