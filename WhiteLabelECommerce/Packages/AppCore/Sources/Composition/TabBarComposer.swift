@@ -19,7 +19,10 @@ extension CompositionRoot {
   }
 
   private static var providers: [TabViewProvider] {
-    [homeTabProvider]
+    [
+      homeTabProvider,
+      myCartTabProvider
+    ]
   }
 
   static var homeTabProvider: TabViewProvider {
@@ -27,6 +30,14 @@ extension CompositionRoot {
       systemImageName: "house.fill",
       tabName: "Home",
       viewProvider: { homeView }
+    )
+  }
+
+  static var myCartTabProvider: TabViewProvider {
+    TabViewProvider(
+      systemImageName: "cart.fill",
+      tabName: "My Cart",
+      viewProvider: { cartView }
     )
   }
 }

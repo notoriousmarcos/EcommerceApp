@@ -19,7 +19,7 @@ public struct Mocks {
       imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
     ),
     description: "Product description",
-    imagesURL: ["https://imageurl"]
+    imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
   )
   public static let products = [
     Product(
@@ -32,7 +32,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 2,
@@ -44,7 +44,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 3,
@@ -56,7 +56,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 4,
@@ -68,7 +68,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 5,
@@ -80,7 +80,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 6,
@@ -92,7 +92,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     ),
     Product(
       id: 7,
@@ -104,7 +104,7 @@ public struct Mocks {
         imageURL: "https://placeimg.com/640/480/any?r=0.591926261873231"
       ),
       description: "Product description",
-      imagesURL: ["https://imageurl"]
+      imagesURL: ["https://placeimg.com/640/480/any?r=0.9178516507833767"]
     )
   ]
 

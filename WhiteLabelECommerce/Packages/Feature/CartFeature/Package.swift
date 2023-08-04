@@ -18,6 +18,7 @@ let package = Package(
   dependencies: [
     .package(path: "../../Backend"),
     .package(path: "../../NotoriousComponentsKit"),
+    .package(path: "../../AppState"),
     .package(path: "../../Mock")
   ],
   targets: [
@@ -27,7 +28,9 @@ let package = Package(
       name: "CartFeature",
       dependencies: [
         "Backend",
-        "NotoriousComponentsKit"
+        "NotoriousComponentsKit",
+        "AppState",
+        "Mock"
       ],
       path: "Sources"
     ),

@@ -19,6 +19,7 @@ let package = Package(
     .package(path: "../AppState"),
     .package(path: "../NotoriousComponentsKit"),
     .package(path: "../Feature/HomeFeature"),
+    .package(path: "../Feature/CartFeature"),
     .package(path: "../Feature/ProductsFeature"),
     .package(path: "../Feature/RootFeature"),
     .package(path: "../Feature/TabBarFeature")
@@ -32,6 +33,7 @@ let package = Package(
         "AppState",
         "NotoriousComponentsKit",
         "HomeFeature",
+        "CartFeature",
         "ProductsFeature",
         "RootFeature",
         "TabBarFeature"

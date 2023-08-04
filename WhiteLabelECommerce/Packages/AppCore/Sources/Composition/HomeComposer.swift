@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 03/08/23.
 //
 
-import SwiftUI
 import HomeFeature
+import SwiftUI
 
 // MARK: - HomeComposer
 extension CompositionRoot {

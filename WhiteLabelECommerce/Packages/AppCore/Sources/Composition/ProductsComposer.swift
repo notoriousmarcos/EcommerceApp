@@ -5,10 +5,10 @@
 //  Created by Marcos Vinicius Brito on 03/08/23.
 //
 
-import SwiftUI
-import ProductsFeature
-import Backend
 import AppState
+import Backend
+import ProductsFeature
+import SwiftUI
 
 // MARK: - ProductsComposer
 extension CompositionRoot {
@@ -24,6 +24,10 @@ extension CompositionRoot {
     )
   }
 
+  static var getProductUseCase: GetProductUseCase {
+    RemoteGetProductUseCase(client: remoteGetProductClient)
+  }
+
   private static var productsViewModel: ProductsViewModel {
     let viewModel = ProductsViewModel(productsService: productsService, cartService: cartService, pageLimit: 15)
     viewModel.title = "Products"
@@ -36,6 +40,10 @@ extension CompositionRoot {
 
   private static var getProductsUseCase: GetProductsUseCase {
     RemoteGetProductsUseCase(client: remoteGetProductsClient)
+  }
+
+  private static var remoteGetProductClient: GetProductClient {
+    RemoteGetProductClient(client: CompositionRoot.httpClient)
   }
 
   private static var remoteGetProductsClient: GetProductsClient {
@@ -55,9 +63,5 @@ extension CompositionRoot {
         }
       }
     }
-  }
-
-  private static var addProductToCartUseCase: AddProductToCartUseCase {
-    LocalAddProductToCartUseCase()
   }
 }
