@@ -8,7 +8,7 @@
 import SwiftUI
 
 import AppState
-import Backend
+import ShopCore
 import HomeFeature
 import ProductsFeature
 import RootFeature

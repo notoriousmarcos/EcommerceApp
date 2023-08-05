@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 24/07/23.
 //
 
-import Backend
+import ShopCore
 import Combine
 import Mock
 @testable import ProductsFeature

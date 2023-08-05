@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
-import Backend
+import ShopCore
 import Mock
 import NotoriousComponentsKit
 import SwiftUI

@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
-@testable import Backend
+@testable import ShopCore
 import Foundation
 
 extension Request {

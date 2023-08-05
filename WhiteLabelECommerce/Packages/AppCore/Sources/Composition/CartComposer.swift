@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
-import Backend
+import ShopCore
 import CartFeature
 import SwiftUI
 
@@ -67,17 +67,5 @@ extension CompositionRoot {
         }
       }
     )
-  }
-
-  static var addProductToCartUseCase: AddProductToCartUseCase {
-    LocalAddProductToCartUseCase()
-  }
-
-  static var updateProductToCartUseCase: UpdateProductInCartUseCase {
-    LocalUpdateProductInCartUseCase()
-  }
-
-  static var removeProductToCartUseCase: RemoveProductInCartUseCase {
-    LocalRemoveProductInCartUseCase()
   }
 }

@@ -12,7 +12,6 @@
 		5C4727EAF6C0285EE6D6B537 /* Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6518F178CF11F79F3A9B504B /* Pods_WhiteLabelECommerce__macOS__WhiteLabelECommerceTests_mac_.framework */; };
 		852BCCFAA351D2E9CE327B84 /* Pods_WhiteLabelECommerce__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC852A170BF3629947648663 /* Pods_WhiteLabelECommerce__macOS_.framework */; };
 		B71BAC8B2A76AD770059E2B9 /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = B71BAC8A2A76AD770059E2B9 /* AppCore */; };
-		B71BAC8D2A76AD770059E2B9 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = B71BAC8C2A76AD770059E2B9 /* Backend */; };
 		B72080942A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
 		B72080952A54B9D8005D237B /* UinitTest (iOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080922A54B9D8005D237B /* UinitTest (iOS).xctestplan */; };
 		B72080962A54B9D8005D237B /* UnitTest (macOS).xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B72080932A54B9D8005D237B /* UnitTest (macOS).xctestplan */; };
@@ -20,7 +19,8 @@
 		B74A8C9C27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */; };
 		B74A8C9D27BEB5B2002F41CD /* WhiteLabelECommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A8C7127BEB5B1002F41CD /* WhiteLabelECommerceApp.swift */; };
 		B776C63F2A74502000EBEF0B /* AppCore in Frameworks */ = {isa = PBXBuildFile; productRef = B776C63E2A74502000EBEF0B /* AppCore */; };
-		B7CC98AA2A686DEA0009EAF4 /* Backend in Frameworks */ = {isa = PBXBuildFile; productRef = B7CC98A92A686DEA0009EAF4 /* Backend */; };
+		B79AF48F2A7EAB9900CFDE3B /* ShopCore in Frameworks */ = {isa = PBXBuildFile; productRef = B79AF48E2A7EAB9900CFDE3B /* ShopCore */; };
+		B79AF4912A7EABA200CFDE3B /* ShopCore in Frameworks */ = {isa = PBXBuildFile; productRef = B79AF4902A7EABA200CFDE3B /* ShopCore */; };
 		B7CC98AE2A6870380009EAF4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC98AD2A6870380009EAF4 /* Mocks.swift */; };
 		B7CC98AF2A6870380009EAF4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC98AD2A6870380009EAF4 /* Mocks.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +86,7 @@
 		B74A8CEB27BEC80C002F41CD /* WhiteLabelECommerceTests(mac).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhiteLabelECommerceTests(mac).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74E31AE2A7980DE00FE8FFA /* HomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeFeature; path = Packages/Feature/HomeFeature; sourceTree = SOURCE_ROOT; };
 		B776C63D2A744FE800EBEF0B /* AppState */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppState; sourceTree = "<group>"; };
-		B7CC977A2A6847990009EAF4 /* Backend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Backend; sourceTree = "<group>"; };
+		B7CC977A2A6847990009EAF4 /* ShopCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ShopCore; sourceTree = "<group>"; };
 		B7CC98AD2A6870380009EAF4 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		B7D3A9EB2A74418E009D5F76 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppCore; sourceTree = "<group>"; };
 		B7F87F182A7C001D002FC379 /* CartFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CartFeature; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E707A6DC2A8EA278EACFE99 /* Pods_WhiteLabelECommerce__iOS_.framework in Frameworks */,
+				B79AF48F2A7EAB9900CFDE3B /* ShopCore in Frameworks */,
 				B776C63F2A74502000EBEF0B /* AppCore in Frameworks */,
-				B7CC98AA2A686DEA0009EAF4 /* Backend in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B71BAC8D2A76AD770059E2B9 /* Backend in Frameworks */,
 				852BCCFAA351D2E9CE327B84 /* Pods_WhiteLabelECommerce__macOS_.framework in Frameworks */,
+				B79AF4912A7EABA200CFDE3B /* ShopCore in Frameworks */,
 				B71BAC8B2A76AD770059E2B9 /* AppCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +241,7 @@
 				B776C63D2A744FE800EBEF0B /* AppState */,
 				B7D3A9EB2A74418E009D5F76 /* AppCore */,
 				B722C51F2A6AEB8800703D9D /* Mock */,
-				B7CC977A2A6847990009EAF4 /* Backend */,
+				B7CC977A2A6847990009EAF4 /* ShopCore */,
 				B70F69A22A768992005E094F /* NotoriousComponentsKit */,
 			);
 			path = Packages;
@@ -324,8 +324,8 @@
 			);
 			name = "WhiteLabelECommerce (iOS)";
 			packageProductDependencies = (
-				B7CC98A92A686DEA0009EAF4 /* Backend */,
 				B776C63E2A74502000EBEF0B /* AppCore */,
+				B79AF48E2A7EAB9900CFDE3B /* ShopCore */,
 			);
 			productName = "WhiteLabelECommerce (iOS)";
 			productReference = B74A8C7927BEB5B2002F41CD /* WhiteLabelECommerce.app */;
@@ -348,7 +348,7 @@
 			name = "WhiteLabelECommerce (macOS)";
 			packageProductDependencies = (
 				B71BAC8A2A76AD770059E2B9 /* AppCore */,
-				B71BAC8C2A76AD770059E2B9 /* Backend */,
+				B79AF4902A7EABA200CFDE3B /* ShopCore */,
 			);
 			productName = "WhiteLabelECommerce (macOS)";
 			productReference = B74A8C7F27BEB5B2002F41CD /* WhiteLabelECommerce.app */;
@@ -1441,17 +1441,17 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCore;
 		};
-		B71BAC8C2A76AD770059E2B9 /* Backend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Backend;
-		};
 		B776C63E2A74502000EBEF0B /* AppCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppCore;
 		};
-		B7CC98A92A686DEA0009EAF4 /* Backend */ = {
+		B79AF48E2A7EAB9900CFDE3B /* ShopCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Backend;
+			productName = ShopCore;
+		};
+		B79AF4902A7EABA200CFDE3B /* ShopCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ShopCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

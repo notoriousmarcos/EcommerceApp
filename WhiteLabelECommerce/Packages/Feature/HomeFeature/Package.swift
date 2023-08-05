@@ -16,7 +16,7 @@ let package = Package(
       targets: ["HomeFeature"])
   ],
   dependencies: [
-    .package(path: "../../Backend"),
+    .package(path: "../../ShopCore"),
     .package(path: "../../NotoriousComponentsKit"),
     .package(path: "../../Mock")
   ],
@@ -26,7 +26,7 @@ let package = Package(
     .target(
       name: "HomeFeature",
       dependencies: [
-        "Backend",
+        "ShopCore",
         "NotoriousComponentsKit"
       ],
       path: "Sources"

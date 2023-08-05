@@ -6,7 +6,7 @@
 //
 
 import AppState
-import Backend
+import ShopCore
 import ProductsFeature
 import SwiftUI
 

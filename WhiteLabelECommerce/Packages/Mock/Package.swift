@@ -16,7 +16,7 @@ let package = Package(
       targets: ["Mock"])
   ],
   dependencies: [
-    .package(path: "../Backend")
+    .package(path: "../ShopCore")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,7 +24,7 @@ let package = Package(
     .target(
       name: "Mock",
       dependencies: [
-        "Backend"
+        "ShopCore"
       ],
       path: "Sources"
     )

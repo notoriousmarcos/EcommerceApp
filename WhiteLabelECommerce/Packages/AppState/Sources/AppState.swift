@@ -1,4 +1,4 @@
-import Backend
+import ShopCore
 
 public struct AppState: Equatable {
   public var auth = AuthState()

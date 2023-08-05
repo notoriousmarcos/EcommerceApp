@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 03/08/23.
 //
 
-import Backend
+import ShopCore
 import Foundation
 
 // MARK: - InfraComposr

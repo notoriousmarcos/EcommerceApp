@@ -20,22 +20,6 @@
       }
     },
     {
-      "skippedTests" : [
-        "RemoteAuthenticationIntegrationTests",
-        "RemoteCreateCartIntegrationTests",
-        "RemoteGetCurrentCartIntegrationTests",
-        "RemoteGetProductIntegrationTests",
-        "RemoteGetProductsIntegrationTests",
-        "RemoteGetUserIntegrationTests",
-        "RemoteUpdateCartIntegrationTests"
-      ],
-      "target" : {
-        "containerPath" : "container:Packages\/Backend",
-        "identifier" : "BackendTests",
-        "name" : "BackendTests"
-      }
-    },
-    {
       "target" : {
         "containerPath" : "container:Packages\/AppCore",
         "identifier" : "AppCoreTests",
@@ -47,13 +31,6 @@
         "containerPath" : "container:Packages\/AppState",
         "identifier" : "AppStateTests",
         "name" : "AppStateTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Packages\/Feature\/LoginFeature",
-        "identifier" : "LoginFeatureTests",
-        "name" : "LoginFeatureTests"
       }
     },
     {
@@ -72,13 +49,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/RegistrationFeature",
-        "identifier" : "RegistrationFeatureTests",
-        "name" : "RegistrationFeatureTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:Packages\/Feature\/RootFeature",
         "identifier" : "RootFeatureTests",
         "name" : "RootFeatureTests"
@@ -93,9 +63,23 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/WelcomeFeature",
-        "identifier" : "WelcomeFeatureTests",
-        "name" : "WelcomeFeatureTests"
+        "containerPath" : "container:Packages\/Feature\/CartFeature",
+        "identifier" : "CartFeatureTests",
+        "name" : "CartFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/HomeFeature",
+        "identifier" : "HomeFeatureTests",
+        "name" : "HomeFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/ShopCore",
+        "identifier" : "ShopCoreTests",
+        "name" : "ShopCoreTests"
       }
     }
   ],

@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
-import Backend
+import ShopCore
 import Combine
 import Foundation
 

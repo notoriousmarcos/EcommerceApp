@@ -20,22 +20,6 @@
       }
     },
     {
-      "skippedTests" : [
-        "RemoteAuthenticationIntegrationTests",
-        "RemoteCreateCartIntegrationTests",
-        "RemoteGetCurrentCartIntegrationTests",
-        "RemoteGetProductIntegrationTests",
-        "RemoteGetProductsIntegrationTests",
-        "RemoteGetUserIntegrationTests",
-        "RemoteUpdateCartIntegrationTests"
-      ],
-      "target" : {
-        "containerPath" : "container:Packages\/Backend",
-        "identifier" : "BackendTests",
-        "name" : "BackendTests"
-      }
-    },
-    {
       "target" : {
         "containerPath" : "container:Packages\/AppCore",
         "identifier" : "AppCoreTests",
@@ -65,6 +49,20 @@
     },
     {
       "target" : {
+        "containerPath" : "container:Packages\/Feature\/HomeFeature",
+        "identifier" : "HomeFeatureTests",
+        "name" : "HomeFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/CartFeature",
+        "identifier" : "CartFeatureTests",
+        "name" : "CartFeatureTests"
+      }
+    },
+    {
+      "target" : {
         "containerPath" : "container:Packages\/Feature\/RootFeature",
         "identifier" : "RootFeatureTests",
         "name" : "RootFeatureTests"
@@ -72,16 +70,16 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/TabBarFeature",
-        "identifier" : "TabBarFeatureTests",
-        "name" : "TabBarFeatureTests"
+        "containerPath" : "container:Packages\/ShopCore",
+        "identifier" : "ShopCoreTests",
+        "name" : "ShopCoreTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/Feature\/HomeFeature",
-        "identifier" : "HomeFeatureTests",
-        "name" : "HomeFeatureTests"
+        "containerPath" : "container:Packages\/Feature\/TabBarFeature",
+        "identifier" : "TabBarFeatureTests",
+        "name" : "TabBarFeatureTests"
       }
     }
   ],

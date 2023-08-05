@@ -17,7 +17,7 @@ let package = Package(
   ],
   dependencies: [
     .package(path: "../CartFeature"),
-    .package(path: "../../Backend"),
+    .package(path: "../../ShopCore"),
     .package(path: "../../NotoriousComponentsKit"),
     .package(path: "../../Mock")
   ],
@@ -28,7 +28,7 @@ let package = Package(
       name: "ProductsFeature",
       dependencies: [
         "CartFeature",
-        "Backend",
+        "ShopCore",
         "NotoriousComponentsKit",
         "Mock"
       ],
@@ -36,7 +36,7 @@ let package = Package(
     ),
     .testTarget(
       name: "ProductsFeatureTests",
-      dependencies: ["ProductsFeature", "Backend", "Mock"],
+      dependencies: ["ProductsFeature", "ShopCore", "Mock"],
       path: "Tests"
     )
   ],

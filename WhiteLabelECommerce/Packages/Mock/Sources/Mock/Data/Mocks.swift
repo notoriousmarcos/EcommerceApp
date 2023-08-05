@@ -5,7 +5,7 @@
 //  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
-import Backend
+import ShopCore
 import Foundation
 
 public struct Mocks {
