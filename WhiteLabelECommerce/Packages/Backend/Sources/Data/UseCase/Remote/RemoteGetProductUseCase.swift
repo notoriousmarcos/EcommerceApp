@@ -11,14 +11,14 @@ public protocol GetProductClient {
   func dispatch(productId id: Int, _ completion: @escaping ResultCompletionHandler<Product, DomainError>)
 }
 
-public class RemoteGetProductUseCase: GetProductUseCase {
+class RemoteGetProductUseCase: GetProductUseCase {
   let client: GetProductClient
 
-  public init(client: GetProductClient) {
+  init(client: GetProductClient) {
     self.client = client
   }
 
-  public func execute(id: Int, completion: @escaping CompletionHandler) {
+  func execute(id: Int, completion: @escaping CompletionHandler) {
     client.dispatch(productId: id) { result in
       completion(result)
     }

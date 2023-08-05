@@ -7,10 +7,8 @@
 
 import Foundation
 
-public struct LocalRemoveProductInCartUseCase: RemoveProductInCartUseCase {
-  public init() { }
-
-  public func execute(_ product: Product, inCart cart: Cart, completion: @escaping CompletionHandler) {
+struct LocalRemoveProductInCartUseCase: RemoveProductInCartUseCase {
+  func execute(_ product: Product, inCart cart: Cart, completion: @escaping CompletionHandler) {
     var products = cart.products
     products.removeAll(where: { $0.productId == product.id })
     completion(

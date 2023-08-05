@@ -14,14 +14,14 @@ public protocol AuthenticationClient {
   )
 }
 
-public class RemoteAuthenticationUseCase: AuthenticationUseCase {
+class RemoteAuthenticationUseCase: AuthenticationUseCase {
   let client: AuthenticationClient
 
-  public init(client: AuthenticationClient) {
+  init(client: AuthenticationClient) {
     self.client = client
   }
 
-  public func execute(
+  func execute(
     authenticationModel: AuthenticationModel,
     completion: @escaping CompletionHandler
   ) {

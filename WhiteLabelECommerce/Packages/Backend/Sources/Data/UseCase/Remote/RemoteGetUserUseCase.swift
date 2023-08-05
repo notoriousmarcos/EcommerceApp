@@ -14,14 +14,14 @@ public protocol GetUserClient {
   )
 }
 
-public class RemoteGetUserUseCase: GetUserUseCase {
+class RemoteGetUserUseCase: GetUserUseCase {
   let client: GetUserClient
 
-  public init(client: GetUserClient) {
+  init(client: GetUserClient) {
     self.client = client
   }
 
-  public func execute(
+  func execute(
     userId: Int,
     completion: @escaping CompletionHandler
   ) {

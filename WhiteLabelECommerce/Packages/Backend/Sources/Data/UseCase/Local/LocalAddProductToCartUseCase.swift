@@ -7,10 +7,8 @@
 
 import Foundation
 
-public struct LocalAddProductToCartUseCase: AddProductToCartUseCase {
-  public init() { }
-
-  public func execute(_ product: Product, toCart cart: Cart, completion: @escaping CompletionHandler) {
+struct LocalAddProductToCartUseCase: AddProductToCartUseCase {
+  func execute(_ product: Product, toCart cart: Cart, completion: @escaping CompletionHandler) {
     var products = cart.products
     guard let itemIndex = products.firstIndex(where: { $0.productId == product.id }) else {
       let cartItem = CartItem(productId: product.id, quantity: 1)

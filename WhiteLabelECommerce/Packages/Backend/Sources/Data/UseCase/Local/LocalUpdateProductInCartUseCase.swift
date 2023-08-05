@@ -7,10 +7,8 @@
 
 import Foundation
 
-public struct LocalUpdateProductInCartUseCase: UpdateProductInCartUseCase {
-  public init() { }
-
-  public func execute(
+struct LocalUpdateProductInCartUseCase: UpdateProductInCartUseCase {
+  func execute(
     _ product: Product,
     withQuantity quantity: Int,
     inCart cart: Cart,

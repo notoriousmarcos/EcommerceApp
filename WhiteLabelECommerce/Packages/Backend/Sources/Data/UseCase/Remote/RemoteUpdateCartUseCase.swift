@@ -11,14 +11,14 @@ public protocol UpdateCartClient {
   func dispatch(updateCart cart: Cart, _ completion: @escaping ResultCompletionHandler<Cart, DomainError>)
 }
 
-public class RemoteUpdateCartUseCase: UpdateCartUseCase {
+class RemoteUpdateCartUseCase: UpdateCartUseCase {
   let client: UpdateCartClient
 
-  public init(client: UpdateCartClient) {
+  init(client: UpdateCartClient) {
     self.client = client
   }
 
-  public func execute(
+  func execute(
     cart: Cart,
     completion: @escaping CompletionHandler
   ) {
