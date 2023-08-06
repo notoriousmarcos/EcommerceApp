@@ -33,6 +33,8 @@ public protocol CartViewModel: ObservableObject {
   // This method does not directly update the `cart` property.
   // Instead, it calls the cart service method to perform the necessary update on the cart.
   func increaseQuantityFor(_ item: CartItemData)
+
+  func removeProductFor(_ index: IndexSet)
 }
 
 public class DefaultCartViewModel: CartViewModel {
@@ -105,6 +107,11 @@ public class DefaultCartViewModel: CartViewModel {
     }
   }
 
+  public func removeProductFor(_ index: IndexSet) {
+    guard let index = index.first else { return }
+    cartService.removeProduct(items[index].product, cart: cart)
+  }
+
   // Method to increase the quantity of a cart item.
   // This method increases the quantity of the given cart item by 1.
   // This method does not directly update the `cart` property.
@@ -147,7 +154,6 @@ public class DefaultCartViewModel: CartViewModel {
   // Method to reload the cart items.
   // It fetches the cart items for the current `cart` and updates the `items` property accordingly.
   private func reloadCartItems() {
-    print(cart.products.count)
     getCartItems(cart)
       .sink(receiveCompletion: { completion in
         switch completion {

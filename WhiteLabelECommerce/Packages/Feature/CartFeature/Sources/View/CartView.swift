@@ -20,16 +20,21 @@ public struct CartView<ViewModel: ObservableObject & CartViewModel>: View {
 
   public var body: some View {
     ZStack {
-      List(viewModel.items, id: \.product.id) { item in
-        CartListRow(
-          item: $viewModel.items[getIndex(item)],
-          minusAction: { item in
-            viewModel.decreaseOrRemoveQuantityFor(item)
-          },
-          plusAction: { item in
-            viewModel.increaseQuantityFor(item)
-          }
-        )
+      List {
+        ForEach(viewModel.items, id: \.product.id) { item in
+          CartListRow(
+            item: $viewModel.items[getIndex(item)],
+            minusAction: { item in
+              viewModel.decreaseOrRemoveQuantityFor(item)
+            },
+            plusAction: { item in
+              viewModel.increaseQuantityFor(item)
+            }
+          )
+        }
+        .onDelete { index in
+          viewModel.removeProductFor(index)
+        }
       }
       .listStyle(.plain)
       .navigationTitle("My Cart")
@@ -73,5 +78,9 @@ private class MockViewModel: CartViewModel {
   func increaseQuantityFor(_ item: CartItemData) {
     guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
     items[index].quantity += 1
+  }
+
+  func removeProductFor(_ index: IndexSet) {
+    
   }
 }
