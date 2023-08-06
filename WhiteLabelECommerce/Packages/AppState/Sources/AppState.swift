@@ -1,6 +1,8 @@
 import ShopCore
+import SwiftUI
+import Combine
 
-public struct AppState: Equatable {
+public class AppState: Equatable {
   public var auth = AuthState()
   public var user = UserData()
   public var shopCart = ShopCart()
@@ -8,7 +10,7 @@ public struct AppState: Equatable {
 
   public init() {}
 
-  public static func == (lhs: Self, rhs: Self) -> Bool {
+  public static func == (lhs: AppState, rhs: AppState) -> Bool {
     return lhs.auth == rhs.auth &&
     lhs.shopCart == rhs.shopCart &&
     lhs.system == rhs.system &&
@@ -36,7 +38,9 @@ public extension AppState {
 }
 
 public extension AppState {
-  struct ViewRouting: Equatable { }
+  struct ViewRouting: Equatable {
+    
+  }
 }
 
 public extension AppState {

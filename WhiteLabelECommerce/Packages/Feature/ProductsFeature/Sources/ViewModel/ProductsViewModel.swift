@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
+import AppState
 import ShopCore
 import CartFeature
 import Combine
@@ -52,6 +53,8 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
     }
   }
 
+  let container: AppContainer
+
   /// The current offset/index for pagination. It is used to request products from the service with
   /// the appropriate offset.
   private var currentOffset = 0
@@ -80,10 +83,12 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   ///   - productsService: An instance of `ProductsService` used for fetching products.
   ///   - pageLimit: The maximum number of products to fetch in each API call. Default value is 10.
   public init(
+    container: AppContainer,
     productsService: ProductsService,
     cartService: CartService,
     pageLimit: Int = 10
   ) {
+    self.container = container
     self.productsService = productsService
     self.cartService = cartService
     self.pageLimit = pageLimit
@@ -92,7 +97,7 @@ public final class ProductsViewModel: ProductsViewModelProtocol {
   // MARK: - Public Methods
 
   public func addToCart(_ product: Product) {
-    cartService.addProduct(product)
+    cartService.addProduct(product, cart: container.appState.value.shopCart.cart)
   }
 
   /// Initiates the process of fetching products.

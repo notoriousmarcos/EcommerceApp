@@ -9,14 +9,14 @@ import HomeFeature
 import SwiftUI
 
 // MARK: - HomeComposer
-extension CompositionRoot {
-  static var homeView: AnyView {
+extension AppView {
+  var homeView: AnyView {
     AnyView(
-      HomeView(viewModel: viewModel)
+      HomeView(viewModel: homeViewViewModel)
     )
   }
 
-  private static var viewModel: HomeViewViewModel {
-    HomeViewViewModel(searchText: .constant(""), topProductsContentView: { productsGridView })
+  private var homeViewViewModel: HomeViewViewModel {
+    HomeViewViewModel(containter: container, topProductsContentView: { productsGridView })
   }
 }

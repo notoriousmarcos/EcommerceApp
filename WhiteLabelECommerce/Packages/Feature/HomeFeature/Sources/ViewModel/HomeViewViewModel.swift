@@ -5,17 +5,19 @@
 //  Created by Marcos Vinicius Brito on 02/08/23.
 //
 
+import AppState
 import SwiftUI
 
 public class HomeViewViewModel: ObservableObject {
-  let searchText: Binding<String>
+  @Published var searchText: String = ""
+  let containter: AppContainer
   let topProductsContentView: () -> AnyView
 
   public init(
-    searchText: Binding<String>,
+    containter: AppContainer,
     topProductsContentView: @escaping () -> AnyView
   ) {
-    self.searchText = searchText
+    self.containter = containter
     self.topProductsContentView = topProductsContentView
   }
 

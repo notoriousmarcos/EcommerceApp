@@ -9,8 +9,8 @@ import ShopCore
 import Foundation
 
 // MARK: - InfraComposr
-extension CompositionRoot {
-  static var httpClient: HTTPClient {
+extension AppView {
+  var httpClient: HTTPClient {
     NativeHTTPClient()
   }
 }

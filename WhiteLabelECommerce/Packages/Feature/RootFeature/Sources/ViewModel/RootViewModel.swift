@@ -8,8 +8,8 @@ public class RootViewModel: ObservableObject {
 
   private var subscriptions: Set<AnyCancellable> = []
 
-  public init(appState: Store<AppState>) {
-    appState.map(\.auth.isAuthorized)
+  public init(container: AppContainer) {
+    container.appState.map(\.auth.isAuthorized)
       .removeDuplicates()
       .assign(to: \.isAuthorized, on: self)
       .store(in: &subscriptions)

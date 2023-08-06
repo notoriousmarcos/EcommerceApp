@@ -9,8 +9,8 @@ import SwiftUI
 import TabBarFeature
 
 // MARK: - TabBarComposer
-extension CompositionRoot {
-  static var tabBarView: AnyView {
+extension AppView {
+  var tabBarView: AnyView {
     AnyView(
       TabBarView(
         providers: providers
@@ -18,14 +18,14 @@ extension CompositionRoot {
     )
   }
 
-  private static var providers: [TabViewProvider] {
+  private var providers: [TabViewProvider] {
     [
       homeTabProvider,
       myCartTabProvider
     ]
   }
 
-  static var homeTabProvider: TabViewProvider {
+  private var homeTabProvider: TabViewProvider {
     TabViewProvider(
       systemImageName: "house.fill",
       tabName: "Home",
@@ -33,7 +33,7 @@ extension CompositionRoot {
     )
   }
 
-  static var myCartTabProvider: TabViewProvider {
+  private var myCartTabProvider: TabViewProvider {
     TabViewProvider(
       systemImageName: "cart.fill",
       tabName: "My Cart",

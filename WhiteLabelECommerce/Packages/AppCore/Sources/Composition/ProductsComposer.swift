@@ -11,42 +11,39 @@ import ProductsFeature
 import SwiftUI
 
 // MARK: - ProductsComposer
-extension CompositionRoot {
-  static var productsGridView: AnyView {
+extension AppView {
+  var productsGridView: AnyView {
     AnyView(
       ProductsGridView(viewModel: productsViewModel)
     )
   }
 
-  static var productsListView: AnyView {
+  var productsListView: AnyView {
     AnyView(
       ProductsListView(viewModel: productsViewModel)
     )
   }
 
-  static var getProductUseCase: GetProductUseCase {
-    RemoteGetProductUseCase(client: remoteGetProductClient)
-  }
-
-  private static var productsViewModel: ProductsViewModel {
-    let viewModel = ProductsViewModel(productsService: productsService, cartService: cartService, pageLimit: 15)
+  private var productsViewModel: ProductsViewModel {
+    let viewModel = ProductsViewModel(
+      container: container,
+      productsService: productsService,
+      cartService: cartService,
+      pageLimit: 15
+    )
     viewModel.title = "Products"
     return viewModel
   }
 
-  private static var productsService: ShowProductsService {
-    ShowProductsService(fetchProductsUseCase: getProductsUseCase)
+  private var productsService: ShowProductsService {
+    ShowProductsService(fetchProductsUseCase: shopCore.remoteGetProductsUseCase)
   }
 
-  private static var getProductsUseCase: GetProductsUseCase {
-    RemoteGetProductsUseCase(client: remoteGetProductsClient)
+  private var remoteGetProductClient: GetProductClient {
+    RemoteGetProductClient(client: httpClient)
   }
 
-  private static var remoteGetProductClient: GetProductClient {
-    RemoteGetProductClient(client: CompositionRoot.httpClient)
-  }
-
-  private static var remoteGetProductsClient: GetProductsClient {
-    RemoteGetProductsClient(client: CompositionRoot.httpClient)
+  private var remoteGetProductsClient: GetProductsClient {
+    RemoteGetProductsClient(client: httpClient)
   }
 }

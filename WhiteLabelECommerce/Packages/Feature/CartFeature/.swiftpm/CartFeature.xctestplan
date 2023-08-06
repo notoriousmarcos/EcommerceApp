@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "AB36A629-AD9A-4299-A0C3-8548F77D7360",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "CartFeatureTests",
+        "name" : "CartFeatureTests"
+      }
+    }
+  ],
+  "version" : 1
+}

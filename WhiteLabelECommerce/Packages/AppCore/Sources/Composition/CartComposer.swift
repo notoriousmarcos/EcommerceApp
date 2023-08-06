@@ -5,67 +5,32 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
-import ShopCore
 import CartFeature
+import ShopCore
 import SwiftUI
 
 // MARK: - CartComposer
-extension CompositionRoot {
-  static var cartView: AnyView {
+extension AppView {
+  var cartView: AnyView {
     AnyView(
       CartView(viewModel: viewModel)
     )
   }
 
-  private static var viewModel: CartViewModel {
-    CartViewModel(
+  private var viewModel: some CartViewModel {
+    DefaultCartViewModel(
+      container: container,
       cartService: cartService,
-      appState: appState,
-      getProductUseCase: getProductUseCase
+      getProductHandler: shopCore.remoteGetProductUseCase.execute(id:completion:)
     )
   }
 
-  static var cartService: CartService {
+  var cartService: CartService {
     DefaultCartService(
-      addProductHandler: { product in
-        addProductToCartUseCase.execute(product, toCart: appState.value.shopCart.cart) { result in
-          switch result {
-            case .success(let cart):
-              appState.bulkUpdate { state in
-                state.shopCart.cart = cart
-              }
-            case .failure:
-              break
-          }
-        }
-      }, updateProductHandler: { product, quantity in
-        updateProductToCartUseCase.execute(
-          product,
-          withQuantity: quantity,
-          inCart: appState.value.shopCart.cart
-        ) { result in
-          switch result {
-            case .success(let cart):
-              appState.bulkUpdate { state in
-                state.shopCart.cart = cart
-              }
-            case .failure:
-              break
-          }
-        }
-      },
-      removeProductHandler: { product in
-        removeProductToCartUseCase.execute(product, inCart: appState.value.shopCart.cart) { result in
-          switch result {
-            case .success(let cart):
-              appState.bulkUpdate { state in
-                state.shopCart.cart = cart
-              }
-            case .failure:
-              break
-          }
-        }
-      }
+      container: container,
+      addProductHandler: shopCore.localAddProductToCartUseCase.execute(_:toCart:completion:),
+      updateProductHandler: shopCore.localUpdateProductInCartUseCase.execute(_:withQuantity:inCart:completion:),
+      removeProductHandler: shopCore.localRemoveProductInCartUseCase.execute(_:inCart:completion:)
     )
   }
 }

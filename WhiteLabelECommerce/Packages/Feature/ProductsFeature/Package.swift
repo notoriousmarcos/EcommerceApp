@@ -17,6 +17,7 @@ let package = Package(
   ],
   dependencies: [
     .package(path: "../CartFeature"),
+    .package(path: "../../AppState"),
     .package(path: "../../ShopCore"),
     .package(path: "../../NotoriousComponentsKit"),
     .package(path: "../../Mock")
@@ -28,6 +29,7 @@ let package = Package(
       name: "ProductsFeature",
       dependencies: [
         "CartFeature",
+        "AppState",
         "ShopCore",
         "NotoriousComponentsKit",
         "Mock"

@@ -73,6 +73,7 @@
         "containerPath" : "container:Packages\/Feature\/HomeFeature",
         "identifier" : "HomeFeatureTests",
         "name" : "HomeFeatureTests"
+<<<<<<< Updated upstream
       }
     },
     {
@@ -80,6 +81,8 @@
         "containerPath" : "container:Packages\/ShopCore",
         "identifier" : "ShopCoreTests",
         "name" : "ShopCoreTests"
+=======
+>>>>>>> Stashed changes
       }
     }
   ],

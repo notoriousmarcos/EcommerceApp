@@ -81,6 +81,13 @@
         "identifier" : "TabBarFeatureTests",
         "name" : "TabBarFeatureTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Feature\/CartFeature",
+        "identifier" : "CartFeatureTests",
+        "name" : "CartFeatureTests"
+      }
     }
   ],
   "version" : 1

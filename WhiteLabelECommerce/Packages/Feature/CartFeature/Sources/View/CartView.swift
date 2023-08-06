@@ -5,15 +5,16 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
+import AppState
 import ShopCore
 import Mock
 import NotoriousComponentsKit
 import SwiftUI
 
-public struct CartView: View {
-  @ObservedObject var viewModel: CartViewModel
+public struct CartView<ViewModel: ObservableObject & CartViewModel>: View {
+  @ObservedObject var viewModel: ViewModel
 
-  public init(viewModel: CartViewModel) {
+  public init(viewModel: ViewModel) {
     self.viewModel = viewModel
   }
 
@@ -22,10 +23,10 @@ public struct CartView: View {
       List(viewModel.items, id: \.product.id) { item in
         CartListRow(
           item: $viewModel.items[getIndex(item)],
-          minusAction: { _ in
+          minusAction: { item in
             viewModel.decreaseOrRemoveQuantityFor(item)
           },
-          plusAction: { _ in
+          plusAction: { item in
             viewModel.increaseQuantityFor(item)
           }
         )
@@ -34,7 +35,7 @@ public struct CartView: View {
       .navigationTitle("My Cart")
     }
     .onAppear {
-      viewModel.reload()
+      viewModel.handleCartUpdate()
     }
   }
 
@@ -46,21 +47,31 @@ public struct CartView: View {
 struct CartView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-//      CartView(viewModel: CartViewModel())
-//      CartView(viewModel: CartViewModel())
-//        .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-//      CartView(viewModel: CartViewModel())
-//        .preferredColorScheme(.dark)
+      CartView(viewModel: MockViewModel())
+      CartView(viewModel: MockViewModel())
+      .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
+      CartView(viewModel: MockViewModel())
+      .preferredColorScheme(.dark)
     }
   }
 }
 
-extension Mocks {
-  static var cartViewData: CartViewData {
-    CartViewData(
-      userId: cart.userId,
-      date: cart.date,
-      products: products.map { CartItemData(product: $0, quantity: 1) }
-    )
+private class MockViewModel: CartViewModel {
+  var items: [CartItemData] = Mocks.products.map { CartItemData(product: $0, quantity: 1) }
+
+  func handleCartUpdate() { }
+
+  func decreaseOrRemoveQuantityFor(_ item: CartItemData) {
+    guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
+    if items[index].quantity > 1 {
+      items[index].quantity -= 1
+    } else {
+      items.remove(at: index)
+    }
+  }
+
+  func increaseQuantityFor(_ item: CartItemData) {
+    guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
+    items[index].quantity += 1
   }
 }

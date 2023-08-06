@@ -17,6 +17,7 @@ let package = Package(
   ],
   dependencies: [
     .package(path: "../../ShopCore"),
+    .package(path: "../../AppState"),
     .package(path: "../../NotoriousComponentsKit"),
     .package(path: "../../Mock")
   ],
@@ -27,6 +28,7 @@ let package = Package(
       name: "HomeFeature",
       dependencies: [
         "ShopCore",
+        "AppState",
         "NotoriousComponentsKit"
       ],
       path: "Sources"

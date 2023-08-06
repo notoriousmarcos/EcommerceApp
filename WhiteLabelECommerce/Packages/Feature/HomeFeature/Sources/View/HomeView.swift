@@ -5,6 +5,7 @@
 //  Created by Marcos Vinicius Brito on 01/08/23.
 //
 
+import AppState
 import NotoriousComponentsKit
 import SwiftUI
 
@@ -30,7 +31,7 @@ public struct HomeView: View {
             //        BrandView()
             //          .padding(.top, 16)
 
-            HomeToolBarView(searchText: viewModel.searchText)
+            HomeToolBarView(searchText: $viewModel.searchText)
 
             SectionAndContentView(
               section: Section(
@@ -56,7 +57,7 @@ struct HomeView_Previews: PreviewProvider {
     Group {
       HomeView(
         viewModel: HomeViewViewModel(
-          searchText: .constant(""),
+          containter: AppContainer(appState: Store<AppState>(AppState())),
           topProductsContentView: {
             AnyView(Text("All Products"))
           }
@@ -64,7 +65,7 @@ struct HomeView_Previews: PreviewProvider {
       )
       HomeView(
         viewModel: HomeViewViewModel(
-          searchText: .constant(""),
+          containter: AppContainer(appState: Store<AppState>(AppState())),
           topProductsContentView: {
             AnyView(Text("All Products"))
           }
@@ -73,7 +74,7 @@ struct HomeView_Previews: PreviewProvider {
         .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
       HomeView(
         viewModel: HomeViewViewModel(
-          searchText: .constant(""),
+          containter: AppContainer(appState: Store<AppState>(AppState())),
           topProductsContentView: {
             AnyView(Text("All Products"))
           }

@@ -8,7 +8,7 @@
 import ShopCore
 import Foundation
 
-class CartViewData: ObservableObject {
+class CartViewData {
   var id: Int?
   var userId: Int
   var date: Date
@@ -24,7 +24,10 @@ class CartViewData: ObservableObject {
   deinit { }
 }
 
-class CartItemData: ObservableObject {
+public class CartItemData: Identifiable {
+  public var id: Int {
+    product.id
+  }
   var product: Product
   var quantity: Int
 

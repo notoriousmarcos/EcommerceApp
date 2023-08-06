@@ -11,38 +11,27 @@ import UIKit
 import AppKit
 #endif
 import AppCore
-import ProductsFeature
+import AppState
 import SwiftUI
 
 @main
 struct WhiteLabelECommerceApp: App {
-  let environment = AppEnvironment.start()
+  let container = AppContainer(appState: AppState())
 
   init() {
     let bootstrap = AppBootstrap()
-    bootstrap.boot(with: environment.appState)
+    bootstrap.boot(with: container.appState)
   }
 
   var body: some Scene {
     WindowGroup {
-      AppView(appState: environment.appState)
+      AppView(container: container)
 #if targetEnvironment(macCatalyst)
         .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
 #endif
     }
   }
 }
-
-// struct WhiteLabelECommerceApp: App {
-//  var body: some Scene {
-//    WindowGroup {
-//      CompositionRoot.rootView
-// #if targetEnvironment(macCatalyst)
-//        .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-// #endif
-//    }
-//  }
-// }
 
 #if targetEnvironment(macCatalyst)
 extension UIApplication {
