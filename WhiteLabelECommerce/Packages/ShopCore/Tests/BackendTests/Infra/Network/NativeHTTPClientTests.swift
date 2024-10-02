@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/02/22.
 //
 
-@testable import ShopCore
 import Combine
+@testable import ShopCore
 import XCTest
 
 class NativeHTTPClientTests: XCTestCase {

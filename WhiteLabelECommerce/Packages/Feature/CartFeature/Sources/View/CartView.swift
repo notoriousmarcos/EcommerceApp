@@ -6,9 +6,9 @@
 //
 
 import AppState
-import ShopCore
 import Mock
 import NotoriousComponentsKit
+import ShopCore
 import SwiftUI
 
 public struct CartView<ViewModel: ObservableObject & CartViewModel>: View {
@@ -81,6 +81,5 @@ private class MockViewModel: CartViewModel {
   }
 
   func removeProductFor(_ index: IndexSet) {
-    
   }
 }

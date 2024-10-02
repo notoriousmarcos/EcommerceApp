@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 24/02/22.
 //
 
-import ShopCore
 import Foundation
+import ShopCore
 
 class MockClients {
     let url = URL(string: "https://google.com")!

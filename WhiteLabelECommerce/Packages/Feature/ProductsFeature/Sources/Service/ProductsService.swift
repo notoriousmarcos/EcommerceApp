@@ -5,9 +5,9 @@
 //  Created by Marcos Vinicius Brito on 21/07/23.
 //
 
-import ShopCore
 import Combine
 import Foundation
+import ShopCore
 
 public protocol ProductsService {
   func fetchProducts(for offset: Int?, andLimit limit: Int?) -> AnyPublisher<[Product], ProductsServiceError>

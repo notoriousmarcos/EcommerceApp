@@ -19,34 +19,32 @@ public struct HomeView: View {
 
   // MARK: - Body
   public var body: some View {
-    NavigationView {
-      ZStack {
-        // MARK: - Background
-        Color.backgroundColor
+    ZStack {
+      // MARK: - Background
+      Color.backgroundColor
 
-        ScrollView(.vertical, showsIndicators: true) {
-          VStack(spacing: 24) {
-            HeaderView() //: HStack
+      ScrollView(.vertical, showsIndicators: true) {
+        VStack(spacing: 24) {
+          HeaderView() //: HStack
 
-            //        BrandView()
-            //          .padding(.top, 16)
+          //        BrandView()
+          //          .padding(.top, 16)
 
-            HomeToolBarView(searchText: $viewModel.searchText)
+          HomeToolBarView(searchText: $viewModel.searchText)
 
-            SectionAndContentView(
-              section: Section(
-                title: "Top products",
-                actionTitle: "See All",
-                action: {
-                  // TODO: - Action
-                }
-              )
-            ) {
-              viewModel.topProductsContentView()
-            }
-          } //: VStack
-          .padding(.horizontal, 24)
-        }
+          SectionAndContentView(
+            section: Section(
+              title: "Top products",
+              actionTitle: "See All",
+              action: {
+                // TODO: - Action
+              }
+            )
+          ) {
+            viewModel.topProductsContentView()
+          }
+        } //: VStack
+        .padding(.horizontal, 24)
       }
     }
   }
@@ -71,7 +69,7 @@ struct HomeView_Previews: PreviewProvider {
           }
         )
       )
-        .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
+      .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
       HomeView(
         viewModel: HomeViewViewModel(
           containter: AppContainer(appState: Store<AppState>(AppState())),
@@ -80,7 +78,7 @@ struct HomeView_Previews: PreviewProvider {
           }
         )
       )
-        .preferredColorScheme(.dark)
+      .preferredColorScheme(.dark)
     }
   }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 public class ShopCore {
-
   private let httpClient: HTTPClient
 
   public lazy var remoteAuthenticationUseCase: AuthenticationUseCase = RemoteAuthenticationUseCase(client: remoteAuthenticationClient)
@@ -23,7 +22,6 @@ public class ShopCore {
   public lazy var localUpdateProductInCartUseCase: UpdateProductInCartUseCase = LocalUpdateProductInCartUseCase()
   public lazy var localRemoveProductInCartUseCase: RemoveProductInCartUseCase = LocalRemoveProductInCartUseCase()
 
-
   public init(httpClient: HTTPClient = NativeHTTPClient()) {
     self.httpClient = httpClient
   }
@@ -35,5 +33,4 @@ public class ShopCore {
   private lazy var remoteGetProductsClient = RemoteGetProductsClient(client: httpClient)
   private lazy var remoteGetUserClient = RemoteGetUserClient(client: httpClient)
   private lazy var remoteUpdateCartClient = RemoteUpdateCartClient(client: httpClient)
-
 }

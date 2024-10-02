@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct AppContainer: EnvironmentKey {
-
   public let appState: Store<AppState>
 
   public init(appState: Store<AppState>) {
@@ -34,7 +33,6 @@ public extension EnvironmentValues {
 // MARK: - Injection in the view hierarchy
 
 public extension View {
-
   func inject(_ appState: AppState) -> some View {
     let container = AppContainer(appState: .init(appState))
     return inject(container)

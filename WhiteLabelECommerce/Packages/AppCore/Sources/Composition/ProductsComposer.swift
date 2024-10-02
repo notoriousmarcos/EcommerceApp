@@ -6,8 +6,8 @@
 //
 
 import AppState
-import ShopCore
 import ProductsFeature
+import ShopCore
 import SwiftUI
 
 // MARK: - ProductsComposer

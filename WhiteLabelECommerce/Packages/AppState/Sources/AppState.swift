@@ -1,6 +1,6 @@
+import Combine
 import ShopCore
 import SwiftUI
-import Combine
 
 public class AppState: Equatable {
   public var auth = AuthState()
@@ -39,7 +39,6 @@ public extension AppState {
 
 public extension AppState {
   struct ViewRouting: Equatable {
-    
   }
 }
 

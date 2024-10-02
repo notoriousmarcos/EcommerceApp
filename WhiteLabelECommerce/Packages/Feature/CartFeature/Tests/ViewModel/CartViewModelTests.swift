@@ -8,6 +8,4 @@
 import XCTest
 
 final class CartViewModelTests: XCTestCase {
-
-    
 }

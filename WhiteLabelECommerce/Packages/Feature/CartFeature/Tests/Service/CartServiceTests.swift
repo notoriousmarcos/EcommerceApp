@@ -6,10 +6,10 @@
 //
 
 import AppState
-import ShopCore
+@testable import CartFeature
 import Combine
 import Mock
-@testable import CartFeature
+import ShopCore
 import XCTest
 
 final class CartServiceTests: XCTestCase {
@@ -88,7 +88,7 @@ final class CartServiceTests: XCTestCase {
       container: mockContainer,
       addProductHandler: nil,
       updateProductHandler: nil,
-      removeProductHandler: { product, cart, completion in
+      removeProductHandler: { _, cart, completion in
         let cart = Cart(
           id: cart.id,
           userId: cart.userId,

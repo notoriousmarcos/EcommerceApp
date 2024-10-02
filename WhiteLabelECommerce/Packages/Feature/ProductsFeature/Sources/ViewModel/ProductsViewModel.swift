@@ -6,10 +6,10 @@
 //
 
 import AppState
-import ShopCore
 import CartFeature
 import Combine
 import Foundation
+import ShopCore
 
 public protocol ProductsViewModelProtocol: ObservableObject {
   // MARK: - Properties

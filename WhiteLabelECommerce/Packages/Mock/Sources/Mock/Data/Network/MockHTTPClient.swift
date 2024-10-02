@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
-@testable import ShopCore
 import Foundation
+@testable import ShopCore
 
 extension Request {
     func toString() -> String {

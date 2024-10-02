@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 04/08/23.
 //
 
-import ShopCore
 import Foundation
+import ShopCore
 
 class CartViewData {
   var id: Int?

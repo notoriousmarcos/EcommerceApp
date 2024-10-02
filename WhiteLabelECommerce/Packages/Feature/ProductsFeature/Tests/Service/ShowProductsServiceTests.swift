@@ -5,10 +5,10 @@
 //  Created by Marcos Vinicius Brito on 24/07/23.
 //
 
-import ShopCore
 import Combine
 import Mock
 @testable import ProductsFeature
+import ShopCore
 import XCTest
 
 final class ShowProductsServiceTests: XCTestCase {

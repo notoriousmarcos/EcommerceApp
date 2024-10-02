@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 23/07/23.
 //
 
-import ShopCore
 import Foundation
+import ShopCore
 
 final class ProductDetailViewModel: ObservableObject {
   @Published var product: Product

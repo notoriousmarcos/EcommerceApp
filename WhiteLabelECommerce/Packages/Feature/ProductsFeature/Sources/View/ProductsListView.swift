@@ -6,12 +6,16 @@
 //
 
 import Mock
+import ShopCore
 import SwiftUI
 
 /// A view responsible for displaying a list of products fetched from the `ProductsViewModelProtocol`.
 public struct ProductsListView<ViewModel: ProductsViewModelProtocol>: View {
   /// The view model conforming to `ProductsViewModelProtocol` responsible for managing the product data and state.
   @ObservedObject var viewModel: ViewModel
+
+  @State private var selectedProduct: Product?
+  @State private var showDetailView = false
 
   /// Initializes the `ProductsListView` with the given view model.
   ///

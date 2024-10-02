@@ -5,8 +5,8 @@
 //  Created by Marcos Vinicius Brito on 18/02/22.
 //
 
-import ShopCore
 import Foundation
+import ShopCore
 
 public struct Mocks {
   public static let product = Product(

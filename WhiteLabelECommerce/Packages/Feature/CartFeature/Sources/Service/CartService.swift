@@ -6,9 +6,9 @@
 //
 
 import AppState
-import ShopCore
 import Combine
 import Foundation
+import ShopCore
 
 public protocol CartService {
   var container: AppContainer { get }
